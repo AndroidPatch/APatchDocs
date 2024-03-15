@@ -83,7 +83,7 @@ mgiskboot.exe repack boot.img
 :::
 
 # KP命令及注解
-
+```
 -h，——help打印此信息。
 
 -v，——version打印版本号。如果指定了-k，则打印kimpg版本。
@@ -124,3 +124,4 @@ mgiskboot.exe repack boot.img
 -A，——extra- ARGS ARGS设置前一个额外项的参数。
 
 -D，——extra- Detach从补丁中分离先前的额外项目。
+```
