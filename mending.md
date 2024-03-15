@@ -2,14 +2,15 @@
 
 ## 自动修补
 
-1.前往[github](https://github.com/bmax121/APatch/releases)下载最新管理器
+1. 前往[GitHub](https://github.com/bmax121/APatch/releases)下载最新管理器
 
-2.点击Patch设置管理密钥，密钥需要"数字+字母"，并且最少8位，后面获取root权限需要用到，请记住，请尽量不要设置1234等弱密码，[原因参考](/warn)
+2. 点击Patch设置管理密钥，密钥需要"数字+字母"，并且最少8位，后面获取root权限需要用到
 
-3.选择你的boot.img，确认后等待修补完成
+:::warning 
+请尽量不要设置1234等弱密码  [原因](/warn)
+:::
 
-修补成功后会显示修补后的img镜像路径     
-**例如:/storage/emulated/0/Download/apatch_10533_0.10.1_vune.img**
+3. 选择你的boot.img，确认后等待修补完成。修补成功后会显示修补后的img镜像路径。例如:`/storage/emulated/0/Download/apatch_10533_0.10.1_vune.img`
 
 最后按你的实际情况[刷入](/flash)即可
 
@@ -20,33 +21,69 @@
 
 你可以前往[KernelPatch](https://github.com/bmax121/KernelPatch/releases)项目获取最新的KP文件
 
-1.下载kptools-win.zip和kpimg-android，并解压到当前目录使用，同时下载magiskboot(Windows) 
+### Windows
 
-2.执行
-****
+1. 下载kptools-win.zip和kpimg-android，并解压到当前目录使用，同时下载magiskboot(Windows) 
+
+2. 执行
+```
 magisk.exe unpack boot.img
-****
+```
 解压boot，然后将kernel改名为kernel-b(kernel-b可以是其他第三方内核，但是第三方内核不做任何保证，也不会受到支持)
 
-**Windows可以安装wsl进行修补**        
+Windows可以使用CMD或PowerShell进行修补
 执行
-****
+```
 kptools-x86_64-win.exe -p --image kernel-b --skey "1234" --kpimg kpimg-android --out kernel
-****
-**这里推荐使用wsl的linux修补**
-****
+```
+
+或者更推荐的，使用WSL的Linux修补
+
+```
 ./kptools-linux -p --image kernel-b --skey "1234" --kpimg kpimg-android --out kernel
-****
+```
 
 修补后无报错，最后用
-****
+
+```
 mgiskboot.exe repack boot.img
-****
+```
+
 打包生成镜像，生成的**new-boot.img**即是修补好的镜像
 
-**再次强调不要设置1234等弱密码，这里只是方便演示。**
+---
+
+### Linux
+
+1. 下载kptools-linux和kpimg-android，并获取magiskboot。
+
+2. 执行
+
+```
+magiskboot unpack boot.img
+```
+
+解包boot，获取kernel文件。将kernel改名为kernel-b。
+
+使用以下命令来修补内核镜像:
+
+```
+./kptools-linux -p --image kernel-b --skey "1234" --kpimg kpimg-android --out kernel
+```
+修补后无报错，最后用
+
+```
+mgiskboot.exe repack boot.img
+```
+
+打包生成镜像，生成的new-boot.img即是修补好的镜像
+
+::: warning 
+再次强调不要设置1234等弱密码，这里只是方便演示。
+:::
 
 # KP命令及注解
+
 -h，——help打印此信息。
 
 -v，——version打印版本号。如果指定了-k，则打印kimpg版本。
