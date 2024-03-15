@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base:'/APatchDocs/',
   title: "APatch",
   description: "APatch文档",
   themeConfig: {
