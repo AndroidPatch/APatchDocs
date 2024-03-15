@@ -73,7 +73,7 @@ magiskboot unpack boot.img
 修补后无报错，最后用
 
 ```
-mgiskboot.exe repack boot.img
+mgiskboot repack boot.img
 ```
 
 打包生成镜像，生成的new-boot.img即是修补好的镜像
