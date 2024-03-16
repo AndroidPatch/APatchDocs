@@ -29,7 +29,7 @@ export default defineConfig({
       {
         text: '如何使用',
         items: [
-          { text: '安装', link: '/Install' },
+          { text: '安装', link: '/install' },
           { text: '修补', link: '/patch' },
           { text: '刷入', link: '/flash' }
         ]
