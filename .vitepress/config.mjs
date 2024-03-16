@@ -13,7 +13,7 @@ export default defineConfig({
       { text: '文档指南', link: '/what-is-APatch' }
     ],
 
-    logo: "background.png", // 配置logo位置，public目录
+    logo: "logo.png", // 配置logo位置，public目录
 
     sidebar: [
       {
