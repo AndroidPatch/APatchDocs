@@ -9,7 +9,7 @@ CONFIG_KALLSYMS=y或CONFIG_KALLSYMS_ALL=n(早期支持)
 
 ::: warning
 
-**仅限 ARM64**
+**仅支持 ARM64 架构**
 
 **Android 内核版本 3.18 - 6.1**
 :::

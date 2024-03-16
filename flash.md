@@ -1,5 +1,5 @@
 # 刷入
-## fastboot命令刷入
+## fastboot 命令刷入
 
 ::: info
 fastboot命令方便稳定，出错便于补救，是最理想的刷入方式**
@@ -23,12 +23,16 @@ fastboot flash boot boot.img
 
 如果你的设备有第三方recovery(比如TWRP),这时你可以通过TWRP刷写boot分区来获取root权限。
 
-## Magisk用户转APatch
+## Magisk 用户转 APatch
 
 ::: warning
-本方案仅推荐有init_boot分区的设备尝试
+本方案仅推荐有`init_boot`分区的设备且已经刷入`TWRP`尝试
 :::
 
-1. 安装kernelflash并授予root权限  
-2. 选择你正在使用的卡槽，并点击查看，然后选择备份boot分区  
-3. 备份好的文件在/sdcrad/kernelflasher/里面修补方法和上面一样，刷写boot可以直接使用kernelflaher刷入boot，同样你也可以用fastboot刷入，刷入无问题后可以将面具完全卸载。
+1. Magisk 点击卸载 还原原厂镜像
+2. 将你的原厂 Boot 参照[此处](/patch.md) 修补
+3. 重启设备到`TWRP` 刷入修补过的 `Boot` 到 `Boot 分区`
+
+::: danger
+此方案具有99.9%概率变砖，谨慎尝试
+:::
