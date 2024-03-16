@@ -15,8 +15,6 @@ export default defineConfig({
 
     logo: "logo.png", // 配置logo位置，public目录
 
-    head: [['link', { rel: 'icon', href: 'logo.png' }]]
-
     sidebar: [
       {
         text: '项目简介',
