@@ -26,7 +26,7 @@ fastboot flash boot boot.img
 ## Magisk 用户转 APatch
 
 ::: warning
-本方案仅推荐有`init_boot`分区的设备且已经刷入`TWRP`尝试
+本方案仅推荐有`init_boot`分区的设备且已经刷入`TWRP`的设备尝试
 :::
 
 1. Magisk 点击卸载 还原原厂镜像
