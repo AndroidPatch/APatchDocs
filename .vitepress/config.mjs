@@ -14,9 +14,10 @@ export default defineConfig({
     ],
 
     logo: "logo.png", // 配置logo位置，public目录
+
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
-    ]
+    ],
 
     sidebar: [
       {

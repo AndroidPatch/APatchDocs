@@ -1,4 +1,4 @@
 node_modules
 /.vitepress
-.vitepress/cache/
+.vitepress/cache/*
 !/.vitepress/config.mjs
