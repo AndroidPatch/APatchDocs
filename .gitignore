@@ -1,4 +1,3 @@
 /node_modules
 /.vitepress
-/*.json
-/*.yaml
+!/.vitepress/config.mjs
