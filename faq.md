@@ -24,7 +24,7 @@ APatch分别结合了Magisk方便易用的通过`boot.img`安装的方法，和K
 
 此外，KPM提供在内核空间进行内联hook、系统调用表hook的能力。
 
-更多相关信息，请参阅[如何编写KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/module.md)
+更多相关信息，请参阅[如何编写KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/zh-CN/module.md)
 
 ## APatch与KernelPatch的关系
 
