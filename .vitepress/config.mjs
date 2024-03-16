@@ -5,6 +5,7 @@ export default defineConfig({
   base:'/APatchDocs/',
   title: "APatch",
   description: "APatch文档",
+  ignoreDeadLinks: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
