@@ -33,7 +33,11 @@ export default defineConfig({
         ]
       },
       {
-        text: '反馈与帮助',link: '/support'
+        text: '其他',
+        items: [
+          { text: '反馈与帮助',link: '/support' },
+          { text: 'FAQ', link: '/faq' }
+        ]
       }
     ],
 
