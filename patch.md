@@ -48,7 +48,7 @@ kptools-x86_64-win.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-androi
 修补后无报错，最后用
 
 ```
-mgiskboot.exe repack boot.img
+magiskboot.exe repack boot.img
 ```
 
 打包生成镜像，生成的 **new-boot.img** 即为修补好的镜像
