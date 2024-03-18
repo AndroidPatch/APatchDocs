@@ -27,7 +27,7 @@
 
 2. 执行
 ```
-magisk.exe unpack boot.img
+magiskboot.exe unpack boot.img
 ```
 
 解压 boot，然后将 kernel 改名为 kernel-b (kernel-b可以是其他第三方内核，但是第三方内核不做任何保证，也不会受到支持)
@@ -75,7 +75,7 @@ magiskboot unpack boot.img
 修补后无报错，最后用
 
 ```
-mgiskboot repack boot.img
+magiskboot repack boot.img
 ```
 
 打包生成镜像，生成的 `new-boot.img` 即是修补好的镜像
