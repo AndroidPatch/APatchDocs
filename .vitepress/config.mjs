@@ -22,7 +22,7 @@ export default defineConfig({
         text: '项目简介',
         items: [
           { text: '什么是APatch', link: '/what-is-APatch' },
-          { text: '安装要求', link: '/demand' },
+          { text: '安装要求', link: '/requirements' },
           { text: '重要提醒', link: '/warn' },
         ]
       },

@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: 在 GitHub 中查看
       link: https://github.com/bmax121/APatch
+    - theme: alt
+      text: 贡献文档
+      link: https://github.com/AndroidPatch/APatchDocs
 
 features:
   - title: 基于内核

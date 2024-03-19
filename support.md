@@ -1,4 +1,4 @@
-# GITHUB
+# 反馈与帮助
 
 ## 项目开发者
 
@@ -6,12 +6,10 @@
 
 ## 项目地址
 
-[APatch](https://github.com/bmax121/APatch).
+[APatch](https://github.com/bmax121/APatch)
 
-[kernelPatch](https://github.com/bmax121/KernelPatch).
+[KernelPatch](https://github.com/bmax121/KernelPatch)
 
 ## 交流群
 
-[APatch中文组](https://t.me/APatch_CN_Group)
-
-[APatch EN Group](https://t.me/APatchGroup)
+[APatch Discussions](https://t.me/apatch_discuss)
