@@ -2,6 +2,10 @@
 
 ## 什么是APatch？
 
+::: info
+[这里](/what-is-APatch)的介绍更完整。
+:::
+
 APatch是一种类似于Magisk或KernelSU的root解决方案，但APatch提供更多功能。
 APatch分别结合了Magisk方便易用的通过`boot.img`安装的方法，和KernelSU强大的内核修补能力。
 
@@ -45,3 +49,26 @@ KernelPatch 添加了一个新的系统调用（syscall），为应用程序和�
 
 - KernelPatch不修改SELinux上下文，而是通过hook绕过SELinux。 这允许您在应用程序上下文中root Android线程，无需使用libsu启动新进程，然后执行IPC。这非常方便。
 - 此外，APatch直接利用magiskpolicy提供额外的SELinux支持。  
+
+## 模块无法安装(os error 2/5/22)?
+
+在root授权页面取消shell的root权限。
+
+## APP 在手机重启后自动获得 root 权限?
+
+参阅 [这里](https://t.me/APatchChannel/74)
+
+## 无法使用 Shamiko
+
+Shamiko闭源并且停更，无法适配。
+::: info
+如果你必须使用，使用Shamiko 0.7.4。
+:::
+
+## Zygisk 支持？
+
+APatch可使用官方版ZygiskNext。
+
+::: warning
+尽可能使用官方版本而不是第三方改版，除非你能确定此修改版无害。。
+:::
