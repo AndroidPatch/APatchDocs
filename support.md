@@ -12,4 +12,6 @@
 
 ## 交流群
 
-[APatch Discussions](https://t.me/apatch_discuss)
+[\[ZH/EN\]APatch Discussions(官方群)](https://t.me/apatch_discuss)
+
+[\[ZH\]APatch_CN_Group(半官方)](https://t.me/APatch_CN_Group)
