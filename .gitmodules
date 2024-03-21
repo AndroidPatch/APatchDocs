@@ -1,0 +1,3 @@
+[submodule "TermFaker"]
+	path = TermFaker
+	url = https://github.com/AndroidPatch/apatch_faketerminal
