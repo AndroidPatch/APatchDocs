@@ -85,7 +85,9 @@ magiskboot repack boot.img
 :::
 
 # KP命令及注解
+:::
 [你可以点此尝试](https://exame.apatch.top/)
+:::
 ```
 -h，——help打印此信息。
 
