@@ -7,12 +7,12 @@ hero:
   text: "安卓内核 Root 新方案"
   tagline: 为 Android 内核 3.18 - 6.1 版本提供的通用 root 方案
   image:
-    src: background.png
+    src: /logo.png
     alt: 背景图片
   actions:
     - theme: brand
       text: 开始了解
-      link: /what-is-APatch
+      link: /what-is-apatch
     - theme: alt
       text: 在 GitHub 中查看
       link: https://github.com/bmax121/APatch

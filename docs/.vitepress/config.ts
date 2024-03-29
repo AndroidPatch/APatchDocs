@@ -6,6 +6,7 @@ import { resolve } from 'path'
 export default defineConfig( {
     title: 'APatch',
     locales: locales.locales,
+    ignoreDeadLinks: true,
     sitemap: {
         hostname: 'https://apatch.top'
     },
