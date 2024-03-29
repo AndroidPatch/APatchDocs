@@ -15,9 +15,8 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/tiann/KernelSU' }
+      { icon: 'github', link: 'https://github.com/bmax121/APatch' }
     ],
-
   }
 })
 
