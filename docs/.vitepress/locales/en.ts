@@ -11,7 +11,7 @@ export default defineConfig({
     lastUpdatedText: '最后更新',
 
     sidebar: {
-      '/': sidebarGuide()
+      '/en/': sidebarGuide()
     },
 
     socialLinks: [
