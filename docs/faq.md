@@ -3,7 +3,7 @@
 ## 什么是APatch？
 
 ::: info
-[这里](/what-is-APatch)的介绍更完整。
+[这里](/what-is-apatch)的介绍更完整。
 :::
 
 APatch是一种类似于Magisk或KernelSU的root解决方案，但APatch提供更多功能。
