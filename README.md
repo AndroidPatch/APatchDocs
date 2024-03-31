@@ -2,7 +2,7 @@
 
 ---
 
-[![Deploy status](https://github.com/AndroidPatch/APatchDocs/actions/workflows/deploy.yml/badge.svg?event=page_build)](https://github.com/AndroidPatch/APatchDocs/actions/workflows/deploy.yml)
+[![Deploy VitePress site to Pages](https://github.com/AndroidPatch/APatchDocs/actions/workflows/deploy.yml/badge.svg)](https://github.com/AndroidPatch/APatchDocs/actions/workflows/deploy.yml)
 
 This repository is for [APatch Documentation](https://apatch.top/), which is created for [APatch Project](https://github.com/bmax121/APatch).
 
