@@ -10,16 +10,16 @@ export default defineConfig( {
     sitemap: {
         hostname: 'https://apatch.top'
     },
-    buildEnd: async (config: SiteConfig) => {
-        const templateDir = resolve(config.outDir, 'templates');
-        const templateList = resolve(templateDir, "index.json");
-        let files = [];
-        try {
-            files = await readdir(templateDir);
-            files = files.filter(file => !file.startsWith('.'));
-        } catch(e) {
-            // ignore
-        }
-        await writeFile(templateList, JSON.stringify(files));
-    }
+//        buildEnd: async (config: SiteConfig) => {
+//        const templateDir = resolve(config.outDir, 'templates');
+//        const templateList = resolve(templateDir, "index.json");
+//        let files = [];
+//        try {
+//            files = await readdir(templateDir);
+//            files = files.filter(file => !file.startsWith('.'));
+//        } catch(e) {
+//            // ignore
+//        }
+//        await writeFile(templateList, JSON.stringify(files));
+//    }
 })
