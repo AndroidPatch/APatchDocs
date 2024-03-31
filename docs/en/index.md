@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 开始了解
-      link: /en/what-is-apatch
+      link: /what-is-apatch
     - theme: alt
       text: 在 GitHub 中查看
       link: https://github.com/bmax121/APatch

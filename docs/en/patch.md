@@ -7,12 +7,12 @@
 2. 点击 Patch 设置管理密钥，密钥需要 **"数字+字母"**，并且至少**8位**，后面解锁 Root 权限需要用到
 
 :::warning 
-禁止设置 `114514` 等弱密码，新版 APatch 管理器 已强制使用强密码  [原因](/en/warn)
+禁止设置 `114514` 等弱密码，新版 APatch 管理器 已强制使用强密码  [原因](/warn)
 :::
 
 3. 选择你的 boot.img，确认后等待修补完成。修补成功后会显示修补后的 img镜像 路径。例如: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
 
-最后按你的实际情况[刷入](/en/flash)即可
+最后按你的实际情况[刷入](/flash)即可
 
 
 ## 手动修补
