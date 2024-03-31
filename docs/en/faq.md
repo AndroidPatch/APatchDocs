@@ -54,7 +54,7 @@ KernelPatch 添加了一个新的系统调用（syscall），为应用程序和�
 
 在root授权页面取消shell的root权限。
 
-## APP 在手机重启后自动获得 root 权限?
+## APP 在手机重启后自动获得/丢失 root 权限?
 
 参阅 [这里](https://t.me/APatchChannel/74)
 
@@ -67,7 +67,7 @@ Shamiko闭源并且停更，无法适配。
 
 ## Zygisk 支持？
 
-APatch可使用官方版ZygiskNext。
+APatch可使用官方版[ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)。
 
 ::: warning
 尽可能使用官方版本而不是第三方改版，除非你能确定此修改版无害。
@@ -75,6 +75,4 @@ APatch可使用官方版ZygiskNext。
 
 ## root检测软件无法通过？
 
-:::danger
-卸载那些东西 别逼我们生气到在群组里ban掉你
-:::
+如果你的软件可以正常使用，那么就不要一直纠结于检测软件。
