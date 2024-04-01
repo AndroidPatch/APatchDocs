@@ -2,7 +2,7 @@ import { createRequire } from 'module'
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  lang: 'zh-CN',
+  lang: 'en-US',
   description: '一个基于内核，为安卓准备的 root 方案。',
 
   themeConfig: {
@@ -22,7 +22,7 @@ export default defineConfig({
 
 function nav() {
   return [
-    { text: '指南', link: '/en/what-is-apatch' },
+    { text: 'Guide', link: '/en/what-is-apatch' },
   ]
 }
 
