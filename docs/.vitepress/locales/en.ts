@@ -37,7 +37,7 @@ function sidebarGuide() {
           { text: '安装', link: '/en/install' },
           { text: '修补', link: '/en/patch' },
           { text: '刷入', link: '/en/flash' },
-          { text: '反馈与帮助',link: '/en/support' },
+          { text: '反馈与帮助', link: '/en/support' },
           { text: '常见问题', link: '/en/faq' },
         ]
     }
