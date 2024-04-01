@@ -29,7 +29,7 @@ function nav() {
 function sidebarGuide() {
   return [
     {
-        text: 'Guide',
+        text: '指南',
         items: [
           { text: '什么是 APatch?', link: '/what-is-apatch' },
           { text: '安装要求', link: '/requirements' },
@@ -37,7 +37,7 @@ function sidebarGuide() {
           { text: '安装', link: '/install' },
           { text: '修补', link: '/patch' },
           { text: '刷入', link: '/flash' },
-          { text: '反馈与帮助',link: '/support' },
+          { text: '反馈与帮助', link: '/support' },
           { text: '常见问题', link: '/faq' },
         ]
     }
