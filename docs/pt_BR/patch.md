@@ -7,12 +7,12 @@
 2. Clique em Patch para definir a SuperKey. A SuperKey precisa ter **números e letras** e pelo menos **8 caracteres**. Ela será usada posteriormente para desbloquear permissões root.
 
 :::warning Aviso
-É proibido definir senhas fracas como `114514`. As versões mais recentes do APatch obriga o uso de senhas fortes. [Motivo](/warn).
+É proibido definir senhas fracas como `114514`. As versões mais recentes do APatch obriga o uso de senhas fortes. [Motivo](/pt_BR/warn).
 :::
 
 3. Selecione seu boot.img, confirme e aguarde a conclusão do patch. Depois que o patch for bem-sucedido, o caminho da boot.img corrigida será exibida. Por exemplo: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
 
-Finalmente, você pode fazer o [flash](/flash) conforme necessário.
+Finalmente, você pode fazer o [flash](/pt_BR/flash) conforme necessário.
 
 ## Patch manual
 
