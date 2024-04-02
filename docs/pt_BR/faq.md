@@ -10,16 +10,16 @@ APatch é uma solução root semelhante ao Magisk ou KernelSU que une o melhor d
 
 ## Qual é a diferença entre APatch e Magisk?
 
-- Magisk modifica o sistema init com um patch no ramdisk da sua imagem de inicialização, enquanto o APatch corrige o kernel diretamente.
+Magisk modifica o sistema `init` com um patch no `ramdisk` da sua imagem de inicialização, enquanto o APatch corrige o kernel diretamente.
 
 ## APatch vs KernelSU
 
-- KernelSU requer o código-fonte do kernel de seu dispositivo, que nem sempre é fornecido pelo OEM. APatch funciona apenas com seu `boot.img` stock.
+KernelSU requer o código-fonte do kernel de seu dispositivo, que nem sempre é fornecido pelo OEM. APatch funciona apenas com seu `boot.img` stock.
 
 ## APatch vs Magisk e KernelSU
 
-- APatch permite opcionalmente não modificar o SELinux, isso significa que o thread do app pode ser rooteado, libsu e IPC não são necessários.
-- **KPMódulo** fornecido.
+APatch permite opcionalmente não modificar o SELinux, isso significa que o thread do app pode ser rooteado, libsu e IPC não são necessários.
+**KPMódulo** fornecido.
 
 ## O que é KPMódulo?
 
@@ -27,13 +27,13 @@ Alguns códigos são executados no espaço do kernel, semelhante ao Loadable Ker
 
 Além disso, o KPMódulo fornece a capacidade de executar inline-hook e syscall-table-hook no espaço do kernel.
 
-Para mais informações, veja [como escrever um KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/zh-CN/module.md).
+Para mais informações, veja [como escrever um KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/pt-BR/module.md).
 
 ## A relação entre APatch e KernelPatch
 
 APatch depende do KernelPatch. Ele herda todas as suas capacidades e foi expandido.
 
-Você pode instalar apenas o KernelPatch, mas isso não permitirá o uso de módulos Magisk.
+Você pode instalar apenas o KernelPatch, mas isso não permitirá o uso de módulos do Magisk.
 
 Para usar o gerenciamento de SuperUsuário, você precisa instalar o AndroidPatch e depois desinstalar o KernelPatch.
 
@@ -45,8 +45,9 @@ KernelPatch conecta chamadas do sistema para fornecer todos os recursos ao espa�
 
 ## O que é SELinux?
 
-- KernelPatch não modifica o contexto do SELinux e ignora o SELinux via hook. Isso permite que você faça root em um thread do Android dentro do contexto do app sem a necessidade de usar libsu para iniciar um novo processo e então executar o IPC.
-- Além disso, o APatch utiliza diretamente o magiskpolicy para fornecer suporte adicional ao SELinux. 
+KernelPatch não modifica o contexto do SELinux e ignora o SELinux via hook. Isso permite que você faça root em um thread do Android dentro do contexto do app sem a necessidade de usar libsu para iniciar um novo processo e então executar o IPC.
+
+Além disso, o APatch utiliza diretamente o magiskpolicy para fornecer suporte adicional ao SELinux. 
 
 ## O módulo não pode ser instalado
 
@@ -58,9 +59,9 @@ Veja [aqui](https://t.me/APatchChannel/74).
 
 ## Não é possível usar Shamiko
 
-Shamiko é de código fechado e parou de ser atualizado, portanto não pode ser adaptado.
+Shamiko é de código fechado e parou de ser atualizado, portanto, não pode ser adaptado.
 
-::: info
+::: info INFORMAÇÕES
 Se você precisar usá-lo, use o Shamiko 0.7.4.
 :::
 
