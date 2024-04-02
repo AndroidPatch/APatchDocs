@@ -12,13 +12,13 @@ Conecte o seu dispositivo usando o ADB e execute o seguinte comando:
 adb reboot bootloader
 ```
 
-para entrar no modo fastboot e depois flashar usando este comando:
+Para entrar no modo fastboot e depois flashar usando este comando:
 
 ```
 fastboot flash boot boot.img
 ```
 
-Se o seu dispositivo suporta fastboot boot, você pode primeiro tentar inicializar o sistema usando fastboot boot boot.img. Se ocorrerem problemas inesperados, simplesmente reinicie o dispositivo para inicialização normal.
+Se o seu dispositivo suporta `fastboot boot`, você pode primeiro tentar inicializar o sistema usando `fastboot boot boot.img`. Se ocorrerem problemas inesperados, simplesmente reinicie o dispositivo para a inicialização normal.
 
 ## Usando TWRP
 
@@ -31,8 +31,8 @@ Esta solução é recomendada apenas para dispositivos com uma partição `init_
 :::
 
 1. Clique para desinstalar o Magisk e restaurar a imagem original de fábrica.
-2. Consulte [aqui](/pt_BR/patch.md) para corrigir seu boot original.
-3. Reinicie o dispositivo no `TWRP` e instale o `boot` corrigido na `partição boot`.
+2. Consulte [aqui](/pt_BR/patch.md) para corrigir seu boot.img original.
+3. Reinicie o dispositivo no `TWRP` e instale o `boot.img` corrigido na `partição boot`.
 
 ::: danger PERIGO
 Este método tem uma chance de deixar o seu dispositivo inutilizável, por isso, tente com cautela.
