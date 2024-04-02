@@ -1,6 +1,6 @@
 # Instalação
 
-## Preparativos antes de flashar
+## Preparativos antes de instalar
 
 1. Por favor, certifique-se de que seu telefone esteja desbloqueado antes de fazer root.
 
@@ -8,7 +8,7 @@
 
 3. [Clique aqui](https://github.com/bmax121/APatch/releases) para obter a versão estável mais recente do APatch.
 
-4. Extraia o boot.img do pacote de firmware ou de outra fonte que contenha a imagem original de fábrica do seu telefone. Você precisará dele mais tarde para corrigir.
+4. Extraia o boot.img de sua ROM ou de outra fonte que contenha o boot.img original de fábrica do seu dispositivo. Você precisará dele mais tarde para corrigir.
 
 5. Faça backup do `boot.img` que você extraiu para um computador, pendrive ou outro dispositivo. Se houver qualquer problema durante o processo de instalação, você pode restaurar o sistema para a imagem original de fábrica usando o fastboot.
 

@@ -1,6 +1,6 @@
 # O que é APatch?
 
-APatch é uma solução root baseada em kernel para dispositivos Android que funciona no modo kernel e concede privilégios root para apps do espaço do usuário diretamente no espaço do kernel.
+APatch é uma solução root **baseada em kernel** para dispositivos Android que funciona no modo kernel e concede privilégios root para apps do espaço do usuário diretamente no espaço do kernel.
 
 ## Características
 
@@ -12,7 +12,7 @@ Fornece suporte para módulos de patch de kernel permitindo que qualquer código
 
 APatch depende do KernelPatch.
 
-A interface de usuário do Apatch e o código-fonte do APMódulo foram derivados e modificados a partir do KernelSU.
+A interface de usuário do APatch e o código-fonte do APMódulo foram derivados e modificados a partir do KernelSU.
 
 ## Como usar o APatch?
 
