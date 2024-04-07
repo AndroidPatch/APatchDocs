@@ -76,3 +76,8 @@ APatch可使用官方版[ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)。
 ## root检测软件无法通过？
 
 如果你的软件可以正常使用，那么就不要一直纠结于检测软件。
+
+## 一些软件莫名被授权 root
+::: info
+可能是新安装的软件与已卸载并授权 root 的软件 uid 相同，可尝试删除 `/data/adb/ap/package_config` 文件，来重新分配 root 权限
+:::
