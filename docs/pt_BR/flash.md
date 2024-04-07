@@ -30,7 +30,7 @@ Se o seu dispositivo tiver um sistema de recovery de terceiros (como o TWRP), vo
 Esta solução é recomendada apenas para dispositivos com uma partição `init_boot` e dispositivos que foram flashados com o `TWRP`.
 :::
 
-1. Clique em Desinstalar Magisk para restaurar a imagem original de fábrica.
+1. Clique em **Desinstalar Magisk** para restaurar a imagem original de fábrica.
 2. Consulte [aqui](/pt_BR/patch.md) para corrigir seu boot.img original.
 3. Reinicie o dispositivo no `TWRP` e instale o `boot.img` corrigido na `partição boot`.
 
