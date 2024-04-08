@@ -8,7 +8,7 @@ Compatível com a maioria dos dispositivos Android, não apenas limitado a dispo
 
 Fornece suporte ao APMódulo semelhante aos módulos do Magisk.
 
-Fornece suporte para módulos de patch de kernel permitindo que qualquer código seja injetado no kernel. As funções do kernel inline-hook e syscall-table-hook estão disponíveis.
+Fornece suporte para módulos de patch de kernel permitindo que qualquer código seja injetado no kernel. As funções do kernel **inline-hook** e **syscall-table-hook** estão disponíveis.
 
 APatch depende do KernelPatch.
 

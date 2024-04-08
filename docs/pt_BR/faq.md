@@ -19,15 +19,16 @@ KernelSU requer o código-fonte do kernel de seu dispositivo, que nem sempre é 
 ## APatch vs Magisk e KernelSU
 
 APatch permite opcionalmente não modificar o SELinux, isso significa que o thread do app pode ser rooteado, libsu e IPC não são necessários.
+
 **KPMódulo** fornecido.
 
 ## O que é KPMódulo?
 
-Alguns códigos são executados no espaço do kernel, semelhante ao Loadable Kernel Modules (LKM).
+Alguns códigos são executados no espaço do kernel, semelhante ao **Loadable Kernel Modules** (LKM).
 
-Além disso, o KPMódulo fornece a capacidade de executar inline-hook e syscall-table-hook no espaço do kernel.
+Além disso, o KPMódulo fornece a capacidade de executar `inline-hook` e `syscall-table-hook` no espaço do kernel.
 
-Para mais informações, veja [como escrever um KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/pt-BR/module.md).
+Para mais informações, veja [como escrever um KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/zh-CN/module.md).
 
 ## A relação entre APatch e KernelPatch
 
@@ -47,11 +48,11 @@ KernelPatch conecta chamadas do sistema para fornecer todos os recursos ao espa�
 
 KernelPatch não modifica o contexto do SELinux e ignora o SELinux via hook. Isso permite que você faça root em um thread do Android dentro do contexto do app sem a necessidade de usar libsu para iniciar um novo processo e então executar o IPC.
 
-Além disso, o APatch utiliza diretamente o magiskpolicy para fornecer suporte adicional ao SELinux. 
+Além disso, o APatch utiliza diretamente o magiskpolicy para fornecer suporte adicional ao SELinux.
 
 ## O módulo não pode ser instalado
 
-Revogue as permissões de root para o shell na página de autorização de root.
+Revogue as permissões de root para o shell na página de autorização root.
 
 ## O app automaticamente obtém e perde permissões root após o reinício do telefone
 
