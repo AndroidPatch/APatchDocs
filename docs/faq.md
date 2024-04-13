@@ -11,7 +11,7 @@ APatch分别结合了Magisk方便易用的通过`boot.img`安装的方法，和K
 
 ## APatch与Magisk的区别？
 
-- Magisk对启动映像中的ramdisk进行补丁，以修改init系统。而APatch则直接修补Linux内核。
+- Magisk对启动映像中的ramdisk进行补丁，以修改init系统。而APatch则直接修补Android内核。
 
 ## APatch与KernelSU的区别？
 
@@ -34,8 +34,8 @@ APatch分别结合了Magisk方便易用的通过`boot.img`安装的方法，和K
 
 APatch依赖于KernelPatch，继承了其所有功能并进行了扩展。
 
-您可以仅安装KernelPatch，但如此将不允许您使用Magisk模块。  
-要使用超级用户管理，您需要安装AndroidPatch，然后卸载KernelPatch。
+您可以仅安装KernelPatch，但如此将不允许您使用APM。  
+要使用超级用户管理，您需要安装APatch，然后卸载KernelPatch。
 
 [了解更多关于KernelPatch的信息](https://github.com/bmax121/KernelPatch)
 
@@ -71,6 +71,7 @@ APatch可使用官方版[ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)。
 
 ::: warning
 尽可能使用官方版本而不是第三方改版，除非你能确定此修改版无害。
+基于部分原因，在没有严重问题的情况下，我们建议使用 ZygiskNext 的 0.9.1.1 版本。
 :::
 
 ## root检测软件无法通过？

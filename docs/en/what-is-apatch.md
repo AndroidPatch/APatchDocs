@@ -1,6 +1,6 @@
 # What is AndroidPatch(APatch)?
 
-AndroidPatch(APatch) is a new Root solution based on Android Kernel, it can works in Kernel mode, and grant the root permission for user namespace applications in kernel namespace directly.
+AndroidPatch(APatch) is a new Root solution based on Android Kernel, it can works in Kernel mode, and grant the root permission for user space applications in kernel space directly.
 
 ## Features
 
