@@ -8,11 +8,11 @@
 
 提供类似 Magisk 模块的 APM 支持。
 
-提供内核补丁模块支持。允许将任何代码注入内核，内核函数 inline-hook 和 syscall-table-hook 可用）。
+提供内核补丁模块支持。允许将任何代码注入内核（要求内核函数 `inline-hook` 和 `syscall-table-hook` 可用）。
 
 APatch 依赖于 KernelPatch。
 
-APatch UI 和 APM 的源代码来自对 KernelSU 复制和修改。
+APatch 管理器 和 APM 的源代码来自对 KernelSU 管理器 和 KernelSU 的复制和修改。
 
 ## 如何使用
 
