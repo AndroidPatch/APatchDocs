@@ -1,10 +1,12 @@
+# Warning
+
 ::: info
-**SUPERKEY 的权限高于 root 访问权限**
+**The permission of SuperKey is higher then Root permission.**
 ::: info
-使用强密钥并保护它们免受暴露以维护设备的安全
+Using the strong key and prevent the key from exposure to ensure your device security.
 ::: warning
-弱密钥或泄露密钥可能导致未经授权的设备控制
+Weak key or exposed key may cause unauthenticated device control.
 :::
 ::: danger
-不要刷入他人修补的内核
+DO NOT FLASH ANY KERNEL PATCHED BY THIRD-PARTIES.
 :::

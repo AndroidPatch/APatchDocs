@@ -8,7 +8,7 @@ Works on most of Android devices, not only on GKI Kernel devices.
 
 Supports AndroidPatch Modules(APM) similar to Magisk Modules.
 
-Supports KernelPatch Modules(KPM), which allows to inject any code into Kernel (Requires Kernel function `inline-hook` and `syscall-table-hook` is enabled).
+Supports KernelPatch Modules(KPM), which allows to inject any code into Kernel (Requires Kernel function `inline-hook` and `syscall-table-hook` enabled).
 
 APatch depends on KernelPatch.
 
