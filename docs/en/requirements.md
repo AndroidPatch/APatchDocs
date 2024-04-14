@@ -1,16 +1,16 @@
-# Install Requirements
+# Install requirements
 
-The requirement of APatch basically reflected in Kernel configuration. Here are the requirements of Kernel:
+APatch installation requirements are mainly reflected in the kernel configuration. The kernel requirements are:
+
 ```
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=y
-CONFIG_KALLSYMS=y或CONFIG_KALLSYMS_ALL=n(Early Support)
+CONFIG_KALLSYMS=y
+CONFIG_KALLSYMS_ALL=n (Early support)
 ```
 
 ::: warning
+**Only supports the ARM64 architecture.**
 
-**Only supports the ARM64 architecture**
-
-**Only supports the Kernel version 3.18 - 6.1**
+**Only supports Android kernel versions 3.18 - 6.1**
 :::
-
