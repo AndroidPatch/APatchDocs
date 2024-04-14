@@ -3,12 +3,12 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'en-US',
-  description: '一个基于内核，为安卓准备的 root 方案。',
+  description: 'A Root solution based on Kernel and prepared for Android.',
 
   themeConfig: {
     nav: nav(),
 
-    lastUpdatedText: '最后更新',
+    lastUpdatedText: 'Last Updates',
 
     sidebar: {
       '/en/': sidebarGuide()
@@ -31,14 +31,14 @@ function sidebarGuide() {
     {
         text: 'Guide',
         items: [
-          { text: '什么是 APatch?', link: '/en/what-is-apatch' },
-          { text: '安装要求', link: '/en/requirements' },
-          { text: '重要提醒', link: '/en/warn' },
-          { text: '安装', link: '/en/install' },
-          { text: '修补', link: '/en/patch' },
-          { text: '刷入', link: '/en/flash' },
-          { text: '反馈与帮助', link: '/en/support' },
-          { text: '常见问题', link: '/en/faq' },
+          { text: 'What is APatch?', link: '/en/what-is-apatch' },
+          { text: 'Install Requirements', link: '/en/requirements' },
+          { text: 'Warnings', link: '/en/warn' },
+          { text: 'Installation', link: '/en/install' },
+          { text: 'Patch', link: '/en/patch' },
+          { text: 'Flash', link: '/en/flash' },
+          { text: 'Help and Support', link: '/en/support' },
+          { text: 'FAQs', link: '/en/faq' },
         ]
     }
   ]
