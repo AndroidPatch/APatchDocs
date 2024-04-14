@@ -24,7 +24,7 @@ APatch combines Magisk's easy and convenient install method by patching the `boo
 
 ## What is KernelPatch Module(KPM)
 
-KernelPatch Module contains some codes running in Kernel space similar to Loadable Kernel Modules(KPM)
+KernelPatch Module contains some codes running in Kernel space similar to Loadable Kernel Modules(LKM)
 
 KPM also provides the ability to perform inline hooks and system call table hooks in the kernel space.
 

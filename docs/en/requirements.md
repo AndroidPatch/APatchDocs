@@ -1,4 +1,4 @@
-# 安装要求
+# Install Requirements
 
 The requirement of APatch basically reflected in Kernel configuration. Here are the requirements of Kernel:
 ```
