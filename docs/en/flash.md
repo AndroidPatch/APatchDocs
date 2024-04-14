@@ -1,38 +1,42 @@
-# 刷入
-## fastboot 命令刷入
+# Flash
+
+Before flashing by any method, please confirm that you have [patched](/en/patch.md) your image correctly.
+
+
+## Flashing by fastboot command
 
 ::: info
-fastboot命令方便稳定，出错便于补救，是最理想的刷入方式
+This method is convenient and stable, you can easily recover your device if your device is corrupted. We strongly recommend using this way to flash.
 :::
 
-使用 adb 连接您的设备，然后执行:
+Connect your device using `adb`, then execute:
 
 ```
 adb reboot bootloader
 ```
 
-以进入 fastboot 模式，然后使用此命令刷入:
+to reboot your device into fastboot mode. Next, execute this command to flash:
 
 ```
 fastboot flash boot boot.img
 ```
 
-*如果你的设备支持 fastboot boot，可以先使用 fastboot boot boot.img 来先尝试使用 boot.img 引导系统，如果出现意外，再重启一次即可开机。*
+*If your device supports command `fastboot boot`, you can use `fastboot boot boot.img` command to boot the system before you flash the image. If any accident occured, just reboot again then your device will started to boot correctly.*
 
-## TWRP刷入
+## Flashing by third-party recovery
 
-如果你的设备有第三方recovery(比如TWRP),这时你可以通过TWRP刷写boot分区来获取root权限。
+If your device has a third-party recovery(such as TWRP), you can flash the image to boot partition directly.
 
-## Magisk 用户转 APatch
+## Convert your Magisk to APatch
 
 ::: warning
-本方案仅推荐有`init_boot`分区的设备且已经刷入`TWRP`的设备尝试
+This method is only recommended for users whose device has `init_boot` partition and has flashed any third-party recovery.
 :::
 
-1. Magisk 点击卸载 还原原厂镜像
-2. 将你的原厂 Boot 参照 [此处](/en/patch.md) 修补
-3. 重启设备到 `TWRP` 刷入修补过的 `Boot` 到 `Boot 分区`
+1. Open your Magisk application, choose "Uninstall Magisk', and choose "Restore Images".
+2. Patch your original image refer to [This](/en/patch.md) .
+3. Go to [here](/en/flash.md#Flashing-by-third-party-recovery) and flash your image refer to that method.
 
 ::: danger
-此方案有概率变砖，谨慎尝试
+This method might cause your device run correctly, use as your own risk.
 :::

@@ -1,132 +1,117 @@
-# 修补内核
+# Patching the Kernel
 
-## 自动修补
+## Automatically Patching
 
-1. 前往[GitHub](https://github.com/bmax121/APatch/releases)下载最新管理器
+1. Go to [GitHub](https://github.com/bmax121/APatch/releases) and install the latest stable version of APatch Manager.
 
-2. 点击 Patch 设置管理密钥，密钥需要 **"数字+字母"**，并且至少**8位**，后面解锁 Root 权限需要用到
+2. Click "Patch" and define a SuperKey. A SuperKey requires **numbers + alphabets** , and requires at least **8 bytes** length. SuperKey is required for unlocking root premission.
 
 :::warning 
-禁止设置 `114514` 等弱密码，新版 APatch 管理器 已强制使用强密码  [原因](/en/warn)
+You MUST NOT set a weak password such as `12345678`, the new version of APatch Manager force [requires a strong password](/en/warn)
 :::
 
-3. 选择你的 boot.img，确认后等待修补完成。修补成功后会显示修补后的 img镜像 路径。例如: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
+3. Select your `boot.img`, comfirm and wait APatch patchs the image. If complete, APatch Manager will display the location of patched image, such as: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
 
-最后按你的实际情况[刷入](/en/flash)即可
+Finally, [Flash](/en/flash) your image under your actually circumstance, and it dones.
 
 
-## 手动修补
+## Manually Patching
 
-**当内核补丁更新后，管理器仍未更新时，你可以选择手动修补内核**
+**You can choose to patch the kernel manually when KernelPatch updated but APatch Manager was not updated.**
 
-你可以前往[KernelPatch](https://github.com/bmax121/KernelPatch/releases)项目获取最新的`KP`文件
+You can go to [KernelPatch](https://github.com/bmax121/KernelPatch/releases) page to get the latest "KP" files.
 
 ### Windows
 
-1. 下载 `kptools-win.zip` 和 `kpimg-android` ，并解压到当前目录使用，同时下载 `magiskboot(Windows)` 
+1. Download `kptools-win.zip` and `kpimg-android`， unzip them to current folder to use. Download `magiskboot(Windows)` at the same time. 
 
-2. 执行
+2. Execute this command:
 ```
 magiskboot.exe unpack boot.img
 ```
 
-解压 boot，然后将 kernel 改名为 kernel-b (kernel-b可以是其他第三方内核，但是第三方内核不做任何保证，也不会受到支持)
+to unpack the `boot.img`. Then, rename `kernel` to `kernel-b`(`kernel-b` can be any third-party kernels, but we can not guarantee that the third-party kernel can run APatch correctly, and we won't provide any support for third-party kernels.)
 
-Windows可以使用 CMD 或 PowerShell 进行修补
+Windows Platform can use `cmd` or `PowerShell` to patch.
 
-执行
+Execute this command to patch:
 ```
 kptools-x86_64-win.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
-或者更推荐的，使用 `WSL` 的`Linux`修补
+Or using the `WSL Linux`, which is more recommended to patch:
 
 ```
 ./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
-修补后无报错，最后用
+If no error reported during the patch process, execute this command:
 
 ```
 magiskboot.exe repack boot.img
 ```
 
-打包生成镜像，生成的 **new-boot.img** 即为修补好的镜像
+to repack the patched image, the image generated which is called **new-boot.img** is the patched image.
 
 ---
 
 ### Linux
 
-1. 下载 `kptools-linux` 和 `kpimg-android` ，并下载 `magiskboot`
+1. Download `kptools-linux`, `kpimg-android` and `magiskboot` to the same folder.
 
-2. 执行
+2. Execute this command:
 
 ```
 magiskboot unpack boot.img
 ```
 
-解包boot，获取kernel文件。将kernel改名为kernel-b。
+to unpack the `boot.img`. Then, rename `kernel` to `kernel-b`(`kernel-b` can be any third-party kernels, but we can not guarantee that the third-party kernel can run APatch correctly, and we won't provide any support for third-party kernels.)
 
-使用以下命令来修补内核镜像:
+Execute this command to patch:
 
 ```
 ./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
-修补后无报错，最后用
+If no error reported during the patch process, execute this command:
 
 ```
 magiskboot repack boot.img
 ```
 
-打包生成镜像，生成的 `new-boot.img` 即是修补好的镜像
+to repack the patched image, the image generated which is called **new-boot.img** is the patched image.
 
 ::: warning 
-再次强调 严禁设置`114514`等弱密码
+Emphasize again, DO NOT set week password such as `12345678`.
 :::
 
-# KP命令及注解
+# KP Commands and comment:
 ::: info
-[你可以点此尝试](https://exame.apatch.top/)
+You can click [this](https://exame.apatch.top/) to have a try.
 :::
 ```
--h，——help打印此信息。
-
--v，——version打印版本号。如果指定了-k，则打印kimpg版本。
-
--p，——patch补丁或更新内核映像的补丁(-i)，指定kimpg (-k)和超级键(-s)。
-
--u，——unpatch解除补丁后的内核映像(-i)。
-
--r，——Reset -skey重置补丁映像的超级密钥(-i)。
-
--d，——dump dump内核镜像的kallsyms信息(-i)。
-
--l，——list如果指定(-i)，打印内核镜像的所有补丁信息。
-如果指定了(-M)，则打印额外的项目信息。
-如果指定(-k)，则打印KernelPatch映像信息。
-选项:-i，——image PATH内核镜像路径。
-
--k，——kimpg PATH内核补丁镜像路径。
-
--s，——skey PATH设置超级键。
-
--o，——out PATH补丁镜像路径。
-
--a——Add KEY=VALUE添加附加信息。
-
--K，——kpatch PATH将kpatch可执行二进制文件嵌入补丁中。
-
--M，——Embed -extra- PATH PATH嵌入新的额外项。
-
--E，——embed -extra- NAME NAME保留和修改嵌入的额外项。
-
--T，——extra- TYPE TYPE设置上一个附加项的类型。
-
--N，——extra- NAME NAME设置前一个附加项的名称。
-
--V，——extra- EVENT EVENT设置前一个额外项的触发事件。
-
--A，——extra- ARGS ARGS设置前一个额外项的参数。
-
--D，——extra- Detach从补丁中分离先前的额外项目。
+COMMAND:
+  -h, --help                       Print this message.
+  -v, --version                    Print version number. Print kpimg version if -k specified.
+  -p, --patch                      Patch or Update patch of kernel image(-i) with specified kpimg(-k) and superkey(-s).
+  -u, --unpatch                    Unpatch patched kernel image(-i).
+  -r, --reset-skey                 Reset superkey of patched image(-i).
+  -d, --dump                       Dump kallsyms infomations of kernel image(-i).
+  -l, --list                       Print all patch informations of kernel image if (-i) specified.
+                                   Print extra item informations if (-M) specified.
+                                   Print KernelPatch image informations if (-k) specified.
+Options:
+  -i, --image PATH                 Kernel image path.
+  -k, --kpimg PATH                 KernelPatch image path.
+  -s, --skey KEY                   Set the superkey and save it directly in the boot.img.
+  -S, --root-skey KEY              Set the root-superkey that uses hash verification, and the superkey can be changed dynamically.
+  -o, --out PATH                   Patched image path.
+  -a  --addition KEY=VALUE         Add additional information.
+  -K, --kpatch PATH                Embed kpatch executable binary into patches.
+  -M, --embed-extra-path PATH      Embed new extra item.
+  -E, --embeded-extra-name NAME    Preserve and modifiy embedded extra item.
+  -T, --extra-type TYPE            Set type of previous extra item.
+  -N, --extra-name NAME            Set name of previous extra item.
+  -V, --extra-event EVENT          Set trigger event of previous extra item.
+  -A, --extra-args ARGS            Set arguments of previous extra item.
+  -D, --extra-detach               Detach previous extra item from patches.
 ```

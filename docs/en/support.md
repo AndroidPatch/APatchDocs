@@ -1,17 +1,17 @@
-# 反馈与帮助
+# Help and support
 
-## 项目开发者
+## APatch developer(s)
 
 [bmax121](https://github.com/bmax121)
 
-## 项目地址
+## Project website
 
 [APatch](https://github.com/bmax121/APatch)
 
 [KernelPatch](https://github.com/bmax121/KernelPatch)
 
-## 交流群
+## Groups
 
-[\[ZH/EN\]APatch Discussions(官方群)](https://t.me/apatch_discuss) (管理较宽松)
+[\[ZH/EN\]APatch Discussions(Official group)](https://t.me/apatch_discuss)(Tolerant management)
 
-[\[ZH\]APatch_CN_Group(半官方)](https://t.me/APatch_CN_Group) (有严格的入群审核与管理制度)
+[\[ZH\]APatch_CN_Group(half-Official group)](https://t.me/APatch_CN_Group)(Strict management, only for Chinese users)

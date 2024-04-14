@@ -4,30 +4,30 @@ layout: home
 
 hero:
   name: "APatch"
-  text: "安卓内核 Root 新方案"
-  tagline: 为 Android 内核 3.18 - 6.1 版本提供的通用 root 方案
+  text: "The NEW solution of Android Kernel root"
+  tagline: Provides a general root solution for Android Kernel version 3.18 - 6.1
   image:
     src: /logo.png
-    alt: 背景图片
+    alt: Background Picture
   actions:
     - theme: brand
-      text: 开始了解
+      text: Explore
       link: /en/what-is-apatch
     - theme: alt
-      text: 在 GitHub 中查看
+      text: View on Github
       link: https://github.com/bmax121/APatch
     - theme: alt
-      text: 贡献文档
+      text: Contributing the Documents
       link: https://github.com/AndroidPatch/APatchDocs
 
 features:
-  - title: 基于内核
-    details: APatch 运行在内核空间，相比用户空间Root有更强的隐蔽性和掌控性。
-  - title: 白名单访问控制
-    details: 只有被授权的 App 才可以访问 'su'，而其他 App 无法感知其存在。
-  - title: APM
-    details: 类似 Magisk 模块的支持。
-  - title: KPM
-    details: 内核补丁模块支持。（允许将任何代码注入内核，内核函数 inline-hook 和 syscall-table-hook 可用）
+  - title: Based on Kernel
+    details: APatch is running on Kernel space, with stronger concealment and controllability then user space Root.
+  - title: Whitelist call control
+    details: Only granted applications can call 'su', other applications can not know the existance of 'su'.
+  - title: AndroidPatch Modules
+    details: Modules support similar to Magisk.
+  - title: KernelPatch Modules
+    details: Modules support of KernelPatch(allows to inject any code in kernel, requires kernel function inline-hook and syscall-table-hook enabled).
 ---
 

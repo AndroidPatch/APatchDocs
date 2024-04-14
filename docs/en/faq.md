@@ -1,78 +1,78 @@
-# 常见问题解答
+# FAQs
 
-## 什么是APatch？
+## What is APatch?
 
 ::: info
-[这里](/en/what-is-apatch)的介绍更完整。
+[There](/en/what-is-apatch) is a more complete introduction.
 :::
 
-APatch是一种类似于Magisk或KernelSU的root解决方案，但APatch提供更多功能。
-APatch分别结合了Magisk方便易用的通过`boot.img`安装的方法，和KernelSU强大的内核修补能力。
+APatch is a root solution similar to Magisk and KernelSU, but APatch provides more functions.
+APatch combines Magisk's easy and convenient install method by patching the `boot.img` and KernelSU's strong ability of patching the kernel.
 
-## APatch与Magisk的区别？
+## What is the difference of APatch and Magisk?
 
-- Magisk对启动映像中的ramdisk进行补丁，以修改init系统。而APatch则直接修补Linux内核。
+- Magisk patchs the ramdisk in boot image to modify the init. APatch patchs the Android Kernel directly.
 
-## APatch与KernelSU的区别？
+## What is the difference of APatch and KernelSU?
 
-- KernelSU需要您设备的内核的源代码，而OEM并不总是提供该源码。而APatch仅需要您的设备原本的`boot.img`。
+- KernelSU requires the source code of your device kernel, which OEMs not always provide it. APatch only needs your original `boot.img` of your device.
 
-## APatch与Magisk、KernelSU的区别？
+## What is the difference of APatch and Magisk&KernelSU?
 
-- APatch可选择不修改SELinux，这意味着Android应用程序线程可以被root，无需libsu和IPC。
-- APatch提供**Kernel Patch Module（KP模块）**。
+- APatch can choose not to modify the SELinux, which means the Android application threads can be rooted without libsu and IPC.
+- APatch provides **KernelPatch Module(KPM)**.
 
-## 什么是Kernel Patch Module（KP模块）？
+## What is KernelPatch Module(KPM)
 
-一些代码在内核空间运行，类似于Loadable Kernel Modules（LKM）。
+KernelPatch Module contains some codes running in Kernel space similar to Loadable Kernel Modules(KPM)
 
-此外，KPM提供在内核空间进行内联hook、系统调用表hook的能力。
+KPM also provides the ability to perform inline hooks and system call table hooks in the kernel space.
 
-更多相关信息，请参阅[如何编写KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/zh-CN/module.md)
+Please read [How to write the KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/zh-CN/module.md) for further information.
 
-## APatch与KernelPatch的关系
+## The relationship of APatch and KernelPatch
 
-APatch依赖于KernelPatch，继承了其所有功能并进行了扩展。
+APatch depends on KernelPatch, succeeded all of its function and extented it.
 
-您可以仅安装KernelPatch，但如此将不允许您使用Magisk模块。  
-要使用超级用户管理，您需要安装AndroidPatch，然后卸载KernelPatch。
+You can install KernelPatch only. However, it will prevent you from using the APM.
+To use the SuperUser management, you need install APatch, and uninstall KernelPatch.
 
-[了解更多关于KernelPatch的信息](https://github.com/bmax121/KernelPatch)
+For further information of KernelPatch, please read [This](https://github.com/bmax121/KernelPatch).
 
-## 什么是SuperKey（超级密钥）？
+## What is Superkey？
 
-KernelPatch 添加了一个新的系统调用（syscall），为应用程序和用户空间中的程序提供所有功能，此系统调用称为SuperCall。 
-当应用程序/程序尝试调用SuperCall时，它需要提供访问凭据，称为SuperKey。
-只有当SuperKey正确时，才能成功调用 SuperCall。否则，调用方将不受影响。
+KernelPatch added a new syscall, provided all function in applications. This syscall is called SuperCall.
+When any application tries to call SuperCall, it needs to provide a token, which is called SuperKey. SuperCall will only be successful called only correct SuperKey is provided. Otherwise, no modification will be applied.  
 
-## 关于SELinux如何处理？
+## How to produce the SELinux?
 
-- KernelPatch不修改SELinux上下文，而是通过hook绕过SELinux。 这允许您在应用程序上下文中root Android线程，无需使用libsu启动新进程，然后执行IPC。这非常方便。
-- 此外，APatch直接利用magiskpolicy提供额外的SELinux支持。  
+- KernelPatch not modifys the SELinux. Instead, it bypasses the SELinux by hooking it. This allows you root the Android processes in application space without start a new process by `libsu` and executing `IPC`.
+- In addition, APatch uses the `magiskpolicy` to add addition support of SELinux directly.  
 
-## 模块无法安装(os error 2/5/22)?
+## Can not install modules(os error 2/5/22)?
 
-在root授权页面取消shell的root权限。
+Remove the root permission of "shell" application in SuperUser page.
 
-## APP 在手机重启后自动获得/丢失 root 权限?
+## APP granted/lost root permission automatically when rebooting device?
 
-参阅 [这里](https://t.me/APatchChannel/74)
+Read [This](https://t.me/APatchChannel/74).
 
-## 无法使用 Shamiko
+## Can not use Shamiko?
 
-Shamiko闭源并且停更，无法适配。
+We can not support Shamiko due to its close-source and no updates.
 ::: info
-如果你必须使用，使用Shamiko 0.7.4。
+If you have to use Shamiko, please use version 0.7.4.
 :::
 
-## Zygisk 支持？
+## Zygisk Support?
 
-APatch可使用官方版[ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)。
+APatch can use the [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) to add the Zygisk support.
 
 ::: warning
-尽可能使用官方版本而不是第三方改版，除非你能确定此修改版无害。
+Use the official build of ZygiskNext instead of the third-party modified version, unless you can confirm that it is harmless.
+Due to some reasons, we recommended to use the version 0.9.1.1 of ZygiskNext if no serious issues is appeared.
 :::
 
-## root检测软件无法通过？
+## Can not pass the root-detecting application?
 
-如果你的软件可以正常使用，那么就不要一直纠结于检测软件。
+If your other applications can work correctly, do not be tangled in detecting applications.

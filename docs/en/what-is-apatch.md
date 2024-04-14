@@ -1,23 +1,23 @@
-# 什么是 APatch
+# What is AndroidPatch(APatch)?
 
-适用于 Android 设备的基于内核的 Root 新解决方案，可以工作在内核模式，并直接在内核空间中为用户空间应用程序授予 root 权限。
+AndroidPatch(APatch) is a new Root solution based on Android Kernel, it can works in Kernel mode, and grant the root permission for user space applications in kernel space directly.
 
-## 特点
+## Features
 
-适用于大部分安卓设备，不仅限于GKI内核设备。
+Works on most of Android devices, not only on GKI Kernel devices.
 
-提供类似 Magisk 模块的 APM 支持。
+Supports AndroidPatch Modules(APM) similar to Magisk Modules.
 
-提供内核补丁模块支持。允许将任何代码注入内核，内核函数 inline-hook 和 syscall-table-hook 可用）。
+Supports KernelPatch Modules(KPM), which allows to inject any code into Kernel (Requires Kernel function `inline-hook` and `syscall-table-hook` enabled).
 
-APatch 依赖于 KernelPatch。
+APatch depends on KernelPatch.
 
-APatch UI 和 APM 的源代码来自对 KernelSU 复制和修改。
+The source code of APatch UI and APM is based and modified on the source code of KernelSU Manager and KernelSU.
 
-## 如何使用
+## How to use?
 
-请参考:[安装教程](/en/install).
+Please read this: [Installation Guide](/en/install).
 
-## 如何修补
+## How to patch?
 
-请参考:[修补教程](/en/patch).
+Please read this: [Patch Guide](/en/patch).
