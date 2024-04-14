@@ -3,12 +3,12 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'en-US',
-  description: 'A Root solution based on Kernel and prepared for Android.',
+  description: 'A kernel-based root solution for Android devices.',
 
   themeConfig: {
     nav: nav(),
 
-    lastUpdatedText: 'Last Updates',
+    lastUpdatedText: 'Last updated',
 
     sidebar: {
       '/en/': sidebarGuide()
@@ -32,13 +32,13 @@ function sidebarGuide() {
         text: 'Guide',
         items: [
           { text: 'What is APatch?', link: '/en/what-is-apatch' },
-          { text: 'Install Requirements', link: '/en/requirements' },
-          { text: 'Warnings', link: '/en/warn' },
+          { text: 'Install requirements', link: '/en/requirements' },
+          { text: 'Warning', link: '/en/warn' },
           { text: 'Installation', link: '/en/install' },
           { text: 'Patch', link: '/en/patch' },
           { text: 'Flash', link: '/en/flash' },
-          { text: 'Help and Support', link: '/en/support' },
-          { text: 'FAQs', link: '/en/faq' },
+          { text: 'Feedback and help', link: '/en/support' },
+          { text: 'FAQ', link: '/en/faq' },
         ]
     }
   ]
