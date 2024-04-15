@@ -10,7 +10,7 @@ APatch é uma solução root semelhante ao Magisk ou KernelSU que une o melhor d
 
 ## Qual é a diferença entre APatch e Magisk?
 
-Magisk modifica o sistema `init` com um patch no `ramdisk` da sua imagem de inicialização, enquanto o APatch corrige o kernel diretamente.
+Magisk modifica o sistema `init` com um patch no `ramdisk` da sua imagem de inicialização, enquanto APatch corrige diretamente o kernel Android.
 
 ## APatch vs KernelSU
 
@@ -34,9 +34,9 @@ Para mais informações, veja [como escrever um KPM](https://github.com/bmax121/
 
 APatch depende do KernelPatch. Ele herda todas as suas capacidades e foi expandido.
 
-Você pode instalar apenas o KernelPatch, mas isso não permitirá o uso de módulos do Magisk.
+Você pode instalar apenas o KernelPatch, mas isso não permitirá o uso do APM.
 
-Para usar o gerenciamento de SuperUsuário, você precisa instalar o AndroidPatch e depois desinstalar o KernelPatch.
+Para usar o gerenciamento de SuperUsuário, você precisa instalar o APatch e depois desinstalar o KernelPatch.
 
 [Saiba mais sobre o KernelPatch](https://github.com/bmax121/KernelPatch).
 
@@ -46,9 +46,9 @@ KernelPatch conecta chamadas do sistema para fornecer todos os recursos ao espa�
 
 ## O que é SELinux?
 
-KernelPatch não modifica o contexto do SELinux e ignora o SELinux via hook. Isso permite que você faça root em um thread do Android dentro do contexto do app sem a necessidade de usar libsu para iniciar um novo processo e então executar o IPC.
+KernelPatch não modifica o contexto do SELinux e ignora o SELinux via hook. Isso permite que você faça root em um thread do Android dentro do contexto do app sem a necessidade de usar `libsu` para iniciar um novo processo e então executar o `IPC`.
 
-Além disso, o APatch utiliza diretamente o magiskpolicy para fornecer suporte adicional ao SELinux.
+Além disso, o APatch utiliza diretamente o `magiskpolicy` para fornecer suporte adicional ao SELinux.
 
 ## O módulo não pode ser instalado
 
@@ -63,7 +63,7 @@ Veja [aqui](https://t.me/APatchChannel/74).
 Shamiko é de código fechado e parou de ser atualizado, portanto, não pode ser adaptado.
 
 ::: info INFORMAÇÕES
-Se você precisar usá-lo, use o Shamiko 0.7.4.
+Se você precisar usá-lo, use o Shamiko [0.7.4](https://github.com/LSPosed/LSPosed.github.io/releases/tag/shamiko-188).
 :::
 
 ## Suporta Zygisk?
@@ -71,7 +71,7 @@ Se você precisar usá-lo, use o Shamiko 0.7.4.
 APatch pode usar a versão oficial do [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext).
 
 ::: warning AVISO
-Sempre que possível, use a versão oficial em vez de modificações de terceiros, a menos que tenha certeza de que a versão modificada é inofensiva.
+Sempre que possível, use a versão oficial em vez de modificações de terceiros, a menos que tenha certeza de que a versão modificada é inofensiva. Por alguns motivos, recomendamos usar a versão [0.9.1.1](https://github.com/Dr-TSNG/ZygiskNext/releases/tag/v4-0.9.1.1) do ZygiskNext se nenhum problema sério aparecer.
 :::
 
 ## O software de detecção de root falha
