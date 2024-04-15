@@ -26,7 +26,7 @@ APatch allows you to optionally not modify SELinux, this means the app thread ca
 
 Some code runs in kernel space, similar to **Loadable Kernel Modules** (LKM).
 
-Additionally, the KPM provides the ability to run `inline-hook` and `syscall-table-hook` in kernel space.
+Additionally, the KPM provides the ability to execute `inline-hook` and `syscall-table-hook` in kernel space.
 
 Please read [How to write KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/zh-CN/module.md) for more information.
 
@@ -62,7 +62,7 @@ Read [this](https://t.me/APatchChannel/74).
 
 We can not support Shamiko due to its close-source and no updates.
 ::: info
-If you have to use Shamiko, please use version 0.7.4.
+If you have to use Shamiko, please use version [0.7.4](https://github.com/LSPosed/LSPosed.github.io/releases/tag/shamiko-188).
 :::
 
 ## Zygisk support?
