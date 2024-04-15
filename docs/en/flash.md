@@ -22,7 +22,7 @@ fastboot flash boot boot.img
 
 If your device supports command `fastboot boot`, you can use `fastboot boot boot.img` command to boot the system before you flash the image. If any accident occured, just reboot again then your device will started to boot correctly.
 
-## Using recovery
+## Using third-party recovery
 
 If your device has a third-party recovery (such as TWRP), you can use TWRP to flash the `boot.img` partition and gain root access.
 
@@ -34,7 +34,7 @@ This method is only recommended for users whose device has `init_boot` partition
 
 1. Open your Magisk application, choose **Uninstall Magisk**, and choose **Restore Images**.
 2. Refer [here](/en/patch.md) to fix your original boot.img.
-3. Reboot the device into `TWRP` and install the patched `boot.img` on the `boot partition`.
+3. Reboot the device into `third-party recovery` and install the patched `boot.img` on the `boot partition`.
 
 ::: danger
 This method has a chance of making your device unusable, so please try it carefully.
