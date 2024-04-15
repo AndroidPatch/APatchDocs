@@ -8,5 +8,5 @@ Use senhas fortes e proteja-as da exposição para manter a segurança do dispos
 Senhas fracas ou comprometidas podem levar ao controle não autorizado do dispositivo.
 :::
 ::: danger PERIGO
-Não flash kernels corrigidos por outros.
+**NÃO FLASH NENHUM KERNEL CORRIGIDO POR TERCEIROS.**
 :::
