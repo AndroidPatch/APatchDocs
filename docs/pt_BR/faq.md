@@ -12,11 +12,11 @@ APatch é uma solução root semelhante ao Magisk ou KernelSU que une o melhor d
 
 Magisk modifica o sistema `init` com um patch no `ramdisk` da sua imagem de inicialização, enquanto APatch corrige diretamente o kernel Android.
 
-## APatch vs KernelSU
+## Qual é a diferença entre APatch e KernelSU?
 
 KernelSU requer o código-fonte do kernel de seu dispositivo, que nem sempre é fornecido pelo OEM. APatch funciona apenas com seu `boot.img` stock.
 
-## APatch vs Magisk e KernelSU
+## Qual é a diferença entre APatch, Magisk e KernelSU?
 
 APatch permite opcionalmente não modificar o SELinux, isso significa que o thread do app pode ser rooteado, libsu e IPC não são necessários.
 
