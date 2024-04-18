@@ -4,7 +4,7 @@ import { readdir, writeFile } from 'fs/promises'
 import { resolve } from 'path'
 
 export default defineConfig( {
-    title: 'APatch',
+    title: 'APatch Docs',
     locales: locales.locales,
     ignoreDeadLinks: true,
     sitemap: {
