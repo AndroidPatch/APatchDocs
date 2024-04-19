@@ -10,7 +10,6 @@ CONFIG_KALLSYMS_ALL=n (Suporte antecipado)
 ```
 
 ::: warning AVISO
-
 **Suporta apenas arquitetura ARM64.**
 
 **Suporta apenas versões do kernel Android 3.18 - 6.1**
