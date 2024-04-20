@@ -6,7 +6,7 @@ APatch installation requirements are mainly reflected in the kernel configuratio
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=y
 CONFIG_KALLSYMS=y
-CONFIG_KALLSYMS_ALL=n (Early support)
+CONFIG_KALLSYMS_ALL=n (Initial support)
 ```
 
 ::: warning

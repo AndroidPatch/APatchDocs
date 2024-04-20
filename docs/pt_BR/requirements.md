@@ -6,7 +6,7 @@ Os requisitos de instalação do APatch são principalmente refletidos na config
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=y
 CONFIG_KALLSYMS=y
-CONFIG_KALLSYMS_ALL=n (Suporte antecipado)
+CONFIG_KALLSYMS_ALL=n (Suporte inicial)
 ```
 
 ::: warning AVISO

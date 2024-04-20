@@ -1,11 +1,11 @@
 # Warning
 
 ::: info
-**SuperKey has higher permissions than root access.**
+**The SuperKey has higher privilege than root access.**
 ::: info
-Use strong passwords and protect them from exposure to maintain device security.
+Use strong keys and protect them from exposure to maintain device security.
 ::: warning
-Weak or compromised passwords can lead to unauthorized control of the device.
+Weak or compromised keys can lead to unauthorized control of the device.
 :::
 ::: danger
 **DO NOT FLASH ANY KERNEL PATCHED BY THIRD-PARTIES.**

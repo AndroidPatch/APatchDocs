@@ -7,7 +7,7 @@
 2. Click Patch and define a SuperKey. The SuperKey needs to have **numbers and letters** and at least **8 characters**. It will be used later to unlock root privileges.
 
 :::warning 
-It is prohibited to set weak passwords like `12345678`. The latest versions of APatch [requires the use of strong passwords](/en/warn)
+It is prohibited to set weak keys like `12345678`. The latest versions of APatch [requires the use of strong keys](/en/warn).
 :::
 
 3. Select the `boot.img` of your ROM, confirm and wait for the patch to complete. After the patch is successful, the patched boot.img path will be displayed. For example: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
@@ -83,7 +83,7 @@ magiskboot repack boot.img
 Package and generate the image. The generated `new-boot.img` is the patched image.
 
 ::: warning 
-Again, it is strictly prohibited to set weak passwords like `12345678`.
+Again, it is strictly prohibited to set weak keys like `12345678`.
 :::
 
 # KP commands and comments:

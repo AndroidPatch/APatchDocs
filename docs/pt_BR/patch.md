@@ -7,7 +7,7 @@
 2. Clique em Patch para definir a SuperKey. A SuperKey precisa ter **números e letras** e pelo menos **8 caracteres**. Ela será usada posteriormente para desbloquear privilégios root.
 
 :::warning AVISO
-É proibido definir senhas fracas como `12345678`. As versões mais recentes do APatch [obriga o uso de senhas fortes](/pt_BR/warn).
+É proibido definir chaves fracas como `12345678`. As versões mais recentes do APatch [obriga o uso de chaves fortes](/pt_BR/warn).
 :::
 
 3. Selecione o `boot.img` de sua ROM, confirme e aguarde a conclusão do patch. Depois que o patch for bem-sucedido, o caminho do boot.img corrigido será exibido. Por exemplo: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
@@ -83,7 +83,7 @@ magiskboot repack boot.img
 Empacote e gere a imagem. O `new-boot.img` gerado é a imagem corrigida.
 
 ::: warning AVISO
-Novamente, é estritamente proibido definir senhas fracas como `12345678`.
+Novamente, é estritamente proibido definir chaves fracas como `12345678`.
 :::
 
 # Comandos e comentários do KP
