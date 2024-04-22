@@ -4,7 +4,7 @@
 
 1. 前往[GitHub](https://github.com/bmax121/APatch/releases)下载最新管理器
 
-2. 点击 Patch 设置管理密钥，密钥需要 **"数字+字母"**，并且至少**8位**，后面解锁 Root 权限需要用到
+2. 点击主页右上角的 ![Patch Button](/PButton.png) 按钮来设置管理密钥，密钥需要 **"数字+字母"**，并且至少**8位**，后面解锁 Root 权限需要用到
 
 :::warning 
 禁止设置 `114514` 等弱密码，新版 APatch 管理器 已强制使用强密码  [原因](/warn)
