@@ -16,6 +16,6 @@
 
 1. Ensure to use the latest ADB and fastboot tools and have knowledge about them to proceed to the next step. If you haven't learned about them yet, we recommend researching to learn about them first.
 
-2. APatch fixes the `boot.img` regardless of the device. Do not attempt to fix or flash the `init_boot` or other partition image files. The APatch developers are not responsible for resulting patch and boot failures.
+2. APatch patch the `boot.img` regardless of the device. Do not attempt to patch or flash the `init_boot` or other partition image files. The APatch developers are not responsible for resulting patch and boot failures.
 
 3. Avoid using the `boot.img` file that has been patched by other managers to avoid unexpected situations.

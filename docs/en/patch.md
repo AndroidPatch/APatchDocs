@@ -4,7 +4,7 @@
 
 1. Download the latest manager from [GitHub](https://github.com/bmax121/APatch/releases).
 
-2. Click Patch and define a SuperKey. The SuperKey needs to have **numbers and letters** and at least **8 characters**. It will be used later to unlock root privileges.
+2. Click on the button ![Patch Button](/PButton.png) at the top right corner of the homepage to set the SuperKey. The SuperKey needs to have **numbers and letters** and at least **8 characters**. It will be used later to unlock root privileges.
 
 :::warning 
 It is prohibited to set weak keys like `12345678`. The latest versions of APatch [requires the use of strong keys](/en/warn).
@@ -93,21 +93,21 @@ You can click [this](https://exame.apatch.top/) to have a try.
 :::
 
 ```
-COMMANDS:
+COMMAND:
   -h, --help                       Print this message.
   -v, --version                    Print version number. Print kpimg version if -k specified.
-  -p, --patch                      Patch or Update patch of kernel image(-i) with specified kpimg(-k) and SuperKey(-s).
+  -p, --patch                      Patch or Update patch of kernel image(-i) with specified kpimg(-k) and superkey(-s).
   -u, --unpatch                    Unpatch patched kernel image(-i).
-  -r, --reset-skey                 Reset SuperKey of patched image(-i).
+  -r, --reset-skey                 Reset superkey of patched image(-i).
   -d, --dump                       Dump kallsyms infomations of kernel image(-i).
   -l, --list                       Print all patch informations of kernel image if (-i) specified.
                                    Print extra item informations if (-M) specified.
                                    Print KernelPatch image informations if (-k) specified.
-OPTIONS:
+Options:
   -i, --image PATH                 Kernel image path.
   -k, --kpimg PATH                 KernelPatch image path.
-  -s, --skey KEY                   Set the SuperKey and save it directly in the boot.img.
-  -S, --root-skey KEY              Set the root-superkey that uses hash verification, and the SuperKey can be changed dynamically.
+  -s, --skey KEY                   Set the superkey and save it directly in the boot.img.
+  -S, --root-skey KEY              Set the root-superkey that uses hash verification, and the superkey can be changed dynamically.
   -o, --out PATH                   Patched image path.
   -a  --addition KEY=VALUE         Add additional information.
   -K, --kpatch PATH                Embed kpatch executable binary into patches.

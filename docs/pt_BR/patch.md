@@ -4,7 +4,7 @@
 
 1. Baixe o gerenciador mais recente no [GitHub](https://github.com/bmax121/APatch/releases).
 
-2. Clique em Patch para definir a SuperKey. A SuperKey precisa ter **números e letras** e pelo menos **8 caracteres**. Ela será usada posteriormente para desbloquear privilégios root.
+2. Clique no botão ![Patch Button](/PButton.png) no canto superior direito da página inicial para definir a SuperKey. A SuperKey precisa ter **números e letras** e pelo menos **8 caracteres**. Ela será usada posteriormente para desbloquear privilégios root.
 
 :::warning AVISO
 É proibido definir chaves fracas como `12345678`. As versões mais recentes do APatch [obriga o uso de chaves fortes](/pt_BR/warn).
