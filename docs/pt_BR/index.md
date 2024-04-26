@@ -24,7 +24,7 @@ features:
   - title: Baseado em kernel
     details: APatch é executado no espaço do kernel e tem maior ocultação e controle do que o espaço do usuário root.
   - title: Controle de acesso root
-    details: Somente apps permitidos podem acessar ou ver su, todos os outros apps não estão cientes disso.
+    details: Somente apps permitidos podem acessar su, todos os outros apps não estarão cientes disso.
   - title: APMódulo
     details: Suporte a módulos semelhantes ao Magisk.
   - title: KPMódulo

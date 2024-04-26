@@ -30,7 +30,7 @@ Additionally, the KPM provides the ability to execute `inline-hook` and `syscall
 
 Please read [How to write KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/zh-CN/module.md) for more information.
 
-## The relationship of APatch and KernelPatch
+## What is the relationship of APatch and KernelPatch?
 
 APatch depends on KernelPatch. It inherits all of its capabilities and has been expanded.
 
@@ -50,7 +50,7 @@ KernelPatch not modify the SELinux context but bypasses SELinux via hook. This a
 
 In addition, APatch uses the `magiskpolicy` to add addition support of SELinux directly. 
 
-## WebUI of APM / KPM
+## WebUI of APM/KPM
 
 The APatch source code has been derived and modified from KernelSU, so APatch introduced WebUI feature in version [10568](https://github.com/bmax121/APatch/releases/tag/10568) after KernelSU introduced WebUI feature.
 
@@ -87,7 +87,7 @@ APatch also can use the [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod
 If you only need to use LSPosed without other Zygisk features, you also can try [Zloader](https://github.com/Mufanc/z-loader) [for LSPosed](https://t.me/mufanc_chan/28) to load LSPosed simply.
 
 ::: warning
-Zloader is NOT compatible with any Zygisk implementation for example ZygiskNext / Zygisk_mod, please disable or uninstall any Zygisk implementation before using Zloader.
+Zloader is NOT compatible with any Zygisk implementation, for example, ZygiskNext or Zygisk_mod. Please disable or uninstall any Zygisk implementation before using Zloader.
 :::
 
 ::: info

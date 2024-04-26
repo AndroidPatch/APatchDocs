@@ -8,7 +8,7 @@ Por favor, antes de flashar por qualquer método, confirme se você [corrigiu](/
 Os comandos fastboot são convenientes, estáveis e fáceis de recuperar em caso de erros. Recomendamos fortemente usar esta forma de flash.
 :::
 
-Conecte o seu dispositivo usando o `ADB` e execute o seguinte comando:
+Conecte o seu dispositivo usando o `ADB` e execute o seguinte comando para entrar no modo fastboot:
 
 ```
 adb reboot bootloader
@@ -20,7 +20,9 @@ Ao entrar no modo fastboot execute este comando:
 fastboot flash boot boot.img
 ```
 
+::: info INFORMAÇÕES
 Se o seu dispositivo suporta `fastboot boot`, você pode primeiro tentar inicializar o sistema usando `fastboot boot boot.img`. Se ocorrerem problemas inesperados, simplesmente reinicie o dispositivo para a inicialização normal.
+:::
 
 ## Usando recovery de terceiros
 
@@ -34,8 +36,8 @@ Esta solução é recomendada apenas para dispositivos com uma partição `init_
 
 1. Abra o Magisk, escolha **Desinstalar Magisk** e escolha **Restaurar imagens**.
 2. Consulte [aqui](/pt_BR/patch.md) para corrigir seu boot.img original.
-3. Reinicie o dispositivo no `recovery de terceiros` e instale o `boot.img` corrigido na `partição boot`.
+3. Reinicie o dispositivo em seu `recovery de terceiros` e instale o `boot.img` corrigido na `partição boot`.
 
 ::: danger PERIGO
-Este método tem chance de deixar seu dispositivo inutilizável, por isso, tente com cuidado.
+**Este método pode danificar seu dispositivo e fazer com que ele funcione incorretamente, use por sua própria conta e risco.**
 :::
