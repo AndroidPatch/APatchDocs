@@ -44,11 +44,19 @@ To use the SuperUser management, you need install APatch, and uninstall KernelPa
 
 KernelPatch adds a new system call (syscall) to provide all capabilities to apps and programs in userspace, this syscall is referred to as **SuperCall**. When an app/program tries to invoke **SuperCall**, it needs to provide an access credential, known as the **SuperKey**. **SuperCall** can only be successfully invoked if the **SuperKey** is correct and if it's not the caller will remain unaffected.
 
-## What is SELinux?
+## How to process the SELinux?
 
 KernelPatch not modify the SELinux context but bypasses SELinux via hook. This allows you to root an Android thread within the app context without the need to use `libsu` to start a new process and then perform `IPC`.
 
-In addition, APatch uses the `magiskpolicy` to add addition support of SELinux directly.  
+In addition, APatch uses the `magiskpolicy` to add addition support of SELinux directly. 
+
+## WebUI of APM / KPM
+
+The APatch source code has been derived and modified from KernelSU, so APatch introduced WebUI feature in version [10568](https://github.com/bmax121/APatch/releases/tag/10568) after KernelSU introduced WebUI feature.
+
+APatch WebUI implementation and requirements is completely same as KernelSU, WebUI designed for KernelSU modules can run perfectly in APatch.
+
+If you want to design WebUI for APM or KPM, please refer to the [WebUI introduction](https://kernelsu.org/guide/module-webui.html) of KernelSU for further information.
 
 ## Can not install modules (os error 2/5/22)?
 
@@ -71,7 +79,19 @@ APatch can use the [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) to add th
 
 ::: warning
 Use the official build of ZygiskNext instead of the third-party modified version, unless you can confirm that it is harmless.
-Due to some reasons, we recommended to use the version [0.9.1.1](https://github.com/Dr-TSNG/ZygiskNext/releases/tag/v4-0.9.1.1) of ZygiskNext if no serious issues is appeared.
+Due to some reasons, we recommended to use the version [0.9.1.1](https://github.com/Dr-TSNG/ZygiskNext/releases/tag/v4-0.9.1.1) of ZygiskNext if no serious issues is appeared and you do not need to use WebUI feature.
+:::
+
+APatch also can use the [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) to add the Zygisk support.
+
+If you only need to use LSPosed without other Zygisk features, you also can try [Zloader](https://github.com/Mufanc/z-loader) [for LSPosed](https://t.me/mufanc_chan/28) to load LSPosed simply.
+
+::: warning
+Zloader is NOT compatible with any Zygisk implementation for example ZygiskNext / Zygisk_mod, please disable or uninstall any Zygisk implementation before using Zloader.
+:::
+
+::: info
+Zloader is still in early development, welcome to commit Pull requests to Zloader developers or open an issue for any usage issues.
 :::
 
 ## Can not pass the root-detecting application?
