@@ -2,30 +2,30 @@
 
 Before flashing by any method, please confirm that you have [patched](/en/patch.md) your image correctly.
 
-
-## Flashing by fastboot command
+## Using fastboot
 
 ::: info
 This method is convenient and stable, you can easily recover your device if your device is corrupted. We strongly recommend using this way to flash.
 :::
 
-Connect your device using `adb`, then execute:
+Connect your device using `ADB` and execute the following command to enter the fastboot mode:
 
 ```
 adb reboot bootloader
 ```
 
-to reboot your device into fastboot mode. Next, execute this command to flash:
+When entering fastboot mode, execute this command:
 
 ```
 fastboot flash boot boot.img
 ```
+::: info
+If your device supports command `fastboot boot`, you can use `fastboot boot boot.img` command to boot the system before you flash the image. If any accident occured, just reboot again then your device will started to boot correctly.
+:::
 
-*If your device supports command `fastboot boot`, you can use `fastboot boot boot.img` command to boot the system before you flash the image. If any accident occured, just reboot again then your device will started to boot correctly.*
+## Using third-party recovery
 
-## Flashing by third-party recovery
-
-If your device has a third-party recovery(such as TWRP), you can flash the image to boot partition directly.
+If your device has a third-party recovery (such as TWRP), you can use TWRP to flash the `boot.img` partition and gain root access.
 
 ## Convert your Magisk to APatch
 
@@ -33,10 +33,10 @@ If your device has a third-party recovery(such as TWRP), you can flash the image
 This method is only recommended for users whose device has `init_boot` partition and has flashed any third-party recovery.
 :::
 
-1. Open your Magisk application, choose "Uninstall Magisk', and choose "Restore Images".
-2. Patch your original image refer to [This](/en/patch.md) .
-3. Go to [here](/en/flash.md#Flashing-by-third-party-recovery) and flash your image refer to that method.
+1. Open your Magisk application, choose **Uninstall Magisk**, and choose **Restore Images**.
+2. Refer [here](/en/patch.md) to patch your original boot.img.
+3. Reboot the device into `third-party recovery` and install the patched `boot.img` on the `boot partition`.
 
 ::: danger
-This method might cause your device run correctly, use as your own risk.
+**This method might damage your device and cause your device run incorrectly, use as your own risk.**
 :::

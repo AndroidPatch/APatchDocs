@@ -1,17 +1,17 @@
-# Help and support
+# Feedback and help
 
-## APatch developer(s)
+## Project developer
 
 [bmax121](https://github.com/bmax121)
 
-## Project website
+## Projects
 
 [APatch](https://github.com/bmax121/APatch)
 
 [KernelPatch](https://github.com/bmax121/KernelPatch)
 
-## Groups
+## Discussion
 
-[\[ZH/EN\]APatch Discussions(Official group)](https://t.me/apatch_discuss)(Tolerant management)
+[[ZH/EN] [SFW] APatch Discussions](https://t.me/apatch_discuss)
 
-[\[ZH\]APatch_CN_Group(half-Official group)](https://t.me/APatch_CN_Group)(Strict management, only for Chinese users)
+[[NSFW] [R-18] APatch 中文组](https://t.me/APatch_CN_Group) (Only for Chinese users)

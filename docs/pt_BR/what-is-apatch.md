@@ -6,9 +6,9 @@ APatch é uma solução root **baseada em kernel** para dispositivos Android que
 
 Compatível com a maioria dos dispositivos Android, não apenas limitado a dispositivos com kernel GKI.
 
-Fornece suporte ao APMódulo semelhante aos módulos do Magisk.
+Suporta APMódulo (APM) semelhante aos módulos do Magisk.
 
-Fornece suporte para módulos de patch de kernel permitindo que qualquer código seja injetado no kernel. As funções do kernel **inline-hook** e **syscall-table-hook** estão disponíveis.
+Suporta KPMódulo (KPM), que permite injetar qualquer código no kernel (Requer que as funções do kernel `inline-hook` e `syscall-table-hook` estejam ativadas).
 
 APatch depende do KernelPatch.
 

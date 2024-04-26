@@ -1,63 +1,64 @@
-# Patching the Kernel
+# Patch
 
-## Automatically Patching
+## Automatically patching
 
-1. Go to [GitHub](https://github.com/bmax121/APatch/releases) and install the latest stable version of APatch Manager.
+1. Download the latest version of APatch manager from [GitHub](https://github.com/bmax121/APatch/releases).
 
-2. Click "Patch" and define a SuperKey. A SuperKey requires **numbers + alphabets** , and requires at least **8 bytes** length. SuperKey is required for unlocking root premission.
+2. Click on the button ![Patch Button](/PButton.png) at the top right corner of the homepage to set the SuperKey. The SuperKey needs to have **numbers and letters** and at least **8 characters** length. It will be used later to unlock root privileges.
 
 :::warning 
-You MUST NOT set a weak password such as `12345678`, the new version of APatch Manager force [requires a strong password](/en/warn)
+It is strictly prohibited to set weak keys like `12345678`. The latest versions of APatch [requires the use of strong keys](/en/warn).
 :::
 
-3. Select your `boot.img`, comfirm and wait APatch patchs the image. If complete, APatch Manager will display the location of patched image, such as: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
+3. Select the `boot.img` of your ROM, confirm and wait for the patch to complete. After the patch is successful, the patched boot.img path will be displayed. For example: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
 
-Finally, [Flash](/en/flash) your image under your actually circumstance, and it dones.
+Finally, you can [Flash](/en/flash) as needed.
 
+## Manually patching
 
-## Manually Patching
+When the KernelPatch is updated and APatch Manager remains unchanged, you can choose to manually patch the kernel.
 
-**You can choose to patch the kernel manually when KernelPatch updated but APatch Manager was not updated.**
-
-You can go to [KernelPatch](https://github.com/bmax121/KernelPatch/releases) page to get the latest "KP" files.
+You can go to [KernelPatch](https://github.com/bmax121/KernelPatch/releases) project to get the latest `KP` files.
 
 ### Windows
 
-1. Download `kptools-win.zip` and `kpimg-android`， unzip them to current folder to use. Download `magiskboot(Windows)` at the same time. 
+1. Download `kptools-win.zip`, `kpimg-android` and `magiskboot`. Extract them into the same directory for use.
 
 2. Execute this command:
+
 ```
 magiskboot.exe unpack boot.img
 ```
 
-to unpack the `boot.img`. Then, rename `kernel` to `kernel-b`(`kernel-b` can be any third-party kernels, but we can not guarantee that the third-party kernel can run APatch correctly, and we won't provide any support for third-party kernels.)
+to unpack the `boot.img` and get the kernel file. Rename the kernel to **kernel-b**. (kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
 
-Windows Platform can use `cmd` or `PowerShell` to patch.
+Windows users can patch using `CMD` or `PowerShell`.
 
 Execute this command to patch:
+
 ```
 kptools-x86_64-win.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
-Or using the `WSL Linux`, which is more recommended to patch:
+Alternatively, it is recommended to use `WSL` with `Linux` for patching:
 
 ```
 ./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
-If no error reported during the patch process, execute this command:
+If no errors were reported during patching, execute this command:
 
 ```
 magiskboot.exe repack boot.img
 ```
 
-to repack the patched image, the image generated which is called **new-boot.img** is the patched image.
+to pack and generate the image. The generated `new-boot.img` is the patched image.
 
 ---
 
 ### Linux
 
-1. Download `kptools-linux`, `kpimg-android` and `magiskboot` to the same folder.
+1. Download `kptools-linux`, `kpimg-android` and `magiskboot`.
 
 2. Execute this command:
 
@@ -65,29 +66,33 @@ to repack the patched image, the image generated which is called **new-boot.img*
 magiskboot unpack boot.img
 ```
 
-to unpack the `boot.img`. Then, rename `kernel` to `kernel-b`(`kernel-b` can be any third-party kernels, but we can not guarantee that the third-party kernel can run APatch correctly, and we won't provide any support for third-party kernels.)
+to unpack the `boot.img` to get the kernel file. Rename the kernel to **kernel-b**(Say again, kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
+
 
 Execute this command to patch:
 
 ```
 ./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
-If no error reported during the patch process, execute this command:
+
+If no errors were reported during patching, execute this command:
 
 ```
 magiskboot repack boot.img
 ```
 
-to repack the patched image, the image generated which is called **new-boot.img** is the patched image.
+to pack and generate the image. The generated `new-boot.img` is the patched image.
 
 ::: warning 
-Emphasize again, DO NOT set week password such as `12345678`.
+**Emphasize again, it is STRICTLY PROHIBITED to set weak keys like `12345678`.**
 :::
 
-# KP Commands and comment:
+# KP commands and comments:
+
 ::: info
 You can click [this](https://exame.apatch.top/) to have a try.
 :::
+
 ```
 COMMAND:
   -h, --help                       Print this message.

@@ -6,11 +6,10 @@ Os requisitos de instalação do APatch são principalmente refletidos na config
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=y
 CONFIG_KALLSYMS=y
-CONFIG_KALLSYMS_ALL=n (Suporte antecipado)
+CONFIG_KALLSYMS_ALL=n (Suporte inicial)
 ```
 
 ::: warning AVISO
-
 **Suporta apenas arquitetura ARM64.**
 
 **Suporta apenas versões do kernel Android 3.18 - 6.1**
