@@ -26,7 +26,7 @@ features:
   - title: Controle de acesso root
     details: Somente apps permitidos podem acessar ou ver su, todos os outros apps não estão cientes disso.
   - title: APMódulo
-    details: Suporte aos módulos semelhantes ao Magisk.
+    details: Suporte a módulos semelhantes ao Magisk.
   - title: KPMódulo
-    details: Suporte aos módulos de patch de kernel permitindo que qualquer código seja injetado no kernel. As funções do kernel inline-hook e syscall-table-hook estão disponíveis.
+    details: Suporte a módulos que permitem injetar qualquer código no kernel (Requer que as funções do kernel inline-hook e syscall-table-hook estejam ativadas).
 ---
