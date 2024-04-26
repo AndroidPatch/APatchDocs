@@ -10,15 +10,15 @@ APatch is a root solution similar to Magisk or KernelSU which is one of the best
 
 ## What is the difference of APatch and Magisk?
 
-Magisk modifies the `init` system with a patch to the `ramdisk` of your boot image, while APatch patches the kernel directly.
+Magisk modifies the `init` system with a patch to the `ramdisk` of your boot image. APatch patches the kernel directly.
 
 ## What is the difference of APatch and KernelSU?
 
-KernelSU requires your device's kernel source code, which is not always provided by the OEM. APatch only works with your stock `boot.img`.
+KernelSU requires your device's kernel source code, which is not always provided by the OEM. APatch only need your stock `boot.img`.
 
 ## What is the difference of APatch, Magisk and KernelSU?
 
-APatch allows you to optionally not modify SELinux, this means the app thread can be rooted, libsu and IPC are not needed.
+APatch allows you to optionally not modify SELinux, this means the app thread can be rooted without `libsu` and `IPC`.
 
 **KPModule** provided.
 
@@ -34,7 +34,7 @@ Please read [How to write KPM](https://github.com/bmax121/KernelPatch/blob/main/
 
 APatch depends on KernelPatch. It inherits all of its capabilities and has been expanded.
 
-You can install just KernelPatch, but this doesn't allow you to use Magisk modules.
+You can install just KernelPatch, but this doesn't allow you to use APM.
 
 To use the SuperUser management, you need install APatch, and uninstall KernelPatch.
 
@@ -46,7 +46,7 @@ KernelPatch adds a new system call (syscall) to provide all capabilities to apps
 
 ## What is SELinux?
 
-KernelPatch doesn't modify the SELinux context and bypasses SELinux via hook. This allows you to root an Android thread within the app context without the need to use `libsu` to start a new process and then perform `IPC`.
+KernelPatch not modify the SELinux context but bypasses SELinux via hook. This allows you to root an Android thread within the app context without the need to use `libsu` to start a new process and then perform `IPC`.
 
 In addition, APatch uses the `magiskpolicy` to add addition support of SELinux directly.  
 
