@@ -8,7 +8,7 @@ Before flashing by any method, please confirm that you have [patched](/en/patch.
 This method is convenient and stable, you can easily recover your device if your device is corrupted. We strongly recommend using this way to flash.
 :::
 
-Connect your device using `ADB` and execute the following command:
+Connect your device using `ADB` and execute the following command to enter the fastboot mode:
 
 ```
 adb reboot bootloader
@@ -19,8 +19,9 @@ When entering fastboot mode, execute this command:
 ```
 fastboot flash boot boot.img
 ```
-
+::: info
 If your device supports command `fastboot boot`, you can use `fastboot boot boot.img` command to boot the system before you flash the image. If any accident occured, just reboot again then your device will started to boot correctly.
+:::
 
 ## Using third-party recovery
 
@@ -37,5 +38,5 @@ This method is only recommended for users whose device has `init_boot` partition
 3. Reboot the device into `third-party recovery` and install the patched `boot.img` on the `boot partition`.
 
 ::: danger
-This method has a chance of making your device unusable, so please try it carefully.
+**This method might damage your device and cause your device run incorrectly, use as your own risk.**
 :::
