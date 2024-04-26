@@ -24,7 +24,7 @@ features:
   - title: Kernel-based
     details: APatch runs in kernel space and has greater concealment and control than user space root.
   - title: Root access control
-    details: Only permitted apps may access or see su, all other apps are not aware of this.
+    details: Only permitted apps may access su, all other apps will not aware of the existance of su.
   - title: APModule
     details: Support for modules similar to Magisk.
   - title: KPModule
