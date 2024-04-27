@@ -6,6 +6,6 @@
   },
   "type": "module",
   "devDependencies": {
-    "vitepress": "^1.1.0"
+    "vitepress": "^1.1.3"
   }
 }
