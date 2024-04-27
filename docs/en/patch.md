@@ -30,7 +30,7 @@ You can go to [KernelPatch](https://github.com/bmax121/KernelPatch/releases) pro
 magiskboot.exe unpack boot.img
 ```
 
-To unpack the `boot.img` and get the kernel file. Rename the kernel to **kernel-b**. (kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
+to unpack the `boot.img` and get the kernel file. Rename the kernel to **kernel-b**. (kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
 
 Windows users can patch using `CMD` or `PowerShell`.
 
@@ -52,7 +52,7 @@ If no errors were reported during patching, execute this command:
 magiskboot.exe repack boot.img
 ```
 
-To pack and generate the image. The generated `new-boot.img` is the patched image.
+to pack and generate the image. The generated `new-boot.img` is the patched image.
 
 ---
 
@@ -66,7 +66,7 @@ To pack and generate the image. The generated `new-boot.img` is the patched imag
 magiskboot unpack boot.img
 ```
 
-To unpack the `boot.img` to get the kernel file. Rename the kernel to **kernel-b**(Say again, kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
+to unpack the `boot.img` to get the kernel file. Rename the kernel to **kernel-b**(Say again, kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
 
 
 Execute this command to patch:
@@ -81,7 +81,7 @@ If no errors were reported during patching, execute this command:
 magiskboot repack boot.img
 ```
 
-To pack and generate the image. The generated `new-boot.img` is the patched image.
+to pack and generate the image. The generated `new-boot.img` is the patched image.
 
 ::: warning 
 **Emphasize again, it is STRICTLY PROHIBITED to set weak keys like `12345678`.**
