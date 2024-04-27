@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: 'APatch'
-  text: 'Новое решение для рутирования ядра Android'
-  tagline: Универсальное root-решение для версий ядра Android версий 3.18 - 6.1
+  text: 'Новое root-решение для Android на основе ядра'
+  tagline: Универсальное root-решение для ядра Android версий 3.18 - 6.1
   image:
     src: /logo.png
     alt: APatch
