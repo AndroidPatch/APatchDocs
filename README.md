@@ -25,4 +25,4 @@ English: [@RinLin-NYA](https://github.com/RinLin-NYA), [@igormiguell](https://gi
 
 ## TODO
 Here are some things that need to be done by the community **(When you complete a TODO item, please remove it.)** :  
-- Updates to patch.md section for all non-zh-CN documentation
+- No tasks currently
