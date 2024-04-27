@@ -37,7 +37,7 @@ function sidebarGuide() {
           { text: 'Instalação', link: '/pt_BR/install' },
           { text: 'Patch', link: '/pt_BR/patch' },
           { text: 'Flash', link: '/pt_BR/flash' },
-          { text: 'Feedback e ajuda', link: '/pt_BR/support' },
+          { text: 'Ajuda e suporte', link: '/pt_BR/support' },
           { text: 'Perguntas frequentes', link: '/pt_BR/faq' },
         ]
     }

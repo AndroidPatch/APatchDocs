@@ -2,27 +2,27 @@
 
 ## Patch automático
 
-1. Baixe o gerenciador mais recente no [GitHub](https://github.com/bmax121/APatch/releases).
+1. Baixe a versão mais recente do APatch no [GitHub](https://github.com/bmax121/APatch/releases).
 
 2. Clique no botão ![Patch Button](/PButton.png) no canto superior direito da página inicial para definir a SuperKey. A SuperKey precisa ter **números e letras** e pelo menos **8 caracteres**. Ela será usada posteriormente para desbloquear privilégios root.
 
 :::warning AVISO
-É proibido definir chaves fracas como `12345678`. As versões mais recentes do APatch [obriga o uso de chaves fortes](/pt_BR/warn).
+É estritamente proibido definir chaves fracas como `12345678`. As versões mais recentes do APatch [obriga o uso de chaves fortes](/pt_BR/warn).
 :::
 
-3. Selecione o `boot.img` de sua ROM, confirme e aguarde a conclusão do patch. Depois que o patch for bem-sucedido, o caminho do boot.img corrigido será exibido. Por exemplo: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
+3. Selecione o `boot.img` de sua ROM, confirme e aguarde a conclusão do patch. Depois que o patch for bem-sucedido, o caminho do boot.img corrigido será exibido. Por exemplo: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
 
 Finalmente, você pode fazer o [Flash](/pt_BR/flash) conforme necessário.
 
 ## Patch manual
 
-Quando o patch do kernel é atualizado e o gerenciador permanece inalterado, você pode optar por fazer o patch manualmente do kernel.
+Quando o KernelPatch é atualizado e o gerenciador do APatch permanece inalterado, você pode optar por fazer o patch manualmente do kernel.
 
 Você pode ir até o projeto [KernelPatch](https://github.com/bmax121/KernelPatch/releases) para obter os arquivos `KP` mais recentes.
 
 ### Windows
 
-1. Baixe `kptools-win.zip`, `kpimg-android` e `magiskboot`. Extraia-os no diretório atual para o uso.
+1. Baixe `kptools-win.zip`, `kpimg-android` e `magiskboot`. Extraia-os no mesmo diretório para o uso.
 
 2. Execute este comando:
 
@@ -66,7 +66,7 @@ Empacote e gere a imagem. O `new-boot.img` gerado é a imagem corrigida.
 magiskboot unpack boot.img
 ```
 
-Descompacte o `boot.img` para obter o arquivo do kernel. Renomeie o kernel para **kernel-b**.
+Descompacte o `boot.img` para obter o arquivo do kernel. Renomeie o kernel para **kernel-b**. (Novamente, o kernel-b pode ser outro kernel de terceiros, mas os kernels de terceiros não possuem garantias e não serão suportados).
 
 Execute este comando para corrigir:
 
@@ -74,7 +74,7 @@ Execute este comando para corrigir:
 ./kptools-linux -p --image kernel-b --skey "SuaChave" --kpimg kpimg-android --out kernel
 ```
 
-Após o patch ser concluído sem erros, execute este comando:
+Se nenhum erro for relatado durante o patch, execute este comando:
 
 ```
 magiskboot repack boot.img
@@ -83,7 +83,7 @@ magiskboot repack boot.img
 Empacote e gere a imagem. O `new-boot.img` gerado é a imagem corrigida.
 
 ::: warning AVISO
-Novamente, é estritamente proibido definir chaves fracas como `12345678`.
+**Enfatizando novamente, que é ESTRITAMENTE PROIBIDO definir chaves fracas como `12345678`.**
 :::
 
 # Comandos e comentários do KP
@@ -106,7 +106,7 @@ COMANDOS:
 OPÇÕES:
   -i, --image PATH                 Caminho da imagem do kernel.
   -k, --kpimg PATH                 Caminho da imagem do KernelPatch.
-  -s, --skey KEY                   Definir SuperKey e salve-a diretamente no boot.img.
+  -s, --skey KEY                   Definir SuperKey e salvar diretamente no boot.img.
   -S, --root-skey KEY              Definir SuperKey root que usa verificação de hash e a SuperKey que pode ser alterada dinamicamente.
   -o, --out PATH                   Caminho da imagem corrigida.
   -a  --addition KEY=VALUE         Adicionar informações adicionais.

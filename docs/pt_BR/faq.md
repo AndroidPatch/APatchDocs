@@ -10,15 +10,15 @@ APatch é uma solução root semelhante ao Magisk ou KernelSU que une o melhor d
 
 ## Qual é a diferença entre APatch e Magisk?
 
-Magisk modifica o sistema `init` com um patch no `ramdisk` da sua imagem de inicialização, enquanto APatch corrige diretamente o kernel Android.
+Magisk modifica o sistema `init` com um patch no `ramdisk` da sua imagem de inicialização. APatch corrige diretamente o kernel Android.
 
 ## Qual é a diferença entre APatch e KernelSU?
 
-KernelSU requer o código-fonte do kernel de seu dispositivo, que nem sempre é fornecido pelo OEM. APatch funciona apenas com seu `boot.img` stock.
+KernelSU requer o código-fonte do kernel de seu dispositivo, que nem sempre é fornecido pelo OEM. APatch só precisa de seu `boot.img` stock.
 
 ## Qual é a diferença entre APatch, Magisk e KernelSU?
 
-APatch permite opcionalmente não modificar o SELinux, isso significa que o thread do app pode ser rooteado, libsu e IPC não são necessários.
+APatch permite opcionalmente não modificar o SELinux, isso significa que o thread do app pode ser rooteado sem `libsu` e `IPC`.
 
 **KPMódulo** fornecido.
 
@@ -30,11 +30,11 @@ Além disso, o KPMódulo fornece a capacidade de executar `inline-hook` e `sysca
 
 Para mais informações, veja [como escrever um KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/zh-CN/module.md).
 
-## A relação entre APatch e KernelPatch
+## Qual é a relação entre APatch e KernelPatch?
 
 APatch depende do KernelPatch. Ele herda todas as suas capacidades e foi expandido.
 
-Você pode instalar apenas o KernelPatch, mas isso não permitirá o uso do APM.
+Você pode instalar apenas o KernelPatch, mas isso não permitirá o uso do APMódulo.
 
 Para usar o gerenciamento de SuperUsuário, você precisa instalar o APatch e depois desinstalar o KernelPatch.
 
@@ -44,15 +44,23 @@ Para usar o gerenciamento de SuperUsuário, você precisa instalar o APatch e de
 
 KernelPatch conecta chamadas do sistema para fornecer todos os recursos ao espaço do usuário, e essa chamada do sistema é chamada de **SuperCall**. Invocar o SuperCall requer a passagem de uma credencial, conhecida como **SuperKey**. SuperCall só pode ser invocado com sucesso quando a SuperKey estiver correta. Se a SuperKey estiver incorreta, o chamador não será afetado.
 
-## O que é SELinux?
+## Como processar o SELinux?
 
-KernelPatch não modifica o contexto do SELinux e ignora o SELinux via hook. Isso permite que você faça root em um thread do Android dentro do contexto do app sem a necessidade de usar `libsu` para iniciar um novo processo e então executar o `IPC`.
+KernelPatch não modifica o contexto do SELinux mas ignora o SELinux via hook. Isso permite que você faça root em um thread do Android dentro do contexto de um app sem a necessidade de usar `libsu` para iniciar um novo processo e então executar o `IPC`.
 
 Além disso, o APatch utiliza diretamente o `magiskpolicy` para fornecer suporte adicional ao SELinux.
 
-## O módulo não pode ser instalado
+## WebUI do APMódulo/KPMódulo
 
-Revogue as permissões de root para o shell na página de autorização root.
+O código-fonte do APatch foi derivado e modificado do KernelSU, então o APatch introduziu o recurso WebUI na versão [10568](https://github.com/bmax121/APatch/releases/tag/10568) depois que o KernelSU introduziu o recurso WebUI.
+
+A implementação e os requisitos do WebUI do APatch são completamente iguais aos do KernelSU, o WebUI projetado para os módulos do KernelSU podem funcionar perfeitamente no APatch.
+
+Se você deseja usar o WebUI para o APMódulo ou KPMódulo, consulte a [introdução do WebUI](https://kernelsu.org/pt_BR/guide/module-webui.html) do KernelSU para obter mais informações.
+
+## O módulo não pode ser instalado (Erro do OS 05/02/22)
+
+Revogue o privilégio root do app "Shell" na página SuperUsuário.
 
 ## O app automaticamente obtém e perde permissões root após o reinício do telefone
 
@@ -71,7 +79,19 @@ Se você precisar usá-lo, use o Shamiko [0.7.4](https://github.com/LSPosed/LSPo
 APatch pode usar a versão oficial do [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext).
 
 ::: warning AVISO
-Sempre que possível, use a versão oficial em vez de modificações de terceiros, a menos que tenha certeza de que a versão modificada é inofensiva. Por alguns motivos, recomendamos usar a versão [0.9.1.1](https://github.com/Dr-TSNG/ZygiskNext/releases/tag/v4-0.9.1.1) do ZygiskNext se nenhum problema sério aparecer.
+Sempre que possível, use a versão oficial em vez de modificações de terceiros, a menos que tenha certeza de que a versão modificada é inofensiva. Por alguns motivos, recomendamos usar a versão [0.9.1.1](https://github.com/Dr-TSNG/ZygiskNext/releases/tag/v4-0.9.1.1) do ZygiskNext se nenhum problema sério aparecer e você não precisar usar o recurso WebUI.
+:::
+
+APatch também pode usar o [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) para adicionar suporte ao Zygisk.
+
+Se você só precisa usar o LSPosed sem os outros recursos do Zygisk, você também pode tentar o [Zloader](https://github.com/Mufanc/z-loader) [para o LSPosed](https://t.me/mufanc_chan/28).
+
+::: warning AVISO
+O Zloader NÃO é compatível com nenhuma implementação do Zygisk, por exemplo, ZygiskNext ou Zygisk_mod. Por favor, desative ou desinstale qualquer implementação do Zygisk antes de usar o Zloader.
+:::
+
+::: info INFORMAÇÕES
+O Zloader ainda está em desenvolvimento inicial, seja bem-vindo para enviar Pull requests aos desenvolvedores do Zloader ou abrir um problema.
 :::
 
 ## O software de detecção de root falha

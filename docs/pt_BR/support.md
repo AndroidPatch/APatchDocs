@@ -1,4 +1,4 @@
-# Feedback e ajuda
+# Ajuda e suporte
 
 ## Desenvolvedor do projeto
 

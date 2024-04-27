@@ -2,9 +2,9 @@
 
 ## Preparations
 
-1. Ensure your phone's bootloader is unlocked before rooting.
+1. Ensure your device's bootloader is unlocked before rooting.
 
-2. You can execute command `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` in terminal or ADB to ensure your kernel is support to patch (Root required).
+2. You can execute command `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` in terminal or ADB to ensure your kernel is support to patch (root required).
 
 3. [Click here](https://github.com/bmax121/APatch/releases) to get the latest stable version of APatch Manager.
 

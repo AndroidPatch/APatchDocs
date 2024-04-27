@@ -1,10 +1,13 @@
 # Requisitos de instalação
 
-Os requisitos de instalação do APatch são principalmente refletidos na configuração do kernel. Os requisitos do kernel são:
+Os requisitos de instalação do APatch são principalmente refletidos na configuração do kernel. Aqui estão os requisitos do kernel:
 
 ```
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=y
+```
+ou:
+```
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=n (Suporte inicial)
 ```

@@ -19,6 +19,7 @@ When entering fastboot mode, execute this command:
 ```
 fastboot flash boot boot.img
 ```
+
 ::: info
 If your device supports command `fastboot boot`, you can use `fastboot boot boot.img` command to boot the system before you flash the image. If any accident occured, just reboot again then your device will started to boot correctly.
 :::
