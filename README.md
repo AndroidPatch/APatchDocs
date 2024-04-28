@@ -23,7 +23,7 @@ Brazilian Portuguese / Português (Brasil): [@igormiguell](https://github.com/ig
 
 English: [@RinLin-NYA](https://github.com/RinLin-NYA), [@igormiguell](https://github.com/igormiguell)
 
-Russian: [@xteamlyer](https://github.com/xteamlyer)
+Russian / Русский: [@xteamlyer](https://github.com/xteamlyer)
 
 ## TODO
 Here are some things that need to be done by the community **(When you complete a TODO item, please remove it.)** :  
