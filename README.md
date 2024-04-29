@@ -26,5 +26,4 @@ English: [@RinLin-NYA](https://github.com/RinLin-NYA), [@igormiguell](https://gi
 Russian / Русский: [@xteamlyer](https://github.com/xteamlyer)
 
 ## TODO
-Here are some things that need to be done by the community **(When you complete a TODO item, please remove it.)** :  
-- No tasks currently
+TODO will no longer be stored in README.md. When there is a new TODO item, an issue will be created. So please be aware of issues in this repository.
