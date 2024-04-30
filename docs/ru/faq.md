@@ -66,33 +66,40 @@ KernelPatch не изменяет контекст SELinux, а обходит SE
 
 Прочтите [это](https://t.me/APatchChannel/74).
 
-## Не можете использовать Shamiko?
+## Можно ли использовать LSPosed?
 
-Мы не можем полностью поддерживать Shamiko из-за его закрытого исходного кода и отсутствия обновлений.
-::: info
-Если вам необходимо использовать Shamiko, пожалуйста, используйте версию [0.7.4](https://github.com/LSPosed/LSPosed.github.io/releases/tag/shamiko-188).
-:::
+Запуск LSPosed зависит от Riru или Zygisk, но APatch не поддерживает Riru или Zygisk по умолчанию, поэтому вы не можете использовать LSPosed напрямую.
 
-## Поддерживается ли Zygisk?
+Однако в APatch можно добавить поддержку Zygisk или позволить LSPosed работать без какой-либо реализации Zygisk, установив APM (APatch Modules).
 
-APatch может использовать [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) чтобы добавить поддержку Zygisk.
+Вот два решения по запуску LSPosed на APatch:
 
-::: warning
-Используйте официальную версию ZygiskNext, а не модифицированные (если только вы не можете подтвердить, что она безопасна).
-По некоторым причинам мы рекомендуем использовать версию [0.9.1.1](https://github.com/Dr-TSNG/ZygiskNext/releases/tag/v4-0.9.1.1) ZygiskNext, если не возникло серьезных проблем, и вам не нужно использовать функцию WebUI.
-:::
-
-APatch также может использовать [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) для добавления поддержки Zygisk.
-
-Если вам нужно использовать только LSPosed без других функций Zygisk, вы также можете попробовать [Zloader](https://github.com/Mufanc/z-loader) [for LSPosed](https://t.me/mufanc_chan/28), для упрощенной загрузки LSPosed.
+1. Обратитесь к [Поддерживается ли Zygisk?](/ru/faq#zygisk-support) чтобы добавить поддержку Zygisk
+2. Если вам нужно использовать только LSPosed без других функций Zygisk, вы можете попробовать [Zloader](https://github.com/Mufanc/z-loader) [for LSPosed](https://t.me/mufanc_chan/28) чтобы загрузить только LSPosed.
 
 ::: warning
-Zloader НЕ совместим ни с одной из реализаций Zygisk, например, ZygiskNext или Zygisk_mod. Пожалуйста, отключите или удалите любую реализацию Zygisk перед использованием Zloader.
+Zloader НЕ совместим ни с одной реализацией Zygisk, например, ZygiskNext или Zygisk_mod, и вы также не можете использовать APM, зависящие от Zygisk. Пожалуйста, отключите или удалите любую другую реализацию Zygisk перед использованием Zloader.
 :::
 
 ::: info
 Zloader все еще находится на ранней стадии разработки, приглашаем вас отправлять pull-запросы разработчикам Zloader или открывать тикеты по любым вопросам использования.
 :::
+
+## Не можете использовать Shamiko?
+
+Мы не можем полностью поддерживать Shamiko из-за его закрытого исходного кода и отсутствия обновлений.
+
+::: danger
+**Любые проблемы, вызванные использованием Shamiko, не будут поддерживаться разработчиками APatch, используйте их на свой страх и риск.**.
+:::
+
+## Поддерживается ли Zygisk?
+
+Как и KernelSU, APatch по умолчанию не поддерживает Zygisk.
+
+APatch может использовать [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) чтобы добавить поддержку Zygisk.
+
+Также, можете использовать [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod)
 
 ## Root-детекторы обнаруживают у вас root?
 
