@@ -56,43 +56,49 @@ APatch 的源代码来自于 KernelSU，因此 KernelSU 引入 WebUI 特性之�
 
 APatch 的 WebUI 实现方法和要求和 KernelSU 的实现方法和要求完全一致，为 KernelSU 模块设计的 WebUI 在 APatch 中可以完美运行。
 
-如果你希望为 APM 或 KPM 设计 WebUI，请参考 KernelSU 的 [WebUI 介绍页面](https://kernelsu.org/zh_CN/guide/module-webui.html)进行设计。
+如果你希望为 APM 或 KPM 设计 WebUI，请参考 KernelSU 的 [WebUI 介绍页面](https://kernelsu.org/zh_CN/guide/module-webui.html) 进行设计。
 
-## 模块无法安装(os error 2/5/22)?
+## 模块无法安装(os error 2/5/22)？
 
 在 root 授权页面取消 shell 的 root 权限。
 
-## APP 在手机重启后自动获得/丢失 root 权限?
+## APP 在手机重启后自动获得/丢失 root 权限？
 
 参阅 [这里](https://t.me/APatchChannel/74)
 
-## 无法使用 Shamiko
+## 能使用 LSPosed 吗？
 
-Shamiko 闭源并且停更，无法适配。
-::: info
-如果你必须使用，使用 Shamiko [0.7.4](https://github.com/LSPosed/LSPosed.github.io/releases/tag/shamiko-188)。
-:::
+LSPosed 依赖于 Riru 或 Zygisk，APatch 默认情况下并不附带对 Riru 或 Zygisk 的支持，因此 APatch 无法直接使用 LSPosed。
 
-## Zygisk 支持？
+但是，APatch 可以通过安装 APM 的形式来添加对 Zygisk 的支持或者允许 LSPosed 在没有 Zygisk 的情况下运行。
 
-APatch 可使用 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) 以实现 Zygisk 支持。
+下面是两种在 APatch 中使用 LSPosed 的解决方案：
 
-::: warning
-尽可能使用官方版本而不是第三方改版，除非你能确定此修改版无害。
-基于部分原因，在没有严重问题且不需要使用 WebUI 的情况下，我们建议使用 ZygiskNext 的 [0.9.1.1](https://github.com/Dr-TSNG/ZygiskNext/releases/tag/v4-0.9.1.1) 版本。
-:::
-
-APatch 也可以使用 [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) 以实现 Zygisk 支持。
-
-如果你只需要使用 LSPosed 而无需其它 Zygisk 功能，也可以使用 [Zloader](https://github.com/Mufanc/z-loader) 的 [LSPosed 专版](https://t.me/mufanc_chan/28) 以实现单独加载 LSPosed。
+1. 参考 [Zygisk 支持？](/faq#zygisk-支持) 部分以添加对 Zygisk 的支持。
+2. 如果你只需要使用 LSPosed 而无需其它 Zygisk 功能，也可以使用 [Zloader](https://github.com/Mufanc/z-loader) 的 [LSPosed 专版](https://t.me/mufanc_chan/28) 以实现单独加载 LSPosed。
 
 ::: warning
-Zloader 与 ZygiskNext / Zygisk_mod 等 Zygisk 实现不兼容，使用前请先禁用或卸载任何 Zygisk 实现。
+Zloader 与 ZygiskNext / Zygisk_mod 等 Zygisk 实现不兼容，并且你也将无法使用任何其它依赖于 Zygisk 的 APM。使用前请先禁用或卸载任何 Zygisk 实现。
 :::
 
 ::: info
 Zloader 仍处于早期开发阶段，欢迎各位向开发者提交 Pull request 或就使用问题提交 issue 进行反馈。
 :::
+
+## 无法使用 Shamiko
+
+Shamiko 闭源并且停更，无法适配。
+::: danger
+**APatch 开发者将不对任何因使用 Shamiko 导致的问题承担任何责任，你需要自行承担使用风险。**
+:::
+
+## Zygisk 支持？
+
+APatch 和 KernelSU 保持一致，默认不附带对 Zygisk 的支持。
+
+APatch 可使用 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) 以实现 Zygisk 支持。
+
+APatch 也可以使用 [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) 以实现 Zygisk 支持。
 
 ## root 检测软件无法通过？
 

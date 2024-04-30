@@ -3,7 +3,7 @@ This repository have 2 parts:
 Part 1: Vitepress
 
 This is a free opensource software for generating websites, and this repository 
-uses Vitepress to generate [APatch documentation website](apatch.top).
+uses Vitepress to generate APatch documentation website(apatch.top).
 Here is Vitepress's license:
 
 MIT License

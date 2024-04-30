@@ -5,7 +5,7 @@
 
 本仓库是 [APatch](https://github.com/bmax121/APatch) 的文档库，网页版本请参阅[此处](https://apatch.top/)。
 
-目前本仓库的文档有[中文](/docs)、[英文](/docs/en)、[葡萄牙文（巴西）](/docs/pt_BR)、[俄语](/docs/ru)等语言的版本，欢迎翻译并贡献本仓库文档的其他语言版本。我们需要你的帮助。
+目前本仓库的文档有[简体中文](/docs)、[英语](/docs/en)、[葡萄牙语（巴西）](/docs/pt_BR)、[俄语](/docs/ru)等语言的版本，欢迎翻译并贡献本仓库文档的其他语言版本。我们需要你的帮助。
 
 ## English introduction
 
