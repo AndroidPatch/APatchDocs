@@ -11,7 +11,7 @@ export default defineConfig({
     lastUpdatedText: 'Last updated',
 
     sidebar: {
-      '/en/': sidebarGuide()
+      '/': sidebarGuide()
     },
 
     socialLinks: [
@@ -22,7 +22,7 @@ export default defineConfig({
 
 function nav() {
   return [
-    { text: 'Guide', link: '/en/what-is-apatch' },
+    { text: 'Guide', link: '/what-is-apatch' },
   ]
 }
 
@@ -31,14 +31,14 @@ function sidebarGuide() {
     {
         text: 'Guide',
         items: [
-          { text: 'What is APatch?', link: '/en/what-is-apatch' },
-          { text: 'Install Requirements', link: '/en/requirements' },
-          { text: 'Warning', link: '/en/warn' },
-          { text: 'Installation', link: '/en/install' },
-          { text: 'Patch', link: '/en/patch' },
-          { text: 'Flash', link: '/en/flash' },
-          { text: 'Help and Support', link: '/en/support' },
-          { text: 'FAQ', link: '/en/faq' },
+          { text: 'What is APatch?', link: '/what-is-apatch' },
+          { text: 'Install Requirements', link: '/requirements' },
+          { text: 'Warning', link: '/warn' },
+          { text: 'Installation', link: '/install' },
+          { text: 'Patch', link: '/patch' },
+          { text: 'Flash', link: '/flash' },
+          { text: 'Help and Support', link: '/support' },
+          { text: 'FAQ', link: '/faq' },
         ]
     }
   ]
