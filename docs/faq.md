@@ -3,7 +3,7 @@
 ## What is APatch?
 
 ::: info
-[There](/en/what-is-apatch) is a more complete introduction.
+[There](/what-is-apatch) is a more complete introduction.
 :::
 
 APatch is a root solution similar to Magisk or KernelSU which is one of the best of both. It combines Magisk easy and convenient installation method via `boot.img` with KernelSU powerful kernel patching abilities.

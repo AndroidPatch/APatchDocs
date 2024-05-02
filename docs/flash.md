@@ -1,6 +1,6 @@
 # Flash
 
-Before flashing by any method, please confirm that you have [patched](/en/patch.md) your image correctly.
+Before flashing by any method, please confirm that you have [patched](/patch.md) your image correctly.
 
 ## Using fastboot
 
@@ -35,7 +35,7 @@ This method is only recommended for users whose device has `init_boot` partition
 :::
 
 1. Open your Magisk application, choose **Uninstall Magisk**, and choose **Restore Images**.
-2. Refer [here](/en/patch.md) to patch your original boot.img.
+2. Refer [here](/patch.md) to patch your original boot.img.
 3. Reboot the device into `third-party recovery` and install the patched `boot.img` on the `boot partition`.
 
 ::: danger

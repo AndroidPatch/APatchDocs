@@ -1,6 +1,6 @@
 # 刷入
 
-以任何方式刷入之前，请先确认您已经按照步骤 [修补](/patch.md) 了您的镜像。
+以任何方式刷入之前，请先确认您已经按照步骤 [修补](/zh_CN/patch.md) 了您的镜像。
 
 ## fastboot 命令刷入
 
@@ -33,7 +33,7 @@ fastboot flash boot boot.img
 :::
 
 1. Magisk 点击卸载 还原原厂镜像
-2. 将你的原厂 Boot 参照 [此处](/patch.md) 修补
+2. 将你的原厂 Boot 参照 [此处](/zh_CN/patch.md) 修补
 3. 重启设备到 `TWRP` 刷入修补过的 `Boot` 到 `Boot 分区`
 
 ::: danger

@@ -7,12 +7,12 @@
 2. Click on the button ![Patch Button](/PButton.png) at the top right corner of the homepage to set the SuperKey. The SuperKey needs to have **numbers and letters** and at least **8 characters** length. It will be used later to unlock root privileges.
 
 :::warning 
-It is strictly prohibited to set weak keys like `12345678`. The latest versions of APatch [requires the use of strong keys](/en/warn).
+It is strictly prohibited to set weak keys like `12345678`. The latest versions of APatch [requires the use of strong keys](/warn).
 :::
 
 3. Select the `boot.img` of your ROM, confirm and wait for the patch to complete. After the patch is successful, the patched boot.img path will be displayed. For example: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
 
-Finally, you can [Flash](/en/flash) as needed.
+Finally, you can [Flash](/flash) as needed.
 
 ## Manually patching
 

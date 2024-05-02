@@ -16,8 +16,8 @@ The APatch UI and the APModule source code have been derived and modified from K
 
 ## How to use APatch?
 
-Please read this: [Installation](/en/install)
+Please read this: [Installation](/install)
 
 ## How to patch?
 
-Please read this: [Patch](/en/patch)
+Please read this: [Patch](/patch)
