@@ -11,7 +11,7 @@ export default defineConfig({
     lastUpdatedText: '最后更新',
 
     sidebar: {
-      '/': sidebarGuide()
+      '/zh_CN/': sidebarGuide()
     },
 
     socialLinks: [
@@ -22,7 +22,7 @@ export default defineConfig({
 
 function nav() {
   return [
-    { text: '指南', link: '/what-is-apatch' },
+    { text: '指南', link: '/zh_CN/what-is-apatch' },
   ]
 }
 
@@ -31,14 +31,14 @@ function sidebarGuide() {
     {
         text: '指南',
         items: [
-          { text: '什么是 APatch?', link: '/what-is-apatch' },
-          { text: '安装要求', link: '/requirements' },
-          { text: '重要提醒', link: '/warn' },
-          { text: '安装', link: '/install' },
-          { text: '修补', link: '/patch' },
-          { text: '刷入', link: '/flash' },
-          { text: '反馈与帮助', link: '/support' },
-          { text: '常见问题', link: '/faq' },
+          { text: '什么是 APatch?', link: '/zh_CN/what-is-apatch' },
+          { text: '安装要求', link: '/zh_CN/requirements' },
+          { text: '重要提醒', link: '/zh_CN/warn' },
+          { text: '安装', link: '/zh_CN/install' },
+          { text: '修补', link: '/zh_CN/patch' },
+          { text: '刷入', link: '/zh_CN/flash' },
+          { text: '反馈与帮助', link: '/zh_CN/support' },
+          { text: '常见问题', link: '/zh_CN/faq' },
         ]
     }
   ]

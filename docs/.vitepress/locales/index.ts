@@ -6,7 +6,7 @@ import ru from './ru'
 
 export default defineConfig({
 	locales: {
-		root: {
+		zh_CN: {
 			label: '简体中文',
 			lang: zh_CN.lang,
 			themeConfig: zh_CN.themeConfig,
@@ -18,7 +18,7 @@ export default defineConfig({
 			themeConfig: pt_BR.themeConfig,
 			description: pt_BR.description,
 		},
-		en: {
+		root: {
 			label: 'English',
 			lang: en.lang,
 			themeConfig: en.themeConfig,
