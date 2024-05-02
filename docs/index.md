@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Get started
-      link: /en/what-is-apatch
+      link: /what-is-apatch
     - theme: alt
       text: View on GitHub
       link: https://github.com/bmax121/APatch
