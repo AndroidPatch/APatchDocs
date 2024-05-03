@@ -37,6 +37,7 @@ function sidebarGuide() {
           { text: '安装', link: '/zh_CN/install' },
           { text: '修补', link: '/zh_CN/patch' },
           { text: '刷入', link: '/zh_CN/flash' },
+          { text: 'APM 编写指南', link: '/zh_CN/apm-guide' },
           { text: '反馈与帮助', link: '/zh_CN/support' },
           { text: '常见问题', link: '/zh_CN/faq' },
         ]
