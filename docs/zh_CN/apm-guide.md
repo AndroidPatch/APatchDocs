@@ -25,8 +25,8 @@ APatch 的模块支持显示界面并与用户交互，请参阅 [WebUI 文档](
 
 APatch 提供了一个功能完备的 BusyBox 二进制文件（包括完整的SELinux支持）。可执行文件位于 `/data/adb/ap/bin/busybox`。
 APatch 的 BusyBox 支持运行时可切换的 "ASH Standalone Shell Mode"。
-这种独立模式意味着在运行 BusyBox 的 ash shell 时，每个命令都会直接使用 BusyBox 中内置的应用程序，而不管 PATH 设置为什么。
-例如，`ls`、`rm`、`chmod` 等命令将不会使用 PATH 中设置的命令（在Android的情况下，默认情况下分别为 `/system/bin/ls`、`/system/bin/rm` 和 `/system/bin/chmod`），而是直接调用 BusyBox 内置的应用程序。
+这种独立模式意味着在运行 BusyBox 的 ash shell 时，每个命令都会直接使用 BusyBox 中内置的应用程序，而不管 `PATH` 设置为什么。
+例如，`ls`、`rm`、`chmod` 等命令将不会使用 `PATH` 中设置的命令（在Android的情况下，默认情况下分别为 `/system/bin/ls`、`/system/bin/rm` 和 `/system/bin/chmod`），而是直接调用 BusyBox 内置的应用程序。
 这确保了脚本始终在可预测的环境中运行，并始终具有完整的命令套件，无论它运行在哪个Android版本上。
 要强制一个命令不使用BusyBox，你必须使用完整路径调用可执行文件。
 
