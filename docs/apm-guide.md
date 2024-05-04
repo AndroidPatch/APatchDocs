@@ -15,10 +15,6 @@ The following documentation is copied and modified from the KernelSU documentati
 
 The mechanism of APatch modules operation is almost the same as Magisk. If you are familiar with the development of Magisk modules, the development of APatch modules is very similar. You can skip the presentation of the modules below, just read what the differences are.
 
-## WebUI
-
-APatch modules support interface display and user interaction, see [WebUI](/module-webui.md).
-
 ## Busybox
 
 APatch provides a fully functional BusyBox binary (including full SELinux support). The executable is located at `/data/adb/ap/bin/busybox`.
