@@ -6,8 +6,8 @@ APatch module implementation copied and modified from [KernelSU](https://github.
 
 The modified code can be found here:
 
-[KernelSU](https://github.com/tiann/KernelSU/tree/main/userspace/ksud)
-<br>[APatch](https://github.com/bmax121/APatch/tree/main/apd)
+KernelSU: [https://github.com/tiann/KernelSU/tree/main/userspace/ksud](https://github.com/tiann/KernelSU/tree/main/userspace/ksud)  
+APatch: [https://github.com/bmax121/APatch/tree/main/apd](https://github.com/bmax121/APatch/tree/main/apd)  
 
 The following documentation is copied and modified from the KernelSU documentation, and much of the content is the same. The main points to note are as follows:
 
