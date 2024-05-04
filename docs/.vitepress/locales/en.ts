@@ -36,7 +36,6 @@ function sidebarGuide() {
 				{ text: 'Patch', link: '/patch' },
 				{ text: 'Flash', link: '/flash' },
 				{ text: 'APModule Guide', link: '/apm-guide' },
-				{ text: 'APModule WebUI', link: '/module-webui.md' },
 				{ text: 'Help and Support', link: '/support' },
 				{ text: 'FAQ', link: '/faq' },
 			],
