@@ -27,20 +27,16 @@ function nav() {
 function sidebarGuide() {
 	return [
 		{
-			text: 'Руководство',
+			text: 'Guide',
 			items: [
 				{ text: 'Что такое APatch?', link: '/ru/what-is-apatch' },
 				{ text: 'Требования к установке', link: '/ru/requirements' },
 				{ text: 'Предупреждение', link: '/ru/warn' },
 				{ text: 'Установка', link: '/ru/install' },
-				{ text: 'Как пропатчить?', link: '/ru/patch' },
-				{ text: 'Прошивка ядра', link: '/ru/flash' },
-				{
-					text: 'Руководство по разработке APM',
-					link: '/ru/apm-guide',
-				},
-				{ text: 'Веб-интерфейс APM', link: '/ru/module-webui.md' },
+				{ text: 'Патчинг', link: '/ru/patch' },
+				{ text: 'Прошивка', link: '/ru/flash' },
 				{ text: 'Обратная связь и помощь', link: '/ru/support' },
+				{ text: 'Руководство по разработке APM', link: '/ru/apm-guide' },
 				{ text: 'Частые вопросы', link: '/ru/faq' },
 			],
 		},
