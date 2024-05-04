@@ -6,8 +6,8 @@ APatch 的模块实现是从 [KernelSU](https://github.com/tiann/KernelSU) 模�
 
 具体修改的代码对应位置：
 
-[KernelSU](https://github.com/tiann/KernelSU/tree/main/userspace/ksud)
-<br>[APatch](https://github.com/bmax121/APatch/tree/main/apd)
+KernelSU: [https://github.com/tiann/KernelSU/tree/main/userspace/ksud](https://github.com/tiann/KernelSU/tree/main/userspace/ksud)  
+APatch: [https://github.com/bmax121/APatch/tree/main/apd](https://github.com/bmax121/APatch/tree/main/apd)  
 
 以下的文档内容基本来自于 KernelSU 的文档，其中大部分内容与 KernelSU 方面保持一致。需要注意的主要有以下几个地方：
 
