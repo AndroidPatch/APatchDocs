@@ -1,13 +1,13 @@
 # 模块(APM)开发指南 {#introduction}
 
-APatch 提供了一个模块机制（ AndroidPatch Module），它可以在保持系统分区完整性的同时达到修改系统分区的效果；这种机制通常被称之为 systemless。
+APatch 提供了一个模块机制（AndroidPatch Module），它可以在保持系统分区完整性的同时达到修改系统分区的效果；这种机制通常被称之为 systemless。
 
 APatch 的模块实现是从 [KernelSU](https://github.com/tiann/KernelSU) 模块复制并修改而来，感谢 KernelSU。  
 具体修改的代码对应位置：  
 KernelSU: [https://github.com/tiann/KernelSU/tree/main/userspace/ksud](https://github.com/tiann/KernelSU/tree/main/userspace/ksud)  
 APatch: [https://github.com/bmax121/APatch/tree/main/apd](https://github.com/bmax121/APatch/tree/main/apd)
 
-以下的文档内容也是从 KernelSU 的文档复制并修改而来，其中大部分的内容是一致。需要注意的主要有以下几个地方
+以下的文档内容基本来自于 KernelSU 的文档，其中大部分内容与 KernelSU 方面保持一致。需要注意的主要有以下几个地方：
 
 1. 文件位置
 2. 环境变量
@@ -105,8 +105,9 @@ APatch 模块就是一个放置在 `/data/adb/modules` 内且满足如下结构�
 ```
 
 ::: tip 与 Magisk 的差异
-APatch 没有内置的针对 Zygisk 的支持，因此模块中没有 Zygisk 相关的内容
-<!-- ，但你可以通过 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) 来支持 Zygisk 模块，此时 Zygisk 模块的内容与 Magisk 所支持的 Zygisk 是完全相同的。 -->
+APatch 没有内置的针对 Zygisk 的支持，因此模块中没有 Zygisk 相关的内容。
+
+但你可以通过 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) 或者 [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) 来支持 Zygisk 模块，此时 Zygisk 模块的内容与 Magisk 所支持的 Zygisk 是完全相同的。
 :::
 
 ### module.prop

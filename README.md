@@ -21,7 +21,7 @@ Simplified Chinese / 简体中文：[@NightSong-UwU](https://github.com/NightSon
 
 Brazilian Portuguese / Português (Brasil): [@igormiguell](https://github.com/igormiguell)
 
-English: [@RinLin-NYA](https://github.com/RinLin-NYA), [@igormiguell](https://github.com/igormiguell)
+English: [@RinLin-NYA](https://github.com/RinLin-NYA), [@igormiguell](https://github.com/igormiguell), [@xteamlyer](https://github.com/xteamlyer)
 
 Russian / Русский: [@xteamlyer](https://github.com/xteamlyer)
 
