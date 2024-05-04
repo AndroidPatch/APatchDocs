@@ -1,11 +1,13 @@
 # 模块(APM)开发指南 {#introduction}
 
-APatch 提供了一个模块机制（AndroidPatch Module），它可以在保持系统分区完整性的同时达到修改系统分区的效果；这种机制通常被称之为 systemless。
+APatch 提供了一个模块机制（AndroidPatch Module），它可以在保持系统分区完整性的同时达到修改系统分区的效果；这种机制通常被称之为 `systemless`。
 
-APatch 的模块实现是从 [KernelSU](https://github.com/tiann/KernelSU) 模块复制并修改而来，感谢 KernelSU。  
-具体修改的代码对应位置：  
-KernelSU: [https://github.com/tiann/KernelSU/tree/main/userspace/ksud](https://github.com/tiann/KernelSU/tree/main/userspace/ksud)  
-APatch: [https://github.com/bmax121/APatch/tree/main/apd](https://github.com/bmax121/APatch/tree/main/apd)
+APatch 的模块实现是从 [KernelSU](https://github.com/tiann/KernelSU) 模块复制并修改而来，感谢 KernelSU。
+
+具体修改的代码对应位置：
+
+[KernelSU](https://github.com/tiann/KernelSU/tree/main/userspace/ksud)
+<br>[APatch](https://github.com/bmax121/APatch/tree/main/apd)
 
 以下的文档内容基本来自于 KernelSU 的文档，其中大部分内容与 KernelSU 方面保持一致。需要注意的主要有以下几个地方：
 
@@ -19,7 +21,7 @@ APatch 的模块运作机制与 Magisk 几乎是一样的，如果你熟悉 Magi
 
 APatch 的模块支持显示界面并与用户交互，请参阅 [WebUI 文档](module-webui.md)。 -->
 
-## Busybox
+## BusyBox
 
 APatch 提供了一个功能完备的 BusyBox 二进制文件（包括完整的SELinux支持）。可执行文件位于 `/data/adb/ap/bin/busybox`。
 APatch 的 BusyBox 支持运行时可切换的 "ASH Standalone Shell Mode"。
@@ -32,7 +34,7 @@ APatch 的 BusyBox 支持运行时可切换的 "ASH Standalone Shell Mode"。
 
 对于想要在 APatch 之外使用这个“独立模式”功能的用户，有两种启用方法:
 
-1. 设置环境变量 `ASH_STANDALONE` 为 `1`。例如：`ASH_STANDALONE=1 /data/adb/ap/bin/busybox sh <script>`
+1. 设置环境变量 `ASH_STANDALONE` 为 `1`。<br>例如：`ASH_STANDALONE=1 /data/adb/ap/bin/busybox sh <script>`
 2. 使用命令行选项切换：`/data/adb/ap/bin/busybox sh -o standalone <script>`
 
 为了确保所有后续的 `sh` shell 都在独立模式下执行，第一种是首选方法（这也是 APatch 和 APatch 管理器内部使用的方法），因为环境变量会被继承到子进程中。
@@ -145,7 +147,7 @@ description=<string>
 1. 系统中对应目录的同名文件会被此目录的文件覆盖。
 2. 系统中对应目录的同名文件夹会与此目录的文件夹合并。
 
-如果你想删掉系统原来目录某个文件或者文件夹，你需要在模块目录通过 `mknod filename c 0 0` 来创建一个 `filename` 的同名文件；这样 overlayfs 系统会自动 whiteout 等效删除此文件（`/system` 分区并没有被更改）。
+如果你想删掉系统原来目录某个文件或者文件夹，你需要在模块目录通过 `mknod filename c 0 0` 来创建一个 `filename` 的同名文件；这样 OverlayFS 系统会自动 whiteout 等效删除此文件（`/system` 分区并没有被更改）。
 
 你也可以在 `customize.sh` 中声明一个名为 `REMOVE` 并且包含一系列目录的变量来执行删除操作，APatch 会自动为你在模块对应目录执行 `mknod <TARGET> c 0 0`。例如：
 
@@ -156,9 +158,9 @@ REMOVE="
 "
 ```
 
-上面的这个列表将会执行： `mknod $MODPATH/system/app/YouTuBe c 0 0` 和 `mknod $MODPATH/system/app/Bloatware c 0 0`；并且 `/system/app/YouTube` 和 `/system/app/Bloatware` 将会在模块生效后被删除。
+上面的这个列表将会执行： `mknod $MODPATH/system/app/YouTube c 0 0` 和 `mknod $MODPATH/system/app/Bloatware c 0 0`；并且 `/system/app/YouTube` 和 `/system/app/Bloatware` 将会在模块生效后被删除。
 
-如果你想替换掉系统的某个目录，你需要在模块目录创建一个相同路径的目录，然后为此目录设置此属性：`setfattr -n trusted.overlay.opaque -v y <TARGET>`；这样 overlayfs 系统会自动将系统内相应目录替换（`/system` 分区并没有被更改）。
+如果你想替换掉系统的某个目录，你需要在模块目录创建一个相同路径的目录，然后为此目录设置此属性：`setfattr -n trusted.overlay.opaque -v y <TARGET>`；这样 OverlayFS 系统会自动将系统内相应目录替换（`/system` 分区并没有被更改）。
 
 你可以在 `customize.sh` 中声明一个名为 `REPLACE` 并且包含一系列目录的变量来执行替换操作，APatch 会自动为你在模块对应目录执行相关操作。例如：
 
@@ -173,10 +175,10 @@ REPLACE="
 
 :::tip 与 Magisk 的差异
 
-APatch 的 systemless 机制是通过内核的 overlayfs 实现的，而 Magisk 当前则是通过 magic mount (bind mount)，二者实现方式有着巨大的差异，但最终的目标实际上是一致的：不修改物理的 `/system` 分区但实现修改 `/system` 文件。
+APatch 的 systemless 机制是通过内核的 OverlayFS 实现的，而 Magisk 当前则是通过 magic mount (bind mount)，二者实现方式有着巨大的差异，但最终的目标实际上是一致的：不修改物理的 `/system` 分区但实现修改 `/system` 文件。
 :::
 
-如果你对 overlayfs 感兴趣，建议阅读 Linux Kernel 关于 [overlayfs 的文档](https://docs.kernel.org/filesystems/overlayfs.html)
+如果你对 OverlayFS 感兴趣，建议阅读 Linux Kernel 关于 [OverlayFS 的文档](https://docs.kernel.org/filesystems/overlayfs.html)
 
 ### system.prop
 
