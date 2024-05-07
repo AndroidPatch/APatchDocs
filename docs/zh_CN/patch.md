@@ -84,6 +84,10 @@ magiskboot repack boot.img
 再次强调 严禁设置`114514`等弱密码
 :::
 
+::: info
+你也可以尝试[在线修补](https://kernelpatch-on-web.pages.dev/)
+:::
+
 # KP命令及注解
 ::: info
 [你可以点此尝试](https://exame.apatch.top/)
