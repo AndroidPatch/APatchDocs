@@ -86,6 +86,10 @@ Empacote e gere a imagem. O `new-boot.img` gerado é a imagem corrigida.
 **Enfatizando novamente, que é ESTRITAMENTE PROIBIDO definir chaves fracas como `12345678`.**
 :::
 
+::: info
+Você também pode tentar [patch online](https://kernelpatch-on-web.pages.dev/).
+:::
+
 # Comandos e comentários do KP
 
 ::: info INFORMAÇÕES

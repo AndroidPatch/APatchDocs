@@ -1,4 +1,4 @@
-# APM Module guide {#introduction}
+# APModule Guide {#introduction}
 
 APatch provides a modular mechanism (AndroidPatch Module) for modifying a system partition while preserving its integrity. This mechanism is often referred to as `systemless`.
 
@@ -137,7 +137,7 @@ You can determine if the script is running in APatch by using the `APATCH` envir
 
 ### `system` directory {#system-directories}
 
-The contents of this directory will be overlaid on top of the system's /system partition using OverlayFS after the system is booted. This means that:
+The contents of this directory will be overlaid on top of the system's `/system` partition using OverlayFS after the system is booted. This means that:
 
 1. Files with the same name as those in the corresponding directory in the system will be overwritten by the files in this directory.
 2. Folders with the same name as those in the corresponding directory in the system will be merged with the folders in this directory.
@@ -197,7 +197,7 @@ module.zip
 ```
 
 :::warning
-The APatch module is NOT supported for installation in custom Recovery!
+The APatch module is **NOT** supported for installation in custom Recovery!
 :::
 
 ### Customization {#customizing-installation}
@@ -266,7 +266,7 @@ There are two types of scripts in APatch depending on their mode of operation: p
   - This stage is BLOCKING. The boot process is paused before execution is done, or 10 seconds have passed.
   - Scripts run before any modules are mounted. This allows a module developer to dynamically adjust their modules before it gets mounted.
   - This stage happens before Zygote is started, which pretty much means everything in Android.
-  - **WARNING:** using `setprop` will deadlock the boot process! Please use `resetprop -n <prop_name> <prop_value>` instead.
+  - **WARNING:** Using `setprop` will deadlock the boot process! Please use `resetprop -n <prop_name> <prop_value>` instead.
   - **Only run scripts in this mode if necessary.**
 
 - late_start service mode
