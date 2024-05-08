@@ -13,7 +13,7 @@ APatch: [https://github.com/bmax121/APatch/tree/main/apd](https://github.com/bma
 
 1. 文件位置
 2. 环境变量
-3. SELinux 支持，APatch 直接使用了 magiskpolicy
+3. SELinux 支持，APatch 直接使用了 `magiskpolicy`
 
 APatch 的模块运作机制与 Magisk 几乎是一样的，如果你熟悉 Magisk 模块的开发，那么开发 APatch 的模块大同小异，你可以跳过下面有关模块的介绍，只需要了解 APatch 模块与 Magisk 模块的异同(编写中)。
 
@@ -40,12 +40,10 @@ APatch 的 BusyBox 支持运行时可切换的 "ASH Standalone Shell Mode"。
 为了确保所有后续的 `sh` shell 都在独立模式下执行，第一种是首选方法（这也是 APatch 和 APatch 管理器内部使用的方法），因为环境变量会被继承到子进程中。
 
 ::: tip 与 KernelSU 的差异
-
-busybox 的位置由 /data/adb/ksu/bin/busybox 改到了 /data/adb/ap/bin/busybox
+BusyBox 的位置由 `/data/adb/ksu/bin/busybox` 改到了 `/data/adb/ap/bin/busybox`
 :::
 
 ::: tip 与 Magisk 的差异
-
 APatch 的 BusyBox 现在是直接使用 Magisk 项目编译的二进制文件，**感谢 Magisk！**
 因此，你完全不用担心 BusyBox 脚本与在 Magisk 和 APatch 之间的兼容问题，因为他们是完全一样的！
 :::
@@ -114,7 +112,7 @@ APatch 没有内置的针对 Zygisk 的支持，因此模块中没有 Zygisk 相
 
 ### module.prop
 
-module.prop 是一个模块的配置文件，在 APatch 中如果模块中不包含此文件，那么它将不被认为是一个模块；此文件的格式如下：
+`module.prop` 是一个模块的配置文件，在 APatch 中如果模块中不包含此文件，那么它将不被认为是一个模块；此文件的格式如下：
 
 ```txt
 id=<string>
@@ -128,7 +126,7 @@ description=<string>
 - id 必须与这个正则表达式匹配：`^[a-zA-Z][a-zA-Z0-9._-]+$` 例如：✓ `a_module`，✓ `a.module`，✓ `module-101`，✗ `a  module`，✗ `1_module`，✗ `-a-module`。这是您的模块的唯一标识符，发布后不应更改。
 - versionCode 必须是一个整数，用于比较版本。
 - 其他未在上面提到的内容可以是任何单行字符串。
-- 请确保使用 UNIX（LF）换行类型，而不是Windows（CR + LF）或 Macintosh（CR）。
+- 请确保使用 `UNIX（LF）`换行类型，而不是`Windows（CR + LF）`或 `Macintosh（CR）`。
 
 ### Shell 脚本 {#shell-scripts}
 
@@ -142,7 +140,7 @@ description=<string>
 
 ### `system` 目录 {#system-directories}
 
-这个目录的内容会在系统启动后，以 `overlayfs` 的方式叠加在系统的 `/system` 分区之上，这意味着：
+这个目录的内容会在系统启动后，以 OverlayFS 的方式叠加在系统的 `/system` 分区之上，这意味着：
 
 1. 系统中对应目录的同名文件会被此目录的文件覆盖。
 2. 系统中对应目录的同名文件夹会与此目录的文件夹合并。
@@ -174,7 +172,6 @@ REPLACE="
 上面这个列表将会：自动创建目录 `$MODPATH/system/app/YouTube` 和 `$MODPATH//system/app/Bloatware`，然后执行 `setfattr -n trusted.overlay.opaque -v y $$MODPATH/system/app/YouTube` 和 `setfattr -n trusted.overlay.opaque -v y $$MODPATH/system/app/Bloatware`；并且 `/system/app/YouTube` 和 `/system/app/Bloatware` 将会在模块生效后替换为空目录。
 
 :::tip 与 Magisk 的差异
-
 APatch 的 systemless 机制是通过内核的 OverlayFS 实现的，而 Magisk 当前则是通过 magic mount (bind mount)，二者实现方式有着巨大的差异，但最终的目标实际上是一致的：不修改物理的 `/system` 分区但实现修改 `/system` 文件。
 :::
 
@@ -203,7 +200,7 @@ module.zip
 ```
 
 :::warning
-APatch 模块不支持在 Recovery 中安装！！
+APatch 模块不支持在 Recovery 中安装！
 :::
 
 ### 定制安装过程 {#customizing-installation}
@@ -217,8 +214,8 @@ APatch 模块不支持在 Recovery 中安装！！
 #### 变量 {#variables}
 
 - `KERNELPATCH` (bool): 标记此脚本运行在 APatch 环境下，此变量的值将永远为 `true`
-- `KERNEL_VERSION` (hex): 从 KernelPatch 继承，内核版本号 (如： `50a01` 是指 5.10.1)
-- `KERNELPATCH_VERSION` (hex): 从 KernelPatch 继承，KernelPatch 版本号 (如： `a05` 是指 0.10.5)
+- `KERNEL_VERSION` (hex): 从 KernelPatch 继承，内核版本号 (如： `50a01` 是指 `5.10.1`)
+- `KERNELPATCH_VERSION` (hex): 从 KernelPatch 继承，KernelPatch 版本号 (如： `a05` 是指 `0.10.5`)
 - `SUPERKEY` (string): 从 KernelPatch 继承，用于调用 kpatch 或者 supercall
 
 - `APATCH` (bool): 标记此脚本运行在 APatch 环境下，此变量的值将永远为 `true`
@@ -271,7 +268,7 @@ set_perm_recursive <directory> <owner> <group> <dirpermission> <filepermission> 
     - 这个阶段是阻塞的。在执行完成之前或者 10 秒钟之后，启动过程会暂停。
     - 脚本在任何模块被挂载之前运行。这使得模块开发者可以在模块被挂载之前动态地调整它们的模块。
     - 这个阶段发生在 Zygote 启动之前。
-    - 使用 setprop 会导致启动过程死锁！请使用 `resetprop -n <prop_name> <prop_value>` 代替。
+    - 使用 `setprop` 会导致启动过程死锁！请使用 `resetprop -n <prop_name> <prop_value>` 代替。
     - **只有在必要时才在此模式下运行脚本**。
 
 - late_start 服务模式
@@ -291,4 +288,4 @@ set_perm_recursive <directory> <owner> <group> <dirpermission> <filepermission> 
     - 只有当模块被启用时才会执行。
     - `post-fs-data.sh` 以 post-fs-data 模式运行，`post-mount.sh` 以 post-mount 模式运行，而 `service.sh` 则以 late_start 服务模式运行，`boot-completed` 在 Android 系统启动完毕后以服务模式运行。
 
-所有启动脚本都将在 APatch 的 BusyBox ash shell 中运行，并启用“独立模式”。  
+所有启动脚本都将在 APatch 的 BusyBox `ash` shell 中运行，并启用“独立模式”。  

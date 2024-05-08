@@ -87,6 +87,10 @@ to pack and generate the image. The generated `new-boot.img` is the patched imag
 **Emphasize again, it is STRICTLY PROHIBITED to set weak keys like `12345678`.**
 :::
 
+::: info
+You can also try [online patching](https://kernelpatch-on-web.pages.dev/).
+:::
+
 # KP commands and comments:
 
 ::: info

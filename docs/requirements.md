@@ -1,4 +1,4 @@
-# Install requirements
+# Install Requirements
 
 APatch installation requirements are mainly reflected in the kernel configuration. Here are the requirements of kernel:
 

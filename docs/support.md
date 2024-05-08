@@ -1,4 +1,4 @@
-# Help and support
+# Help and Support
 
 ## Project developer
 
