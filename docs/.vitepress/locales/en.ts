@@ -37,6 +37,7 @@ function sidebarGuide() {
           { text: 'Installation', link: '/install' },
           { text: 'Patch', link: '/patch' },
           { text: 'Flash', link: '/flash' },
+          { text: 'Update', link: '/update' },
           { text: 'Help and Support', link: '/support' },
 	  { text: 'APModule Guide', link: '/apm-guide' },
           { text: 'FAQ', link: '/faq' },
