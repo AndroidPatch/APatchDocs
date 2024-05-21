@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   vitepress:
-    specifier: ^1.2.0
-    version: 1.2.0(@algolia/client-search@4.23.3)(search-insights@2.13.0)
+    specifier: ^1.2.2
+    version: 1.2.2(@algolia/client-search@4.23.3)(search-insights@2.13.0)
 
 packages:
 
@@ -1010,8 +1010,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress@1.2.0(@algolia/client-search@4.23.3)(search-insights@2.13.0):
-    resolution: {integrity: sha512-m/4PAQVyPBvKHV7sFKwcmNmrsoSxdjnw/Eg40YyuBSaBHhrro9ubnfWk5GT0xGfE98LqjZkHCWKNJlR6G/7Ayg==}
+  /vitepress@1.2.2(@algolia/client-search@4.23.3)(search-insights@2.13.0):
+    resolution: {integrity: sha512-uZ3nXR5NY4nYj3RJWCo5jev9qlNZAQo5SUXu1U0QSUx84cUm/o7hCTDVjZ4njVSVui+PsV1oAbdQOg8ygbaf4w==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4
