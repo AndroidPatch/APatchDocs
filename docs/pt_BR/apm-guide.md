@@ -211,13 +211,13 @@ O script `customize.sh` é executado no shell BusyBox `ash` do APatch com o Modo
 #### Variáveis {#variables}
 
 - `KERNELPATCH` (bool): Marque este script para rodar no ambiente do APatch, e o valor desta variável será sempre `true`.
-- `KERNEL_VERSION` (hex): Herdado do KernelPatch, o número da versão do kernel (por exemplo: `50a01` significa `5.10.1`).
-- `KERNELPATCH_VERSION` (hex): Herdado do KernelPatch, o número da versão do KernelPatch (por exemplo: `a05` significa `0.10.5`).
+- `KERNEL_VERSION` (hex): Herdado do KernelPatch, o número da versão do kernel (ex.: `50a01` significa `5.10.1`).
+- `KERNELPATCH_VERSION` (hex): Herdado do KernelPatch, o número da versão do KernelPatch (ex.: `a05` significa `0.10.5`).
 - `SUPERKEY` (string): Herdado do KernelPatch, usado para chamar kpatch ou supercall.
 
 - `APATCH` (bool): Marque este script para rodar no ambiente do APatch, e o valor desta variável será sempre `true`.
-- `APATCH_VER_CODE` (int): Número da versão atual do APatch (por exemplo: `10672`).
-- `APATCH_VER` (string): O nome da versão atual do APatch (por exemplo: `10672`).
+- `APATCH_VER_CODE` (int): Número da versão atual do APatch (ex.: `10672`).
+- `APATCH_VER` (string): O nome da versão atual do APatch (ex.: `10672`).
 
 - `BOOTMODE` (bool): No APatch, esta variável sempre terá o valor `true`.
 - `MODPATH` (path): Diretório de instalação do módulo atual.
@@ -225,7 +225,7 @@ O script `customize.sh` é executado no shell BusyBox `ash` do APatch com o Modo
 - `ZIPFILE` (path): Arquivo do pacote de instalação para o módulo atual.
 - `ARCH` (string): Arquitetura do processador do dispositivo, somente `arm64`.
 - `IS64BIT` (bool): Este dispositivo é de 64 bits.
-- `API` (int): Versão atual da API Android do dispositivo (por exemplo: `23` no Android 6.0).
+- `API` (int): Versão atual da API Android do dispositivo (ex.: `23` no Android 6.0).
 
 ::: warning AVISO
 No APatch, `MAGISK_VER_CODE` tem um valor de `27000` e `MAGISK_VER` tem um valor de `27.0`.
