@@ -11,7 +11,7 @@ CONFIG_KALLSYMS_ALL=y
 
 ```
 CONFIG_KALLSYMS=y
-CONFIG_KALLSYMS_ALL=n (Начальная поддержка)
+CONFIG_KALLSYMS_ALL=n (поддержка начального уровня, могут быть проблемы)
 ```
 
 ::: warning
