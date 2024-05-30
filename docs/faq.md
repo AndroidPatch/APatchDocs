@@ -74,7 +74,7 @@ However, APatch can add the Zygisk support or allow LSPosed run without any Zygi
 
 Here are two solutions about running LSPosed on APatch:
 
-1. Refer to [Zygisk support?](/en/faq#zygisk-support) part to add the Zygisk support.
+1. Refer to [Zygisk support?](#zygisk-support) part to add the Zygisk support.
 2. If you only need to use LSPosed without other Zygisk features, you can try [Zloader](https://github.com/Mufanc/z-loader) [for LSPosed](https://t.me/mufanc_chan/28) to load LSPosed simply.
 
 ::: warning
@@ -92,7 +92,7 @@ We can not support Shamiko due to its close-source and no updates.
 **Any issues caused by using Shamiko will not be supported by APatch developers, use as your own risk.**
 :::
 
-## Zygisk support?
+## Zygisk support? {#zygisk-support}
 
 Same as KernelSU, APatch does not supports Zygisk by default.
 

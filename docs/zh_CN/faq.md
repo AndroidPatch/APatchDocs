@@ -74,7 +74,7 @@ LSPosed 依赖于 Riru 或 Zygisk，APatch 默认情况下并不附带对 Riru �
 
 下面是两种在 APatch 中使用 LSPosed 的解决方案：
 
-1. 参考 [Zygisk 支持？](/faq#zygisk-支持) 部分以添加对 Zygisk 的支持。
+1. 参考 [Zygisk 支持？](#zygisk-support) 部分以添加对 Zygisk 的支持。
 2. 如果你只需要使用 LSPosed 而无需其它 Zygisk 功能，也可以使用 [Zloader](https://github.com/Mufanc/z-loader) 的 [LSPosed 专版](https://t.me/mufanc_chan/28) 以实现单独加载 LSPosed。
 
 ::: warning
@@ -92,7 +92,7 @@ Shamiko 闭源并且停更，无法适配。
 **APatch 开发者将不对任何因使用 Shamiko 导致的问题承担任何责任，你需要自行承担使用风险。**
 :::
 
-## Zygisk 支持？
+## Zygisk 支持？ {#zygisk-support}
 
 APatch 和 KernelSU 保持一致，默认不附带对 Zygisk 的支持。
 

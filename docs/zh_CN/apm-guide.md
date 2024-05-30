@@ -175,7 +175,7 @@ REPLACE="
 APatch 的 systemless 机制是通过内核的 OverlayFS 实现的，而 Magisk 当前则是通过 magic mount (bind mount)，二者实现方式有着巨大的差异，但最终的目标实际上是一致的：不修改物理的 `/system` 分区但实现修改 `/system` 文件。
 :::
 
-如果你对 OverlayFS 感兴趣，建议阅读 Linux Kernel 关于 [OverlayFS 的文档](https://docs.kernel.org/filesystems/overlayfs.html)
+如果你对 OverlayFS 感兴趣，建议阅读 Linux Kernel 关于 [OverlayFS 的文档](https://docs.kernel.org/filesystems/overlayfs.html)。
 
 ### system.prop
 
@@ -207,7 +207,7 @@ APatch 模块不支持在 Recovery 中安装！
 
 如果你想控制模块的安装过程，可以在模块的目录下创建一个名为 `customize.sh` 的文件，这个脚本将会在模块被解压后**导入**到当前 shell 中，如果你的模块需要根据设备的 API 版本或者设备构架做一些额外的操作，那这个脚本将非常有用。
 
-如果你想完全控制脚本的安装过程，你可以在 `customize.sh` 中声明 `SKIPUNZIP=1` 来跳过所有的默认安装步骤；此时，你需要自行处理所有安装过程（如解压模块，设置权限等）
+如果你想完全控制脚本的安装过程，你可以在 `customize.sh` 中声明 `SKIPUNZIP=1` 来跳过所有的默认安装步骤；此时，你需要自行处理所有安装过程（如解压模块，设置权限等）。
 
 `customize.sh` 脚本以“独立模式”运行在 APatch 的 BusyBox `ash` shell 中。你可以使用如下变量和函数：
 
@@ -231,7 +231,7 @@ APatch 模块不支持在 Recovery 中安装！
 - `API` (int): 当前设备的 Android API 版本 (如：Android 6.0 上为 `23`)
 
 ::: warning
-`MAGISK_VER_CODE` 在 APatch 为 `27000`，`MAGISK_VER` 则为 `27.0`
+`MAGISK_VER_CODE` 在 APatch 为 `27000`，`MAGISK_VER` 则为 `27.0`。
 :::
 
 #### 函数 {#functions}

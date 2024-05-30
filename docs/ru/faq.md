@@ -74,7 +74,7 @@ KernelPatch не изменяет контекст SELinux, а обходит SE
 
 Вот два решения по запуску LSPosed на APatch:
 
-1. Обратитесь к [Поддерживается ли Zygisk?](/ru/faq#zygisk-support) чтобы добавить поддержку Zygisk
+1. Обратитесь к [Поддерживается ли Zygisk?](#zygisk-support) чтобы добавить поддержку Zygisk
 2. Если вам нужно использовать только LSPosed без других функций Zygisk, вы можете попробовать [Zloader](https://github.com/Mufanc/z-loader) [for LSPosed](https://t.me/mufanc_chan/28) чтобы загрузить только LSPosed.
 
 ::: warning
@@ -93,7 +93,7 @@ Zloader все еще находится на ранней стадии разр
 **Любые проблемы, вызванные использованием Shamiko, не будут поддерживаться разработчиками APatch, используйте их на свой страх и риск.**
 :::
 
-## Поддерживается ли Zygisk?
+## Поддерживается ли Zygisk? {#zygisk-support}
 
 Как и KernelSU, APatch по умолчанию не поддерживает Zygisk.
 

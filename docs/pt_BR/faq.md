@@ -62,7 +62,7 @@ Se você deseja usar o WebUI para o APMódulo ou KPMódulo, consulte a [introdu�
 
 Revogue o privilégio root do app "Shell" na página SuperUsuário.
 
-## O app automaticamente obtém e perde permissões root após o reinício do telefone
+## O app automaticamente obtém e perde permissões root após o reinício do dispositivo
 
 Veja [aqui](https://t.me/APatchChannel/74).
 
@@ -74,7 +74,7 @@ No entanto, o APatch pode adicionar suporte ao Zygisk ou permitir que o LSPosed 
 
 Aqui estão duas soluções sobre como executar o LSPosed no APatch:
 
-1. Consulte a parte [Suporta Zygisk?](/pt_BR/faq#zygisk-support) para adicionar suporte ao Zygisk.
+1. Consulte a parte [Suporta Zygisk?](#zygisk-support) para adicionar suporte ao Zygisk.
 2. Se você só precisa usar o LSPosed sem os outros recursos do Zygisk, você pode tentar o [Zloader](https://github.com/Mufanc/z-loader) [para o LSPosed](https://t.me/mufanc_chan/28).
 
 ::: warning AVISO
@@ -93,7 +93,7 @@ Não podemos oferecer suporte ao Shamiko devido ao seu código fechado e sem atu
 **Quaisquer problemas causados ​​pelo uso do Shamiko não serão suportados pelos desenvolvedores do APatch, use por sua própria conta e risco.**
 :::
 
-## Suporta Zygisk?
+## Suporta Zygisk? {#zygisk-support}
 
 Assim como o KernelSU, APatch não oferece suporte ao Zygisk por padrão.
 
