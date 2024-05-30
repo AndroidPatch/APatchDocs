@@ -38,7 +38,7 @@ function sidebarGuide() {
           { text: '修补', link: '/zh_CN/patch' },
           { text: '刷入', link: '/zh_CN/flash' },
           { text: '升级', link: '/zh_CN/update' },
-          { text: '救砖', link: '/zh_CN/rescue' },
+          { text: '救砖', link: '/zh_CN/rescue-bootloop' },
           { text: 'APM 编写指南', link: '/zh_CN/apm-guide' },
           { text: '反馈与帮助', link: '/zh_CN/support' },
           { text: '常见问题', link: '/zh_CN/faq' },
