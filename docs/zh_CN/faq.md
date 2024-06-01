@@ -28,7 +28,7 @@ APatch 分别结合了 Magisk 方便易用的通过 `boot.img` 安装的方法�
 
 此外，KPM 提供在内核空间进行内联 hook、系统调用表 hook 的能力。
 
-更多相关信息，请参阅[如何编写KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/zh-CN/module.md)
+更多相关信息，请参阅[如何编写KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/zh-CN/module.md)。
 
 ## APatch 与 KernelPatch 的关系
 
@@ -37,7 +37,7 @@ APatch 依赖于 KernelPatch，继承了其所有功能并进行了扩展。
 您可以仅安装 KernelPatch，但如此将不允许您使用 APM。  
 要使用超级用户管理，您需要安装 APatch，然后卸载 KernelPatch。
 
-[了解更多关于 KernelPatch 的信息](https://github.com/bmax121/KernelPatch)
+[了解更多关于 KernelPatch 的信息](https://github.com/bmax121/KernelPatch)。
 
 ## 什么是 SuperKey（超级密钥）？
 
@@ -64,7 +64,7 @@ APatch 的 WebUI 实现方法和要求和 KernelSU 的实现方法和要求完�
 
 ## APP 在手机重启后自动获得/丢失 root 权限？
 
-参阅 [这里](https://t.me/APatchChannel/74)
+参阅 [这里](https://t.me/APatchChannel/74)。
 
 ## 能使用 LSPosed 吗？
 

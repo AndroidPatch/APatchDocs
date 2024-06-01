@@ -84,52 +84,37 @@ magiskboot repack boot.img
 :::
 
 ::: info
-你也可以尝试[在线修补](https://kernelpatch-on-web.pages.dev/)
+你也可以尝试[在线修补](https://kernelpatch-on-web.pages.dev/)。
 :::
 
 # KP命令及注解
 ::: info
-[你可以点此尝试](https://exame.apatch.top/)
+[你可以点此尝试](https://exame.apatch.top/)。
 :::
+
 ```
--h，——help打印此信息。
-
--v，——version打印版本号。如果指定了-k，则打印kimpg版本。
-
--p，——patch补丁或更新内核映像的补丁(-i)，指定kimpg (-k)和超级键(-s)。
-
--u，——unpatch解除补丁后的内核映像(-i)。
-
--r，——Reset -skey重置补丁映像的超级密钥(-i)。
-
--d，——dump dump内核镜像的kallsyms信息(-i)。
-
--l，——list如果指定(-i)，打印内核镜像的所有补丁信息。
-如果指定了(-M)，则打印额外的项目信息。
-如果指定(-k)，则打印KernelPatch映像信息。
-选项:-i，——image PATH内核镜像路径。
-
--k，——kimpg PATH内核补丁镜像路径。
-
--s，——skey PATH设置超级键。
-
--o，——out PATH补丁镜像路径。
-
--a——Add KEY=VALUE添加附加信息。
-
--K，——kpatch PATH将kpatch可执行二进制文件嵌入补丁中。
-
--M，——Embed -extra- PATH PATH嵌入新的额外项。
-
--E，——embed -extra- NAME NAME保留和修改嵌入的额外项。
-
--T，——extra- TYPE TYPE设置上一个附加项的类型。
-
--N，——extra- NAME NAME设置前一个附加项的名称。
-
--V，——extra- EVENT EVENT设置前一个额外项的触发事件。
-
--A，——extra- ARGS ARGS设置前一个额外项的参数。
-
--D，——extra- Detach从补丁中分离先前的额外项目。
+命令:
+  -h, --help                       打印此信息。
+  -v, --version                    打印版本号。如果指定了-k，则打印kimpg版本。
+  -p, --patch                      丁或更新内核映像的补丁(-i)，指定kimpg (-k)和超级键(-s)。
+  -u, --unpatch                    解除补丁后的内核映像(-i)。
+  -r, --reset-skey                 重置补丁映像的超级密钥(-i)。
+  -d, --dump                       内核镜像的kallsyms信息(-i)。
+  -l, --list                       如果指定(-i)，打印内核镜像的所有补丁信息。
+                                   如果指定了(-M)，则打印额外的项目信息。
+                                   如果指定(-k)，则打印KernelPatch映像信息。
+选项:
+  -i, --image PATH                 内核镜像路径。
+  -k, --kpimg PATH                 内核补丁镜像路径。
+  -s, --skey PATH                  设置超级键。
+  -o, --out PATH                   补丁镜像路径。
+  -a  --addition KEY=VALUE         添加附加信息。
+  -K, --kpatch PATH                将kpatch可执行二进制文件嵌入补丁中。
+  -M, --embed-extra-path PATH      嵌入新的额外项。
+  -E, --embeded-extra-name NAME    保留和修改嵌入的额外项。
+  -T, --extra-type TYPE            设置上一个附加项的类型。
+  -N, --extra-name NAME            设置前一个附加项的名称。
+  -V, --extra-event EVENT          设置前一个额外项的触发事件。
+  -A, --extra-args ARGS            设置前一个额外项的参数。
+  -D, --extra-detach               从补丁中分离先前的额外项目。
 ```

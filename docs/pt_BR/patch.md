@@ -110,8 +110,7 @@ COMANDOS:
 OPÇÕES:
   -i, --image PATH                 Caminho da imagem do kernel.
   -k, --kpimg PATH                 Caminho da imagem do KernelPatch.
-  -s, --skey KEY                   Definir SuperKey e salvar diretamente no boot.img.
-  -S, --root-skey KEY              Definir SuperKey root que usa verificação de hash e a SuperKey que pode ser alterada dinamicamente.
+  -s, --skey PATH                  Definir SuperKey e salvar diretamente no boot.img.
   -o, --out PATH                   Caminho da imagem corrigida.
   -a  --addition KEY=VALUE         Adicionar informações adicionais.
   -K, --kpatch PATH                Incorporar binário executável do kpatch no patch.
