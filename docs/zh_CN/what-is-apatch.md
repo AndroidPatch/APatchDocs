@@ -1,4 +1,4 @@
-# 什么是 APatch
+# 什么是 APatch？
 
 适用于 Android 设备的基于内核的 Root 新解决方案，可以工作在内核模式，并直接在内核空间中为用户空间应用程序授予 root 权限。
 
@@ -16,8 +16,8 @@ APatch 管理器 和 APM 的源代码来自对 KernelSU 管理器 和 KernelSU �
 
 ## 如何使用
 
-请参考:[安装教程](/zh_CN/install).
+请参考: [安装教程](/zh_CN/install)。
 
 ## 如何修补
 
-请参考:[修补教程](/zh_CN/patch).
+请参考: [修补教程](/zh_CN/patch)。

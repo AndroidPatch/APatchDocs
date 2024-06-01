@@ -2,64 +2,63 @@
 
 ## 自动修补
 
-1. 前往[GitHub](https://github.com/bmax121/APatch/releases)下载最新管理器
+1. 前往[GitHub](https://github.com/bmax121/APatch/releases)下载最新管理器。
 
-2. 点击主页右上角的 ![Patch Button](/PButton.png) 按钮来设置管理密钥，密钥需要 **"数字+字母"**，并且至少**8位**，后面解锁 Root 权限需要用到
+2. 点击主页右上角的 ![Patch Button](/PButton.png) 按钮来设置管理密钥，密钥需要 **"数字+字母"**，并且至少**8位**，后面解锁 Root 权限需要用到。
 
 :::warning 
-禁止设置 `114514` 等弱密码，新版 APatch 管理器 已强制使用强密码  [原因](/zh_CN/warn)
+禁止设置 `114514` 等弱密码，新版 APatch 管理器 已强制使用强密码  [原因](/zh_CN/warn)。
 :::
 
 3. 选择你的 boot.img，确认后等待修补完成。修补成功后会显示修补后的 img镜像 路径。例如: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
 
-最后按你的实际情况[刷入](/zh_CN/flash)即可
-
+最后按你的实际情况[刷入](/zh_CN/flash)即可。
 
 ## 手动修补
 
-**当内核补丁更新后，管理器仍未更新时，你可以选择手动修补内核**
+**当内核补丁更新后，管理器仍未更新时，你可以选择手动修补内核。**
 
-你可以前往[KernelPatch](https://github.com/bmax121/KernelPatch/releases)项目获取最新的`KP`文件
+你可以前往[KernelPatch](https://github.com/bmax121/KernelPatch/releases)项目获取最新的`KP`文件。
 
 ### Windows
 
-1. 下载 `kptools-win.zip` 和 `kpimg-android` ，并解压到当前目录使用，同时下载 `magiskboot(Windows)` 
+1. 下载 `kptools-win.zip` 和 `kpimg-android` ，并解压到当前目录使用，同时下载 `magiskboot(Windows)` 。
 
-2. 执行
+2. 执行:
 ```
 magiskboot.exe unpack boot.img
 ```
 
-解压 boot，然后将 kernel 改名为 kernel-b (kernel-b可以是其他第三方内核，但是第三方内核不做任何保证，也不会受到支持)
+解压 boot，然后将 kernel 改名为 kernel-b (kernel-b可以是其他第三方内核，但是第三方内核不做任何保证，也不会受到支持)。
 
-Windows可以使用 CMD 或 PowerShell 进行修补
+Windows可以使用 CMD 或 PowerShell 进行修补。
 
-执行
+执行:
 ```
 kptools-x86_64-win.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
-或者更推荐的，使用 `WSL` 的`Linux`修补
+或者更推荐的，使用 `WSL` 的`Linux`修补:
 
 ```
 ./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
-修补后无报错，最后用
+修补后无报错，最后用:
 
 ```
 magiskboot.exe repack boot.img
 ```
 
-打包生成镜像，生成的 **new-boot.img** 即为修补好的镜像
+打包生成镜像，生成的 **new-boot.img** 即为修补好的镜像。
 
 ---
 
 ### Linux
 
-1. 下载 `kptools-linux` 和 `kpimg-android` ，并下载 `magiskboot`
+1. 下载 `kptools-linux` 和 `kpimg-android` ，并下载 `magiskboot`。
 
-2. 执行
+2. 执行:
 
 ```
 magiskboot unpack boot.img
@@ -72,16 +71,16 @@ magiskboot unpack boot.img
 ```
 ./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
-修补后无报错，最后用
+修补后无报错，最后用:
 
 ```
 magiskboot repack boot.img
 ```
 
-打包生成镜像，生成的 `new-boot.img` 即是修补好的镜像
+打包生成镜像，生成的 `new-boot.img` 即是修补好的镜像。
 
 ::: warning 
-再次强调 严禁设置`114514`等弱密码
+再次强调 严禁设置`114514`等弱密码。
 :::
 
 ::: info
