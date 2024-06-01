@@ -38,8 +38,9 @@ function sidebarGuide() {
           { text: 'Patch', link: '/pt_BR/patch' },
           { text: 'Flash', link: '/pt_BR/flash' },
           { text: 'Atualizar', link: '/pt_BR/update' },
-          { text: 'Ajuda e suporte', link: '/pt_BR/support' },
+          { text: 'Resgate do bootloop', link: '/pt_BR/rescue-bootloop' },
           { text: 'Guia APMódulo', link: '/pt_BR/apm-guide' },
+          { text: 'Ajuda e suporte', link: '/pt_BR/support' },
           { text: 'Perguntas frequentes', link: '/pt_BR/faq' },
         ]
     }

@@ -20,7 +20,7 @@ Você pode atualizar diretamente no app.
 Mantenha a atualização OTA do root do APatch consistente com o Magisk.
 :::
 
-1. Baixe e comece a instalar a atualização OTA através do software de sua ROM.
+1. Baixe e comece a instalar a atualização OTA através do software de sua ROM
 
 2. Após a conclusão de instalação da atualização OTA (quando solicitado a reiniciar), abra o APatch e clique no botão no canto superior direito ![Patch Button](/PButton.png)
 

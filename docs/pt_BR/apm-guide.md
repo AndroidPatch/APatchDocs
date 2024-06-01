@@ -35,11 +35,11 @@ Para aqueles que desejam usar o recurso Modo Autônomo fora do APatch, existem 2
 
 Para garantir que todos os shells `sh` subsequentes executados também sejam executados no Modo Autônomo, a opção 1 é o método preferido (e é isso que o APatch e o gerenciador do APatch usam internamente), pois as variáveis ​​de ambiente são herdadas para os subprocesso.
 
-::: tip DIFERENÇA COM KERNELSU
+::: tip DIFERENÇAS COM KERNELSU
 A localização do BusyBox foi alterada de `/data/adb/ksu/bin/busybox` para `/data/adb/ap/bin/busybox`.
 :::
 
-::: tip DIFERENÇA COM MAGISK
+::: tip DIFERENÇAS COM MAGISK
 O BusyBox do APatch agora está usando o arquivo binário compilado diretamente do projeto Magisk. **Obrigado ao Magisk!**
 Portanto, você não precisa se preocupar com problemas de compatibilidade entre scripts BusyBox no Magisk e APatch porque eles são exatamente iguais!
 :::
@@ -100,7 +100,7 @@ Um módulo APatch é uma pasta colocada em `/data/adb/modules` com a estrutura a
 ├── .
 ```
 
-::: tip DIFERENÇA COM MAGISK
+::: tip DIFERENÇAS COM MAGISK
 O APatch não possui suporte integrado para o Zygisk, portanto não há conteúdo relacionado ao Zygisk no módulo.
 No entanto, você pode usar [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) ou [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) para suportar módulos Zygisk. Neste caso, o conteúdo do módulo Zygisk é idêntico ao suportado pelo Magisk.
 :::
@@ -131,7 +131,7 @@ As diferenças entre `post-fs-data.sh`, `post-mount.sh`, `service.sh` e `boot-co
 
 Em todos os scripts do seu módulo, use `MODDIR=${0%/*}` para obter o caminho do diretório base do seu módulo, **NÃO** codifique o caminho do seu módulo nos scripts.
 
-:::tip DIFERENÇA COM MAGISK E KERNELSU
+:::tip DIFERENÇAS COM MAGISK E KERNELSU
 Você pode determinar se o script está sendo executado no APatch usando a variável de ambiente `APATCH`. Se estiver sendo executado no APatch, esse valor será definido como `true`.
 :::
 
@@ -168,7 +168,7 @@ REPLACE="
 
 Esta lista criará automaticamente os diretórios `$MODPATH/system/app/YouTube` e `$MODPATH/system/app/Bloatware` e, em seguida, executará `setfattr -n trusted.overlay.opaque -v y $MODPATH/system/app/YouTube` e `setfattr -n trusted.overlay.opaque -v y $MODPATH/system/app/Bloatware`. Após o módulo entrar em vigor, `/system/app/YouTube` e `/system/app/Bloatware` serão substituídos por diretórios vazios.
 
-:::tip DIFERENÇA COM MAGISK
+:::tip DIFERENÇAS COM MAGISK
 O mecanismo sem sistema do APatch é implementado através do OverlayFS do kernel, enquanto o Magisk atualmente usa montagem mágica. Há uma enorme diferença entre essas duas implementações, mas o objetivo final é o mesmo: modificar os arquivos `/system` sem modificar fisicamente a partição `/system`.
 :::
 
@@ -180,7 +180,7 @@ Este arquivo segue o mesmo formato de `build.prop`. Cada linha é composta por `
 
 ### sepolicy.rule
 
-Se o seu módulo exigir alguns patches adicionais do sepolicy, adicione essas regras a este arquivo. Cada linha neste arquivo será tratada como uma declaração de política
+Se o seu módulo exigir alguns patches adicionais do sepolicy, adicione essas regras a este arquivo. Cada linha neste arquivo será tratada como uma declaração de política.
 
 ## Instalador do módulo {#module-installer}
 

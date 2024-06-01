@@ -38,8 +38,8 @@ function sidebarGuide() {
           { text: 'Патчинг', link: '/ru/patch' },
           { text: 'Прошивка', link: '/ru/flash' },
           { text: 'Обновление', link: '/ru/update' },
-          { text: 'Обратная связь и помощь', link: '/ru/support' },
 	  { text: 'Руководство по разработке APM', link: '/ru/apm-guide' },
+          { text: 'Обратная связь и помощь', link: '/ru/support' },
           { text: 'Частые вопросы', link: '/ru/faq' },
         ]
     }

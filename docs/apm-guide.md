@@ -121,7 +121,7 @@ description=<string>
 - `id` has to match this regular expression: `^[a-zA-Z][a-zA-Z0-9._-]+$`<br>
   ex: ✓ `a_module`, ✓ `a.module`, ✓ `module-101`, ✗ `a module`, ✗ `1_module`, ✗ `-a-module`<br>
   This is the **unique identifier** of your module. You should not change it once published.
-- `versionCode` has to be an **integer**. This is used to compare versions
+- `versionCode` has to be an **integer**. This is used to compare versions.
 - Others that weren't mentioned above can be any **single line** string.
 - Make sure to use the `UNIX (LF)` line break type and not the `Windows (CR+LF)` or `Macintosh (CR)`.
 
