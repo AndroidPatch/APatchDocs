@@ -31,7 +31,7 @@ Cada script shell executado no contexto do APatch será executado no shell `ash`
 Para aqueles que desejam usar o recurso Modo Autônomo fora do APatch, existem 2 maneiras de ativá-los:
 
 1. Definir a variável de ambiente `ASH_STANDALONE` como `1`.<br>Exemplo: `ASH_STANDALONE=1 /data/adb/ap/bin/busybox sh <script>`.
-2. Alternar com opções de linha de comando: `/data/adb/ap/bin/busybox sh -o standalone <script>`
+2. Alternar com opções de linha de comando: `/data/adb/ap/bin/busybox sh -o standalone <script>`.
 
 Para garantir que todos os shells `sh` subsequentes executados também sejam executados no Modo Autônomo, a opção 1 é o método preferido (e é isso que o APatch e o gerenciador do APatch usam internamente), pois as variáveis ​​de ambiente são herdadas para os subprocesso.
 
@@ -197,7 +197,7 @@ module.zip
 ```
 
 :::warning AVISO
-O módulo APatch **NÃO** é compatível para instalação no Recovery personalizado!
+O módulo APatch **NÃO** é compatível para instalação no recovery personalizado!
 :::
 
 ### Personalização {#customizing-installation}

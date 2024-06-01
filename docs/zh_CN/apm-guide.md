@@ -34,13 +34,13 @@ APatch 的 BusyBox 支持运行时可切换的 "ASH Standalone Shell Mode"。
 
 对于想要在 APatch 之外使用这个“独立模式”功能的用户，有两种启用方法:
 
-1. 设置环境变量 `ASH_STANDALONE` 为 `1`。<br>例如：`ASH_STANDALONE=1 /data/adb/ap/bin/busybox sh <script>`
-2. 使用命令行选项切换：`/data/adb/ap/bin/busybox sh -o standalone <script>`
+1. 设置环境变量 `ASH_STANDALONE` 为 `1`。<br>例如：`ASH_STANDALONE=1 /data/adb/ap/bin/busybox sh <script>`。
+2. 使用命令行选项切换：`/data/adb/ap/bin/busybox sh -o standalone <script>`。
 
 为了确保所有后续的 `sh` shell 都在独立模式下执行，第一种是首选方法（这也是 APatch 和 APatch 管理器内部使用的方法），因为环境变量会被继承到子进程中。
 
 ::: tip 与 KernelSU 的差异
-BusyBox 的位置由 `/data/adb/ksu/bin/busybox` 改到了 `/data/adb/ap/bin/busybox`
+BusyBox 的位置由 `/data/adb/ksu/bin/busybox` 改到了 `/data/adb/ap/bin/busybox`。
 :::
 
 ::: tip 与 Magisk 的差异

@@ -37,7 +37,7 @@ function sidebarGuide() {
 				{ text: 'Прошивка', link: '/ru/flash' },
 				{ text: 'Обновление', link: '/ru/update' },
 				{ text: 'Спасения от бутлупа', link: '/ru/rescue-bootloop' },
-        { text: 'Руководство по разработке APM', link: '/ru/apm-guide' },
+                                { text: 'Руководство по разработке APM', link: '/ru/apm-guide' },
 				{ text: 'Обратная связь и помощь', link: '/ru/support' },
 				{ text: 'Частые вопросы', link: '/ru/faq' },
 			],
