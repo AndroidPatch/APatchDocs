@@ -20,7 +20,7 @@ Em outras palavras, é válido antes de `sys.boot_completed=1`.
 
 - Entrando no Modo de Segurança
 
-Algumas ROMs, como MIUI/HyperOS, podem ativar o Modo de Segurança em seu recovery. Reiniciar para o recovery e ativar o Modo de Segurança que vem com a ROM também iniciará o Modo de Segurança do APatch.
+Algumas ROMs, como a MIUI/HyperOS, podem ativar o Modo de Segurança em seu recovery. Reiniciar para o recovery e ativar o Modo de Segurança que vem com a ROM também iniciará o Modo de Segurança do APatch.
 
 ---
 
@@ -33,3 +33,11 @@ Após entrar no Modo de Segurança, todos os módulos na página de módulos do 
 ### Mesmo depois de ativar o Modo de Segurança, o sistema ainda pode travar.
 
 Pode ser devido à falha em reverter as modificações do `post-fs`, causando o travamento. Reiniciar forçadamente novamente deve resolver.
+
+### Não consigo ver o APatch após entrar no Modo de Segurança via recovery.
+
+Você pode entrar no Modo de Segurança do Android.
+
+Ao entrar no Modo de Segurança do Android, há uma regra aplicável: Após entrar no Modo de Segurança, todos os apps que não sejam do sistema serão desativados pelo Android. O APatch não se encaixará como um app do sistema, portanto, esta regra resultará na desativação do APatch após entrar no Modo de Segurança.
+
+Esse comportamento é normal e mostra que tanto o Modo de Segurança do Android quanto o Modo de Segurança do APatch funcionam bem se você não tiver consolidado o APatch em um app do sistema. O que você precisa fazer é apenas reiniciar o dispositivo novamente e o Android sairá do Modo de Segurança com o APatch recuperado. No entanto, o APatch não sairá do Modo de Segurança ao mesmo tempo, então você pode desabilitar qualquer APMódulo que tenha causado problemas neste caso.

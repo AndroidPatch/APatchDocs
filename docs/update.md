@@ -31,12 +31,11 @@ The OTA update functionality with root saving in APatch is currently not very st
 :::
 
 ::: info Pay attention
+For MIUI/Xiaomi HyperOS users, here is what you need to pay extra attention for:
 
-For MIUI / Xiaomi HyperOS users, here is what you need to pay extra attention for:
+Different from Magisk/KernelSU, APatch currently won't automatically backup the stock `boot.img` when patching it. If you haven't manually restored the stock `boot.img` before a system update, the verification will fail, and you'll be forced to use a Full ROM to complete the update process.
 
-Different from Magisk / KernelSU, APatch currently won't automatically backup stock `boot.img` when patching it. If you haven't manually restore the stock `boot.img` before system update, the verification will fail, and you'll be forced to use Full ROM to complete the update process. 
-
-If you're using MIUI / Xiaomi HyperOS(especially Dev Edition), we recommend that restoring stock `boot.img` manually before system update.
+If you're using MIUI/Xiaomi HyperOS (especially Dev Edition), we recommend that restoring stock `boot.img` manually before system update.
 :::
 
 ## Miscellaneous

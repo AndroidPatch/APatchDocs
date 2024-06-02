@@ -30,6 +30,14 @@ Mantenha a atualização OTA do root do APatch consistente com o Magisk.
 A funcionalidade de atualização OTA está atualmente instável e pode causar problemas. Se problemas ocorrerem [vá para o repositório do APatch no GitHub para enviar um problema](https://github.com/bmax121/APatch/issues/new/choose).
 :::
 
+::: info PRESTE ATENÇÃO
+Para usuários da MIUI/Xiaomi HyperOS, aqui está o que você precisa prestar mais atenção:
+
+Diferente do Magisk/KernelSU, o APatch atualmente não fará backup automático do `boot.img` stock ao corrigi-lo. Se você não restaurou manualmente o `boot.img` stock antes de uma atualização do sistema, a verificação falhará e você será forçado a usar uma ROM completa para concluir o processo de atualização.
+
+Se você estiver usando MIUI/Xiaomi HyperOS (especialmente Dev Edition), recomendamos restaurar o `boot.img` stock manualmente antes da atualização do sistema.
+:::
+
 ## Diversos
 
 :::info INFORMAÇÕES
