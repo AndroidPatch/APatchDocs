@@ -30,6 +30,15 @@ OTA update with root retention in APatch is consistent with Magisk.
 The OTA update functionality with root saving in APatch is currently not very stable and issues may occur. If an issue occurs [go to the APatch project GitHub repository to submit an issue](https://github.com/bmax121/APatch/issues/new/choose).
 :::
 
+::: info Pay attention
+
+For MIUI / Xiaomi HyperOS users, here is what you need to pay extra attention for:
+
+Different from Magisk / KernelSU, APatch currently won't automatically backup stock `boot.img` when patching it. If you haven't manually restore the stock `boot.img` before system update, the verification will fail, and you'll be forced to use Full ROM to complete the update process. 
+
+If you're using MIUI / Xiaomi HyperOS(especially Dev Edition), we recommend that restoring stock `boot.img` manually before system update.
+:::
+
 ## Miscellaneous
 
 :::info

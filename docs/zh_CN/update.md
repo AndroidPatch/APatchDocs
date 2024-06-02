@@ -30,6 +30,15 @@ APatch 的保 root OTA 升级与 Magisk 保持一致。
 APatch 的 OTA 功能目前不太稳定，可能会出现问题。当遇到问题时，最好[前往 APatch 项目 GitHub 仓库提交 issue](https://github.com/bmax121/APatch/issues/new/choose)。
 :::
 
+::: info 提请注意
+
+对于 MIUI / Xiaomi HyperOS 设备，以下事项需要额外注意：
+
+和 Magisk / KernelSU 不同，APatch 目前不会在修补 `boot` 镜像时自动备份原厂镜像。如果不在更新系统前手动恢复 `boot` 镜像，会导致系统升级的校验失败，从而被强制使用全量包进行更新。
+
+如果你正在使用 MIUI / Xiaomi HyperOS(特别是开发版)，我们建议你在更新系统前手动还原原厂 `boot` 镜像。
+:::
+
 ## 其他注意事项
 
 :::info
