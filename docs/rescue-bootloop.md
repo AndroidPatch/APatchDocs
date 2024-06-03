@@ -34,10 +34,10 @@ After entering Safe Mode, all modules on the system modules page of APatch will 
 
 It could be due to failure in reverting the modifications made in the `post-fs`, causing the freeze. Forcefully rebooting again should resolve it.
 
-### Can't see APatch manager after entering Safe Mode via recovery.
+### Can't see APatch Manager after entering Safe Mode via recovery.
 
 You may entered Android's Safe Mode.
 
-When you entering Android's Safe mode, there is a rule appliable: After entering Safe Mode, all non-system applications will be disabled by Android system. APatch manager won't register itself as a system application, so this rule will result in the disable of APatch manager after entering Safe Mode.
+When entering Android's Safe Mode, there is a rule applicable: After entering Safe Mode, all non-system applications will be disabled by the Android system. APatch Manager won't register itself as a system application, so this rule will result in the disabling of APatch Manager after entering Safe Mode.
 
-This behaviour is normal, and it shows that both Android's Safe Mode and APatch's Safe Mode works fine if you haven't soildified APatch manager to a system application. What you need to do is only to reboot your device again, and Android will exit Safe Mode with APatch manager recovered. However, APatch won't exit Safe Mode at the same time, so you can disable any APMs that caused problems at this case.
+This behavior is normal, and it shows that both Android's Safe Mode and APatch's Safe Mode work fine if you haven't solidified APatch Manager as a system application. What you need to do is only to reboot your device again, and Android will exit Safe Mode with APatch Manager recovered. However, APatch won't exit Safe Mode at the same time, so you can disable any APMs that caused problems in this case.
