@@ -33,7 +33,7 @@ function sidebarGuide() {
         items: [
           { text: 'What is APatch?', link: '/what-is-apatch' },
           { text: 'Install Requirements', link: '/requirements' },
-          { text: 'Warning', link: '/warn' },
+          { text: 'Security Alert', link: '/warn' },
           { text: 'Installation', link: '/install' },
           { text: 'Patch', link: '/patch' },
           { text: 'Flash', link: '/flash' },

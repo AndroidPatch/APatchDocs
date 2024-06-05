@@ -1,5 +1,7 @@
+# 重要提醒
+
 ::: info
-**SUPERKEY 的权限高于 root 访问权限。**
+**SuperKey 的权限高于 root 访问权限。**
 ::: info
 使用强密钥并保护它们免受暴露以维护设备的安全。
 ::: warning

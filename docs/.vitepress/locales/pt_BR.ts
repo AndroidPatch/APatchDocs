@@ -33,7 +33,7 @@ function sidebarGuide() {
         items: [
           { text: 'O que é APatch?', link: '/pt_BR/what-is-apatch' },
           { text: 'Requisitos de instalação', link: '/pt_BR/requirements' },
-          { text: 'Aviso importante', link: '/pt_BR/warn' },
+          { text: 'Alerta de segurança', link: '/pt_BR/warn' },
           { text: 'Instalação', link: '/pt_BR/install' },
           { text: 'Patch', link: '/pt_BR/patch' },
           { text: 'Flash', link: '/pt_BR/flash' },

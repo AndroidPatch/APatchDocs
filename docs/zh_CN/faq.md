@@ -11,16 +11,16 @@ APatch 分别结合了 Magisk 方便易用的通过 `boot.img` 安装的方法�
 
 ## APatch 与 Magisk 的区别？
 
-- Magisk 对启动映像中的 ramdisk 进行补丁，以修改 init 系统。而 APatch 则直接修补 Android 内核。
+Magisk 对启动映像中的 `ramdisk` 进行补丁，以修改 `init` 系统。而 APatch 则直接修补 Android 内核。
 
 ## APatch 与 KernelSU 的区别？
 
-- KernelSU 需要您设备的内核的源代码，而 OEM 并不总是提供该源码。而 APatch 仅需要您的设备原本的`boot.img`。
+KernelSU 需要您设备的内核的源代码，而 OEM 并不总是提供该源码。而 APatch 仅需要您的设备原本的`boot.img`。
 
 ## APatch 与 Magisk、KernelSU 的区别？
 
-- APatch 可选择不修改 SELinux，这意味着 Android 应用程序线程可以被 root，无需 libsu 和 IPC 。
-- APatch 提供 **Kernel Patch Module（KP模块）**。
+APatch 可选择不修改 SELinux，这意味着 Android 应用程序线程可以被 root，无需 `libsu` 和 `IPC` 。
+APatch 提供 **Kernel Patch Module（KP模块）**。
 
 ## 什么是 Kernel Patch Module（KP模块）？
 
@@ -34,21 +34,22 @@ APatch 分别结合了 Magisk 方便易用的通过 `boot.img` 安装的方法�
 
 APatch 依赖于 KernelPatch，继承了其所有功能并进行了扩展。
 
-您可以仅安装 KernelPatch，但如此将不允许您使用 APM。  
+您可以仅安装 KernelPatch，但如此将不允许您使用 APM。
+
 要使用超级用户管理，您需要安装 APatch，然后卸载 KernelPatch。
 
 [了解更多关于 KernelPatch 的信息](https://github.com/bmax121/KernelPatch)。
 
 ## 什么是 SuperKey（超级密钥）？
 
-KernelPatch 添加了一个新的系统调用（syscall），为应用程序和用户空间中的程序提供所有功能，此系统调用称为 SuperCall。 
-当应用程序/程序尝试调用 SuperCall 时，它需要提供访问凭据，称为 SuperKey。
+KernelPatch 添加了一个新的系统调用（syscall），为应用程序和用户空间中的程序提供所有功能，此系统调用称为 **SuperCall**。 
+当应用程序/程序尝试调用 SuperCall 时，它需要提供访问凭据，称为 **SuperKey**。
 只有当 SuperKey 正确时，才能成功调用 SuperCall。否则，调用方将不受影响。
 
 ## 关于 SELinux如何处理？
 
-- KernelPatch 不修改 SELinux 上下文，而是通过 hook 绕过 SELinux。 这允许您在应用程序上下文中 root Android 线程，无需使用 libsu 启动新进程，然后执行 IPC 。这非常方便。
-- 此外，APatch 直接利用 magiskpolicy 提供额外的 SELinux 支持。  
+KernelPatch 不修改 SELinux 上下文，而是通过 hook 绕过 SELinux。 这允许您在应用程序上下文中 root Android 线程，无需使用 `libsu` 启动新进程，然后执行 `IPC` 。这非常方便。
+此外，APatch 直接利用 `magiskpolicy` 提供额外的 SELinux 支持。  
 
 ## APatch 的模块 WebUI
 
@@ -78,7 +79,7 @@ LSPosed 依赖于 Riru 或 Zygisk，APatch 默认情况下并不附带对 Riru �
 2. 如果你只需要使用 LSPosed 而无需其它 Zygisk 功能，也可以使用 [Zloader](https://github.com/Mufanc/z-loader) 的 [LSPosed 专版](https://t.me/mufanc_chan/28) 以实现单独加载 LSPosed。
 
 ::: warning
-Zloader 与 ZygiskNext / Zygisk_mod 等 Zygisk 实现不兼容，并且你也将无法使用任何其它依赖于 Zygisk 的 APM。使用前请先禁用或卸载任何 Zygisk 实现。
+Zloader 与 ZygiskNext/Zygisk_mod 等 Zygisk 实现不兼容，并且你也将无法使用任何其它依赖于 Zygisk 的 APM。使用前请先禁用或卸载任何 Zygisk 实现。
 :::
 
 ::: info

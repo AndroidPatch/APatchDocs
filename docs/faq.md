@@ -32,7 +32,7 @@ Please read [How to write KPM](https://github.com/bmax121/KernelPatch/blob/main/
 
 ## What is the relationship of APatch and KernelPatch?
 
-APatch depends on KernelPatch. It inherits all of its capabilities and has been expanded.
+APatch relies on KernelPatch. It inherits all of its capabilities and has been expanded.
 
 You can install just KernelPatch, but this doesn't allow you to use APM.
 
@@ -68,7 +68,7 @@ Read [this](https://t.me/APatchChannel/74).
 
 ## Can I use LSPosed?
 
-LSPosed is depends on Riru or Zygisk to run, but APatch does not support Riru or Zygisk by default, so you can not use LSPosed directly.
+LSPosed relies on Riru or Zygisk to run, but APatch does not support Riru or Zygisk by default, so you can not use LSPosed directly.
 
 However, APatch can add the Zygisk support or allow LSPosed run without any Zygisk implementation enabled by installing APMs.
 
@@ -78,7 +78,7 @@ Here are two solutions about running LSPosed on APatch:
 2. If you only need to use LSPosed without other Zygisk features, you can try [Zloader](https://github.com/Mufanc/z-loader) [for LSPosed](https://t.me/mufanc_chan/28) to load LSPosed simply.
 
 ::: warning
-Zloader is NOT compatible with any Zygisk implementation, for example, ZygiskNext or Zygisk_mod, and you can not use any APMs depend on Zygisk either. Please disable or uninstall any Zygisk implementation before using Zloader.
+Zloader is **NOT** compatible with any Zygisk implementation, for example, ZygiskNext or Zygisk_mod, and you can not use any APMs depend on Zygisk either. Please disable or uninstall any Zygisk implementation before using Zloader.
 :::
 
 ::: info
