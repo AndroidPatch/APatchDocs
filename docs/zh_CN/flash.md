@@ -20,7 +20,9 @@ adb reboot bootloader
 fastboot flash boot boot.img
 ```
 
+::: info
 如果你的设备支持 `fastboot boot`，可以先使用 `fastboot boot boot.img` 来先尝试使用 `boot.img` 引导系统，如果出现意外，再重启一次即可开机。
+:::
 
 ## 第三方Recovery刷入
 

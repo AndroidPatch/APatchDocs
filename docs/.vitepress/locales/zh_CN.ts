@@ -39,9 +39,9 @@ function sidebarGuide() {
           { text: '刷入', link: '/zh_CN/flash' },
           { text: '升级', link: '/zh_CN/update' },
           { text: '救砖', link: '/zh_CN/rescue-bootloop' },
-          { text: 'APM 编写指南', link: '/zh_CN/apm-guide' },
+          { text: '模块(APM)开发指南', link: '/zh_CN/apm-guide' },
           { text: '反馈与帮助', link: '/zh_CN/support' },
-          { text: '常见问题', link: '/zh_CN/faq' },
+          { text: '常见问题解答', link: '/zh_CN/faq' },
         ]
     }
   ]

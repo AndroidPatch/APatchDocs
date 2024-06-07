@@ -14,7 +14,7 @@ APatch 依赖于 KernelPatch。
 
 APatch 管理器 和 APM 的源代码来自对 KernelSU 管理器 和 KernelSU 的复制和修改。
 
-## 如何使用
+## 如何使用？
 
 请参考: [安装教程](/zh_CN/install)
 

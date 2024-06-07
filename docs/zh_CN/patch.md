@@ -1,4 +1,4 @@
-# 修补内核
+# 修补
 
 ## 自动修补
 
@@ -10,7 +10,7 @@
 禁止设置 `114514` 等弱密码，新版 APatch 管理器 已强制使用强密码  [原因](/zh_CN/warn)。
 :::
 
-3. 选择你的 boot.img，确认后等待修补完成。修补成功后会显示修补后的 img镜像 路径。例如: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
+3. 选择你的 `boot.img`，确认后等待修补完成。修补成功后会显示修补后的 img镜像 路径。例如: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
 
 最后按你的实际情况[刷入](/zh_CN/flash)即可。
 
@@ -31,7 +31,7 @@ magiskboot.exe unpack boot.img
 
 解压 boot，然后将 kernel 改名为 kernel-b (kernel-b可以是其他第三方内核，但是第三方内核不做任何保证，也不会受到支持)。
 
-Windows可以使用 CMD 或 PowerShell 进行修补。
+Windows可以使用 `CMD` 或 `PowerShell` 进行修补。
 
 执行:
 ```

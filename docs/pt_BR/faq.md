@@ -78,7 +78,7 @@ Aqui estão duas soluções sobre como executar o LSPosed no APatch:
 2. Se você só precisa usar o LSPosed sem os outros recursos do Zygisk, você pode tentar o [Zloader](https://github.com/Mufanc/z-loader) [para o LSPosed](https://t.me/mufanc_chan/28).
 
 ::: warning AVISO
-O Zloader NÃO é compatível com nenhuma implementação do Zygisk, por exemplo, ZygiskNext ou Zygisk_mod, e você também não pode usar nenhum APMódulo que dependa do Zygisk. Por favor, desative ou desinstale qualquer implementação do Zygisk antes de usar o Zloader.
+O Zloader **NÃO** é compatível com nenhuma implementação do Zygisk, por exemplo, ZygiskNext ou Zygisk_mod, e você também não pode usar nenhum APMódulo que dependa do Zygisk. Por favor, desative ou desinstale qualquer implementação do Zygisk antes de usar o Zloader.
 :::
 
 ::: info INFORMAÇÕES

@@ -28,6 +28,6 @@ features:
   - title: APM
     details: 类似 Magisk 模块的支持。
   - title: KPM
-    details: 内核补丁模块支持。（允许将任何代码注入内核，内核函数 inline-hook 和 syscall-table-hook 可用）
+    details: 内核补丁模块支持。（允许将任何代码注入内核，内核函数 inline-hook 和 syscall-table-hook 可用）。
 ---
 
