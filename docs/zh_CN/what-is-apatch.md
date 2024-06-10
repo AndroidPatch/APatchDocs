@@ -18,6 +18,6 @@ APatch 管理器 和 APM 的源代码来自对 KernelSU 管理器 和 KernelSU �
 
 请参考: [安装教程](/zh_CN/install)
 
-## 如何修补
+## 如何修补？
 
 请参考: [修补教程](/zh_CN/patch)

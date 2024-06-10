@@ -24,7 +24,7 @@ OTA update with root retention in APatch is consistent with Magisk.
 
 2. After the OTA update installation is complete (when prompted to reboot), open APatch Manager and click the button in the upper right hand corner ![Patch Button](/PButton.png)
 
-3. Select `Install in inactive slot (after OTA)`
+3. Select `Install to next slot (After OTA)`
 
 ::: warning
 The OTA update functionality with root saving in APatch is currently not very stable and issues may occur. If an issue occurs [go to the APatch project GitHub repository to submit an issue](https://github.com/bmax121/APatch/issues/new/choose).
