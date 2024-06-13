@@ -103,3 +103,6 @@ APatch also can use the [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod
 ## Can not pass the root-detecting application?
 
 If your software is working properly, don't worry too much about the detection software.
+::: danger
+APatch developers will **NOT** receive any issues about "Hiding Root"; "Root-detecting application" or any relevated. We will immediately close these issues and pin as "wontfix".
+:::

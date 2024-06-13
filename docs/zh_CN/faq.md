@@ -104,3 +104,6 @@ APatch 也可以使用 [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod)
 ## root 检测软件无法通过？
 
 如果你的软件可以正常使用，那么就不要一直纠结于检测软件。
+::: danger
+APatch 开发者将不会受理任何有关于“隐藏”和“Root 检测软件”的反馈，关于以上内容的反馈将立即被关闭且标记为"wontfix"。
+:::

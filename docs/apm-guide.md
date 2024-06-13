@@ -52,7 +52,7 @@ The APatch module is a folder inside `/data/adb/modules` with the following stru
 /data/adb/modules
 ├── .
 ├── .
-|
+│
 ├── $MODID                  <--- The folder is named with the ID of the module
 │   │
 │   │      *** Module Identity ***
@@ -78,7 +78,7 @@ The APatch module is a folder inside `/data/adb/modules` with the following stru
 │   ├── post-mount.sh       <--- This script will be executed in post-mount
 │   ├── service.sh          <--- This script will be executed in late_start service
 │   ├── boot-completed.sh   <--- This script will be executed on boot completed
-|   ├── uninstall.sh        <--- This script will be executed when APatch removes your module
+│   ├── uninstall.sh        <--- This script will be executed when APatch removes your module
 │   ├── system.prop         <--- Properties in this file will be loaded as system properties by resetprop
 │   ├── sepolicy.rule       <--- Additional custom sepolicy rules
 │   │
@@ -92,7 +92,7 @@ The APatch module is a folder inside `/data/adb/modules` with the following stru
 │   │
 │   ├── ...
 │   └── ...
-|
+│
 ├── another_module
 │   ├── .
 │   └── .
