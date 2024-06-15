@@ -17,7 +17,7 @@ This repository is for [APatch Documentation](https://apatch.top/), which is cre
 
 Website deployment: [@NightSong-UwU](https://github.com/NightSong-UwU), [@zutzo](https://github.com/zutzo)
 
-Simplified Chinese / 简体中文：[@NightSong-UwU](https://github.com/NightSong-UwU), [@AtopesSayuri](https://github.com/AtopesSayuri)
+Simplified Chinese / 简体中文：[@NightSong-UwU](https://github.com/NightSong-UwU), [@AkinaAcct](https://github.com/AkinaAcct)
 
 Brazilian Portuguese / Português (Brasil): [@igormiguell](https://github.com/igormiguell)
 
