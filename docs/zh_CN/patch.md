@@ -4,19 +4,23 @@
 
 1. 前往[GitHub](https://github.com/bmax121/APatch/releases)下载最新管理器。
 
-2. 点击主页右上角的 ![Patch Button](/PButton.png) 按钮来设置管理密钥，密钥需要 **"数字+字母"**，并且至少**8位**，后面解锁 Root 权限需要用到。
+2. 点击主页右上角的 ![Patch Button](/PButton.png) 按钮，之后选择“选择一个启动镜像并修补”选项。
+
+3. 选择你的 `boot.img`。
+
+4. 在“超级密钥”卡片中设置一个密码，之后 APatch 管理器会将其作为超级密钥以解锁 `root`。
 
 :::warning 
 禁止设置 `114514` 等弱密码，新版 APatch 管理器 已强制使用强密码  [原因](/zh_CN/warn)。
 :::
 
-3. 选择你的 `boot.img`，确认后等待修补完成。修补成功后会显示修补后的 img镜像 路径。例如: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
+5. 点击“开始修补”并等待修补完成。修补成功后会显示修补后的 img 镜像 路径。例如: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`
 
 最后按你的实际情况[刷入](/zh_CN/flash)即可。
 
 ## 手动修补
 
-**当内核补丁更新后，管理器仍未更新时，你可以选择手动修补内核。**
+**当 KernelPatch 更新后，管理器仍未更新时，你可以选择手动修补内核。**
 
 你可以前往[KernelPatch](https://github.com/bmax121/KernelPatch/releases)项目获取最新的`KP`文件。
 

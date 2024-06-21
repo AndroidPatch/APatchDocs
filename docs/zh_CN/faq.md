@@ -24,7 +24,7 @@ APatch 提供 **Kernel Patch Module（KP模块）**。
 
 ## 什么是 Kernel Patch Module（KP模块）？
 
-一些代码在内核空间运行，类似于 Loadable Kernel Modules（LKM）。
+KPM 是一种运行在内核空间内的模块，可以让代码运行在内核空间中，类似于 Loadable Kernel Modules（LKM）。
 
 此外，KPM 提供在内核空间进行内联 hook、系统调用表 hook 的能力。
 
@@ -88,7 +88,7 @@ Zloader 仍处于早期开发阶段，欢迎各位向开发者提交 Pull reques
 
 ## 无法使用 Shamiko
 
-Shamiko 闭源并且停更，无法适配。
+Shamiko 是专有软件，并且已经停更，我们无法适配。
 ::: danger
 **APatch 开发者将不对任何因使用 Shamiko 导致的问题承担任何责任，你需要自行承担使用风险。**
 :::

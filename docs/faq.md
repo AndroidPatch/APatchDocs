@@ -87,14 +87,14 @@ Zloader is still in early development, welcome to commit Pull requests to Zloade
 
 ## Can not use Shamiko?
 
-We can not support Shamiko due to its close-source and no updates.
+We can not support Shamiko due to its proprietary and no updates.
 ::: danger
 **Any issues caused by using Shamiko will not be supported by APatch developers, use as your own risk.**
 :::
 
 ## Zygisk support? {#zygisk-support}
 
-Same as KernelSU, APatch does not supports Zygisk by default.
+Same as KernelSU, APatch does not have built-in Zygisk support.
 
 APatch can use the [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) to add the Zygisk support.
 
