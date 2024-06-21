@@ -39,7 +39,8 @@ function sidebarGuide() {
           { text: '刷入', link: '/zh_CN/flash' },
           { text: '升级', link: '/zh_CN/update' },
           { text: '救砖', link: '/zh_CN/rescue-bootloop' },
-          { text: '模块(APM)开发指南', link: '/zh_CN/apm-guide' },
+          { text: '系统模块 (APM) 开发指南', link: '/zh_CN/apm-guide' },
+          { text: '内核模块 (KPM) 使用指南', link: '/zh_CN/kpm-usage-guide' },
           { text: '反馈与帮助', link: '/zh_CN/support' },
           { text: '常见问题解答', link: '/zh_CN/faq' },
         ]
