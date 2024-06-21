@@ -1,6 +1,6 @@
 # 修补
 
-## 自动修补
+## 自动修补 {#automatically-patching}
 
 1. 前往[GitHub](https://github.com/bmax121/APatch/releases)下载最新管理器。
 

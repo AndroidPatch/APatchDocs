@@ -1,6 +1,6 @@
 # Патчинг
 
-## Автоматический патчинг
+## Автоматический патчинг {#automatically-patching}
 
 1. Загрузите последнюю версию менеджера APatch с [GitHub](https://github.com/bmax121/APatch/releases).
 

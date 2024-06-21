@@ -1,6 +1,6 @@
 # Patch
 
-## Automatically patching
+## Automatically patching {#automatically-patching}
 
 1. Download the latest version of APatch Manager from [GitHub](https://github.com/bmax121/APatch/releases).
 
@@ -8,13 +8,13 @@
 
 3. Select your `boot.img`.
 
-4. Set a SuperKey at "Super Key" card. The SuperKey needs to have **numbers and letters** and at least **8 characters** length. It will be used later to unlock root privileges.
+4. Set a SuperKey at "SuperKey" card. The SuperKey needs to have **numbers and letters** and at least **8 characters** length. It will be used later to unlock root privileges.
 
 :::warning 
 It is strictly prohibited to set weak keys like `12345678`. The latest versions of APatch [requires the use of strong keys](/warn).
 :::
 
-5. Click "Patch" and wait for a minute. After the patch is successful, the patched boot.img path will be displayed. For example: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
+5. Click on "Start" and wait for a minute. After the patch is successful, the patched `boot.img` path will be displayed. For example: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
 
 Finally, you can [Flash](/flash) as needed.
 

@@ -1,16 +1,20 @@
 # Patch
 
-## Patch automático
+## Patch automático {#automatically-patching}
 
 1. Baixe a versão mais recente do APatch no [GitHub](https://github.com/bmax121/APatch/releases).
 
-2. Clique no botão ![Patch Button](/PButton.png) no canto superior direito da página inicial para definir a SuperKey. A SuperKey precisa ter **números e letras** e pelo menos **8 caracteres**. Ela será usada posteriormente para desbloquear privilégios root.
+2. Clique no botão ![Patch Button](/PButton.png) no canto superior direito, depois em "Selecionar imagem boot para Patch".
+
+3. Selecione seu `boot.img`.
+
+4. Defina uma SuperKey no cartão "SuperKey". A SuperKey precisa ter **números e letras** e pelo menos **8 caracteres**. Ela será usada posteriormente para desbloquear privilégios root.
 
 :::warning AVISO
 É estritamente proibido definir chaves fracas como `12345678`. As versões mais recentes do APatch [obriga o uso de chaves fortes](/pt_BR/warn).
 :::
 
-3. Selecione o `boot.img` de sua ROM, confirme e aguarde a conclusão do patch. Depois que o patch for bem-sucedido, o caminho do boot.img corrigido será exibido. Por exemplo: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
+5. Clique em "Iniciar" e aguarde um minuto. Depois que o patch for bem-sucedido, o caminho do `boot.img` corrigido será exibido. Por exemplo: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
 
 Finalmente, você pode fazer o [Flash](/pt_BR/flash) conforme necessário.
 

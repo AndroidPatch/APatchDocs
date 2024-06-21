@@ -24,7 +24,7 @@ APatch allows you to optionally not modify SELinux, this means the app thread ca
 
 ## What is KPModule?
 
-Some code runs in kernel space, similar to **Loadable Kernel Modules** (LKM).
+KPM is a module that runs in kernel space and allows code to execute in kernel space, similar to **Loadable Kernel Modules** (LKM).
 
 Additionally, the KPM provides the ability to execute `inline-hook` and `syscall-table-hook` in kernel space.
 
@@ -88,6 +88,7 @@ Zloader is still in early development, welcome to commit Pull requests to Zloade
 ## Can not use Shamiko?
 
 We can not support Shamiko due to its proprietary and no updates.
+
 ::: danger
 **Any issues caused by using Shamiko will not be supported by APatch developers, use as your own risk.**
 :::
