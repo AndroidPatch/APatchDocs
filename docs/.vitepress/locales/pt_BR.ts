@@ -39,7 +39,8 @@ function sidebarGuide() {
           { text: 'Flash', link: '/pt_BR/flash' },
           { text: 'Atualizar', link: '/pt_BR/update' },
           { text: 'Resgate do bootloop', link: '/pt_BR/rescue-bootloop' },
-          { text: 'Guia APMódulo', link: '/pt_BR/apm-guide' },
+          { text: 'Guia de desenvolvimento do APMódulo', link: '/pt_BR/apm-guide' },
+          { text: 'Guia de uso do KPMódulo', link: '/pt_BR/kpm-usage-guide' },
           { text: 'Ajuda e suporte', link: '/pt_BR/support' },
           { text: 'Perguntas frequentes', link: '/pt_BR/faq' },
         ]

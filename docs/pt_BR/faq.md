@@ -24,7 +24,7 @@ APatch permite opcionalmente não modificar o SELinux, isso significa que o thre
 
 ## O que é KPMódulo?
 
-Alguns códigos são executados no espaço do kernel, semelhante ao **Loadable Kernel Modules** (LKM).
+KPM é um módulo que roda no espaço do kernel e permite que o código seja executado no espaço do kernel, semelhante ao **Loadable Kernel Modules** (LKM).
 
 Além disso, o KPMódulo fornece a capacidade de executar `inline-hook` e `syscall-table-hook` no espaço do kernel.
 
@@ -87,7 +87,7 @@ O Zloader ainda está em desenvolvimento inicial, seja bem-vindo para enviar Pul
 
 ## Não é possível usar Shamiko?
 
-Não podemos oferecer suporte ao Shamiko devido ao seu código fechado e sem atualizações.
+Não podemos oferecer suporte ao Shamiko devido devido ao seu proprietário e por estar sem atualizações.
 
 ::: danger PERIGO
 **Quaisquer problemas causados ​​pelo uso do Shamiko não serão suportados pelos desenvolvedores do APatch, use por sua própria conta e risco.**
@@ -95,7 +95,7 @@ Não podemos oferecer suporte ao Shamiko devido ao seu código fechado e sem atu
 
 ## Suporta Zygisk? {#zygisk-support}
 
-Assim como o KernelSU, APatch não oferece suporte ao Zygisk por padrão.
+Assim como o KernelSU, APatch não possui suporte integrado ao Zygisk.
 
 APatch pode usar o [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) para adicionar suporte ao Zygisk.
 

@@ -28,5 +28,5 @@ features:
   - title: APModule
     details: Support for modules similar to Magisk.
   - title: KPModule
-    details: Support for modules that allow you to inject any code into the kernel (Requires kernel function inline-hook and syscall-table-hook enabled).
+    details: Support for modules that allow you to inject any code into the kernel (Provides kernel function inline-hook and syscall-table-hook).
 ---

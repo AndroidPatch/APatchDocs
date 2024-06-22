@@ -1,4 +1,4 @@
-# APModule Guide {#introduction}
+# APModule Development Guide {#introduction}
 
 APatch provides a modular mechanism (AndroidPatch Module) for modifying a system partition while preserving its integrity. This mechanism is often referred to as `systemless`.
 

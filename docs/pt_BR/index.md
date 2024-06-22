@@ -28,5 +28,5 @@ features:
   - title: APMódulo
     details: Suporte a módulos semelhantes ao Magisk.
   - title: KPMódulo
-    details: Suporte a módulos que permitem injetar qualquer código no kernel (Requer que as funções do kernel inline-hook e syscall-table-hook estejam ativadas).
+    details: Suporte a módulos que permitem injetar qualquer código no kernel (Fornece as funções do kernel inline-hook e syscall-table-hook).
 ---
