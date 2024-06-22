@@ -38,7 +38,6 @@ function sidebarGuide() {
 				{ text: 'Обновление', link: '/ru/update' },
 				{ text: 'Спасения от бутлупа', link: '/ru/rescue-bootloop' },
                                 { text: 'Руководство по разработке модулей APM', link: '/ru/apm-guide' },
-                                { text: 'Руководство по использованию модуля KPModule', link: '/ru/kpm-usage-guide' },
 				{ text: 'Обратная связь и помощь', link: '/ru/support' },
 				{ text: 'Частые вопросы', link: '/ru/faq' },
 			],
