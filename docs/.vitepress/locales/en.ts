@@ -38,7 +38,7 @@ function sidebarGuide() {
           { text: 'Patch', link: '/patch' },
           { text: 'Flash', link: '/flash' },
           { text: 'Update', link: '/update' },
-          { text: 'Rescue from bootloop', link: '/rescue-bootloop' },
+          { text: 'Rescue From Bootloop', link: '/rescue-bootloop' },
           { text: 'APModule Development Guide', link: '/apm-guide' },
           { text: 'KPModule Usage Guide', link: '/kpm-usage-guide' },
           { text: 'Help and Support', link: '/support' },

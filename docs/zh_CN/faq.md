@@ -20,11 +20,12 @@ KernelSU 需要您设备的内核的源代码，而 OEM 并不总是提供该源
 ## APatch 与 Magisk、KernelSU 的区别？
 
 APatch 可选择不修改 SELinux，这意味着 Android 应用程序线程可以被 root，无需 `libsu` 和 `IPC` 。
-APatch 提供 **Kernel Patch Module（KP模块）**。
 
-## 什么是 Kernel Patch Module（KP模块）？
+APatch 提供 **KernelPatch Module（KP模块）**。
 
-KPM 是一种运行在内核空间内的模块，可以让代码运行在内核空间中，类似于 Loadable Kernel Modules（LKM）。
+## 什么是 KernelPatch Module（KP模块）？
+
+KPM 是一种运行在内核空间内的模块，可以让代码运行在内核空间中，类似于 **Loadable Kernel Modules**（LKM）。
 
 此外，KPM 提供在内核空间进行内联 hook、系统调用表 hook 的能力。
 
@@ -49,6 +50,7 @@ KernelPatch 添加了一个新的系统调用（syscall），为应用程序和�
 ## 关于 SELinux如何处理？
 
 KernelPatch 不修改 SELinux 上下文，而是通过 hook 绕过 SELinux。 这允许您在应用程序上下文中 root Android 线程，无需使用 `libsu` 启动新进程，然后执行 `IPC` 。这非常方便。
+
 此外，APatch 直接利用 `magiskpolicy` 提供额外的 SELinux 支持。  
 
 ## APatch 的模块 WebUI
@@ -59,11 +61,11 @@ APatch 的 WebUI 实现方法和要求和 KernelSU 的实现方法和要求完�
 
 如果你希望为 APM 或 KPM 设计 WebUI，请参考 KernelSU 的 [WebUI 介绍页面](https://kernelsu.org/zh_CN/guide/module-webui.html) 进行设计。
 
-## 模块无法安装(os error 2/5/22)？
+## 模块无法安装 (os error 2/5/22)？
 
 在 root 授权页面取消 shell 的 root 权限。
 
-## APP 在手机重启后自动获得/丢失 root 权限？
+## App 在手机重启后自动获得/丢失 root 权限？
 
 参阅 [这里](https://t.me/APatchChannel/74)。
 
@@ -101,6 +103,6 @@ APatch 可使用 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) 以实现 Z
 
 APatch 也可以使用 [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) 以实现 Zygisk 支持。
 
-## root 检测软件无法通过？
+## Root 检测软件无法通过？
 
 如果你的软件可以正常使用，那么就不要一直纠结于检测软件。

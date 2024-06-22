@@ -1,4 +1,4 @@
-# Rescue from bootloop
+# Rescue From Bootloop
 
 APatch has an integrated bootloop rescue mechanism that can help you quickly disable all modules and restart the device if any malicious module is flashed and the device fails to boot.
 
@@ -38,6 +38,6 @@ It could be due to failure in reverting the modifications made in the `post-fs`,
 
 You may entered Android's Safe Mode.
 
-When entering Android's Safe Mode, there is a rule applicable: After entering Safe Mode, all non-system applications will be disabled by the Android system. APatch Manager won't register itself as a system application, so this rule will result in the disabling of APatch Manager after entering Safe Mode.
+When entering Android's Safe Mode, there is a rule applicable: After entering Safe Mode, all non-system apps will be disabled by the Android system. APatch Manager won't register itself as a system app, so this rule will result in the disabling of APatch Manager after entering Safe Mode.
 
-This behavior is normal, and it shows that both Android's Safe Mode and APatch's Safe Mode work fine if you haven't solidified APatch Manager as a system application. What you need to do is only to reboot your device again, and Android will exit Safe Mode with APatch Manager recovered. However, APatch won't exit Safe Mode at the same time, so you can disable any APMs that caused problems in this case.
+This behavior is normal, and it shows that both Android's Safe Mode and APatch's Safe Mode work fine if you haven't solidified APatch Manager as a system app. What you need to do is only to reboot your device again, and Android will exit Safe Mode with APatch Manager recovered. However, APatch won't exit Safe Mode at the same time, so you can disable any APMs that caused problems in this case.
