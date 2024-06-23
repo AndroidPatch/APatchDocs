@@ -10,7 +10,7 @@
 
 4. Set a SuperKey at "SuperKey" card. The SuperKey needs to have **numbers and letters** and at least **8 characters** length. It will be used later to unlock root privileges.
 
-:::warning 
+:::warning
 It is strictly prohibited to set weak keys like `12345678`. The latest versions of APatch [requires the use of strong keys](/warn).
 :::
 
@@ -87,7 +87,7 @@ magiskboot repack boot.img
 
 to pack and generate the image. The generated `new-boot.img` is the patched image.
 
-::: warning 
+::: warning
 **Emphasize again, it is STRICTLY PROHIBITED to set weak keys like `12345678`.**
 :::
 
