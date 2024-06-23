@@ -4,11 +4,11 @@
 
 1. 前往[GitHub](https://github.com/bmax121/APatch/releases)下载最新管理器。
 
-2. 点击主页右上角的 ![Patch Button](/PButton.png) 按钮，之后选择“选择一个启动镜像并修补”选项。
+2. 点击主页右上角的 ![Patch Button](/PButton.png) 按钮，之后选择`选择一个启动镜像并修补`选项。
 
 3. 选择你的 `boot.img`。
 
-4. 在“超级密钥”卡片中设置一个密码，之后 APatch 管理器会将其作为超级密钥以解锁 `root`。
+4. 在“超级密钥”卡片中设置一个密码，之后 APatch 管理器会将其作为超级密钥以解锁 root。
 
 :::warning 
 禁止设置 `114514` 等弱密码，新版 APatch 管理器 已强制使用强密码  [原因](/zh_CN/warn)。
@@ -29,6 +29,7 @@
 1. 下载 `kptools-win.zip` 和 `kpimg-android` ，并解压到当前目录使用，同时下载 `magiskboot(Windows)` 。
 
 2. 执行:
+
 ```
 magiskboot.exe unpack boot.img
 ```
@@ -38,6 +39,7 @@ magiskboot.exe unpack boot.img
 Windows可以使用 `CMD` 或 `PowerShell` 进行修补。
 
 执行:
+
 ```
 kptools-x86_64-win.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
@@ -75,6 +77,7 @@ magiskboot unpack boot.img
 ```
 ./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
+
 修补后无报错，最后用:
 
 ```

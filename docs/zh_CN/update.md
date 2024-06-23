@@ -24,7 +24,7 @@ APatch 的保 root OTA 升级与 Magisk 保持一致。
 
 2. 在 OTA 更新安装完成时(提示重启时)，打开 APatch 管理器，点击右上角的 ![Patch Button](/PButton.png)  
 
-3. 选择 `安装到未使用的槽位（OTA后）`
+3. 选择 `安装到未使用的槽位（OTA 后）`
 
 ::: warning
 APatch 的 OTA 功能目前不太稳定，可能会出现问题。当遇到问题时，最好[前往 APatch 项目 GitHub 仓库提交 issue](https://github.com/bmax121/APatch/issues/new/choose)。

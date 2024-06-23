@@ -20,7 +20,7 @@ KPM 有三种安装方式：嵌入、加载和安装。
 
 ### 嵌入
 
-嵌入是指将 KPM 直接嵌入至 `kernel` 。此模式下安装的 KPM 会同 `kernel` 一起被合并进 `boot.img` 中，在 `pre-kernel-init` 阶段加载。
+`嵌入`是指将 KPM 直接嵌入至 `kernel` 。此模式下安装的 KPM 会同 `kernel` 一起被合并进 `boot.img` 中，在 `pre-kernel-init` 阶段加载。
 
 KPM 的嵌入可以在首次使用 APatch 管理器修补 `boot.img` 时或者在完成 APatch 安装后进行。你也可以使用 `kptools` 手动嵌入。
 
@@ -40,7 +40,7 @@ KPM 的嵌入可以在首次使用 APatch 管理器修补 `boot.img` 时或者�
 
 ### 加载
 
-加载是指将 KPM 立即交给内核进行加载。通过这种方式加载的 KPM 会立即生效，但会在下次重新启动后消失。
+`加载`是指将 KPM 立即交给内核进行加载。通过这种方式加载的 KPM 会立即生效，但会在下次重新启动后消失。
 
 加载 KPM 的方式和安装 APM 的方式大致相同，唯一一点区别在于 KPM 在加载后无需重启。
 
@@ -50,4 +50,4 @@ KPM 的嵌入可以在首次使用 APatch 管理器修补 `boot.img` 时或者�
 目前 KernelPatch 和 APatch 还未实现 KPM 的安装，以下的描述仅为对安装 KPM 的预期行为描述。
 :::
 
-安装是指将 KPM 作为一个类似于 APM 的模块文件安装至 `/data/adb/kpmodules` 或类似目录。通过这种方式安装的 KPM 可以在特定的 event 进行加载。
+`安装`是指将 KPM 作为一个类似于 APM 的模块文件安装至 `/data/adb/kpmodules` 或类似目录。通过这种方式安装的 KPM 可以在特定的 event 进行加载。
