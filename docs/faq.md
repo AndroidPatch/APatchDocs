@@ -99,7 +99,15 @@ Same as KernelSU, APatch does not have built-in Zygisk support.
 
 APatch can use the [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) to add the Zygisk support.
 
-APatch also can use the [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) to add the Zygisk support.
+APatch can also use the [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) to add the Zygisk support.
+
+APatch can also use the [ReZygisk](https://github.com/PerformanC/ReZygisk) to add the Zygisk support.
+
+::: info
+
+ReZygisk is still in early development, welcome to commit Pull requests to Zloader developers or open an issue for any usage issues
+
+:::
 
 ## Can not pass the root-detecting application?
 

@@ -103,6 +103,14 @@ APatch 可使用 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) 以实现 Z
 
 APatch 也可以使用 [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) 以实现 Zygisk 支持。
 
+APatch 还可以使用 [ReZygisk](https://github.com/PerformanC/ReZygisk) 以实现 Zygisk 支持。
+
+::: info
+
+ReZygisk 仍处于早期开发阶段，欢迎各位向开发者提交 Pull request 或者就使用问题提交 issue 进行反馈。
+
+:::
+
 ## Root 检测软件无法通过？
 
 如果你的软件可以正常使用，那么就不要一直纠结于检测软件。
