@@ -105,7 +105,7 @@ APatch can also use the [ReZygisk](https://github.com/PerformanC/ReZygisk) to ad
 
 ::: info
 
-ReZygisk is still in early development, welcome to commit Pull requests to Zloader developers or open an issue for any usage issues
+ReZygisk is still in early development, welcome to commit Pull requests to ReZygisk developers or open an issue for any usage issues.
 
 :::
 
