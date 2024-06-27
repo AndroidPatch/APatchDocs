@@ -106,9 +106,7 @@ APatch 也可以使用 [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod)
 APatch 还可以使用 [ReZygisk](https://github.com/PerformanC/ReZygisk) 以实现 Zygisk 支持。
 
 ::: info
-
 ReZygisk 仍处于早期开发阶段，欢迎各位向开发者提交 Pull request 或者就使用问题提交 issue 进行反馈。
-
 :::
 
 ## Root 检测软件无法通过？
