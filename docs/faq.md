@@ -104,9 +104,7 @@ APatch can also use the [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod
 APatch can also use the [ReZygisk](https://github.com/PerformanC/ReZygisk) to add the Zygisk support.
 
 ::: info
-
-ReZygisk is still in early development, welcome to commit Pull requests to ReZygisk developers or open an issue for any usage issues.
-
+ReZygisk is still in early development. Feel free to submit Pull requests to the ReZygisk developers or open an issue for any usage issues.
 :::
 
 ## Can not pass the root-detecting application?

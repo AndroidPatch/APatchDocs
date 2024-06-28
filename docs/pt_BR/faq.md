@@ -101,6 +101,12 @@ APatch pode usar o [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) para adic
 
 APatch também pode usar o [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) para adicionar suporte ao Zygisk.
 
+APatch também pode usar o [ReZygisk](https://github.com/PerformanC/ReZygisk) para adicionar suporte ao Zygisk.
+
+::: info INFORMAÇÕES
+ReZygisk ainda está em desenvolvimento inicial. Sinta-se à vontade para enviar Pull requests aos desenvolvedores do ReZygisk ou abrir um problema para qualquer problema de uso.
+:::
+
 ## O software de detecção de root falha
 
 Se o seu software está funcionando corretamente, não se preocupe muito com o software de detecção.
