@@ -24,6 +24,3 @@ Brazilian Portuguese / Português (Brasil): [@igormiguell](https://github.com/ig
 English: [@RinLin-NYA](https://github.com/RinLin-NYA), [@igormiguell](https://github.com/igormiguell), [@xteamlyer](https://github.com/xteamlyer)
 
 Russian / Русский: [@xteamlyer](https://github.com/xteamlyer)
-
-## TODO
-TODO will no longer be stored in README.md. When there is a new TODO item, an issue will be created. So please be aware of issues in this repository.
