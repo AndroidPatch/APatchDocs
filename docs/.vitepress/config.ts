@@ -5,13 +5,13 @@ import { resolve } from 'path'
 import { defineAsyncComponent } from 'vue'
 
 export default defineConfig({
-  title: 'APatch Docs',
-  locales: locales.locales,
-  ignoreDeadLinks: true,
-  sitemap: {
-    hostname: 'https://apatch.top'
-  },
-  theme: {
-    asyncLinks: true // 启用异步模块和链接渲染
-  },
+    title: 'APatch Docs',
+    locales: locales.locales,
+    ignoreDeadLinks: true,
+    sitemap: {
+        hostname: 'https://apatch.dev'
+    },
+    theme: {
+        asyncLinks: true // 启用异步模块和链接渲染
+    },
 })
