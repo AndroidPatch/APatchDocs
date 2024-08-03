@@ -32,11 +32,8 @@ function sidebarGuide() {
         text: '指南',
         items: [
           { text: '什么是 APatch?', link: '/zh_CN/what-is-apatch' },
-          { text: '安装要求', link: '/zh_CN/requirements' },
           { text: '重要提醒', link: '/zh_CN/warn' },
           { text: '安装', link: '/zh_CN/install' },
-          { text: '修补', link: '/zh_CN/patch' },
-          { text: '刷入', link: '/zh_CN/flash' },
           { text: '升级', link: '/zh_CN/update' },
           { text: '救砖', link: '/zh_CN/rescue-bootloop' },
           { text: '系统模块 (APM) 开发指南', link: '/zh_CN/apm-guide' },
