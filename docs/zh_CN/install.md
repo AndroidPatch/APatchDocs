@@ -161,17 +161,43 @@ fastboot reboot
 
 最新版本的 APatch 支持从 TWRP 等第三方 REC 一键刷入。
 
-::: info
+::: warning
 此功能于版本 `10888` 引入，更早的版本不支持这种方式。
 :::
 
-将下载的 APatch 安装包 (.apk) 后缀改为 .zip，使用第三方 REC 的刷入功能即可自动刷入安装 APatch。
+将下载的 APatch 安装包 (.apk) 后缀改为 .zip，例如从 `APatch-10888-release.apk` 到 `APatch-10888-release.zip`，随后使用第三方 REC 的刷入功能即可自动刷入安装 APatch。
 
 ::: tip
-同样的，第三方类原生的 REC(例如 LineageOS)所使用的 `adb sideload` 方法也支持。
+同样的，第三方类原生 ROM 的 REC(例如 LineageOS)所使用的 `adb sideload` 方法也支持。
 :::
 
 ::: warning
 **注意 自动刷入不会使用固定的超级密钥！相反的，使用此方式得到的超级密钥为随机数字 + 字母的组合。**  
 如果您需要自定义自己的超级密钥，请在开机后手动进入 APatch 管理器并重新修补，以此设置你自己的超级密钥。
+:::
+
+## 卸载
+
+### 自动卸载
+
+::: warning
+此功能于版本 `10888` 引入，更早的版本不支持这种方式。
+:::
+
+下载 APatch 安装包，将安装包后缀改为zip，并将安装包文件名改为带有 `uninstall` 字样的名字。例如，从 `APatch-10888-release.apk` 到 `APatch-10888-release-uninstall.zip`，随后使用 REC 刷入即可。
+
+::: tip
+同样的，和安装一样，卸载也支持使用 `adb sideload`
+:::
+
+### 手动卸载
+
+进入 `bootloader` 模式恢复当前 ROM 的原 boot 镜像即可。
+
+```sh
+fastboot flash boot PATH/TO/boot
+```
+
+:::warning
+不要使用 `init_boot`！
 :::
