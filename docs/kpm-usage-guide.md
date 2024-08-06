@@ -11,7 +11,7 @@ KernelPatch Modules (KPM) is a type of module that allows code to run in kernel 
 There are 3 ways to use KPM: Embed, Load, and Install.
 
 ::: tip About "Install"
-This document was last updated on 2024-06-21 at 23:12. Caution should be exercised when accessing the contents of this page if the time difference from the present is too great.
+This document was last updated on 2024-08-06 at 19:14. Caution should be exercised when accessing the contents of this page if the time difference from the present is too great.
 
 Currently, APatch hasn't implemented the "Install" function for KPMs, and you can only use KPMs via "Embed" and "Load". KernelPatch and APatch's developers are working quickly to implement the "Install" function. Please wait patiently.
 :::
@@ -24,7 +24,7 @@ The Embed of KPMs can be done both at first patching `boot.img` and after instal
 
 #### Embed KPMs at first patching {#embed-kpms-at-first-patching}
 
-1. [Patch](/patch) your `boot.img` by following the [Automatically patching](/patch#automatically-patching) guide. After completing step 4, do not proceed to the next step immediately.
+1. [Patch](/install#patch) your `boot.img` by following the [Automatically patching](/install#automatically-patching) guide. After completing step 4, do not proceed to the next step immediately.
 
 2. Click the "Embed KPM" button, and select the KPM you want to embed (The suffix name of KPM files is `.kpm`).
 

@@ -35,8 +35,6 @@ function sidebarGuide() {
           { text: 'Install Requirements', link: '/requirements' },
           { text: 'Security Alert', link: '/warn' },
           { text: 'Installation', link: '/install' },
-          { text: 'Patch', link: '/patch' },
-          { text: 'Flash', link: '/flash' },
           { text: 'Update', link: '/update' },
           { text: 'Rescue From Bootloop', link: '/rescue-bootloop' },
           { text: 'APModule Development Guide', link: '/apm-guide' },

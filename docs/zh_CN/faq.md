@@ -90,7 +90,7 @@ Zloader 仍处于早期开发阶段，欢迎各位向开发者提交 Pull reques
 
 ## 无法使用 Shamiko
 
-Shamiko 是专有软件，并且已经停更，我们无法适配。
+Shamiko 是专有软件，我们无法适配。
 ::: danger
 **APatch 开发者将不对任何因使用 Shamiko 导致的问题承担任何责任，你需要自行承担使用风险。**
 :::
