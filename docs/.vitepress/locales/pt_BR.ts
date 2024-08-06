@@ -32,11 +32,8 @@ function sidebarGuide() {
         text: 'Guia',
         items: [
           { text: 'O que é APatch?', link: '/pt_BR/what-is-apatch' },
-          { text: 'Requisitos de instalação', link: '/pt_BR/requirements' },
           { text: 'Alerta de segurança', link: '/pt_BR/warn' },
           { text: 'Instalação', link: '/pt_BR/install' },
-          { text: 'Patch', link: '/pt_BR/patch' },
-          { text: 'Flash', link: '/pt_BR/flash' },
           { text: 'Atualizar', link: '/pt_BR/update' },
           { text: 'Resgate do bootloop', link: '/pt_BR/rescue-bootloop' },
           { text: 'Guia de desenvolvimento do APMódulo', link: '/pt_BR/apm-guide' },
