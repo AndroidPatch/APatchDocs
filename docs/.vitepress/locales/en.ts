@@ -32,7 +32,6 @@ function sidebarGuide() {
         text: 'Guide',
         items: [
           { text: 'What is APatch?', link: '/what-is-apatch' },
-          { text: 'Install Requirements', link: '/requirements' },
           { text: 'Security Alert', link: '/warn' },
           { text: 'Installation', link: '/install' },
           { text: 'Update', link: '/update' },
