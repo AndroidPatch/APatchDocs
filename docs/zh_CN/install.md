@@ -28,7 +28,6 @@ APatch 的要求主要体现于内核的配置。内核配置的要求如下:
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=y
 ```
-
 或：
 ```text
 CONFIG_KALLSYMS=y
@@ -40,12 +39,10 @@ CONFIG_KALLSYMS_ALL=n (初步支持)
 :::
 
 ::: warning
-
 **仅支持 ARM64 架构。**
 
 **仅支持 Android 内核版本 3.18 - 6.1**
 :::
-
 
 ## 修补
 
@@ -195,7 +192,7 @@ fastboot reboot
 进入 `bootloader` 模式恢复当前 ROM 的原 boot 镜像即可。
 
 ```sh
-fastboot flash boot PATH/TO/boot
+fastboot flash boot PATH/TO/boot.img
 ```
 
 :::warning

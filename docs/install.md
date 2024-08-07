@@ -12,13 +12,13 @@
 
 5. Backup the `boot.img` you extracted to a computer, USB drive, or another device. If any issues occur, you can flash your original `boot.img` via fastboot to recover your device from a dump.
 
-## Warn
-
+::: tip
 1. Ensure to use the latest ADB and fastboot tools and have knowledge about them to proceed to the next step. If you haven't learned about them yet, we recommend researching to learn about them first.
 
 2. APatch always patch the `boot.img` of any device. Do not attempt to patch or flash the `init_boot` or other partition image files. The APatch developers are not responsible for the failure of resulting patch and boot.
 
 3. Avoid using the `boot.img` file that has been patched by other managers to avoid unexpected situations.
+:::
 
 ## Install Requirements
 
@@ -114,7 +114,6 @@ magiskboot unpack boot.img
 
 to unpack the `boot.img` to get the kernel file. Rename the kernel to **kernel-b**(Say again, kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
 
-
 Execute this command to patch:
 
 ```
@@ -201,15 +200,15 @@ When complete, reboot your device:
 fastboot reboot
 ```
 
-### Directly Flashing
+### Directly flashing
 
-The LATEST version of APatch supports directly flashing via third-party Recovery for example TWRP.
+The LATEST version of APatch supports directly flashing via third-party Recovery; for example, TWRP.
 
 ::: warning
-Directly Flashing is firstly introduced at version `10888` and earlier version of APatch do NOT support this method.
+Directly flashing is firstly introduced at version `10888` and earlier version of APatch do **NOT** support this method.
 :::
 
-Change the suffix name of APatch manager file(.apk) to `.zip`. For example:
+Change the suffix name of APatch Manager file (.apk) to `.zip`. For example:
 
 ```
 [username@localhost Demo] $ ls
@@ -223,23 +222,23 @@ APatch-10888-release.zip
 After done, you can flash this `.zip` file via third-party Recovery's Flash function. APatch will be automatically installed just like Magisk.
 
 ::: tip
-Same as Flash, `adb sideload` function used by Recovery provided by third-party AOSP-Like ROMs is also supported.
+Same as Flash, `adb sideload` function used by Recovery provided by third-party AOSP-like ROMs is also supported.
 :::
 
 ::: warning
-Directly Flashing is NOT supported customizing Superkey! Instead, Superkey will be set as a combination with random numbers and letters.
-If you need customize Superkey, please go to APatch manager after booting and repatch to reset Superkey.
+Directly flashing is **NOT** supported customizing SuperKey! Instead, SuperKey will be set as a combination with random numbers and letters.
+If you need customize SuperKey, please go to APatch manager after booting and repatch to reset SuperKey.
 :::
 
 ## Uninstall
 
-### Automatically Uninstall
+### Automatically uninstall
 
 ::: warning
-Automatically Uninstall is firstly introduced at version `10888` and earlier version of APatch do NOT support this method.
+Automatically uninstall is firstly introduced at version `10888` and earlier version of APatch do **NOT** support this method.
 :::
 
-Change the suffix name of APatch manager file(.apk) to `.zip` and add modify file name to anything with `uninstall`. For example:
+Change the suffix name of APatch manager file (.apk) to `.zip` and add modify file name to anything with `uninstall`. For example:
 
 ```
 [username@localhost Demo] $ ls
@@ -253,12 +252,13 @@ APatch-10888-release-uninstall.zip
 After done, you can flash this `.zip` file via third-party Recovery's Flash function. APatch will be automatically removed just like Magisk.
 
 ::: tip
-Same as Flash, `adb sideload` function used by Recovery provided by third-party AOSP-Like ROMs is also supported.
+Same as Flash, `adb sideload` function used by Recovery provided by third-party AOSP-like ROMs is also supported.
 :::
 
-### Manually Uninstall
+### Manually uninstall
 
 Flash your stock `boot.img` in `bootloader` mode.
+
 ```
 fastboot flash boot PATH/TO/boot.img
 ```
