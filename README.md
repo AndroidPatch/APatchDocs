@@ -24,3 +24,10 @@ Brazilian Portuguese / Português (Brasil): [@igormiguell](https://github.com/ig
 English: [@RinLin-NYA](https://github.com/RinLin-NYA), [@igormiguell](https://github.com/igormiguell), [@xteamlyer](https://github.com/xteamlyer)
 
 Russian / Русский: [@xteamlyer](https://github.com/xteamlyer)
+
+## 特别感谢 / Special Thanks
+
+Domain Providers:
+
+- NightSong: From the beginning to July 6, 2024, `apatch.top`  
+- Bart: From July 6, 2024 to the present, `apatch.dev`  
