@@ -36,8 +36,6 @@ APatch relies on KernelPatch. It inherits all of its capabilities and has been e
 
 You can install just KernelPatch, but this doesn't allow you to use APM.
 
-To use the SuperUser management, you need install APatch, and uninstall KernelPatch.
-
 [Learn more about KernelPatch](https://github.com/bmax121/KernelPatch).
 
 ## What is SuperKey？
