@@ -37,8 +37,6 @@ APatch 依赖于 KernelPatch，继承了其所有功能并进行了扩展。
 
 您可以仅安装 KernelPatch，但如此将不允许您使用 APM。
 
-要使用超级用户管理，您需要安装 APatch，然后卸载 KernelPatch。
-
 [了解更多关于 KernelPatch 的信息](https://github.com/bmax121/KernelPatch)。
 
 ## 什么是 SuperKey（超级密钥）？

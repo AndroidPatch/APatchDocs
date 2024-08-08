@@ -36,8 +36,6 @@ APatch depende do KernelPatch. Ele herda todas as suas capacidades e foi expandi
 
 Você pode instalar apenas o KernelPatch, mas isso não permitirá o uso do APMódulo.
 
-Para usar o gerenciamento de SuperUsuário, você precisa instalar o APatch e depois desinstalar o KernelPatch.
-
 [Saiba mais sobre o KernelPatch](https://github.com/bmax121/KernelPatch).
 
 ## O que é SuperKey?
