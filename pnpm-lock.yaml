@@ -409,9 +409,6 @@ packages:
     peerDependencies:
       vue: 3.4.36
 
-  '@vue/shared@3.4.35':
-    resolution: {integrity: sha512-hvuhBYYDe+b1G8KHxsQ0diDqDMA8D9laxWZhNAjE83VZb5UDaXl9Xnz7cGdDSyiHM90qqI/CyGMcpBpiDy6VVQ==}
-
   '@vue/shared@3.4.36':
     resolution: {integrity: sha512-fdPLStwl1sDfYuUftBaUVn2pIrVFDASYerZSrlBvVBfylObPA1gtcWJHy5Ox8jLEJ524zBibss488Q3SZtU1uA==}
 
@@ -568,8 +565,8 @@ packages:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
 
-  vite@5.3.5:
-    resolution: {integrity: sha512-MdjglKR6AQXQb9JGiS7Rc2wC6uMjcm7Go/NHNO63EwiJXfuk9PgqiP/n5IDJCziMkfw9n4Ubp7lttNwz+8ZVKA==}
+  vite@5.4.0:
+    resolution: {integrity: sha512-5xokfMX0PIiwCMCMb9ZJcMyh5wbBun0zUzKib+L65vAZ8GY9ePZMXxFrHbr/Kyll2+LSCY7xtERPpxkBDKngwg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -577,6 +574,7 @@ packages:
       less: '*'
       lightningcss: ^1.21.0
       sass: '*'
+      sass-embedded: '*'
       stylus: '*'
       sugarss: '*'
       terser: ^5.4.0
@@ -588,6 +586,8 @@ packages:
       lightningcss:
         optional: true
       sass:
+        optional: true
+      sass-embedded:
         optional: true
       stylus:
         optional: true
@@ -917,9 +917,9 @@ snapshots:
 
   '@types/web-bluetooth@0.0.20': {}
 
-  '@vitejs/plugin-vue@5.1.2(vite@5.3.5)(vue@3.4.36)':
+  '@vitejs/plugin-vue@5.1.2(vite@5.4.0)(vue@3.4.36)':
     dependencies:
-      vite: 5.3.5
+      vite: 5.4.0
       vue: 3.4.36
 
   '@vue/compiler-core@3.4.36':
@@ -991,8 +991,6 @@ snapshots:
       '@vue/compiler-ssr': 3.4.36
       '@vue/shared': 3.4.36
       vue: 3.4.36
-
-  '@vue/shared@3.4.35': {}
 
   '@vue/shared@3.4.36': {}
 
@@ -1160,7 +1158,7 @@ snapshots:
 
   to-fast-properties@2.0.0: {}
 
-  vite@5.3.5:
+  vite@5.4.0:
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.41
@@ -1175,16 +1173,16 @@ snapshots:
       '@shikijs/core': 1.12.1
       '@shikijs/transformers': 1.12.1
       '@types/markdown-it': 14.1.2
-      '@vitejs/plugin-vue': 5.1.2(vite@5.3.5)(vue@3.4.36)
+      '@vitejs/plugin-vue': 5.1.2(vite@5.4.0)(vue@3.4.36)
       '@vue/devtools-api': 7.3.7
-      '@vue/shared': 3.4.35
+      '@vue/shared': 3.4.36
       '@vueuse/core': 10.11.0(vue@3.4.36)
       '@vueuse/integrations': 10.11.0(focus-trap@7.5.4)(vue@3.4.36)
       focus-trap: 7.5.4
       mark.js: 8.11.1
       minisearch: 7.1.0
       shiki: 1.12.1
-      vite: 5.3.5
+      vite: 5.4.0
       vue: 3.4.36
     optionalDependencies:
       postcss: 8.4.41
@@ -1207,6 +1205,7 @@ snapshots:
       - react
       - react-dom
       - sass
+      - sass-embedded
       - search-insights
       - sortablejs
       - stylus
