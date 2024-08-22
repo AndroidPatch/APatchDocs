@@ -134,6 +134,10 @@ magiskboot repack boot.img
 
 打包生成镜像，生成的 `new-boot.img` 即是修补好的镜像。
 
+::: info
+你也可以试试[在线修补](https://kernelpatch-on-web.pages.dev/)。
+:::
+
 ## 刷入
 
 ### 刷入镜像
