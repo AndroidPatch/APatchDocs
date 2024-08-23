@@ -24,12 +24,12 @@
 
 APatch 的要求主要体现于内核的配置。内核配置的要求如下:
 
-```text
+```txt
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=y
 ```
 或：
-```text
+```txt
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=n (初步支持)
 ```
@@ -68,7 +68,7 @@ APatch 有多种修补方法。
 
 ### 手动修补
 
-**当 KernelPatch 更新后，管理器仍未更新时，你可以选择手动修补内核。**
+当 KernelPatch 更新后，管理器仍未更新时，你可以选择手动修补内核。
 
 你可以前往[KernelPatch](https://github.com/bmax121/KernelPatch/releases)项目获取最新的`KP`文件。
 
@@ -188,7 +188,7 @@ fastboot reboot
 下载 APatch 安装包，将安装包后缀改为zip，并将安装包文件名改为带有 `uninstall` 字样的名字。例如，从 `APatch-10888-release.apk` 到 `APatch-10888-release-uninstall.zip`，随后使用 REC 刷入即可。
 
 ::: tip
-同样的，和安装一样，卸载也支持使用 `adb sideload`
+同样的，和安装一样，卸载也支持使用 `adb sideload`。
 :::
 
 ### 手动卸载

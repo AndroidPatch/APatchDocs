@@ -19,17 +19,20 @@
 ## Требования к установке
 
 Требования к установке APatch в основном отражены в конфигурации ядра. Вот требования к ядру:
-```
+
+```txt
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=y
 ```
-
 или:
-
-```
+```txt
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=n (Initial support)
 ```
+
+::: tip
+Если у вас уже есть root права, вы можете выполнить команду `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` в терминале или ADB, чтобы убедиться, что ваше ядро поддерживает патчинг.
+:::
 
 ::: warning
 **Поддерживается только архитектура ARM64.**
@@ -65,7 +68,7 @@ CONFIG_KALLSYMS_ALL=n (Initial support)
 1. Загрузите `kptools-win.zip`, `kpimg-android` и `magiskboot`. Извлеките их в один каталог для использования.
 2. Выполните эту команду:
 
-```
+```cmd
 magiskboot.exe unpack boot.img
 ```
 
@@ -75,19 +78,19 @@ magiskboot.exe unpack boot.img
 
 Выполните эту команду для патчинга:
 
-```
+```cmd
 kptools-x86_64-win.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
 В качестве альтернативы рекомендуется использовать `WSL` с `Linux` для патчинга:
 
-```
+```cmd
 ./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
 Если во время патчинга не было сообщено об ошибках, выполните эту команду:
 
-```
+```cmd
 magiskboot.exe repack boot.img
 ```
 
@@ -100,7 +103,7 @@ magiskboot.exe repack boot.img
 1. Загрузите `kptools-linux`, `kpimg-android` и `magiskboot`.
 2. Выполните эту команду:
 
-```
+```sh
 magiskboot unpack boot.img
 ```
 
@@ -108,21 +111,17 @@ magiskboot unpack boot.img
 
 Выполните эту команду для патчинга:
 
-```
+```sh
 ./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
 Если во время патчинга не было сообщено об ошибках, выполните эту команду:
 
-```
+```sh
 magiskboot repack boot.img
 ```
 
 чтобы упаковать и сгенерировать образ. Сгенерированный `new-boot.img` является пропатченным образом.
-
-::: warning
-**Еще раз подчеркнем, СТРОГО ЗАПРЕЩЕНО устанавливать слабые ключи, такие как `12345678`.**
-:::
 
 ::: info
 Вы также можете попробовать [онлайн патчинг](https://kernelpatch-on-web.pages.dev/).
@@ -172,13 +171,13 @@ magiskboot repack boot.img
 
 Подключите ваше устройство с помощью `ADB` и выполните следующую команду, чтобы войти в режим fastboot:
 
-```
+```sh
 adb reboot bootloader
 ```
 
 При входе в режим fastboot выполните эту команду:
 
-```
+```sh
 fastboot flash boot boot.img
 ```
 
@@ -188,7 +187,7 @@ fastboot flash boot boot.img
 
 По завершению прошивки перезагрузите устройство:
 
-```
+```sh
 fastboot reboot
 ```
 
@@ -251,7 +250,7 @@ APatch-10888-release-uninstall.zip
 
 Прошейте ваш стоковый `boot.img` в режиме `bootloader`.
 
-```
+```sh
 fastboot flash boot PATH/TO/boot.img
 ```
 

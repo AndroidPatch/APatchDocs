@@ -24,15 +24,19 @@
 
 Os requisitos de instalação do APatch são principalmente refletidos na configuração do kernel. Aqui estão os requisitos do kernel:
 
-```
+```txt
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=y
 ```
 ou:
-```
+```txt
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=n (Suporte inicial)
 ```
+
+::: tip DICA
+Você pode digitar no terminal ou via ADB `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` para verificar se o seu kernel suporta o patch (necessário root).
+:::
 
 ::: warning AVISO
 **Suporta apenas arquitetura ARM64.**
@@ -41,6 +45,8 @@ CONFIG_KALLSYMS_ALL=n (Suporte inicial)
 :::
 
 ## Patch
+
+Existem várias maneiras de corrigir o APatch.
 
 ### Patch automático {#automatically-patching}
 
@@ -72,7 +78,7 @@ Você pode ir até o projeto [KernelPatch](https://github.com/bmax121/KernelPatc
 
 2. Execute este comando:
 
-```
+```cmd
 magiskboot.exe unpack boot.img
 ```
 
@@ -82,19 +88,19 @@ Usuários do Windows podem fazer o patch usando `CMD` ou `PowerShell`.
 
 Execute este comando para corrigir:
 
-```
+```cmd
 kptools-x86_64-win.exe -p --image kernel-b --skey "SuaChave" --kpimg kpimg-android --out kernel
 ```
 
 Alternativamente, é recomendado usar `WSL` com `Linux` para o patch:
 
-```
+```cmd
 ./kptools-linux -p --image kernel-b --skey "SuaChave" --kpimg kpimg-android --out kernel
 ```
 
 Se nenhum erro for relatado durante o patch, execute este comando:
 
-```
+```cmd
 magiskboot.exe repack boot.img
 ```
 
@@ -108,7 +114,7 @@ Empacote e gere a imagem. O `new-boot.img` gerado é a imagem corrigida.
 
 2. Execute este comando:
 
-```
+```sh
 magiskboot unpack boot.img
 ```
 
@@ -116,21 +122,17 @@ Descompacte o `boot.img` para obter o arquivo do kernel. Renomeie o kernel para 
 
 Execute este comando para corrigir:
 
-```
+```sh
 ./kptools-linux -p --image kernel-b --skey "SuaChave" --kpimg kpimg-android --out kernel
 ```
 
 Se nenhum erro for relatado durante o patch, execute este comando:
 
-```
+```sh
 magiskboot repack boot.img
 ```
 
 Empacote e gere a imagem. O `new-boot.img` gerado é a imagem corrigida.
-
-::: warning AVISO
-**Enfatizando novamente, que é ESTRITAMENTE PROIBIDO definir chaves fracas como `12345678`.**
-:::
 
 ::: info
 Você também pode tentar o [patch online](https://kernelpatch-on-web.pages.dev/).
@@ -180,13 +182,13 @@ Os comandos fastboot são convenientes, estáveis e fáceis de recuperar em caso
 
 Conecte o seu dispositivo usando o `ADB` e execute o seguinte comando para entrar no modo fastboot:
 
-```
+```sh
 adb reboot bootloader
 ```
 
 Ao entrar no modo fastboot execute este comando:
 
-```
+```sh
 fastboot flash boot boot.img
 ```
 
@@ -196,7 +198,7 @@ Se o seu dispositivo suporta `fastboot boot`, você pode primeiro tentar inicial
 
 Quando terminar, reinicie o seu dispositivo:
 
-```
+```sh
 fastboot reboot
 ```
 
@@ -259,7 +261,7 @@ Assim como o Flash, a função `adb sideload` usada pelo recovery fornecida por 
 
 Flash seu `boot.img` stock no modo `bootloader`.
 
-```
+```sh
 fastboot flash boot CAMINHO/DO/boot.img
 ```
 
