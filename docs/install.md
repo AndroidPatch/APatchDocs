@@ -20,19 +20,23 @@
 3. Avoid using the `boot.img` file that has been patched by other managers to avoid unexpected situations.
 :::
 
-## Install Requirements
+## Install requirements
 
 APatch installation requirements are mainly reflected in the kernel configuration. Here are the requirements of kernel:
 
-```
+```txt
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=y
 ```
 or:
-```
+```txt
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=n (Initial support)
 ```
+
+::: tip
+You can execute command `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` in terminal or ADB to ensure your kernel is support to patch (root required).
+:::
 
 ::: warning
 **Only supports the ARM64 architecture.**
@@ -41,6 +45,8 @@ CONFIG_KALLSYMS_ALL=n (Initial support)
 :::
 
 ## Patch
+
+There are several ways to patch APatch.
 
 ### Automatically patching {#automatically-patching}
 
@@ -72,7 +78,7 @@ You can go to [KernelPatch](https://github.com/bmax121/KernelPatch/releases) pro
 
 2. Execute this command:
 
-```
+```cmd
 magiskboot.exe unpack boot.img
 ```
 
@@ -82,19 +88,19 @@ Windows users can patch using `CMD` or `PowerShell`.
 
 Execute this command to patch:
 
-```
+```cmd
 kptools-x86_64-win.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
 Alternatively, it is recommended to use `WSL` with `Linux` for patching:
 
-```
+```cmd
 ./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
 If no errors were reported during patching, execute this command:
 
-```
+```cmd
 magiskboot.exe repack boot.img
 ```
 
@@ -108,7 +114,7 @@ to pack and generate the image. The generated `new-boot.img` is the patched imag
 
 2. Execute this command:
 
-```
+```sh
 magiskboot unpack boot.img
 ```
 
@@ -116,21 +122,17 @@ to unpack the `boot.img` to get the kernel file. Rename the kernel to **kernel-b
 
 Execute this command to patch:
 
-```
+```sh
 ./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
 If no errors were reported during patching, execute this command:
 
-```
+```sh
 magiskboot repack boot.img
 ```
 
 to pack and generate the image. The generated `new-boot.img` is the patched image.
-
-::: warning
-**Emphasize again, it is STRICTLY PROHIBITED to set weak keys like `12345678`.**
-:::
 
 ::: info
 You can also try [online patching](https://kernelpatch-on-web.pages.dev/).
@@ -180,13 +182,13 @@ This method is convenient and stable, you can easily recover your device if your
 
 Connect your device using `ADB` and execute the following command to enter the fastboot mode:
 
-```
+```sh
 adb reboot bootloader
 ```
 
 When entering fastboot mode, execute this command:
 
-```
+```sh
 fastboot flash boot boot.img
 ```
 
@@ -196,7 +198,7 @@ If your device supports command `fastboot boot`, you can use `fastboot boot boot
 
 When complete, reboot your device:
 
-```
+```sh
 fastboot reboot
 ```
 
@@ -208,7 +210,7 @@ The LATEST version of APatch supports directly flashing via third-party Recovery
 Directly flashing is firstly introduced at version `10888` and earlier version of APatch do **NOT** support this method.
 :::
 
-Change the suffix name of APatch Manager file (.apk) to `.zip`. For example:
+Change the suffix name of APatch manager file (.apk) to `.zip`. For example:
 
 ```
 [username@localhost Demo] $ ls
@@ -227,7 +229,7 @@ Same as Flash, `adb sideload` function used by Recovery provided by third-party 
 
 ::: warning
 Directly flashing is **NOT** supported customizing SuperKey! Instead, SuperKey will be set as a combination with random numbers and letters.
-If you need customize SuperKey, please go to APatch manager after booting and repatch to reset SuperKey.
+If you need customize SuperKey, please go to APatch Manager after booting and repatch to reset SuperKey.
 :::
 
 ## Uninstall
@@ -259,7 +261,7 @@ Same as Flash, `adb sideload` function used by Recovery provided by third-party 
 
 Flash your stock `boot.img` in `bootloader` mode.
 
-```
+```sh
 fastboot flash boot PATH/TO/boot.img
 ```
 
