@@ -14,4 +14,4 @@
 
 [[ZH/EN] [SFW] APatch Discussions](https://t.me/apatch_discuss) (管理较宽松)
 
-[[NSFW] APatch CN](https://t.me/APatch_CN_Group) (仅限中文用户)
+[[SFW] APatch CN](https://t.me/APatch_CN_Group) (仅限中文用户)
