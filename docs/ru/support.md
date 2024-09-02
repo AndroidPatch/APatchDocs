@@ -14,4 +14,4 @@
 
 [[ZH/EN] [SFW] APatch Discussions](https://t.me/apatch_discuss)
 
-[[NSFW] [R-18] APatch 中文组](https://t.me/APatch_CN_Group) (Только для китайских пользователей)
+[[SFW] APatch CN](https://t.me/APatch_CN_Group) (Только для китайских пользователей)
