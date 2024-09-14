@@ -44,7 +44,7 @@ CONFIG_KALLSYMS_ALL=n (初步支持)
 **仅支持 Android 内核版本 3.18 - 6.1**
 :::
 
-## 修补
+## 修补 {#how-to-patch}
 
 APatch 有多种修补方法。
 

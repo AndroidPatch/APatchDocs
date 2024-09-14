@@ -44,7 +44,7 @@ Você pode digitar no terminal ou via ADB `zcat /proc/config.gz | grep -w CONFIG
 **Suporta apenas versões do kernel Android 3.18 - 6.1**
 :::
 
-## Patch
+## Patch {#how-to-patch}
 
 Existem várias maneiras de corrigir o APatch.
 

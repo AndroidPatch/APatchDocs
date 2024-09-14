@@ -4,16 +4,16 @@ APatch relies on KernelPatch, it inherits all of its functionalities and has bee
 
 ## What is KPM?
 
-KernelPatch Modules (KPM) is a type of module that allows code to run in kernel space, similar to Loadable Kernel Modules (LKM). They can perform some operations that APMs can't do (for example, partition image protection). ~~You can even modify KernelSU's ksud to a KPM to allow KernelSU to run on APatch~~.
+KernelPatch Modules (KPM) is a type of module that allows code to run in kernel space, similar to Loadable Kernel Modules (LKM). They can perform some operations that APMs can not do (e.g. partition image protection). You can even modify KernelSU's ksud to a KPM to allow KernelSU to run on APatch.
 
 ## How to use KPM?
 
 There are 3 ways to use KPM: Embed, Load, and Install.
 
-::: tip About "Install"
+::: tip ABOUT "INSTALL"
 This document was last updated on 2024-08-06 at 19:14. Caution should be exercised when accessing the contents of this page if the time difference from the present is too great.
 
-Currently, APatch hasn't implemented the "Install" function for KPMs, and you can only use KPMs via "Embed" and "Load". KernelPatch and APatch's developers are working quickly to implement the "Install" function. Please wait patiently.
+Currently, APatch has not implemented the "Install" function for KPMs, and you can only use KPMs via "Embed" and "Load". KernelPatch and APatch's developers are working quickly to implement the "Install" function. Please wait patiently.
 :::
 
 ### Embed
@@ -40,11 +40,11 @@ After installing APatch, the way of embedding KPMs is familiar to installing APM
 
 `Load` is a function that lets the kernel load KPMs directly. KPMs installed this way will be loaded immediately. However, all Loaded KPMs will be lost after the next reboot.
 
-The way of Load KPMs is familiar to installing APMs; the only difference is that you don't need to reboot your device after Loading KPMs.
+The way of Load KPMs is familiar to installing APMs; the only difference is that you do not need to reboot your device after Loading KPMs.
 
 ### Install
 
-::: tip Attention
+::: tip ATTENTION
 KernelPatch and APatch have not yet implemented the "Install" function for KPMs. All descriptions below are speculative and describe the expected behavior of "Install" for KPMs.
 :::
 

@@ -20,4 +20,4 @@ Please read this: [Installation](/install)
 
 ## How to patch?
 
-Please read this: [Patch](/patch)
+Please read this: [Patch](/install#how-to-patch)

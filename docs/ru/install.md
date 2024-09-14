@@ -40,7 +40,7 @@ CONFIG_KALLSYMS_ALL=n (Initial support)
 **Поддерживаются только ядра Android версий 3.18 - 6.1**
 :::
 
-## Патчинг {#patch}
+## Патчинг {#how-to-patch}
 
 ### Автоматический патчинг {#automatically-patching}
 

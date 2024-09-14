@@ -62,7 +62,7 @@ Revogue o privilégio root do app "Shell" na página SuperUsuário.
 
 ## O app automaticamente obtém e perde permissões root após o reinício do dispositivo
 
-Veja [aqui](https://t.me/APatchChannel/74).
+Leia [isto](https://t.me/APatchChannel/74) para mais detalhes.
 
 ## Posso usar o LSPosed?
 
@@ -80,7 +80,7 @@ O Zloader **NÃO** é compatível com nenhuma implementação do Zygisk, por exe
 :::
 
 ::: info INFORMAÇÕES
-O Zloader ainda está em desenvolvimento inicial, seja bem-vindo para enviar Pull requests aos desenvolvedores do Zloader ou abrir um problema.
+Zloader ainda está em desenvolvimento inicial. Sinta-se à vontade para enviar Pull requests aos desenvolvedores do Zloader ou abrir um problema.
 :::
 
 ## Não é possível usar Shamiko?
@@ -102,7 +102,7 @@ APatch também pode usar o [Zygisk_mod](https://github.com/Admirepowered/Zygisk_
 APatch também pode usar o [ReZygisk](https://github.com/PerformanC/ReZygisk) para adicionar suporte ao Zygisk.
 
 ::: info INFORMAÇÕES
-ReZygisk ainda está em desenvolvimento inicial. Sinta-se à vontade para enviar Pull requests aos desenvolvedores do ReZygisk ou abrir um problema para qualquer problema de uso.
+ReZygisk ainda está em desenvolvimento inicial. Sinta-se à vontade para enviar Pull requests aos desenvolvedores do ReZygisk ou abrir um problema.
 :::
 
 ## O software de detecção de root falha

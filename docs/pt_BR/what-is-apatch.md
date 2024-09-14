@@ -20,4 +20,4 @@ Por favor, consulte: [Instalação](/pt_BR/install)
 
 ## Como fazer patch?
 
-Por favor, consulte: [Patch](/pt_BR/patch)
+Por favor, consulte: [Patch](/pt_BR/install#how-to-patch)
