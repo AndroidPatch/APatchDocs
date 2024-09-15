@@ -3,7 +3,7 @@
 ## What is APatch?
 
 ::: info
-[There](/what-is-apatch) is a more complete introduction.
+[Here](/what-is-apatch) is a more complete introduction.
 :::
 
 APatch is a root solution similar to Magisk or KernelSU which is one of the best of both. It combines Magisk easy and convenient installation method via `boot.img` with KernelSU powerful kernel patching abilities.
@@ -34,7 +34,7 @@ Please read [How to write KPM](https://github.com/bmax121/KernelPatch/blob/main/
 
 APatch relies on KernelPatch. It inherits all of its capabilities and has been expanded.
 
-You can install just KernelPatch, but this doesn't allow you to use APM.
+You can install just KernelPatch, but this does not allow you to use APM.
 
 [Learn more about KernelPatch](https://github.com/bmax121/KernelPatch).
 
@@ -58,11 +58,11 @@ If you want to design WebUI for APM or KPM, please refer to the [WebUI introduct
 
 ## Can not install modules (os error 2/5/22)?
 
-Remove the root permission of "shell" application in SuperUser page.
+Remove the root permission of "Shell" app in SuperUser page.
 
 ## App granted/lost root permission automatically when rebooting device?
 
-Read [this](https://t.me/APatchChannel/74).
+Read [this](https://t.me/APatchChannel/74) for more details.
 
 ## Can I use LSPosed?
 
@@ -80,7 +80,7 @@ Zloader is **NOT** compatible with any Zygisk implementation, for example, Zygis
 :::
 
 ::: info
-Zloader is still in early development, welcome to commit Pull requests to Zloader developers or open an issue for any usage issues.
+Zloader is still in early development. Feel free to submit Pull requests to the Zloader developers or open an issue for any usage issues.
 :::
 
 ## Can not use Shamiko?
@@ -105,6 +105,6 @@ APatch can also use the [ReZygisk](https://github.com/PerformanC/ReZygisk) to ad
 ReZygisk is still in early development. Feel free to submit Pull requests to the ReZygisk developers or open an issue for any usage issues.
 :::
 
-## Can not pass the root-detecting application?
+## Can not pass the root-detecting app?
 
 If your software is working properly, don't worry too much about the detection software.

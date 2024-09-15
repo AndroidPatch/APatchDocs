@@ -8,12 +8,12 @@
 
 3. [Click here](https://github.com/bmax121/APatch/releases) to get the latest stable version of APatch Manager.
 
-4. Extract the `boot.img` from your ROM or from another source containing the stock `boot.img` of your device. You'll need it later for patching.
+4. Extract the `boot.img` from your ROM or from another source containing the stock `boot.img` of your device. You will need it later for patching.
 
 5. Backup the `boot.img` you extracted to a computer, USB drive, or another device. If any issues occur, you can flash your original `boot.img` via fastboot to recover your device from a dump.
 
 ::: tip
-1. Ensure to use the latest ADB and fastboot tools and have knowledge about them to proceed to the next step. If you haven't learned about them yet, we recommend researching to learn about them first.
+1. Ensure to use the latest ADB and fastboot tools and have knowledge about them to proceed to the next step. If you have not learned about them yet, we recommend researching to learn about them first.
 
 2. APatch always patch the `boot.img` of any device. Do not attempt to patch or flash the `init_boot` or other partition image files. The APatch developers are not responsible for the failure of resulting patch and boot.
 
@@ -44,7 +44,7 @@ You can execute command `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` in term
 **Only supports Android kernel versions 3.18 - 6.1**
 :::
 
-## Patch
+## Patch {#how-to-patch}
 
 There are several ways to patch APatch.
 
@@ -118,7 +118,7 @@ to pack and generate the image. The generated `new-boot.img` is the patched imag
 magiskboot unpack boot.img
 ```
 
-to unpack the `boot.img` to get the kernel file. Rename the kernel to **kernel-b**(Say again, kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
+to unpack the `boot.img` to get the kernel file. Rename the kernel to **kernel-b** (Say again, kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
 
 Execute this command to patch:
 
@@ -210,7 +210,7 @@ The LATEST version of APatch supports directly flashing via third-party Recovery
 Directly flashing is firstly introduced at version `10888` and earlier version of APatch do **NOT** support this method.
 :::
 
-Change the suffix name of APatch manager file (.apk) to `.zip`. For example:
+Change the suffix name of APatch Manager file (.apk) to `.zip`. For example:
 
 ```
 [username@localhost Demo] $ ls
@@ -240,7 +240,7 @@ If you need customize SuperKey, please go to APatch Manager after booting and re
 Automatically uninstall is firstly introduced at version `10888` and earlier version of APatch do **NOT** support this method.
 :::
 
-Change the suffix name of APatch manager file (.apk) to `.zip` and add modify file name to anything with `uninstall`. For example:
+Change the suffix name of APatch Manager file (.apk) to `.zip` and add modify file name to anything with `uninstall`. For example:
 
 ```
 [username@localhost Demo] $ ls

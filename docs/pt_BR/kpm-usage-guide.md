@@ -4,7 +4,7 @@ APatch depende do KernelPatch, ele herda todas as suas capacidades e foi expandi
 
 ## O que é KPMódulo?
 
-KPMódulo (KPM) é um tipo de módulo que permite que o código seja executado no espaço do kernel, semelhante ao Loadable Kernel Modules (LKM). Eles podem realizar algumas operações que o APMódulo (APM) não pode realizar (ex.: proteção da imagem de partição). ~~Você pode até modificar o ksud do KernelSU para um KPM para permitir que o KernelSU seja executado no APatch~~.
+KPMódulo (KPM) é um tipo de módulo que permite que o código seja executado no espaço do kernel, semelhante ao Loadable Kernel Modules (LKM). Eles podem realizar algumas operações que o APMódulo (APM) não pode realizar (ex.: proteção da imagem de partição). Você pode até modificar o ksud do KernelSU para um KPM para permitir que o KernelSU seja executado no APatch.
 
 ## Como usar o KPMódulo?
 

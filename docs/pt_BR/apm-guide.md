@@ -79,6 +79,7 @@ Um módulo APatch é uma pasta colocada em `/data/adb/modules` com a estrutura a
 │   ├── service.sh          <--- Este script será executado no serviço late_start
 │   ├── boot-completed.sh   <--- Este script será executado na inicialização concluída
 |   ├── uninstall.sh        <--- Este script será executado quando o APatch remover seu módulo
+|   ├── action.sh           <--- Este script será executado quando o usuário clicar no botão Ação no APatch
 │   ├── system.prop         <--- As propriedades neste arquivo serão carregadas como propriedades do sistema por resetprop
 │   ├── sepolicy.rule       <--- Regras adicionais do sepolicy personalizadas
 │   │
@@ -202,7 +203,7 @@ O módulo APatch **NÃO** é compatível para instalação no recovery personali
 
 ### Personalização {#customizing-installation}
 
-Se você precisar personalizar o processo de instalação do módulo, opcionalmente você pode criar um script no instalador chamado `customize.sh`. Este script será **sourced** (não executado!) pelo script do instalador do módulo depois que todos os arquivos forem extraídos e as permissões padrão e o contexto secundário forem aplicados. Isso é muito útil se o seu módulo exigir configuração adicional com base na API do dispositivo ou se você precisar definir permissões/secontext especiais para alguns dos arquivos do seu módulo.
+Se você precisar personalizar o processo de instalação do módulo, opcionalmente você pode criar um script no instalador chamado `customize.sh`. Este script será **sourced** (não executado) pelo script do instalador do módulo depois que todos os arquivos forem extraídos e as permissões padrão e o contexto secundário forem aplicados. Isso é muito útil se o seu módulo exigir configuração adicional com base na API do dispositivo ou se você precisar definir permissões/secontext especiais para alguns dos arquivos do seu módulo.
 
 Se você quiser controlar e personalizar totalmente o processo de instalação, declare `SKIPUNZIP=1` em `customize.sh` para pular todas as etapas de instalação padrão. Ao fazer isso, seu `customize.sh` será responsável por instalar tudo sozinho.
 
@@ -277,14 +278,12 @@ No APatch, os scripts são divididos em dois tipos com base em seu modo de execu
 APatch possui mais dois tipos de scripts de início dependendo de onde estão armazenados: scripts gerais e scripts de módulo.
 
 - Scripts gerais
-
   - Colocado em `/data/adb/post-fs-data.d`, `/data/adb/service.d`, `/data/adb/post-mount.d` ou `/data/adb/boot-completed.d`.
   - Somente executado se o script estiver definido como executável (`chmod +x script.sh`).
   - Os scripts em `post-fs-data.d` são executados no modo post-fs-data e os scripts em `service.d` são executados no modo de serviço late_start.
   - Os módulos **NÃO** devem adicionar scripts gerais durante a instalação.
 
 - Scripts de módulo
-
   - Colocado na própria pasta do módulo.
   - Executado apenas se o módulo estiver ativado.
   - `post-fs-data.sh` é executado no modo post-fs-data, `post-mount.sh` é executado no modo post-mount e `service.sh` é executado no modo de serviço late_start e `boot-completed` é executado no modo de serviço após a conclusão da inicialização do Android.

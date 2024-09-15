@@ -8,7 +8,7 @@ You can update directly in the app.
 
 1. Download the new version of APatch Manager
 
-> Please re-confirm the SuperKey if necessary
+> Please re-confirm the SuperKey if necessary.
 
 2. Click the button in the upper right hand corner ![Patch Button](/PButton.png)
 
@@ -30,10 +30,10 @@ OTA update with root retention in APatch is consistent with Magisk.
 The OTA update functionality with root saving in APatch is currently not very stable and issues may occur. If an issue occurs [go to the APatch project GitHub repository to submit an issue](https://github.com/bmax121/APatch/issues/new/choose).
 :::
 
-::: info Pay attention
+::: info PAY ATTENTION
 For MIUI/Xiaomi HyperOS users, here is what you need to pay extra attention for:
 
-Different from Magisk/KernelSU, APatch currently won't automatically backup the stock `boot.img` when patching it. If you haven't manually restored the stock `boot.img` before a system update, the verification will fail, and you'll be forced to use a Full ROM to complete the update process.
+Different from Magisk/KernelSU, APatch currently will not automatically backup the stock `boot.img` when patching it. If you have not manually restored the stock `boot.img` before a system update, the verification will fail, and you will be forced to use a Full ROM to complete the update process.
 
 If you're using MIUI/Xiaomi HyperOS (especially Dev Edition), we recommend that restoring stock `boot.img` manually before system update.
 :::
@@ -54,4 +54,4 @@ In some major updates, newer versions of KernelPatch may not be compatible with 
 
 **There are a very small number of cases where OTA slot switching does not work.** The sample is too small for us to determine exactly what the problem is. If this fails, please reinstall the program manually. Also, if you want, you can report the problem and attach logs on the page [issues](https://github.com/bmax121/APatch/issues/new/choose).
 
-We need your assistance.
+We need your help.

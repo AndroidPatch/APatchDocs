@@ -21,25 +21,25 @@ The mechanism of APatch modules operation is almost the same as Magisk. If you a
 
 APatch provides a fully functional BusyBox binary (including full SELinux support). The executable is located at `/data/adb/ap/bin/busybox`.
 APatch's BusyBox supports a runtime switchable “ASH Standalone Shell Mode”.
-This standalone mode means that when running in the `ash` BusyBox shell, each command will directly use the applet inside BusyBox, regardless of what is set as `PATH`.
+This Standalone Mode means that when running in the `ash` BusyBox shell, each command will directly use the applet inside BusyBox, regardless of what is set as `PATH`.
 For example, commands such as `ls`, `rm`, `chmod`, etc. will not use the commands defined in the `PATH` (in the case of Android, the defaults are `/system/bin/ls`, `/system/bin/rm` and `/system/bin/chmod`, respectively), but instead directly call the built-in BusyBox applets.
 This ensures that the script always runs in a predictable environment and always has a full set of commands, no matter what version of Android it is running on.
 To force the command to not use BusyBox, you must call the executable with the full path.
 
-Every shell script run in the APatch context will be executed in the BusyBox `ash` shell with standalone mode enabled. For what is relevant to 3rd party developers, this includes all boot scripts and module installation scripts.
+Every shell script run in the APatch context will be executed in the BusyBox `ash` shell with Standalone Mode enabled. For what is relevant to 3rd party developers, this includes all boot scripts and module installation scripts.
 
 For those who want to use this "Standalone Mode" feature outside of APatch, there are 2 ways to enable it:
 
 1. Set the `ASH_STANDALONE` environment variable to `1`.<br>Example: `ASH_STANDALONE=1 /data/adb/ap/bin/busybox sh <script>`.
 2. Toggle with command-line options:`/data/adb/ap/bin/busybox sh -o standalone <script>`
 
-To make sure all subsequent `sh` shell executed also runs in standalone mode, option 1 is the preferred method (and this is what APatch and the APatch Manager internally use) as environment variables are inherited down to child processes.
+To make sure all subsequent `sh` shell executed also runs in Standalone Mode, option 1 is the preferred method (and this is what APatch and the APatch Manager internally use) as environment variables are inherited down to child processes.
 
-::: tip Differences with KernelSU
+::: tip DIFFERENCES WITH KERNELSU
 The location of BusyBox has been changed from `/data/adb/ksu/bin/busybox` to `/data/adb/ap/bin/busybox`.
 :::
 
-::: tip Differences with Magisk
+::: tip DIFFERENCES WITH MAGISK
 APatch's BusyBox is now a binary compiled directly from the Magisk project. **Thanks to Magisk!**
 So you don't have to worry about compatibility of BusyBox scripts with Magisk and APatch scripts, because they are exactly the same!
 :::
@@ -79,6 +79,7 @@ The APatch module is a folder inside `/data/adb/modules` with the following stru
 │   ├── service.sh          <--- This script will be executed in late_start service
 │   ├── boot-completed.sh   <--- This script will be executed on boot completed
 |   ├── uninstall.sh        <--- This script will be executed when APatch removes your module
+|   ├── action.sh           <--- This script will be executed when user click the Action button in APatch Manager
 │   ├── system.prop         <--- Properties in this file will be loaded as system properties by resetprop
 │   ├── sepolicy.rule       <--- Additional custom sepolicy rules
 │   │
@@ -100,7 +101,7 @@ The APatch module is a folder inside `/data/adb/modules` with the following stru
 ├── .
 ```
 
-::: tip Differences with Magisk
+::: tip DIFFERENCES WITH MAGISK
 APatch does not have native Zygisk support, so there is no Zygisk-related content in the module.
 However, you can use [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) or [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) to support Zygisk modules. In this case, the contents of the Zygisk module are identical to those supported by Magisk.
 :::
@@ -131,7 +132,7 @@ The differences between `post-fs-data.sh`, `post-mount.sh`, `service.sh` and `bo
 
 In all scripts of your module, please use `MODDIR=${0%/*}` to get your module's base directory path; do **NOT** hardcode your module path in scripts.
 
-:::tip Differences with Magisk and KernelSU
+:::tip DIFFERENCES WITH MAGISK AND KERNELSU
 You can determine if the script is running in APatch by using the `APATCH` environment variable, if it is running in APatch, this value will be set to `true`.
 :::
 
@@ -168,7 +169,7 @@ REPLACE="
 
 In this example, the `$MODPATH/system/app/YouTube` and `$MODPATH/system/app/Bloatware` directories will be automatically created and then the `setfattr -n trusted.overlay.opaque -v y $MODPATH/system/app/YouTube` and `setfattr -n trusted.overlay.opaque -v y $MODPATH/system/app/Bloatware` commands will be executed. After the module takes effect, the `/system/app/YouTube` and `/system/app/Bloatware` directories will be replaced with empty ones.
 
-:::tip Differences with Magisk
+:::tip DIFFERENCES WITH MAGISK
 The APatch systemless mechanism is implemented via kernel OverlayFS, while Magisk currently uses bind mount. There is a huge difference between these two implementations, but the end goal is essentially the same: to modify the `/system` file without changing the `/system` physical partition.
 :::
 
@@ -202,7 +203,7 @@ The APatch module is **NOT** supported for installation in custom Recovery!
 
 ### Customization {#customizing-installation}
 
-If you need to customize the module installation process, optionally you can create a script in the installer named `customize.sh`. This script will be **sourced** (not executed!) by the module installer script after all files are extracted and default permissions and secontext are applied. This is very useful if your module require additional setup based on the device ABI, or you need to set special permissions/secontext for some of your module files.
+If you need to customize the module installation process, optionally you can create a script in the installer named `customize.sh`. This script will be **sourced** (not executed) by the module installer script after all files are extracted and default permissions and secontext are applied. This is very useful if your module require additional setup based on the device ABI, or you need to set special permissions/secontext for some of your module files.
 
 If you would like to fully control and customize the installation process, declare `SKIPUNZIP=1` in `customize.sh` to skip all default installation steps. By doing so, your `customize.sh` will be responsible to install everything by itself.
 
@@ -274,18 +275,17 @@ There are two types of scripts in APatch depending on their mode of operation: p
   - This stage is NON-BLOCKING. Your script runs in parallel with the rest of the booting process.
   - **This is the recommended stage to run most scripts.**
 
-APatch has two more types of start scripts depending on where they are stored: general scripts and module scripts.
+APatch has two more types of start scripts depending on where they are stored: General scripts and Module scripts.
 
-- General Scripts
-
+- General scripts
   - Placed in `/data/adb/post-fs-data.d`, `/data/adb/service.d`, `/data/adb/post-mount.d` or `/data/adb/boot-completed.d`.
   - Only executed if the script is set as executable (`chmod +x script.sh`).
   - Scripts in `post-fs-data.d` runs in post-fs-data mode, and scripts in `service.d` runs in late_start service mode.
   - Modules should **NOT** add general scripts during installation.
 
-- Module Scripts
+- Module scripts
   - Placed in the module's own folder.
   - Only executed if the module is enabled.
   - `post-fs-data.sh` runs in post-fs-data mode, `post-mount.sh` runs in post-mount mode, and `service.sh` runs in late_start service mode, and `boot-completed` runs in service mode after the Android boot is complete.
 
-All startup scripts will run in the BusyBox ash shell from APatch with Standalone Mode enabled.
+All startup scripts will run in the BusyBox `ash` shell from APatch with Standalone Mode enabled.
