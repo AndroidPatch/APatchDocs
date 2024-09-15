@@ -58,7 +58,7 @@ If you want to design WebUI for APM or KPM, please refer to the [WebUI introduct
 
 ## Can not install modules (os error 2/5/22)?
 
-Remove the root permission of "Shell" app in Superuser page.
+Remove the root permission of "Shell" app in SuperUser page.
 
 ## App granted/lost root permission automatically when rebooting device?
 
