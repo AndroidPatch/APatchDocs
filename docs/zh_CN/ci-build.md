@@ -1,6 +1,6 @@
 # 对 CI build 10977 及以后版本的特别说明
 
-::: tips 提醒
+::: info 提醒
 我们曾经在 [其他注意事项](zh_CN/update#Miscellaneous) 中提醒过类似情况。
 :::
 
