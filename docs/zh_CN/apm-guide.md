@@ -108,7 +108,7 @@ APatch 模块就是一个放置在 `/data/adb/modules` 内且满足如下结构�
 ::: tip 与 Magisk 的差异
 APatch 没有内置的针对 Zygisk 的支持，因此模块中没有 Zygisk 相关的内容。
 
-但你可以通过 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) 或者 [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) 来支持 Zygisk 模块，此时 Zygisk 模块的内容与 Magisk 所支持的 Zygisk 是完全相同的。
+但你可以参照 [Zygisk 支持？](zh_CN/faq#zygisk-support) 中列出的方式来支持 Zygisk 模块，此时 Zygisk 模块的内容与 Magisk 所支持的 Zygisk 是完全相同的。
 :::
 
 ### module.prop
