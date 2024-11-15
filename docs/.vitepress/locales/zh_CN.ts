@@ -36,7 +36,7 @@ function sidebarGuide() {
           { text: '安装', link: '/zh_CN/install' },
           { text: '升级', link: '/zh_CN/update' },
           { text: '救砖', link: '/zh_CN/rescue-bootloop' },
-          { text: '对 10977 版本的特别说明', link: '/zh-CN/ci-build'},
+          { text: '对 10977 版本的特别说明', link: '/zh_CN/ci-build'},
           { text: '系统模块 (APM) 开发指南', link: '/zh_CN/apm-guide' },
           { text: '内核模块 (KPM) 使用指南', link: '/zh_CN/kpm-usage-guide' },
           { text: '反馈与帮助', link: '/zh_CN/support' },
