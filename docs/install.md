@@ -82,7 +82,7 @@ You can go to [KernelPatch](https://github.com/bmax121/KernelPatch/releases) pro
 magiskboot.exe unpack boot.img
 ```
 
-to unpack the `boot.img` and get the kernel file. Rename the kernel to **kernel-b**. (kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
+To unpack the `boot.img` and get the kernel file. Rename the kernel to **kernel-b**. (kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
 
 Windows users can patch using `CMD` or `PowerShell`.
 
@@ -104,7 +104,7 @@ If no errors were reported during patching, execute this command:
 magiskboot.exe repack boot.img
 ```
 
-to pack and generate the image. The generated `new-boot.img` is the patched image.
+To pack and generate the image. The generated `new-boot.img` is the patched image.
 
 ---
 
@@ -118,7 +118,7 @@ to pack and generate the image. The generated `new-boot.img` is the patched imag
 magiskboot unpack boot.img
 ```
 
-to unpack the `boot.img` to get the kernel file. Rename the kernel to **kernel-b** (Say again, kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
+To unpack the `boot.img` to get the kernel file. Rename the kernel to **kernel-b** (Say again, kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
 
 Execute this command to patch:
 
@@ -132,7 +132,7 @@ If no errors were reported during patching, execute this command:
 magiskboot repack boot.img
 ```
 
-to pack and generate the image. The generated `new-boot.img` is the patched image.
+To pack and generate the image. The generated `new-boot.img` is the patched image.
 
 ::: info
 You can also try [online patching](https://kernelpatch-on-web.pages.dev/).
@@ -192,7 +192,7 @@ When entering fastboot mode, execute this command:
 fastboot flash boot boot.img
 ```
 
-::: info
+::: tip
 If your device supports command `fastboot boot`, you can use `fastboot boot boot.img` command to boot the system before you flash the image. If any accident occured, just reboot again then your device will started to boot correctly.
 :::
 

@@ -103,7 +103,7 @@ Um módulo APatch é uma pasta colocada em `/data/adb/modules` com a estrutura a
 
 ::: tip DIFERENÇAS COM MAGISK
 O APatch não possui suporte integrado para o Zygisk, portanto não há conteúdo relacionado ao Zygisk no módulo.
-No entanto, você pode usar [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) ou [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) para suportar módulos Zygisk. Neste caso, o conteúdo do módulo Zygisk é idêntico ao suportado pelo Magisk.
+No entanto, você pode seguir isto: [Suporta Zygisk?](/pt_BR/faq#zygisk-support) para suportar módulos Zygisk. Neste caso, o conteúdo do módulo Zygisk é idêntico ao suportado pelo Magisk.
 :::
 
 ### module.prop

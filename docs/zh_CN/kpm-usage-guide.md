@@ -6,7 +6,7 @@ APatch 依赖于 KernelPatch，继承了其全部功能并进行了扩展。因�
 
 KPM 是一种运行在内核空间内的模块，可以让代码运行在内核空间中，类似于 Loadable Kernel Modules（LKM）。
 
-通过 KPM，你可以实现一些 APM 不能实现的功能(例如分区镜像保护)，~~你甚至可以实现将 KernelSU 的 ksud 改成 KPM 以实现在 APatch 上运行 KernelSU~~。
+通过 KPM，你可以实现一些 APM 不能实现的功能(例如分区镜像保护)，你甚至可以实现将 KernelSU 的 ksud 改成 KPM 以实现在 APatch 上运行 KernelSU。
 
 ## 如何安装 KPM？
 

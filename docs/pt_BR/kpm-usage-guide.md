@@ -11,7 +11,7 @@ KPMódulo (KPM) é um tipo de módulo que permite que o código seja executado n
 Existem 3 maneiras de usar o KPMódulo: Incorporar, Carregar e Instalar.
 
 ::: tip SOBRE "INSTALAR"
-Este documento foi atualizado pela última vez em 06/08/2024 às 19h14. Deve-se ter cuidado ao acessar o conteúdo desta página se a diferença horária em relação ao presente for muito grande.
+Este documento foi atualizado pela última vez em 06/08/2024 às 19:14. Deve-se ter cuidado ao acessar o conteúdo desta página se a diferença horária em relação ao presente for muito grande.
 
 Atualmente, o APatch não implementou a função "Instalar" para KPMs, e você só pode usar KPMs via "Incorporar" ou "Carregar". Os desenvolvedores do KernelPatch e do APatch estão trabalhando rapidamente para implementar a função "Instalar". Por favor, espere pacientemente.
 :::

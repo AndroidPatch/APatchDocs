@@ -38,10 +38,10 @@ Diferente do Magisk/KernelSU, o APatch atualmente não fará backup automático 
 Se você estiver usando MIUI/Xiaomi HyperOS (especialmente Dev Edition), recomendamos restaurar o `boot.img` stock manualmente antes da atualização do sistema.
 :::
 
-## Diversos
+## Diversos {#Miscellaneous}
 
 :::info INFORMAÇÕES
-Este documento foi atualizado pela última vez em 18/05/2024 às 22h30. Deve-se ter cuidado ao acessar o conteúdo desta página se a diferença horária em relação ao presente for muito grande.
+Este documento foi atualizado pela última vez em 18/05/2024 às 22:30. Deve-se ter cuidado ao acessar o conteúdo desta página se a diferença horária em relação ao presente for muito grande.
 :::
 
 O conteúdo descrito neste documento é baseado na versão mais recente do APatch. Se você não conseguir encontrar os botões mencionados neste documento, ![Patch Button](/PButton.png) significa que a versão do APatch que você está usando é muito baixa.

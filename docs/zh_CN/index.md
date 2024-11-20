@@ -22,12 +22,11 @@ hero:
 
 features:
   - title: 基于内核
-    details: APatch 运行在内核空间，相比用户空间Root有更强的隐蔽性和掌控性。
+    details: APatch 运行在内核空间，相比用户空间 Root 有更强的隐蔽性和掌控性。
   - title: 白名单访问控制
-    details: 只有被授权的 App 才可以访问 'su'，而其他 App 无法感知其存在。
+    details: 只有被授权的 App 才可以访问 su，而其他 App 无法感知其存在。
   - title: APM
     details: 类似 Magisk 模块的支持。
   - title: KPM
     details: 内核补丁模块支持。（允许将任何代码注入内核，内核函数 inline-hook 和 syscall-table-hook 可用）。
 ---
-
