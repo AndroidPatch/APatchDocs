@@ -1,4 +1,4 @@
-# Rescue From Bootloop
+# Rescue from bootloop
 
 APatch has an integrated bootloop rescue mechanism that can help you quickly disable all modules and restart the device if any malicious module is flashed and the device fails to boot.
 

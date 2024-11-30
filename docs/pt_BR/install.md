@@ -192,7 +192,7 @@ Ao entrar no modo fastboot execute este comando:
 fastboot flash boot boot.img
 ```
 
-::: info INFORMAÇÕES
+::: tip DICA
 Se o seu dispositivo suporta `fastboot boot`, você pode primeiro tentar inicializar o sistema usando `fastboot boot boot.img`. Se ocorrerem problemas inesperados, simplesmente reinicie o dispositivo para a inicialização normal.
 :::
 
@@ -210,7 +210,7 @@ A versão MAIS RECENTE do APatch suporta atualização direta por meio de recove
 O flash direto foi introduzido pela primeira vez na versão `10888` e versões anteriores do APatch **NÃO** suportam este método.
 :::
 
-Altere o nome do sufixo do arquivo do APatch(.apk) para `.zip`. Por exemplo:
+Altere o nome do sufixo do arquivo do APatch (.apk) para `.zip`. Por exemplo:
 
 ```
 [username@localhost Demo] $ ls
@@ -240,7 +240,7 @@ Se você precisar personalizar a SuperKey, vá para o APatch após a inicializa�
 A desinstalação automática foi introduzida pela primeira vez na versão `10888` e versões anteriores do APatch **NÃO** suportam este método.
 :::
 
-Altere o nome do sufixo do arquivo do APatch(.apk) para `.zip` e adicione o nome do arquivo modificado a qualquer coisa com `uninstall`. Por exemplo:
+Altere o nome do sufixo do arquivo do APatch (.apk) para `.zip` e adicione o nome do arquivo modificado a qualquer coisa com `uninstall`. Por exemplo:
 
 ```
 [username@localhost Demo] $ ls

@@ -6,7 +6,7 @@ APatch предоставляет модульный механизм (AndroidPa
 
 Модифицированный код находится здесь:
 
-KernelSU: [https://github.com/tiann/KernelSU/tree/main/userspace/ksud](https://github.com/tiann/KernelSU/tree/main/userspace/ksud)
+KernelSU: [https://github.com/tiann/KernelSU/tree/main/userspace/ksud](https://github.com/tiann/KernelSU/tree/main/userspace/ksud)  
 APatch: [https://github.com/bmax121/APatch/tree/main/apd](https://github.com/bmax121/APatch/tree/main/apd)
 
 Приведенная ниже документация скопирована и изменена из документации KernelSU, и большая часть ее содержания совпадает. Основные моменты, на которые следует обратить внимание, следующие:

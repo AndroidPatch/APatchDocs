@@ -36,6 +36,7 @@ function sidebarGuide() {
           { text: 'Instalação', link: '/pt_BR/install' },
           { text: 'Atualizar', link: '/pt_BR/update' },
           { text: 'Resgate do bootloop', link: '/pt_BR/rescue-bootloop' },
+          { text: 'Sobre a CI build 10977', link: '/pt_BR/ci-build'},
           { text: 'Guia de desenvolvimento do APMódulo', link: '/pt_BR/apm-guide' },
           { text: 'Guia de uso do KPMódulo', link: '/pt_BR/kpm-usage-guide' },
           { text: 'Ajuda e suporte', link: '/pt_BR/support' },

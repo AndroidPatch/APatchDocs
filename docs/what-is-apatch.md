@@ -1,6 +1,6 @@
 # What is APatch?
 
-APatch is a **kernel-based** root solution for Android devices that works in kernel mode and grants root privileges to user space apps directly in kernel space.
+APatch is a kernel-based root solution for Android devices that works in kernel mode and grants root privileges to user space apps directly in kernel space.
 
 ## Features
 
