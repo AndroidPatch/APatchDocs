@@ -79,11 +79,17 @@ LSPosed 依赖于 Riru 或 Zygisk，APatch 默认情况下并不附带对 Riru �
 2. 如果你只需要使用 LSPosed 而无需其它 Zygisk 功能，也可以使用 [Zloader](https://github.com/Mufanc/z-loader) 的 [LSPosed 专版](https://t.me/mufanc_chan/28) 以实现单独加载 LSPosed。
 
 ::: warning
-Zloader 与 ZygiskNext/Zygisk_mod 等 Zygisk 实现不兼容，并且你也将无法使用任何其它依赖于 Zygisk 的 APM。使用前请先禁用或卸载任何 Zygisk 实现。
+Zloader 与 Zygisk 不兼容，并且你也将无法使用任何其它依赖于 Zygisk 的 APM。使用前请先禁用或卸载任何 Zygisk 实现。
 :::
 
 ::: info
 Zloader 仍处于早期开发阶段，欢迎各位向开发者提交 Pull request 或就使用问题提交 issue 进行反馈。
+:::
+
+::: danger
+Zloader 在版本 `0.1.3` 以后没有任何新版本发布和代码提交。
+
+我们不再建议使用此方式，请考虑改为引入 Zygisk。
 :::
 
 ## 无法使用 Shamiko
@@ -97,15 +103,15 @@ Shamiko 是专有软件，我们无法适配。
 
 APatch 和 KernelSU 保持一致，默认不附带对 Zygisk 的支持。
 
-APatch 可使用 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) 以实现 Zygisk 支持。
+由于社区的努力，现在有一些 APM 或 APatch 兼容的 Magisk 模块可以为 APatch 引入 Zygisk。以下是一些常用于引入 Zygisk 的 APM。
 
-APatch 也可以使用 [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) 以实现 Zygisk 支持。
+- [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext): 最早是为 KernelSU 提供 Zygisk 环境的 APM，功能最为完善，版本 `0.9.1.1` 及之前是自由软件，在此之后则为专有软件。该 APM 明确适配 APatch 的起始版本为 `1.0.3`。
 
-APatch 还可以使用 [ReZygisk](https://github.com/PerformanC/ReZygisk) 以实现 Zygisk 支持。
+- [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod): 在 ZygiskNext 尚未适配 APatch 之前，该 APM 用于为 APatch 提供 Zygisk 环境。在 ZygiskNext 适配 APatch 之后，该 APM 随之停止更新并归档。
 
-::: info
-ReZygisk 仍处于早期开发阶段，欢迎各位向开发者提交 Pull request 或者就使用问题提交 issue 进行反馈。
-:::
+- [ReZygisk](https://github.com/PerformanC/ReZygisk): ZygiskNext 在成为专有软件后出现的自由 Zygisk 环境提供 APM，仍处于早期开发阶段，部分 ZygiskNext 的专有特性在此 APM 中不受支持。
+
+你可以在以上几个 Zygisk 实现中任选其一，或使用你自己的 Zygisk 实现。
 
 ## Root 检测软件无法通过？
 
