@@ -1,4 +1,4 @@
-# Guia de desenvolvimento do APMódulo {#introduction}
+# Guia de desenvolvimento do módulo AndroidPatch {#introduction}
 
 APatch fornece um mecanismo de módulo (AndroidPatch Module) que consegue modificar o diretório do sistema enquanto mantém a integridade da partição do sistema. Este mecanismo é conhecido como `sem sistema`.
 
