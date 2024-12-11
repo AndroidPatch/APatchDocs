@@ -1,10 +1,10 @@
-# KPModule Usage Guide
+# KernelPatch Module Usage Guide
 
 APatch relies on KernelPatch, it inherits all of its functionalities and has been expanded. Therefore, APatch also supports KernelPatch Modules (KPM). Here is an introduction about using KPMs.
 
 ## What is KPM?
 
-KernelPatch Modules (KPM) is a type of module that allows code to run in kernel space, similar to Loadable Kernel Modules (LKM). They can perform some operations that APMs can not do (e.g. partition image protection). You can even modify KernelSU's ksud to a KPM to allow KernelSU to run on APatch.
+KernelPatch Modules (KPM) is a type of module that allows code to run in kernel space, similar to Loadable Kernel Modules (LKM). They can perform some operations that APMs can not do (e.g. partition image protection). ~~You can even modify KernelSU's ksud to a KPM to allow KernelSU to run on APatch~~.
 
 ## How to use KPM?
 

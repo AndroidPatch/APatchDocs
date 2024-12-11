@@ -1,4 +1,4 @@
-# 系统模块 (APM) 开发指南 {#introduction}
+# AndroidPatch Modules(APM) 开发指南{#introduction}
 
 APatch 提供了一个模块机制（AndroidPatch Module），它可以在保持系统分区完整性的同时达到修改系统分区的效果；这种机制通常被称之为 `systemless`。
 

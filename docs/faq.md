@@ -76,16 +76,18 @@ Here are two solutions about running LSPosed on APatch:
 2. If you only need to use LSPosed without other Zygisk features, you can try [Zloader](https://github.com/Mufanc/z-loader) [for LSPosed](https://t.me/mufanc_chan/28) to load LSPosed simply.
 
 ::: warning
-Zloader is **NOT** compatible with any Zygisk implementation, for example, ZygiskNext or Zygisk_mod, and you can not use any APMs depend on Zygisk either. Please disable or uninstall any Zygisk implementation before using Zloader.
+Zloader is **NOT** compatible with any Zygisk implementation, and you can not use any APMs depend on Zygisk either. Please disable or uninstall any Zygisk implementation before using Zloader.
 :::
 
-::: info
-Zloader is still in early development. Feel free to submit Pull requests to the Zloader developers or open an issue for any usage issues.
+::: danger
+Zloader had NO code commits or new version releases after version `0.1.3` released.
+
+We no longer recommends using this method, please consider using Zygisk instead.
 :::
 
 ## Can not use Shamiko?
 
-We can not support Shamiko due to its proprietary and no updates.
+We can not support Shamiko due to its proprietary.
 
 ::: danger
 **Any issues caused by using Shamiko will not be supported by APatch developers, use as your own risk.**
@@ -95,15 +97,15 @@ We can not support Shamiko due to its proprietary and no updates.
 
 Same as KernelSU, APatch does not have built-in Zygisk support.
 
-APatch can use the [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) to add the Zygisk support.
+Thanks to the commitment of community, there is already had several APMs or APatch compatible Magisk modules which can be used to provide Zygisk support for APatch. Here are some APMs that provide Zygisk support:
 
-APatch can also use the [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) to add the Zygisk support.
+- [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext): The earlist APM that provides Zygisk environment for KernelSU, with most-completed functions supported. It's a full implementation of Zygisk API, and provides some extra features based on or outside of Zygisk. The release version `0.9.1.1` and any other releases before it are free software, releases after this version are proprietary. This APM initially supports APatch at version `1.0.3`.
 
-APatch can also use the [ReZygisk](https://github.com/PerformanC/ReZygisk) to add the Zygisk support.
+- [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod): Before ZygiskNext officially supports APatch, this APM was set to provides Zygisk environment for APatch. With ZygiskNext's officially supports APatch, this APM has been stopped update and archived.
 
-::: info
-ReZygisk is still in early development. Feel free to submit Pull requests to the ReZygisk developers or open an issue for any usage issues.
-:::
+- [ReZygisk](https://github.com/PerformanC/ReZygisk): A free Zygisk implementation appeared after ZygiskNext become proprietary, still in early development, and some feature in ZygiskNext is not supported at this APM.
+
+You can choose one of Zygisk implementations above, or use your own Zygisk implementation.
 
 ## Cannot pass the root-detecting app?
 
