@@ -80,7 +80,7 @@ Zloader is **NOT** compatible with any Zygisk implementation, and you can not us
 :::
 
 ::: danger
-Zloader had NO code commits or new version releases after version `0.1.3` released.
+Zloader had **NO** code commits or new version releases after version `0.1.3` released.
 
 We no longer recommends using this method, please consider using Zygisk instead.
 :::

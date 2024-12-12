@@ -1,4 +1,4 @@
-# Guia de uso do KPMódulo
+# Guia de uso do módulo KernelPatch
 
 APatch depende do KernelPatch, ele herda todas as suas capacidades e foi expandido. Portanto, o APatch também oferece suporte ao KPMódulo (KPM). Aqui está uma introdução sobre o uso do KPMódulo.
 

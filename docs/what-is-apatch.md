@@ -23,6 +23,7 @@ Please read this: [Installation](/install)
 Please read this: [Patch](/install#how-to-patch)
 
 ## License
+
 ```
 Copyright (C) 2023 - Present bmax121 and APatch Developers
 
