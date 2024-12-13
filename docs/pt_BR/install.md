@@ -4,7 +4,7 @@
 
 1. Certifique-se de que seu dispositivo esteja com o bootloader desbloqueado antes de fazer root.
 
-2. Você pode digitar no terminal ou via ADB `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` para verificar se o seu kernel suporta o patch (necessário root).
+2. Você pode digitar no terminal ou via ADB `zcat /proc/config.gz | grep CONFIG_KALLSYMS` para verificar se o seu kernel suporta o patch (necessário root).
 
 3. [Clique aqui](https://github.com/bmax121/APatch/releases) para obter a versão estável mais recente do APatch.
 

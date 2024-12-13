@@ -4,7 +4,7 @@
 
 1. 进行 Root 之前请确保你的手机已处于 BL 解锁状态。
 
-2. 你可以在终端输入或者adb输入 `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` 查询你的内核是否支持修补 （需ROOT）。
+2. 你可以在终端输入或者adb输入 `zcat /proc/config.gz | grep CONFIG_KALLSYMS` 查询你的内核是否支持修补 （需ROOT）。
 
 3. [点击此处](https://github.com/bmax121/APatch/releases)以获取最新稳定版本的APatch管理器。
 
