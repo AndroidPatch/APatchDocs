@@ -4,7 +4,7 @@
 
 1. Ensure your device's bootloader is unlocked before rooting.
 
-2. [ROOT REQUIRED] You can execute the command `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` in the terminal to ensure your kernel supports the patch. If using ADB, first switch to terminal mode by entering  `adb shell`.
+2. [ROOT REQUIRED] You can execute the command `zcat /proc/config.gz | grep CONFIG_KALLSYMS` in the terminal to ensure your kernel supports the patch. If using ADB, first switch to terminal mode by entering  `adb shell`.
 
 3. [Click here](https://github.com/bmax121/APatch/releases) to get the latest stable version of APatch Manager.
 
