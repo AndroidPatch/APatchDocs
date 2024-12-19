@@ -76,16 +76,18 @@ Aqui estão duas soluções sobre como executar o LSPosed no APatch:
 2. Se você só precisa usar o LSPosed sem os outros recursos do Zygisk, você pode tentar o [Zloader](https://github.com/Mufanc/z-loader) [para o LSPosed](https://t.me/mufanc_chan/28).
 
 ::: warning AVISO
-O Zloader **NÃO** é compatível com nenhuma implementação do Zygisk, por exemplo, ZygiskNext ou Zygisk_mod, e você também não pode usar nenhum APMódulo que dependa do Zygisk. Por favor, desative ou desinstale qualquer implementação do Zygisk antes de usar o Zloader.
+O Zloader **NÃO** é compatível com nenhuma implementação do Zygisk, e você também não pode usar nenhum APMódulo que dependa do Zygisk. Por favor, desative ou desinstale qualquer implementação do Zygisk antes de usar o Zloader.
 :::
 
-::: info INFORMAÇÕES
-Zloader ainda está em desenvolvimento inicial. Sinta-se à vontade para enviar Pull requests aos desenvolvedores do Zloader ou abrir um problema.
+::: danger PERIGO
+Zloader **NÃO** teve commits de código ou lançamentos de novas versões após o lançamento da versão `0.1.3`.
+
+Não recomendamos mais o uso deste método. Por favor, considere usar o Zygisk.
 :::
 
 ## Não é possível usar Shamiko?
 
-Não podemos oferecer suporte ao Shamiko devido devido ao seu proprietário e por estar sem atualizações.
+Não podemos oferecer suporte ao Shamiko devido devido ao seu proprietário.
 
 ::: danger PERIGO
 **Quaisquer problemas causados ​​pelo uso do Shamiko não serão suportados pelos desenvolvedores do APatch, use por sua própria conta e risco.**
@@ -95,15 +97,15 @@ Não podemos oferecer suporte ao Shamiko devido devido ao seu proprietário e po
 
 Assim como o KernelSU, APatch não possui suporte integrado ao Zygisk.
 
-APatch pode usar o [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) para adicionar suporte ao Zygisk.
+Graças ao compromisso da comunidade, já existem vários APMs ou módulos Magisk compatíveis com o APatch que podem ser usados ​​para fornecer suporte ao Zygisk para o APatch. Aqui estão alguns APMs que fornecem suporte ao Zygisk:
 
-APatch também pode usar o [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod) para adicionar suporte ao Zygisk.
+- [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext): O primeiro APM que fornece ambiente Zygisk para o KernelSU, com suporte para as funções mais completas. É uma implementação completa da API Zygisk e fornece alguns recursos extras baseados ou fora do Zygisk. A versão de lançamento `0.9.1.1` e quaisquer outras versões anteriores são software livres, as versões posteriores a esta versão são proprietárias. Este APM suporta inicialmente o APatch na versão `1.0.3`.
 
-APatch também pode usar o [ReZygisk](https://github.com/PerformanC/ReZygisk) para adicionar suporte ao Zygisk.
+- [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod): Antes do ZygiskNext oferecer suporte oficial ao APatch, este APM foi configurado para fornecer o ambiente Zygisk para o APatch. Com o APatch oficialmente suportado pelo ZygiskNext, este APM foi interrompido, atualizado e arquivado.
 
-::: info INFORMAÇÕES
-ReZygisk ainda está em desenvolvimento inicial. Sinta-se à vontade para enviar Pull requests aos desenvolvedores do ReZygisk ou abrir um problema.
-:::
+- [ReZygisk](https://github.com/PerformanC/ReZygisk): Uma implementação gratuita do Zygisk apareceu depois que o ZygiskNext se tornou proprietário, ainda em desenvolvimento inicial, e alguns recursos do ZygiskNext não são suportados neste APM.
+
+Você pode escolher uma das implementações do Zygisk acima ou usar sua própria implementação do Zygisk.
 
 ## O software de detecção de root falha
 

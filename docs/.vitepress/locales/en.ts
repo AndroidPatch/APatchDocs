@@ -37,8 +37,8 @@ function sidebarGuide() {
           { text: 'Update', link: '/update' },
           { text: 'Rescue From Bootloop', link: '/rescue-bootloop' },
           { text: 'About CI build 10977', link: '/ci-build'},
-          { text: 'APModule Development Guide', link: '/apm-guide' },
-          { text: 'KPModule Usage Guide', link: '/kpm-usage-guide' },
+          { text: 'AndroidPatch Module Development Guide', link: '/apm-guide' },
+          { text: 'KernelPatch Module Usage Guide', link: '/kpm-usage-guide' },
           { text: 'Help and Support', link: '/support' },
           { text: 'FAQ', link: '/faq' },
         ]

@@ -4,7 +4,7 @@
 
 1. Ensure your device's bootloader is unlocked before rooting.
 
-2. You can execute command `zcat /proc/config.gz | grep CONFIG_KALLSYMS` in terminal or ADB to ensure your kernel is support to patch (root required).
+2. [ROOT REQUIRED] You can execute the command `zcat /proc/config.gz | grep CONFIG_KALLSYMS` in the terminal to ensure your kernel supports the patch. If using ADB, first switch to terminal mode by entering  `adb shell`.
 
 3. [Click here](https://github.com/bmax121/APatch/releases) to get the latest stable version of APatch Manager.
 
@@ -33,9 +33,13 @@ or:
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=n (Initial support)
 ```
+or:
+```txt
+CONFIG_KALLSYMS=y
+```
 
 ::: tip
-You can execute command `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` in terminal or ADB to ensure your kernel is support to patch (root required).
+You can execute the command `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` in the terminal to ensure your kernel supports the patch (root required).
 :::
 
 ::: warning
@@ -64,7 +68,7 @@ It is strictly prohibited to set weak keys like `12345678`. The latest versions 
 
 5. Click on "Start" and wait for a minute. After the patch is successful, the patched `boot.img` path will be displayed. For example: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
 
-Finally, you can [Flash](#Flash) as needed.
+Finally, you can [Flash](#flash) as needed.
 
 ### Manually patching
 
