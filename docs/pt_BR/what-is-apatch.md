@@ -27,7 +27,7 @@ Por favor, consulte: [Patch](/pt_BR/install#how-to-patch)
 ```
 Copyright (C) 2023 - Presente bmax121 e desenvolvedores do APatch
 
-APatch é software gratuito: você pode redistribuí-lo e/ou modificá-lo sob os termos da Licença Pública Geral GNU publicada pela Free Software Foundation, versão 3.
+APatch é um software gratuito: você pode redistribuí-lo e/ou modificá-lo sob os termos da Licença Pública Geral GNU publicada pela Free Software Foundation, versão 3.
 
 Este programa é distribuído na esperança de que seja útil,
 mas SEM QUALQUER GARANTIA; mesmo sem a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO FIM.  Veja a Licença Pública Geral GNU para mais detalhes.

@@ -4,7 +4,7 @@
 
 1. Certifique-se de que seu dispositivo esteja com o bootloader desbloqueado antes de fazer root.
 
-2. Você pode digitar no terminal ou via ADB `zcat /proc/config.gz | grep CONFIG_KALLSYMS` para verificar se o seu kernel suporta o patch (necessário root).
+2. [NECESSÁRIO ROOT] Você pode executar o comando `zcat /proc/config.gz | grep CONFIG_KALLSYMS` no terminal para garantir que seu kernel suporta o patch. Se estiver usando ADB, primeiro mude para o modo terminal digitando `adb shell`.
 
 3. [Clique aqui](https://github.com/bmax121/APatch/releases) para obter a versão estável mais recente do APatch.
 
@@ -33,9 +33,13 @@ ou:
 CONFIG_KALLSYMS=y
 CONFIG_KALLSYMS_ALL=n (Suporte inicial)
 ```
+ou:
+```txt
+CONFIG_KALLSYMS=y
+```
 
 ::: tip DICA
-Você pode digitar no terminal ou via ADB `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` para verificar se o seu kernel suporta o patch (necessário root).
+Você pode executar o comando `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` no terminal para garantir que seu kernel suporta o patch (necessário root).
 :::
 
 ::: warning AVISO
@@ -64,7 +68,7 @@ Existem várias maneiras de corrigir o APatch.
 
 5. Clique em "Iniciar" e aguarde um momento. Depois que o patch for bem-sucedido, o caminho do `boot.img` corrigido será exibido. Por exemplo: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
 
-Finalmente, você pode fazer o [Flash](/pt_BR/flash) conforme necessário.
+Finalmente, você pode fazer o [Flash](/pt_BR/install#flash) conforme necessário.
 
 ### Patch manual
 
@@ -172,7 +176,7 @@ OPÇÕES:
   -D, --extra-detach               Desanexar item extra anterior dos patches.
 ```
 
-## Flash
+## Flash {#flash}
 
 ### Usando fastboot
 
