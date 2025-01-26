@@ -99,15 +99,23 @@ Shamiko 是专有软件，我们无法适配。
 
 APatch 和 KernelSU 保持一致，默认不附带对 Zygisk 的支持。
 
-由于社区的努力，现在有一些 APM 或 APatch 兼容的 Magisk 模块可以为 APatch 引入 Zygisk。以下是一些常用于引入 Zygisk 的 APM。
+在社区的广泛努力下，现在有一些 APM 或 APatch 兼容的 Magisk 模块可以为 APatch 引入 Zygisk。以下是一些常用于引入 Zygisk 的 APM。
 
 - [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext): 最早是为 KernelSU 提供 Zygisk 环境的 APM，功能最为完善，是对 Zygisk API 的完整实现，同时在此基础上提供了一些额外特性。版本 `0.9.1.1` 及之前是自由软件，在此之后则为专有软件。该 APM 明确适配 APatch 的起始版本为 `1.0.3`。
 
 - [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod): 在 ZygiskNext 尚未适配 APatch 之前，该 APM 用于为 APatch 提供 Zygisk 环境。在 ZygiskNext 适配 APatch 之后，该 APM 随之停止更新并归档。
 
-- [ReZygisk](https://github.com/PerformanC/ReZygisk): ZygiskNext 在成为专有软件后出现的自由 Zygisk 环境提供 APM，仍处于早期开发阶段，部分 ZygiskNext 的专有特性在此 APM 中不受支持。
+- [ReZygisk](https://github.com/PerformanC/ReZygisk): ZygiskNext 在成为专有软件后出现的一个自由的提供 Zygisk 环境的 APM，仍处于早期开发阶段，部分 ZygiskNext 的专有特性在此 APM 中不受支持。
+
+- [NeoZygisk](https://github.com/JingMatrix/NeoZygisk): 在以上三者之后出现的另一个自由的提供 Zygisk 环境的 APM，它只专注于提供最基本的 Zygisk API 而不考虑其它额外特性。它的 Zygisk API 设计及相关部分直接由 Magisk 的内建 Zygisk 衍生而来,所以理论上说这个 APM 对 Zygisk API 的实现应该最贴近于 Magisk。
 
 你可以在以上几个 Zygisk 实现中任选其一，或使用你自己的 Zygisk 实现。
+
+::: warning
+正如我们上面所说，APatch 默认不附带对 Zygisk 的内建支持，所以我们无法保证上述几种方案的可用性、适用性、稳定性等，也无法提供其它任何意义上的担保。
+
+如果你在将 APatch 和其它任何 Zygisk 实现方案和/或任何依赖于 Zygisk 的 APM 一同使用时遇到了问题，**不要**直接向我们提交问题反馈，请优先考虑向这些 APM 的作者提交反馈。
+:::
 
 ## Root 检测软件无法通过？
 

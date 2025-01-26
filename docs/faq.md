@@ -105,7 +105,17 @@ Thanks to the commitment of community, there is already had several APMs or APat
 
 - [ReZygisk](https://github.com/PerformanC/ReZygisk): A free Zygisk implementation appeared after ZygiskNext become proprietary, still in early development, and some feature in ZygiskNext is not supported at this APM.
 
+- [NeoZygisk](https://github.com/JingMatrix/NeoZygisk): An another free Zygisk implementation after the implementations above, which only aims to provide a minimal Zygisk API and remove any other parts. Its Zygisk API Design is directly derives from the Magisk's Zygisk API Design, so this implementation should be most similar to Magisk's Built-in Zygisk in theory.
+
 You can choose one of Zygisk implementations above, or use your own Zygisk implementation.
+
+::: warning
+
+As we said above, APatch **does NOT** have built-in Zygisk support, so we **CAN NOT** and **WILL NOT** guarantee the avalibility, usability, stability or any other warrenties about any elements related to Zygisk. 
+
+If you run into a trouble with APatch when using any Zygisk implementation and/or any modules depends on Zygisk, **DO NOT** report your bug directly to us, report bug to the developer(s) of the APM first instead.
+
+:::
 
 ## Cannot pass the root-detecting app?
 
