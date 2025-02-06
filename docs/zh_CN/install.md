@@ -138,6 +138,10 @@ magiskboot repack boot.img
 你也可以试试[在线修补](https://kernelpatch-on-web.pages.dev/)。
 :::
 
+::: tip
+你可以传入参数 `--help`，即 `kptools --help` 来获取全部可用参数。
+:::
+
 ## 刷入
 
 ### 刷入镜像
