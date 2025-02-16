@@ -1,6 +1,10 @@
 # KernelPatch Modules(KPM) 使用指南
 
-APatch 依赖于 KernelPatch，继承了其全部功能并进行了扩展。因此，APatch 也支持使用 KernelPatch Modules (KPM)。下边是关于 KPM 的使用说明。
+[[toc]]
+
+---
+
+APatch 依赖于 KernelPatch，继承了其全部功能并进行了扩展。因此，APatch 也支持使用 KernelPatch Modules (KPM)。下面是关于 KPM 的使用说明。
 
 ## 什么是 KPM？
 

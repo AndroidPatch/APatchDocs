@@ -21,6 +21,8 @@ APatch 的模块运作机制与 Magisk 几乎是一样的，如果你熟悉 Magi
 
 APatch 的模块支持显示界面并与用户交互，请参阅 [WebUI 文档](module-webui.md)。 -->
 
+[[toc]]
+
 ## BusyBox
 
 APatch 提供了一个功能完备的 BusyBox 二进制文件（包括完整的SELinux支持）。可执行文件位于 `/data/adb/ap/bin/busybox`。
