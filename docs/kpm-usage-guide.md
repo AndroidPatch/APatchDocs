@@ -1,10 +1,14 @@
 # KernelPatch Module Usage Guide
 
-APatch relies on KernelPatch, it inherits all of its functionalities and has been expanded. Therefore, APatch also supports KernelPatch Modules (KPM). Here is an introduction about using KPMs.
+[[toc]]
+
+---
+
+APatch relies on KernelPatch, inheriting all its functionalities and expanding its capabilities. Therefore, APatch also supports KernelPatch Modules (KPM). Below is an introduction about using KPMs.
 
 ## What is KPM?
 
-KernelPatch Modules (KPM) is a type of module that allows code to run in kernel space, similar to Loadable Kernel Modules (LKM). They can perform some operations that APMs can not do (e.g. partition image protection). ~~You can even modify KernelSU's ksud to a KPM to allow KernelSU to run on APatch~~.
+KernelPatch Modules (KPM) is a type of module that allows code to run in kernel space, similar to Loadable Kernel Modules (LKM). They can perform some operations that AndroidPatch Module (APM) cannot (e.g. partition image protection). You can even modify KernelSU's ksud into a KPM to allow KernelSU to run on APatch.
 
 ## How to use KPM?
 
@@ -13,7 +17,7 @@ There are 3 ways to use KPM: Embed, Load, and Install.
 ::: tip ABOUT "INSTALL"
 This document was last updated on 2024-08-06 at 19:14. Caution should be exercised when accessing the contents of this page if the time difference from the present is too great.
 
-Currently, APatch has not implemented the "Install" function for KPMs, and you can only use KPMs via "Embed" and "Load". KernelPatch and APatch's developers are working quickly to implement the "Install" function. Please wait patiently.
+Currently, APatch hasn't implemented the "Install" function for KPMs, and you can only use KPMs via "Embed" or "Load". KernelPatch and APatch's developers are working quickly to implement the "Install" function. Please wait patiently.
 :::
 
 ### Embed
@@ -24,13 +28,13 @@ The Embed of KPMs can be done both at first patching `boot.img` and after instal
 
 #### Embed KPMs at first patching {#embed-kpms-at-first-patching}
 
-1. [Patch](/install#patch) your `boot.img` by following the [Automatically patching](/install#automatically-patching) guide. After completing step 4, do not proceed to the next step immediately.
+1. [Patch](/install#patch) your `boot.img` by following the [Automatically patching](/install#automatically-patching) guide. After completing step 4, **DO NOT** proceed to the next step immediately.
 
-2. Click the "Embed KPM" button, and select the KPM you want to embed (The suffix name of KPM files is `.kpm`).
+2. Click the "Embed KPM" button and select the KPM you want to embed (KPM files have the `.kpm` suffix).
 
-3. Confirm that the KPM is the KPM you want to embed.
+3. Verify that the selected KPM is the one you want to embed.
 
-4. Complete the rest of the steps in the "Automatically patching" guide, and it will be done.
+4. Complete the remaining steps of the "Automatically patching" guide, and you're done.
 
 #### Embed KPMs after installation of APatch
 
@@ -38,14 +42,14 @@ After installing APatch, the way of embedding KPMs is familiar to installing APM
 
 ### Load
 
-`Load` is a function that lets the kernel load KPMs directly. KPMs installed this way will be loaded immediately. However, all Loaded KPMs will be lost after the next reboot.
+`Load` is a function that allows the kernel to load KPMs directly. KPMs installed this way will be loaded immediately. However, all loaded KPMs will be lost after the next reboot.
 
-The way of Load KPMs is familiar to installing APMs; the only difference is that you do not need to reboot your device after Loading KPMs.
+The way of load KPMs is familiar to installing APMs, with the only difference being that you don't need to reboot your device after loading KPMs.
 
 ### Install
 
 ::: tip ATTENTION
-KernelPatch and APatch have not yet implemented the "Install" function for KPMs. All descriptions below are speculative and describe the expected behavior of "Install" for KPMs.
+KernelPatch and APatch haven't yet implemented the "Install" function for KPMs. All descriptions below are speculative and describe the expected behavior of "Install" option for KPMs.
 :::
 
-`Install` is a function that installs KPMs similar to APM files into `/data/adb/kpmodules` or any similar directories. KPMs installed by this way can be loaded during special events.
+`Install` is a function that allows you to install KPMs similarly to APM files, in directories like `/data/adb/kpmodules` or any similar directories. KPMs installed by this way can be loaded during special events.

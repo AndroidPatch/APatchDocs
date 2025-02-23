@@ -1,43 +1,47 @@
-# Rescue From Bootloop
+# Rescue from bootloop
+
+[[toc]]
+
+---
 
 APatch has an integrated bootloop rescue mechanism that can help you quickly disable all modules and restart the device if any malicious module is flashed and the device fails to boot.
 
-:::warning
+::: warning
 This can only help you **when the device cannot boot due to malicious or conflicting modules**. However, this guide **cannot assist you with issues like factory reset or data loss!**
 :::
 
 ## Integrated mechanisms
 
-- Pressing volume down
+- Pressing Volume down button
 
-After **holding down the power button until the screen turns on, continuously press and release it until the first screen lights up**. This way, the integrated Safe Mode of APatch will be activated, and all modules will be disabled.
+After **holding down the power button until the screen turns on, continuously press and release it until the first screen lights up**. This way, the built-in Safe Mode of APatch will be activated, and all modules will be disabled.
 
-:::info
-APatch has a wide range of detection for volume buttons. Even if the `post-fs` phase has been executed, APatch will undo changes made in the `post-fs` phase if a signal from Safe Mode is detected.
+::: info
+APatch has a wide range of detection for volume buttons. Even if the `post-fs` phase has been executed, APatch will revert any changes made during it if a signal from Safe Mode is detected.
 
-In other words, it is valid before `sys.boot_completed=1`.
+In other words, this check occurs before `sys.boot_completed=1`.
 :::
 
 - Entering Safe Mode
 
-Some ROMs, such as MIUI/HyperOS, can activate Safe Mode within their recovery. Rebooting into recovery and activating the Safe Mode that comes with the ROM will also trigger APatch's Safe Mode.
+Some ROMs, such as MIUI/Xiaomi HyperOS, may trigger Safe Mode in their Recovery. Rebooting into Recovery and activating the Safe Mode that comes with the ROM will also trigger APatch's Safe Mode.
 
 ---
 
-:::tip
-After entering Safe Mode, all modules on the system modules page of APatch will be disabled, but you can perform the "Uninstall" operation to remove modules that may be causing issues.
+::: tip
+After entering Safe Mode, all modules on the APatch system's module page will be disabled. However, you can perform the "Uninstall" operation to remove any modules that may be causing issues.
 :::
 
 ## Some problems
 
 ### Even after activating Safe Mode, the system may still freeze.
 
-It could be due to failure in reverting the modifications made in the `post-fs`, causing the freeze. Forcefully rebooting again should resolve it.
+This may happen due to failures in reverting the `post-fs` modifications, which can cause the freeze. Forcefully rebooting should resolve the issue.
 
-### Can't see APatch Manager after entering Safe Mode via recovery.
+### I can't see APatch Manager after entering Safe Mode via Recovery.
 
 You may entered Android's Safe Mode.
 
-When entering Android's Safe Mode, there is a rule applicable: After entering Safe Mode, all non-system apps will be disabled by the Android system. APatch Manager will not register itself as a system app, so this rule will result in the disabling of APatch Manager after entering Safe Mode.
+When entering Android's Safe Mode, there's an important rule: all apps that aren't part of the system will be disabled by Android system. APatch Manager isn't considered a system app, so this rule will result in the disabling of APatch Manager after entering Safe Mode.
 
-This behavior is normal, and it shows that both Android's Safe Mode and APatch's Safe Mode work fine if you have not solidified APatch Manager as a system app. What you need to do is only to reboot your device again, and Android will exit Safe Mode with APatch Manager recovered. However, APatch will not exit Safe Mode at the same time, so you can disable any APMs that caused problems in this case.
+This behavior is normal, and it shows that both Android's Safe Mode and APatch's Safe Mode are working correctly, as long as APatch hasn't been consolidated as a system app. What you need to do is only to reboot your device again, and Android will exit Safe Mode with APatch Manager restored. However, APatch won't exit Safe Mode automatically. In this case, you can disable any APMs that may have caused issues.

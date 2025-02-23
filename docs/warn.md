@@ -1,4 +1,4 @@
-# Security Alert
+# Security alert
 
 ::: info
 **The SuperKey has higher privileges than root access.**

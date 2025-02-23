@@ -1,6 +1,6 @@
 # O que é APatch?
 
-APatch é uma solução root baseada em kernel para dispositivos Android que funciona no modo kernel e concede privilégios root para apps do espaço do usuário diretamente no espaço do kernel.
+O APatch é uma solução root baseada em kernel para dispositivos Android, funciona no modo kernel e concede privilégios root para apps do espaço do usuário diretamente no espaço do kernel.
 
 ## Características
 
@@ -10,7 +10,7 @@ Suporta APMódulo (APM) semelhante aos módulos do Magisk.
 
 Suporta KPMódulo (KPM), que permite injetar qualquer código no kernel (Fornece as funções do kernel `inline-hook` e `syscall-table-hook`).
 
-APatch depende do KernelPatch.
+O APatch depende do KernelPatch.
 
 A interface de usuário do APatch e o código-fonte do APMódulo foram derivados e modificados a partir do KernelSU.
 
@@ -37,6 +37,6 @@ Você deverá ter recebido uma cópia da Licença Pública Geral GNU junto com e
 
 ## Aviso importante
 
-APatch é um software gratuito, permitindo que todos criem seus forks sob a licença GNU GPLv3, que usamos ou permitimos separadamente do(s) detentor(es) dos direitos.
+O APatch é um software gratuito, permitindo que todos criem seus forks sob a licença GNU GPLv3, que usamos ou permitimos separadamente do(s) detentor(es) dos direitos.
 
-Os desenvolvedores do APatch enfrentam dificuldades em revisar o código de todas as distribuições de terceiros do APatch (independentemente de ser gratuito ou não). Portanto, os desenvolvedores do APatch não se responsabilizam por quaisquer problemas ocorridos ao usar distribuições de terceiros e **NÃO** fornecem garantia para essas distribuições. Caso tenha problemas, você deve enviar feedback diretamente ao(s) autor(es) da distribuição de terceiros que está usando.
+Os desenvolvedores do APatch enfrentam dificuldades em revisar o código de todas as distribuições de terceiros do APatch (independentemente de ser gratuito ou não). Portanto, os desenvolvedores do APatch não se responsabilizam por quaisquer problemas decorrentes do uso dessas distribuições e **NÃO** fornecem garantia para elas. Caso tenha problemas, você deve enviar feedback diretamente ao(s) autor(es) da distribuição de terceiros que está usando.

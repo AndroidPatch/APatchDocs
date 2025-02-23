@@ -1,12 +1,12 @@
 # What is APatch?
 
-APatch is a kernel-based root solution for Android devices that works in kernel mode and grants root privileges to user space apps directly in kernel space.
+APatch is a kernel-based root solution for Android devices that works in kernel mode and grants root privileges to userspace apps directly in kernel space.
 
 ## Features
 
 Compatible with most Android devices, not just limited to devices with GKI kernel.
 
-Supports APModule (APM) similar to Magisk modules.
+Supports APModule (APM), similar to Magisk modules.
 
 Supports KPModule (KPM), which allows to inject any code into kernel (Provides kernel function `inline-hook` and `syscall-table-hook`).
 
@@ -16,11 +16,11 @@ The APatch UI and the APModule source code have been derived and modified from K
 
 ## How to use APatch?
 
-Please read this: [Installation](/install)
+Please refer: [Installation](/install)
 
 ## How to patch?
 
-Please read this: [Patch](/install#how-to-patch)
+Please refer: [Patch](/install#how-to-patch)
 
 ## License
 
@@ -37,6 +37,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 ## Important notice
 
-APatch is a free software, allows everyone to create their forks under GNU GPLv3 we used or seperately permit from rights holder(s).
+APatch is free software, allowing everyone to create their forks under the GNU GPLv3 license, which we use or permit separately from the rights holder(s).
 
-APatch developers are difficult to review the code of every third-party distributions of APatch (regardless its free or not), APatch developers will have no responsibility about any issues occured when you using any third-party distribution of APatch, and APatch developers do **NOT** provide and warrenty to third-party distributions, you need to directly make a feedback to the author(s) of the third-party distribution you are using.
+The APatch developers face difficulties in reviewing the code of every third-party distributions of APatch (regardless its free or not). Therefore, APatch developers are not responsible for any issues arising from the use of these distributions and **DO NOT** provide a warranty for them. If you encounter problems, you should send feedback directly to the author(s) of the third-party distribution you are using.

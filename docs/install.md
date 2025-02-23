@@ -1,5 +1,7 @@
 # Installation
 
+[[toc]]
+
 ## Preparations
 
 1. Ensure your device's bootloader is unlocked before rooting.
@@ -13,9 +15,9 @@
 5. Backup the `boot.img` you extracted to a computer, USB drive, or another device. If any issues occur, you can flash your original `boot.img` via fastboot to recover your device from a dump.
 
 ::: tip
-1. Ensure to use the latest ADB and fastboot tools and have knowledge about them to proceed to the next step. If you have not learned about them yet, we recommend researching to learn about them first.
+1. Ensure to use the latest ADB and fastboot tools and have knowledge about them to proceed to the next step. If you haven't learned about them yet, we recommend researching to learn about them first.
 
-2. APatch always patch the `boot.img` of any device. Do not attempt to patch or flash the `init_boot` or other partition image files. The APatch developers are not responsible for the failure of resulting patch and boot.
+2. APatch always patch the `boot.img` of any device. Don't attempt to patch or flash the `init_boot` or other partition image files. The APatch developers aren't responsible for the failure of resulting patch and boot.
 
 3. Avoid using the `boot.img` file that has been patched by other managers to avoid unexpected situations.
 :::
@@ -43,9 +45,9 @@ You can execute the command `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` in 
 :::
 
 ::: warning
-**Only supports the ARM64 architecture.**
+**Only supports ARM64 architecture.**
 
-**Only supports Android kernel versions 3.18 - 6.1**
+**Only supports Android kernel versions 3.18 - 6.1.**
 :::
 
 ## Patch {#how-to-patch}
@@ -60,10 +62,10 @@ There are several ways to patch APatch.
 
 3. Select your `boot.img`.
 
-4. Set a SuperKey at "SuperKey" card. The SuperKey needs to have **numbers and letters** and at least **8 characters** length. It will be used later to unlock root privileges.
+4. Set a SuperKey at "SuperKey" card. The SuperKey should be **8-63 characters long and include numbers and letters, but no special characters**. It will be used later to unlock root privileges.
 
-:::warning
-It is strictly prohibited to set weak keys like `12345678`. The latest versions of APatch [requires the use of strong keys](/warn).
+::: warning
+It's strictly prohibited to set weak keys like `12345678`. The latest versions of APatch [require the use of strong keys](/warn).
 :::
 
 5. Click on "Start" and wait for a minute. After the patch is successful, the patched `boot.img` path will be displayed. For example: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
@@ -86,7 +88,7 @@ You can go to [KernelPatch](https://github.com/bmax121/KernelPatch/releases) pro
 magiskboot.exe unpack boot.img
 ```
 
-To unpack the `boot.img` and get the kernel file. Rename the kernel to **kernel-b**. (kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
+To unpack the `boot.img` to get the kernel file. Rename the kernel to **kernel-b**. (kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and won't be supported).
 
 Windows users can patch using `CMD` or `PowerShell`.
 
@@ -96,7 +98,7 @@ Execute this command to patch:
 kptools-x86_64-win.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
-Alternatively, it is recommended to use `WSL` with `Linux` for patching:
+Alternatively, it's recommended to use `WSL` with `Linux` for patching:
 
 ```cmd
 ./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
@@ -122,7 +124,7 @@ To pack and generate the image. The generated `new-boot.img` is the patched imag
 magiskboot unpack boot.img
 ```
 
-To unpack the `boot.img` to get the kernel file. Rename the kernel to **kernel-b** (Say again, kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and will not be supported).
+To unpack the `boot.img` to get the kernel file. Rename the kernel to **kernel-b** (Say again, kernel-b can be any third-party kernel, but third-party kernels come with no guarantees and won't be supported).
 
 Execute this command to patch:
 
@@ -142,10 +144,14 @@ To pack and generate the image. The generated `new-boot.img` is the patched imag
 You can also try [online patching](https://kernelpatch-on-web.pages.dev/).
 :::
 
+::: tip
+You can type the `--help` parameter, that is, `kptools --help`, to get all available parameters.
+:::
+
 ### KP commands and comments:
 
 ::: info
-You can click [this](https://exame.apatch.top/) to have a try.
+You can click [here](https://exame.apatch.top/) to try it out.
 :::
 
 ```
@@ -181,7 +187,7 @@ Options:
 ### Using fastboot
 
 ::: info
-This method is convenient and stable, you can easily recover your device if your device is corrupted. We strongly recommend using this way to flash.
+Fastboot commands are convenient, stable, and easy to recover from in case of errors. We strongly recommend using this method to flash.
 :::
 
 Connect your device using `ADB` and execute the following command to enter the fastboot mode:
@@ -197,7 +203,7 @@ fastboot flash boot boot.img
 ```
 
 ::: tip
-If your device supports command `fastboot boot`, you can use `fastboot boot boot.img` command to boot the system before you flash the image. If any accident occured, just reboot again then your device will started to boot correctly.
+If your device supports command `fastboot boot`, you can use `fastboot boot boot.img` command to boot the system before you flash the image. If any unexpected issues arise, simply restart the device, and it should boot correctly.
 :::
 
 When complete, reboot your device:
@@ -208,13 +214,13 @@ fastboot reboot
 
 ### Directly flashing
 
-The LATEST version of APatch supports directly flashing via third-party Recovery; for example, TWRP.
+The latest version of APatch Manager supports directly flashing via third-party Recovery, such as TWRP.
 
 ::: warning
-Directly flashing is firstly introduced at version `10888` and earlier version of APatch do **NOT** support this method.
+Directly flashing was first introduced in version `10888`, and earlier versions of APatch Manager **DO NOT** support this method.
 :::
 
-Change the suffix name of APatch Manager file (.apk) to `.zip`. For example:
+Change the APatch Manager file suffix from `.apk` to `.zip`. For example:
 
 ```
 [username@localhost Demo] $ ls
@@ -225,15 +231,15 @@ APatch-10888-release.zip
 [username@localhost Demo] $ 
 ```
 
-After done, you can flash this `.zip` file via third-party Recovery's Flash function. APatch will be automatically installed just like Magisk.
+After doing this, you can flash this `.zip` file via third-party Recovery's Flash function. APatch will be automatically installed, just like Magisk.
 
 ::: tip
-Same as Flash, `adb sideload` function used by Recovery provided by third-party AOSP-like ROMs is also supported.
+Just like the Flash function, the `adb sideload` command used by Recovery provided by third-party AOSP-based ROMs is also supported.
 :::
 
 ::: warning
-Directly flashing is **NOT** supported customizing SuperKey! Instead, SuperKey will be set as a combination with random numbers and letters.
-If you need customize SuperKey, please go to APatch Manager after booting and repatch to reset SuperKey.
+Directly flashing **DOES NOT** support SuperKey customization! Instead, the SuperKey will be set to a random combination of numbers and letters.
+If you need to customize the SuperKey, go to APatch Manager after booting and repatch to reset it.
 :::
 
 ## Uninstall
@@ -241,10 +247,10 @@ If you need customize SuperKey, please go to APatch Manager after booting and re
 ### Automatically uninstall
 
 ::: warning
-Automatically uninstall is firstly introduced at version `10888` and earlier version of APatch do **NOT** support this method.
+Automatically uninstall was first introduced in version `10888`, and earlier versions of APatch Manager **DO NOT** support this method.
 :::
 
-Change the suffix name of APatch Manager file (.apk) to `.zip` and add modify file name to anything with `uninstall`. For example:
+Change the APatch Manager file suffix from `.apk` to `.zip` and add modify file name to anything with `uninstall`. For example:
 
 ```
 [username@localhost Demo] $ ls
@@ -255,10 +261,10 @@ APatch-10888-release-uninstall.zip
 [username@localhost Demo] $ 
 ```
 
-After done, you can flash this `.zip` file via third-party Recovery's Flash function. APatch will be automatically removed just like Magisk.
+After doing this, you can flash this `.zip` file via third-party Recovery's Flash function. APatch will be automatically removed, just like Magisk.
 
 ::: tip
-Same as Flash, `adb sideload` function used by Recovery provided by third-party AOSP-like ROMs is also supported.
+Just like the Flash function, the `adb sideload` command used by Recovery provided by third-party AOSP-based ROMs is also supported.
 :::
 
 ### Manually uninstall
@@ -270,5 +276,5 @@ fastboot flash boot PATH/TO/boot.img
 ```
 
 ::: warning
-Do NOT use `init_boot`!
+**DO NOT** use `init_boot`!
 :::
