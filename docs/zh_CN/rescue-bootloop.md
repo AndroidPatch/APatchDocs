@@ -24,7 +24,7 @@ APatch 对于音量键的监听范围较大。即使 `post-fs` 已经执行，�
 
 - REC 启动安全模式
 
-一些 ROM，比如 MIUI/HyperOS，可以在它们的 Recovery 中打开安全模式。重启到 Recovery 并开启 ROM 自带的安全模式，也会启动 APatch 的安全模式。
+一些 ROM，比如 MIUI/Xiaomi HyperOS，可以在它们的 Recovery 中打开安全模式。重启到 Recovery 并开启 ROM 自带的安全模式，也会启动 APatch 的安全模式。
 
 ---
 

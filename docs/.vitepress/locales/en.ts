@@ -32,14 +32,14 @@ function sidebarGuide() {
         text: 'Guide',
         items: [
           { text: 'What is APatch?', link: '/what-is-apatch' },
-          { text: 'Security Alert', link: '/warn' },
+          { text: 'Security alert', link: '/warn' },
           { text: 'Installation', link: '/install' },
           { text: 'Update', link: '/update' },
-          { text: 'Rescue From Bootloop', link: '/rescue-bootloop' },
+          { text: 'Rescue from bootloop', link: '/rescue-bootloop' },
           { text: 'About CI build 10977', link: '/ci-build'},
           { text: 'AndroidPatch Module Development Guide', link: '/apm-guide' },
           { text: 'KernelPatch Module Usage Guide', link: '/kpm-usage-guide' },
-          { text: 'Help and Support', link: '/support' },
+          { text: 'Help and support', link: '/support' },
           { text: 'FAQ', link: '/faq' },
         ]
     }

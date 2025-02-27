@@ -1,4 +1,4 @@
-# Guia de desenvolvimento do módulo AndroidPatch {#introduction}
+# Guia de desenvolvimento de módulos AndroidPatch {#introduction}
 
 APatch fornece um mecanismo de módulo (AndroidPatch Module) que consegue modificar o diretório do sistema enquanto mantém a integridade da partição do sistema. Este mecanismo é conhecido como `sem sistema`.
 
@@ -17,12 +17,14 @@ A documentação a seguir foi copiada e modificada da documentação do KernelSU
 
 O mecanismo de módulos do APatch é quase o mesmo do Magisk. Se você está familiarizado com o desenvolvimento de módulos Magisk, o desenvolvimento de módulos APatch é muito semelhante. Você pode pular a introdução dos módulos abaixo e só precisa ler quais são as diferenças.
 
+[[toc]]
+
 ## BusyBox
 
 O APatch vem com um recurso binário BusyBox completo (incluindo suporte completo ao SELinux). O executável está localizado em `/data/adb/ap/bin/busybox`.
 O BusyBox do APatch suporta "ASH Standalone Shell Mode" alternável em tempo de execução.
 O que este Modo Autônomo significa é que ao executar no shell `ash` do BusyBox, cada comando usará diretamente o miniaplicativo dentro do BusyBox, independentemente do que estiver definido em `PATH`.
-Por exemplo, comandos como `ls`, `rm`, `chmod`, etc. **NÃO** usarão o que está em `PATH` (no caso do Android, por padrão será `/system/bin/ls`, `/system/bin/rm` e `/system/bin/chmod` respectivamente), mas em vez disso chamará diretamente os miniaplicativos internos do BusyBox.
+Por exemplo, comandos como `ls`, `rm`, `chmod` **NÃO** usarão o que está em `PATH` (no caso do Android, por padrão será `/system/bin/ls`, `/system/bin/rm` e `/system/bin/chmod` respectivamente), mas em vez disso chamará diretamente os miniaplicativos internos do BusyBox.
 Isso garante que os scripts sempre sejam executados em um ambiente previsível e sempre tenham o conjunto completo de comandos, independentemente da versão do Android em que estão sendo executados.
 Para forçar um comando a **NÃO** usar o BusyBox, você deve chamar o executável com caminhos completos.
 
@@ -30,8 +32,8 @@ Cada script shell executado no contexto do APatch será executado no shell `ash`
 
 Para aqueles que desejam usar o recurso Modo Autônomo fora do APatch, existem 2 maneiras de ativá-los:
 
-1. Definir a variável de ambiente `ASH_STANDALONE` como `1`.<br>Exemplo: `ASH_STANDALONE=1 /data/adb/ap/bin/busybox sh <script>`.
-2. Alternar com opções de linha de comando: `/data/adb/ap/bin/busybox sh -o standalone <script>`.
+1. Definir a variável de ambiente `ASH_STANDALONE` como `1`.<br>Exemplo: `ASH_STANDALONE=1 /data/adb/ap/bin/busybox sh <script>`
+2. Alternar com opções de linha de comando: `/data/adb/ap/bin/busybox sh -o standalone <script>`
 
 Para garantir que todos os shells `sh` subsequentes executados também sejam executados no Modo Autônomo, a opção 1 é o método preferido (e é isso que o APatch e o gerenciador do APatch usam internamente), pois as variáveis ​​de ambiente são herdadas para os subprocesso.
 
@@ -40,8 +42,7 @@ A localização do BusyBox foi alterada de `/data/adb/ksu/bin/busybox` para `/da
 :::
 
 ::: tip DIFERENÇAS COM MAGISK
-O BusyBox do APatch agora está usando o arquivo binário compilado diretamente do projeto Magisk. **Obrigado ao Magisk!**
-Portanto, você não precisa se preocupar com problemas de compatibilidade entre scripts BusyBox no Magisk e APatch porque eles são exatamente iguais!
+O BusyBox do APatch agora está usando o arquivo binário compilado diretamente do projeto Magisk. **Obrigado ao Magisk!** Portanto, você não precisa se preocupar com problemas de compatibilidade entre scripts BusyBox no Magisk e APatch porque eles são exatamente iguais!
 :::
 
 ## APMódulo {#APatch-modules}
@@ -132,7 +133,7 @@ As diferenças entre `post-fs-data.sh`, `post-mount.sh`, `service.sh` e `boot-co
 
 Em todos os scripts do seu módulo, use `MODDIR=${0%/*}` para obter o caminho do diretório base do seu módulo, **NÃO** codifique o caminho do seu módulo nos scripts.
 
-:::tip DIFERENÇAS COM MAGISK E KERNELSU
+::: tip DIFERENÇAS COM MAGISK E KERNELSU
 Você pode determinar se o script está sendo executado no APatch usando a variável de ambiente `APATCH`. Se estiver sendo executado no APatch, esse valor será definido como `true`.
 :::
 
@@ -169,8 +170,8 @@ REPLACE="
 
 Esta lista criará automaticamente os diretórios `$MODPATH/system/app/YouTube` e `$MODPATH/system/app/Bloatware` e, em seguida, executará `setfattr -n trusted.overlay.opaque -v y $MODPATH/system/app/YouTube` e `setfattr -n trusted.overlay.opaque -v y $MODPATH/system/app/Bloatware`. Após o módulo entrar em vigor, `/system/app/YouTube` e `/system/app/Bloatware` serão substituídos por diretórios vazios.
 
-:::tip DIFERENÇAS COM MAGISK
-O mecanismo sem sistema do APatch é implementado através do OverlayFS do kernel, enquanto o Magisk atualmente usa montagem mágica. Há uma enorme diferença entre essas duas implementações, mas o objetivo final é o mesmo: modificar os arquivos `/system` sem modificar fisicamente a partição `/system`.
+::: tip DIFERENÇAS COM MAGISK
+O mecanismo sem sistema do APatch é implementado através do OverlayFS do kernel, enquanto o Magisk atualmente usa montagem mágica (montagem de ligação). Os dois métodos de implementação têm diferenças significativas, mas o objetivo final é o mesmo: modificar os arquivos `/system` sem modificar fisicamente a partição `/system`.
 :::
 
 Se você estiver interessado em OverlayFS, é recomendável ler a [documentação sobre OverlayFS](https://docs.kernel.org/filesystems/overlayfs.html) do kernel Linux.
@@ -197,8 +198,8 @@ module.zip
 │
 ```
 
-:::warning AVISO
-O módulo APatch **NÃO** é compatível para instalação no recovery personalizado!
+::: warning AVISO
+O módulo APatch **NÃO** é compatível para instalação no Recovery personalizado!
 :::
 
 ### Personalização {#customizing-installation}
@@ -229,7 +230,7 @@ O script `customize.sh` é executado no shell BusyBox `ash` do APatch com o Modo
 - `API` (int): Versão atual da API Android do dispositivo (ex.: `23` no Android 6.0).
 
 ::: warning AVISO
-No APatch, `MAGISK_VER_CODE` tem um valor de `27000` e `MAGISK_VER` tem um valor de `27.0`.
+No APatch, `MAGISK_VER_CODE` é sempre `27000` e `MAGISK_VER` é sempre `v27.0`.
 :::
 
 #### Funções {#functions}
@@ -264,18 +265,18 @@ No APatch, os scripts são divididos em dois tipos com base em seu modo de execu
 
 - modo post-fs-data
 
-  - Esta etapa está BLOQUEANDO. O processo de inicialização é pausado antes da execução ser concluída ou 10 segundos se passaram.
+  - Esta etapa está BLOQUEANDO. O processo de inicialização é pausado antes da conclusão da execução ou após 10 segundos.
   - Os scripts são executados antes de qualquer módulo ser montado. Isso permite que um desenvolvedor de módulo ajuste dinamicamente seus módulos antes de serem montados.
   - Este estágio acontece antes do início do Zygote, o que significa praticamente tudo no Android.
   - **AVISO:** Usar `setprop` irá bloquear o processo de inicialização! Por favor, use `resetprop -n <prop_name> <prop_value>` em vez disso.
-  - **Execute scripts neste modo apenas se necessário.**
+  - **Execute scripts neste modo apenas se necessário**.
 
 - modo de serviço late_start
 
   - Esta etapa é SEM BLOQUEIO. Seu script é executado em paralelo com o restante do processo de inicialização.
   - **Este é o estágio recomendado para executar a maioria dos scripts**.
 
-APatch possui mais dois tipos de scripts de início dependendo de onde estão armazenados: scripts gerais e scripts de módulo.
+No APatch, os scripts de inicialização são divididos em dois tipos com base no local de armazenamento: scripts gerais e scripts de módulo.
 
 - Scripts gerais
   - Colocado em `/data/adb/post-fs-data.d`, `/data/adb/service.d`, `/data/adb/post-mount.d` ou `/data/adb/boot-completed.d`.

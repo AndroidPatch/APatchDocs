@@ -25,9 +25,9 @@ English: [@RinLin-NYA](https://github.com/RinLin-NYA), [@igormiguell](https://gi
 
 Russian / Русский: [@xteamlyer](https://github.com/xteamlyer)
 
-## 特别感谢 / Special Thanks
+## 特别感谢 / Special thanks
 
-Domain Providers:
+Domain providers:
 
 - NightSong: From the beginning to July 6, 2024, `apatch.top`  
 - Bart: From July 6, 2024 to the present, `apatch.dev`  

@@ -1,5 +1,7 @@
 # Instalação
 
+[[toc]]
+
 ## Preparativos
 
 1. Certifique-se de que seu dispositivo esteja com o bootloader desbloqueado antes de fazer root.
@@ -45,7 +47,7 @@ Você pode executar o comando `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` n
 ::: warning AVISO
 **Suporta apenas arquitetura ARM64.**
 
-**Suporta apenas versões do kernel Android 3.18 - 6.1**
+**Suporta apenas versões do kernel Android 3.18 - 6.1.**
 :::
 
 ## Patch {#how-to-patch}
@@ -60,9 +62,9 @@ Existem várias maneiras de corrigir o APatch.
 
 3. Selecione seu `boot.img`.
 
-4. Defina uma SuperKey no cartão "SuperKey". A SuperKey precisa ter **números e letras** e pelo menos **8 caracteres**. Ela será usada posteriormente para desbloquear privilégios root.
+4. Defina uma SuperKey no cartão "SuperKey". A SuperKey deve ter de **8 a 63 caracteres e incluir números e letras, mas sem caracteres especiais**. Ela será usada posteriormente para desbloquear privilégios root.
 
-:::warning AVISO
+::: warning AVISO
 É estritamente proibido definir chaves fracas como `12345678`. As versões mais recentes do APatch [obriga o uso de chaves fortes](/pt_BR/warn).
 :::
 
@@ -138,8 +140,12 @@ magiskboot repack boot.img
 
 Empacote e gere a imagem. O `new-boot.img` gerado é a imagem corrigida.
 
-::: info
+::: info INFORMAÇÕES
 Você também pode tentar o [patch online](https://kernelpatch-on-web.pages.dev/).
+:::
+
+::: tip DICA
+Você pode digitar o parâmetro `--help`, ou seja, `kptools --help`, para obter todos os parâmetros disponíveis.
 :::
 
 # Comandos e comentários do KP
@@ -162,7 +168,7 @@ COMANDOS:
 OPÇÕES:
   -i, --image PATH                 Caminho da imagem do kernel.
   -k, --kpimg PATH                 Caminho da imagem do KernelPatch.
-  -s, --skey PATH                  Definir SuperKey e salvar diretamente no boot.img.
+  -s, --skey KEY                   Definir SuperKey e salvar diretamente no boot.img.
   -S, --root-skey KEY              Definir a SuperKey root que usa verificação de hash e a SuperKey pode ser alterada dinamicamente.
   -o, --out PATH                   Caminho da imagem corrigida.
   -a  --addition KEY=VALUE         Adicionar informações adicionais.
@@ -190,14 +196,14 @@ Conecte o seu dispositivo usando o `ADB` e execute o seguinte comando para entra
 adb reboot bootloader
 ```
 
-Ao entrar no modo fastboot execute este comando:
+Ao entrar no modo fastboot, execute este comando:
 
 ```sh
 fastboot flash boot boot.img
 ```
 
 ::: tip DICA
-Se o seu dispositivo suporta `fastboot boot`, você pode primeiro tentar inicializar o sistema usando `fastboot boot boot.img`. Se ocorrerem problemas inesperados, simplesmente reinicie o dispositivo para a inicialização normal.
+Se o seu dispositivo suportar o comando `fastboot boot`, você pode usar o comando `fastboot boot boot.img` para inicializar o sistema antes de fazer o flash da imagem. Se ocorrerem problemas inesperados, basta reiniciar o dispositivo, e ele deverá iniciar corretamente.
 :::
 
 Quando terminar, reinicie o seu dispositivo:
@@ -208,13 +214,13 @@ fastboot reboot
 
 ### Flashando diretamente
 
-A versão MAIS RECENTE do APatch suporta atualização direta por meio de recovery de terceiros, por exemplo, TWRP.
+A versão mais recente do APatch suporta flash direto por meio de Recovery de terceiros, como o TWRP.
 
 ::: warning AVISO
-O flash direto foi introduzido pela primeira vez na versão `10888` e versões anteriores do APatch **NÃO** suportam este método.
+O flash direto foi introduzido pela primeira vez na versão `10888`, e versões anteriores do APatch **NÃO** suportam este método.
 :::
 
-Altere o nome do sufixo do arquivo do APatch (.apk) para `.zip`. Por exemplo:
+Altere o sufixo do arquivo APatch de `.apk` para `.zip`. Por exemplo:
 
 ```
 [username@localhost Demo] $ ls
@@ -225,15 +231,15 @@ APatch-10888-release.zip
 [username@localhost Demo] $ 
 ```
 
-Depois de feito isso, você pode flashar este arquivo `.zip` por meio da função Flash do recovery de terceiros. O APatch será instalado automaticamente assim como Magisk.
+Depois de feito isso, você pode fazer o flash deste arquivo `.zip` por meio da função Flash do Recovery de terceiros. O APatch será instalado automaticamente, assim como o Magisk.
 
 ::: tip DICA
-Assim como o Flash, a função `adb sideload` usada pelo recovery fornecida por ROMs semelhantes a AOSP de terceiros também é suportada.
+Assim como a função Flash, o comando `adb sideload` usado pelo Recovery fornecido por ROMs semelhantes a AOSP de terceiros também é suportado.
 :::
 
 ::: warning AVISO
-Flashar diretamente **NÃO** é compatível com a personalização da SuperKey! Em vez disso, a SuperKey será definida como uma combinação de números e letras aleatórias.
-Se você precisar personalizar a SuperKey, vá para o APatch após a inicialização e repatch para redefinir a SuperKey.
+O flash direto **NÃO** é compatível com a personalização da SuperKey! Em vez disso, a SuperKey será definida como uma combinação de números e letras aleatórias.
+Se você precisar personalizar a SuperKey, acesse o APatch após a inicialização e faça um repatch para redefini-la.
 :::
 
 ## Desinstalar
@@ -241,10 +247,10 @@ Se você precisar personalizar a SuperKey, vá para o APatch após a inicializa�
 ### Desinstalar automaticamente
 
 ::: warning AVISO
-A desinstalação automática foi introduzida pela primeira vez na versão `10888` e versões anteriores do APatch **NÃO** suportam este método.
+A desinstalação automática foi introduzida pela primeira vez na versão `10888`, e versões anteriores do APatch **NÃO** suportam este método.
 :::
 
-Altere o nome do sufixo do arquivo do APatch (.apk) para `.zip` e adicione o nome do arquivo modificado a qualquer coisa com `uninstall`. Por exemplo:
+Altere o sufixo do arquivo APatch de `.apk` para `.zip` e adicione o nome do arquivo modificado a qualquer coisa com `uninstall`. Por exemplo:
 
 ```
 [username@localhost Demo] $ ls
@@ -255,10 +261,10 @@ APatch-10888-release-uninstall.zip
 [username@localhost Demo] $ 
 ```
 
-Depois de feito isso, você pode flashar este arquivo `.zip` por meio da função Flash do recovery de terceiros. O APatch será removido automaticamente assim como Magisk.
+Depois de feito isso, você pode fazer o flash deste arquivo `.zip` por meio da função Flash do Recovery de terceiros. O APatch será removido automaticamente, assim como o Magisk.
 
 ::: tip DICA
-Assim como o Flash, a função `adb sideload` usada pelo recovery fornecida por ROMs semelhantes a AOSP de terceiros também é suportada.
+Assim como a função Flash, o comando `adb sideload` usado pelo Recovery fornecido por ROMs semelhantes a AOSP de terceiros também é suportado.
 :::
 
 ### Desinstalar manualmente
@@ -270,5 +276,5 @@ fastboot flash boot CAMINHO/DO/boot.img
 ```
 
 ::: warning AVISO
-NÃO use `init_boot`!
+**NÃO** use `init_boot`!
 :::
