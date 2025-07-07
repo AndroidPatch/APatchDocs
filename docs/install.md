@@ -58,7 +58,7 @@ There are several ways to patch APatch.
 
 1. Download the latest version of APatch Manager from [GitHub](https://github.com/bmax121/APatch/releases).
 
-2. Click on the button ![Patch Button](/PButton.png) at the top right corner, and click `Select a boot image to Patch`.
+2. Click on the button ![Patch Button](/PButton.png) at the top right corner, and click `Select a boot image to patch`.
 
 3. Select your `boot.img`.
 
