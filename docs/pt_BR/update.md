@@ -26,7 +26,7 @@ Mantenha a atualização OTA do root do APatch consistente com o Magisk.
 
 2. Após a conclusão de instalação da atualização OTA (quando solicitado a reiniciar), abra o APatch e clique no botão no canto superior direito ![Patch Button](/PButton.png)
 
-3. Selecione `Instalar no slot inativo (após o OTA)`
+3. Selecione `Instalar no slot inativo (Após o OTA)`
 
 ::: warning AVISO
 A funcionalidade de atualização OTA está atualmente instável e pode causar problemas. Se ocorrerem problemas, [vá para o repositório do APatch no GitHub para enviar um problema](https://github.com/bmax121/APatch/issues/new/choose).

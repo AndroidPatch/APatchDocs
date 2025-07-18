@@ -58,7 +58,7 @@ Existem várias maneiras de corrigir o APatch.
 
 1. Baixe a versão mais recente do APatch no [GitHub](https://github.com/bmax121/APatch/releases).
 
-2. Clique no botão ![Patch Button](/PButton.png) no canto superior direito, depois em `Selecionar imagem boot para Patch`.
+2. Clique no botão ![Patch Button](/PButton.png) no canto superior direito, depois em `Selecionar imagem boot para patch`.
 
 3. Selecione seu `boot.img`.
 

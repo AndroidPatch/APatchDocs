@@ -44,7 +44,7 @@ CONFIG_KALLSYMS_ALL=n (Initial support)
 ### Автоматический патчинг {#automatically-patching}
 
 1. Загрузите последнюю версию APatch Manager с [GitHub](https://github.com/bmax121/APatch/releases).
-2. Нажмите на кнопку ![Patch Button](/PButton.png) в правом верхнем углу и выберите `Select a boot image to Patch`.
+2. Нажмите на кнопку ![Patch Button](/PButton.png) в правом верхнем углу и выберите `Select a boot image to patch`.
 3. Выберите ваш `boot.img`.
 4. Установите SuperKey в карточке "SuperKey". SuperKey должен содержать **цифры и буквы** и иметь длину не менее **8 символов**. Он будет использоваться позже для разблокировки root-прав.
 
