@@ -9,9 +9,8 @@ export default defineConfig({
     locales: locales.locales,
     ignoreDeadLinks: true,
     lastUpdated: true,
-    base: '/APatchDocs/',
     sitemap: {
-        hostname: 'https://androidpatch.github.io/APatchDocs'
+        hostname: 'https://apatch.dev'
     },
     theme: {
         asyncLinks: true // 启用异步模块和链接渲染
