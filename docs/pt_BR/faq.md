@@ -64,7 +64,7 @@ Revogue o privilégio root do app "Shell" na página SuperUsuário.
 
 ## O app automaticamente obtém e perde permissões root após o reinício do dispositivo
 
-Para mais detalhes, leia [isto](https://t.me/APatchChannel/74).
+Este problema já deve ter sido corrigido. No entanto, se você ainda estiver enfrentando este problema, pode tentar excluir `/data/adb/ap/package_config` para redefinir as permissões de root. Em seguida, conceda novamente o acesso root para corrigir o problema.
 
 ## Posso usar o LSPosed?
 
