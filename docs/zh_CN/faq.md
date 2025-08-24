@@ -67,7 +67,7 @@ APatch 的 WebUI 实现方法和要求和 KernelSU 的实现方法和要求完�
 
 ## App 在手机重启后自动获得/丢失 root 权限？
 
-参阅 [这里](https://t.me/APatchChannel/74)。
+此问题应该已经被修复了。不过，如果你仍然遇到此问题，可以尝试删除 `/data/adb/ap/package_config` 来重置 root 授权。随后，重新授权，即可修复该问题。
 
 ## 能使用 LSPosed 吗？
 
