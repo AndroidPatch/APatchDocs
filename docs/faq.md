@@ -64,7 +64,7 @@ Remove the root privilege from the "Shell" app in Superuser page.
 
 ## App granted/lost root permission automatically when rebooting device
 
-This issue should now be resolved. However, if you are still encountering this problem, you can try deleting `/data/adb/ap/package_config` to reset root permissions. Afterwards, re-granting root access should fix the issue.
+This issue should already be resolved. However, if you're still experiencing the problem, try deleting the `/data/adb/ap/package_config` file to reset the root permissions. Then, grant root access again. This should fix the issue.
 
 ## Can I use LSPosed?
 
