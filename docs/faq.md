@@ -107,7 +107,7 @@ Thanks to the community's efforts, several APMs or Magisk modules are now availa
 
 - [ReZygisk](https://github.com/PerformanC/ReZygisk): A free Zygisk implementation appeared after ZygiskNext become proprietary. Still in early development, this APM doesn't support some features present in ZygiskNext.
 
-- [NeoZygisk](https://github.com/JingMatrix/NeoZygisk): An another free Zygisk implementation after the implementations above, which only aims to provide a minimal Zygisk API and remove any other parts. Its Zygisk API design is directly inspired by Magisk's Zygisk API, making this implementation theoretically more similar to Magisk's integrated Zygisk.
+- [NeoZygisk](https://github.com/JingMatrix/NeoZygisk): Another free Zygisk implementation after the implementations above, which only aims to provide a minimal Zygisk API and remove any other parts. Its Zygisk API design is directly inspired by Magisk's Zygisk API, making this implementation theoretically more similar to Magisk's integrated Zygisk.
 
 You can choose one of Zygisk implementations above, or use your own Zygisk implementation.
 
