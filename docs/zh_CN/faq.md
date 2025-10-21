@@ -65,6 +65,18 @@ APatch 的 WebUI 实现方法和要求和 KernelSU 的实现方法和要求完�
 
 在 root 授权页面取消 shell 的 root 权限。
 
+## 安装的模块在升级到 10997 及以后版本的 APatch 后消失？
+
+对 CI build 10977 及以后版本的特别说明
+
+::: info 提醒
+我们曾经在 [其他注意事项](/zh_CN/update#Miscellaneous) 中提醒过类似情况。
+:::
+
+APatch 在提交 [b843480](https://github.com/bmax121/APatch/commit/b843480c4f56b6190add41366e3eb7148ebc9b87) 之后放弃了对 `module.img` 的支持，所以任何在此 版本之前的 APatch 实例中安装的 APM 在升级到 `10977` 及其后续版本后都将**彻底 丢失**。
+
+你将需要重新安装你以前安装的所有 APM.
+
 ## App 在手机重启后自动获得/丢失 root 权限？
 
 此问题应该已经被修复了。不过，如果你仍然遇到此问题，可以尝试删除 `/data/adb/ap/package_config` 来重置 root 授权。随后，重新授权，即可修复该问题。
