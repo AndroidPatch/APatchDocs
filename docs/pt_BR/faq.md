@@ -62,6 +62,18 @@ Se você deseja usar o WebUI para o APMódulo ou KPMódulo, consulte a [introdu�
 
 Revogue o privilégio root do app "Shell" na página SuperUsuário.
 
+## Os módulos instalados desaparecem após a atualização para a versão 10997 do APatch e em versões posteriores
+
+Notas especiais sobre CI build após a versão 10977.
+
+::: info INFORMAÇÕES
+Notamos esse problema em [Diversos](/pt_BR/update#Miscellaneous) antes.
+:::
+
+O APatch abandonou o suporte para `module.img` desde o commit [b843480](https://github.com/bmax121/APatch/commit/b843480c4f56b6190add41366e3eb7148ebc9b87). Portanto, qualquer APMódulo instalado em versões anteriores será **COMPLETAMENTE PERDIDO** após a atualização para a versão `10977` ou posterior.
+
+Será necessário reinstalar todos os APMódulos instalados anteriormente.
+
 ## O app automaticamente obtém e perde permissões root após o reinício do dispositivo
 
 Este problema já deve estar resolvido. No entanto, se você ainda estiver enfrentando o problema, tente excluir o arquivo `/data/adb/ap/package_config` para redefinir as permissões root. Em seguida, conceda novamente o acesso root. Isso deve resolver o problema.
@@ -107,7 +119,7 @@ Graças ao empenho da comunidade, já existem vários APMs ou módulos Magisk co
 
 - [ReZygisk](https://github.com/PerformanC/ReZygisk): Uma implementação gratuita do Zygisk que surgiu após o ZygiskNext se tornar proprietário. Ainda em desenvolvimento inicial, este APM não suporta alguns recursos presentes no ZygiskNext.
 
-- [NeoZygisk](https://github.com/JingMatrix/NeoZygisk): Uma outra implementação gratuita do Zygisk após as implementações acima, com o objetivo de fornecer apenas uma API Zygisk mínima e remover outras funcionalidades. Seu design de API Zygisk é inspirado diretamente na API Zygisk do Magisk, tornando essa implementação teoricamente mais semelhante ao Zygisk integrado no Magisk.
+- [NeoZygisk](https://github.com/JingMatrix/NeoZygisk): Outra implementação gratuita do Zygisk após as implementações acima, com o objetivo de fornecer apenas uma API Zygisk mínima e remover outras funcionalidades. Seu design de API Zygisk é inspirado diretamente na API Zygisk do Magisk, tornando essa implementação teoricamente mais semelhante ao Zygisk integrado no Magisk.
 
 Você pode escolher uma das implementações do Zygisk acima, ou usar sua própria implementação do Zygisk.
 

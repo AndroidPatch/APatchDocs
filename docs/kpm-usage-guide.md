@@ -8,15 +8,13 @@ APatch relies on KernelPatch, inheriting all its functionalities and expanding i
 
 ## What is KPM?
 
-KernelPatch Modules (KPM) is a type of module that allows code to run in kernel space, similar to Loadable Kernel Modules (LKM). They can perform some operations that AndroidPatch Module (APM) cannot (e.g. partition image protection). You can even modify KernelSU's ksud into a KPM to allow KernelSU to run on APatch.
+KernelPatch Modules (KPM) is a type of module that allows code to run in kernel space, similar to Loadable Kernel Modules (LKM). They can perform some operations that AndroidPatch Module (APM) cannot (e.g. partition image protection).
 
 ## How to use KPM?
 
 There are 3 ways to use KPM: Embed, Load, and Install.
 
 ::: tip ABOUT "INSTALL"
-This document was last updated on 2024-08-06 at 19:14. Caution should be exercised when accessing the contents of this page if the time difference from the present is too great.
-
 Currently, APatch hasn't implemented the "Install" function for KPMs, and you can only use KPMs via "Embed" or "Load". KernelPatch and APatch's developers are working quickly to implement the "Install" function. Please wait patiently.
 :::
 
