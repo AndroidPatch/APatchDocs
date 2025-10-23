@@ -62,6 +62,18 @@ If you want to design WebUI for APM or KPM, refer to the [WebUI introduction](ht
 
 Remove the root privilege from the "Shell" app in Superuser page.
 
+## The installed modules disappear after updating to version 10997 of APatch and in subsequent versions
+
+Special notes about CI build after version 10977.
+
+::: info
+We've noticed this issue in [Miscellaneous](update#miscellaneous) before.
+:::
+
+APatch has dropped support to `module.img` since commit [b843480](https://github.com/bmax121/APatch/commit/b843480c4f56b6190add41366e3eb7148ebc9b87). Therefore, any APModule installed in previous versions will be **COMPLETELY LOST** after updating to version `10977` or later.
+
+You will need to reinstall all APModules that were installed previously.
+
 ## App granted/lost root permission automatically when rebooting device
 
 This issue should already be resolved. However, if you're still experiencing the problem, try deleting the `/data/adb/ap/package_config` file to reset the root permissions. Then, grant root access again. This should fix the issue.

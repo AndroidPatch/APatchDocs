@@ -47,7 +47,11 @@ You can execute the command `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` in 
 ::: warning
 **Only supports ARM64 architecture.**
 
-**Only supports Android kernel versions 3.18 - 6.1.**
+**Only supports Android kernel versions 3.18 - 6.6.**
+:::
+
+::: danger NOTE ON KERNEL 6.6 COMPATIBILITY
+Kernel 6.6 has only been tested on Xiaomi and OnePlus devices. For devices from other brands, please refer to actual usage conditions.
 :::
 
 ## Patch {#how-to-patch}

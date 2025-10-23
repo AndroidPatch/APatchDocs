@@ -19,7 +19,7 @@ You can update directly in the app.
 ## OTA update with APatch retention
 
 ::: tip
-Keep the OTA root update of APatch consistent with Magisk.
+Keep the OTA root update process of APatch consistent with that of Magisk.
 :::
 
 1. Download and start installing the OTA update through your ROM's software
@@ -42,10 +42,6 @@ If you're using MIUI/Xiaomi HyperOS (especially Dev Edition), we recommend that 
 
 ## Miscellaneous
 
-::: info
-This document was last updated on 2024-05-18 at 22:30. Caution should be exercised when accessing the contents of this page if the time difference from the present is too great.
-:::
-
 The content described in this document is based on the latest version of APatch Manager. If you cannot find the buttons mentioned in this document, ![Patch Button](/PButton.png) it means that the version of your APatch Manager is too old.
 
 ::: warning
@@ -55,5 +51,3 @@ Older versions are no longer supported and may pose a risk of compromising the S
 In some major updates, newer versions of KernelPatch may not be compatible with older versions, **causing loss of root** after the update. If such an incompatibility occurs, it will be specifically mentioned in the release notes. If this happens, we recommend that you redo the installation steps using the stock `boot.img`.
 
 **There are a very small number of cases where OTA slot switching doesn't work.** The sample is too small to determine the exact cause of the issue. If this happens, reinstall the app manually. Additionally, if you want, you can report the issue and attach logs on the [Issues](https://github.com/bmax121/APatch/issues/new/choose) page on GitHub.
-
-We need your help.
