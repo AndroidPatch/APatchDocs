@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "APatch"
   text: "Nova solução root do kernel Android"
-  tagline: Solução root universal para versões do kernel Android 3.18 - 6.1
+  tagline: Solução root universal para versões do kernel Android 3.18 - 6.6
   image:
     src: /logo.png
     alt: APatch
