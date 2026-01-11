@@ -37,6 +37,7 @@ function sidebarGuide() {
           { text: 'Update', link: '/update' },
           { text: 'Rescue from bootloop', link: '/rescue-bootloop' },
           { text: 'AndroidPatch Module Development Guide', link: '/apm-guide' },
+          { text: 'MetaModules', link: '/meta-module' },
           { text: 'KernelPatch Module Usage Guide', link: '/kpm-usage-guide' },
           { text: 'Help and support', link: '/support' },
           { text: 'FAQ', link: '/faq' },
