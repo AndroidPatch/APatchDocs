@@ -1,14 +1,17 @@
+# Metamodules
+
 Metamodules are a revolutionary feature in KernelSU that transfers critical module system capabilities from the core to pluggable modules. This architectural shift maintains KernelSU's stability and security while unleashing greater innovation potential for the module ecosystem.
-The buttons below provide the currently available meta modules
-::: NOTE:After installed the metamodule,you need to reboot to continue other module install.
 
-[hybrid mount](buttonurl://https://github.com/YuzakiKokuban/meta-hybrid_mount)
+::: warning Note:
+After installed the metamodule,you need to reboot to continue other module install.
+:::
 
-[overlayfs](buttonurl://https://github.com/KernelSU-Modules-Repo/meta-overlayfs)
+The form below provide the currently available meta modules.
 
-
-[mountify](buttonurl://https://github.com/backslashxx/mountify:same)
-
-[magic mount](buttonurl://https://github.com/KernelSU-Modules-Repo/meta-mm)
-
-[magic mount rs](buttonurl://https://github.com/Tools-cx-app/meta-magic_mount:same)
+|Avaliable Metamodules|
+|--|
+|[overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs)|
+|[mountify](https://github.com/backslashxx/mountify)|
+|[magic mount](https://github.com/7a72/meta-magic_mount)|
+|[magic mount rs](https://github.com/Tools-cx-app/meta-magic_mount)|
+|[hybrid mount](https://github.com/YuzakiKokuban/meta-hybrid_mount)|
