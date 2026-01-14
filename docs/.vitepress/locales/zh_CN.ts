@@ -37,6 +37,7 @@ function sidebarGuide() {
           { text: '升级', link: '/zh_CN/update' },
           { text: '救砖', link: '/zh_CN/rescue-bootloop' },
           { text: 'AndroidPatch Module(APM) 开发指南', link: '/zh_CN/apm-guide' },
+          { text: '元模块', link: '/zh_CN/meta-modules' },
           { text: 'KernelPatch Module(KPM) 使用指南', link: '/zh_CN/kpm-usage-guide' },
           { text: '反馈与帮助', link: '/zh_CN/support' },
           { text: '常见问题解答', link: '/zh_CN/faq' },
