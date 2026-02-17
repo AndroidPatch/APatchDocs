@@ -43,7 +43,7 @@ CONFIG_KALLSYMS_ALL=n (初步支持)
 ::: warning
 **仅支持 ARM64 架构。**
 
-**仅支持 Android 内核版本 3.18 - 6.6。**
+**仅支持 Android 内核版本 3.18 - 6.12。**
 :::
 
 ::: danger 关于 6.6 内核适用性的说明

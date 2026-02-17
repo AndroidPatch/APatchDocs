@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "APatch"
   text: "安卓内核 Root 新方案"
-  tagline: 为 Android 内核 3.18 - 6.6 版本提供的通用 root 方案
+  tagline: 为 Android 内核 3.18 - 6.12 版本提供的通用 root 方案
   image:
     src: /logo.png
     alt: 背景图片
