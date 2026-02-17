@@ -47,7 +47,7 @@ You can execute the command `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` in 
 ::: warning
 **Only supports ARM64 architecture.**
 
-**Only supports Android kernel versions 3.18 - 6.6.**
+**Only supports Android kernel versions 3.18 - 6.12.**
 :::
 
 ::: danger NOTE ON KERNEL 6.6 COMPATIBILITY
