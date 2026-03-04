@@ -7,11 +7,15 @@
 
 目前本仓库的文档有[简体中文](/docs/zh_CN)、[英语](/docs/)、[葡萄牙语（巴西）](/docs/pt_BR)、[俄语](/docs/ru)等语言的版本，欢迎翻译并贡献本仓库文档的其他语言版本。我们需要你的帮助。
 
+**请注意:** 当前，只有简体中文与英语的文档维护较为及时。对于一些数据与使用教程，请先参考这两个版本的内容。
+
 ## English introduction
 
 This repository is for [APatch Documentation](https://apatch.dev), which is created for [APatch Project](https://github.com/bmax121/APatch).
 
 **Currently there are only [zh_CN](/docs/zh_CN), [EN](/docs/), [pt_BR](/docs/pt_BR), [RU](/docs/ru) documents, and you are welcome to contribute versions in other languages. We need you.**
+
+**Please note:** Only the Simplified Chinese and English documentation are currently maintained in a timely manner. For certain data and usage tutorials, please refer to these two versions first.
 
 ## Credits
 
