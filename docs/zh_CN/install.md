@@ -80,12 +80,12 @@ APatch 有多种修补方法。
 
 #### Windows
 
-1. 下载 `kptools-win.zip` 和 `kpimg-android` ，并解压到当前目录使用，同时下载 `magiskboot(Windows)` 。
+1. 下载 `kptools-msys2-win.7z` 和 `kpimg-android` ，并解压到当前目录使用。
 
 2. 执行:
 
 ```cmd
-magiskboot.exe unpack boot.img
+kptools.exe unpack boot.img
 ```
 
 解压 boot，然后将 kernel 改名为 kernel-b (kernel-b可以是其他第三方内核，但是第三方内核不做任何保证，也不会受到支持)。
@@ -95,7 +95,7 @@ Windows可以使用 `CMD` 或 `PowerShell` 进行修补。
 执行:
 
 ```cmd
-kptools-x86_64-win.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
+kptools.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
 或者更推荐的，使用 `WSL` 的`Linux`修补:
@@ -107,7 +107,7 @@ kptools-x86_64-win.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-androi
 修补后无报错，最后用:
 
 ```cmd
-magiskboot.exe repack boot.img
+kptools.exe repack boot.img
 ```
 
 打包生成镜像，生成的 **new-boot.img** 即为修补好的镜像。
@@ -116,12 +116,12 @@ magiskboot.exe repack boot.img
 
 #### Linux
 
-1. 下载 `kptools-linux` 和 `kpimg-android` ，并下载 `magiskboot`。
+1. 下载 `kptools-linux` 和 `kpimg-android` 。
 
 2. 执行:
 
 ```sh
-magiskboot unpack boot.img
+./kptools-linux unpack boot.img
 ```
 
 解包boot，获取kernel文件。将kernel改名为kernel-b。
@@ -135,7 +135,7 @@ magiskboot unpack boot.img
 修补后无报错，最后用:
 
 ```sh
-magiskboot repack boot.img
+./kptools-linux repack boot.img
 ```
 
 打包生成镜像，生成的 `new-boot.img` 即是修补好的镜像。
