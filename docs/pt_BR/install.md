@@ -84,12 +84,12 @@ Você pode ir até o projeto [KernelPatch](https://github.com/bmax121/KernelPatc
 
 #### Windows
 
-1. Baixe `kptools-win.zip`, `kpimg-android` e `magiskboot`. Extraia-os no mesmo diretório para o uso.
+1. Baixe `kptools-msys2-win.7z` e `kpimg-android`. Extraia-os no mesmo diretório para o uso.
 
 2. Execute este comando:
 
 ```cmd
-magiskboot.exe unpack boot.img
+kptools.exe unpack boot.img
 ```
 
 Descompacte o `boot.img` para obter o arquivo do kernel. Renomeie o kernel para **kernel-b**. (O kernel-b pode ser outro kernel de terceiros, mas os kernels de terceiros não possuem garantias e não serão suportados).
@@ -99,7 +99,7 @@ Usuários do Windows podem fazer o patch usando `CMD` ou `PowerShell`.
 Execute este comando para corrigir:
 
 ```cmd
-kptools-x86_64-win.exe -p --image kernel-b --skey "SuaChave" --kpimg kpimg-android --out kernel
+kptools.exe -p --image kernel-b --skey "SuaChave" --kpimg kpimg-android --out kernel
 ```
 
 Alternativamente, é recomendado usar `WSL` com `Linux` para o patch:
@@ -111,7 +111,7 @@ Alternativamente, é recomendado usar `WSL` com `Linux` para o patch:
 Se nenhum erro for relatado durante o patch, execute este comando:
 
 ```cmd
-magiskboot.exe repack boot.img
+kptools.exe repack boot.img
 ```
 
 Empacote e gere a imagem. O `new-boot.img` gerado é a imagem corrigida.
@@ -120,12 +120,12 @@ Empacote e gere a imagem. O `new-boot.img` gerado é a imagem corrigida.
 
 #### Linux
 
-1. Baixe `kptools-linux`, `kpimg-android` e `magiskboot`.
+1. Baixe `kptools-linux` e `kpimg-android`.
 
 2. Execute este comando:
 
 ```sh
-magiskboot unpack boot.img
+./kptools-linux unpack boot.img
 ```
 
 Descompacte o `boot.img` para obter o arquivo do kernel. Renomeie o kernel para **kernel-b**. (Novamente, o kernel-b pode ser outro kernel de terceiros, mas os kernels de terceiros não possuem garantias e não serão suportados).
@@ -139,7 +139,7 @@ Execute este comando para corrigir:
 Se nenhum erro for relatado durante o patch, execute este comando:
 
 ```sh
-magiskboot repack boot.img
+./kptools-linux repack boot.img
 ```
 
 Empacote e gere a imagem. O `new-boot.img` gerado é a imagem corrigida.
@@ -166,9 +166,12 @@ COMANDOS:
   -u, --unpatch                    Desfazer patch na imagem do kernel(-i).
   -r, --reset-skey                 Redefinir SuperKey da imagem do patch(-i).
   -d, --dump                       Despejar informações do kallsyms da imagem do kernel(-i).
+  -f, --flag                       Despejar informações do ikconfig da imagem do kernel(-i).
   -l, --list                       Imprimir todas as informações do patch da imagem do kernel se (-i) for especificado.
                                    Imprimir informações extras do item se (-M) for especificado.
                                    Imprimir informações da imagem do KernelPatch se (-k) for especificado.
+Descompactar kernel: unpack <boot.img>
+Reempacotar kernel: repack <boot.img>
 OPÇÕES:
   -i, --image PATH                 Caminho da imagem do kernel.
   -k, --kpimg PATH                 Caminho da imagem do KernelPatch.

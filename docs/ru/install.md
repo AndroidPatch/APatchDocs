@@ -64,11 +64,11 @@ CONFIG_KALLSYMS_ALL=n (Initial support)
 
 #### Windows
 
-1. Загрузите `kptools-win.zip`, `kpimg-android` и `magiskboot`. Извлеките их в один каталог для использования.
+1. Загрузите `kptools-msys2-win.7z` и `kpimg-android`. Извлеките их в один каталог для использования.
 2. Выполните эту команду:
 
 ```cmd
-magiskboot.exe unpack boot.img
+kptools.exe unpack boot.img
 ```
 
 чтобы распаковать `boot.img` и получить файл ядра. Переименуйте ядро в **kernel-b**. (kernel-b может быть любым кастомным ядром, но работа на кастомных ядрах не гарантированна и не будет поддерживаться).
@@ -78,7 +78,7 @@ magiskboot.exe unpack boot.img
 Выполните эту команду для патчинга:
 
 ```cmd
-kptools-x86_64-win.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
+kptools.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
 В качестве альтернативы рекомендуется использовать `WSL` с `Linux` для патчинга:
@@ -90,7 +90,7 @@ kptools-x86_64-win.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-androi
 Если во время патчинга не было сообщено об ошибках, выполните эту команду:
 
 ```cmd
-magiskboot.exe repack boot.img
+kptools.exe repack boot.img
 ```
 
 чтобы упаковать и сгенерировать образ. Сгенерированный `new-boot.img` является пропатченным образом.
@@ -99,11 +99,11 @@ magiskboot.exe repack boot.img
 
 #### Linux
 
-1. Загрузите `kptools-linux`, `kpimg-android` и `magiskboot`.
+1. Загрузите `kptools-linux` и `kpimg-android`.
 2. Выполните эту команду:
 
 ```sh
-magiskboot unpack boot.img
+./kptools-linux unpack boot.img
 ```
 
 чтобы распаковать `boot.img` и получить файл ядра. Переименуйте ядро в **kernel-b** (Повторяем, kernel-b может быть любым кастомным ядром, но работа на кастомных ядрах не гарантированна и не будет поддерживаться).
@@ -117,7 +117,7 @@ magiskboot unpack boot.img
 Если во время патчинга не было сообщено об ошибках, выполните эту команду:
 
 ```sh
-magiskboot repack boot.img
+./kptools-linux repack boot.img
 ```
 
 чтобы упаковать и сгенерировать образ. Сгенерированный `new-boot.img` является пропатченным образом.
@@ -140,9 +140,12 @@ magiskboot repack boot.img
   -u, --unpatch                    Удалить патч из пропатченного образа ядра(-i)
   -r, --reset-skey                 Сбросить superkey пропатченного образа(-i)
   -d, --dump                       Вывести информацию kallsyms образа ядра(-i)
+  -f, --flag                       Вывести информацию ikconfig образа ядра(-i)
   -l, --list                       Вывести всю информацию о патчах образа ядра, если указан (-i)
                                    Вывести дополнительную информацию об элементах, если указан (-M)
                                    Вывести информацию об образе KernelPatch, если указан (-k)
+Распаковка ядра: unpack <boot.img>
+Перепаковка ядра: repack <boot.img>
 Опции:
   -i, --image PATH                 Путь к образу ядра
   -k, --kpimg PATH                 Путь к образу KernelPatch
