@@ -495,9 +495,6 @@ packages:
     peerDependencies:
       vue: 3.5.31
 
-  '@vue/shared@3.5.30':
-    resolution: {integrity: sha512-YXgQ7JjaO18NeK2K9VTbDHaFy62WrObMa6XERNfNOkAhD1F1oDSf3ZJ7K6GqabZ0BvSDHajp8qfS5Sa2I9n8uQ==}
-
   '@vue/shared@3.5.31':
     resolution: {integrity: sha512-nBxuiuS9Lj5bPkPbWogPUnjxxWpkRniX7e5UBQDWl6Fsf4roq9wwV+cR7ezQ4zXswNvPIlsdj1slcLB7XCsRAw==}
 
@@ -1242,8 +1239,6 @@ snapshots:
       '@vue/shared': 3.5.31
       vue: 3.5.31
 
-  '@vue/shared@3.5.30': {}
-
   '@vue/shared@3.5.31': {}
 
   '@vueuse/core@12.8.2':
@@ -1563,7 +1558,7 @@ snapshots:
       '@types/markdown-it': 14.1.2
       '@vitejs/plugin-vue': 5.2.4(vite@5.4.21)(vue@3.5.31)
       '@vue/devtools-api': 7.7.9
-      '@vue/shared': 3.5.30
+      '@vue/shared': 3.5.31
       '@vueuse/core': 12.8.2
       '@vueuse/integrations': 12.8.2(focus-trap@7.8.0)
       focus-trap: 7.8.0
