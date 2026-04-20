@@ -21,6 +21,12 @@ APatch 的模块运作机制与 Magisk 几乎是一样的，如果你熟悉 Magi
 
 APatch 的模块支持显示界面并与用户交互，请参阅 [WebUI 文档](module-webui.md)。 -->
 
+::: warning 升级须知
+从新版本开始，APatch 不再强制使用 SuperKey 认证，改为验证**管理器签名**。
+
+如果你是从 SuperKey 版本升级，必须先升级到[此过渡版本](https://github.com/bmax121/APatch/actions/runs/24625900590)，再升级到最新版本。跳过此步骤可能导致卡开机或丢失 root 权限。
+:::
+
 [[toc]]
 
 ## BusyBox
@@ -292,3 +298,78 @@ set_perm_recursive <directory> <owner> <group> <dirpermission> <filepermission> 
     - `post-fs-data.sh` 以 post-fs-data 模式运行，`post-mount.sh` 以 post-mount 模式运行，而 `service.sh` 则以 late_start 服务模式运行，`boot-completed` 在 Android 系统启动完毕后以服务模式运行。
 
 所有启动脚本都将在 APatch 的 BusyBox `ash` shell 中运行，并启用“独立模式”。  
+## Lua 模块支持 {#lua-modules}
+
+APatch 支持使用 Lua 脚本编写模块逻辑。Lua 模块必须以**模块 ID + `.lua`** 的形式命名，并放置在模块的根目录下：
+
+```
+/data/adb/modules/$MODID/$MODID.lua
+```
+
+Lua 文件必须返回一个包含生命周期函数实现的表（table）。示例：
+
+```lua
+local M = {}
+
+function M.version() -- 模块版本（推荐添加）
+    return 1
+end
+
+function M.post_fs_data(superkey)
+    info("post_fs_data called")
+end
+
+function M.post_mount(superkey)
+    info("post_mount called")
+    if superkey == "kernelsu" then
+        mount_source = "KSU"
+    else
+        mount_source = "APatch"
+    end
+    local libmagisk_mount = require("libmagic_mount")
+    libmagisk_mount.magic_mount(mount_source)
+end
+
+function M.service(superkey)
+    info("service called")
+end
+
+function M.action()
+    info("action called")
+    print("this is action function")
+    os.execute("sleep 2")
+end
+
+return M
+```
+
+### 生命周期阶段 {#lua-lifecycle}
+
+| 函数 | 阶段 | 说明 |
+|---|---|---|
+| `post_fs_data(superkey)` | post-fs-data | 在模块挂载前以阻塞模式运行 |
+| `post_mount(superkey)` | post-mount | 在 OverlayFS 挂载完成后运行 |
+| `service(superkey)` | late_start 服务 | 以非阻塞服务模式运行 |
+| `action()` | action | 用户在 APatch 管理器中点击 Action 按钮时运行 |
+
+`superkey` 参数在 KernelSU 兼容模式下为 `"kernelsu"`，否则为 APatch 的 superkey 值。
+
+### 内置全局函数 {#lua-globals}
+
+以下全局函数在所有 Lua 模块运行时可直接使用：
+
+| 函数 | 说明 |
+|---|---|
+| `info(msg)` | 以 INFO 级别记录日志 |
+| `warn(msg)` | 以 WARN 级别记录日志 |
+| `install_module(zip)` | 从指定 ZIP 文件路径安装模块 |
+| `setConfig(filename, content)` | 将文本内容保存到 `/data/adb/config/<filename>` |
+| `getConfig(filename)` | 读取 `/data/adb/config/<filename>` 的文本内容；文件不存在时返回空字符串 |
+
+### 原生库支持 {#lua-native}
+
+模块目录下的原生 `.so` 库可通过 `require()` 加载。模块目录已被自动添加到 Lua 的 `package.cpath` 中，因此名为 `libmagic_mount.so` 的库可以通过以下方式加载：
+
+```lua
+local lib = require("libmagic_mount")
+```

@@ -17,6 +17,12 @@ The following documentation was copied and modified from the KernelSU documentat
 
 The mechanism of APatch modules operation is almost the same as Magisk. If you are familiar with the development of Magisk modules, the development of APatch modules is very similar. You can skip the presentation of the modules below, just read what the differences are.
 
+::: warning UPGRADE NOTICE
+Starting from the new version, APatch no longer enforces SuperKey authentication. Instead, it verifies the **manager signature**.
+
+If you are upgrading from a SuperKey-based version, you **must** first upgrade to [this transitional build](https://github.com/bmax121/APatch/actions/runs/24625900590) before upgrading to the latest version. Skipping this step may result in a bootloop or loss of root access.
+:::
+
 [[toc]]
 
 ## BusyBox
@@ -290,3 +296,79 @@ In APatch, startup scripts are divided into two types based on their storage loc
   - `post-fs-data.sh` runs in post-fs-data mode, `post-mount.sh` runs in post-mount mode, and `service.sh` runs in late_start service mode, and `boot-completed` runs in service mode after the Android boot is complete.
 
 All boot scripts will run in APatch's BusyBox `ash` shell with Standalone Mode enabled.
+
+## Lua Module Support {#lua-modules}
+
+APatch supports writing module logic in Lua scripts. A Lua module must be named **`$MODID.lua`** (module ID + `.lua`) and placed in the module's root directory:
+
+```
+/data/adb/modules/$MODID/$MODID.lua
+```
+
+The Lua file must return a table containing lifecycle function implementations. Example:
+
+```lua
+local M = {}
+
+function M.version() -- module version (recommended)
+    return 1
+end
+
+function M.post_fs_data(superkey)
+    info("post_fs_data called")
+end
+
+function M.post_mount(superkey)
+    info("post_mount called")
+    if superkey == "kernelsu" then
+        mount_source = "KSU"
+    else
+        mount_source = "APatch"
+    end
+    local libmagisk_mount = require("libmagic_mount")
+    libmagisk_mount.magic_mount(mount_source)
+end
+
+function M.service(superkey)
+    info("service called")
+end
+
+function M.action()
+    info("action called")
+    print("this is action function")
+    os.execute("sleep 2")
+end
+
+return M
+```
+
+### Lifecycle Stages {#lua-lifecycle}
+
+| Function | Stage | Description |
+|---|---|---|
+| `post_fs_data(superkey)` | post-fs-data | Runs in blocking post-fs-data mode, before modules are mounted |
+| `post_mount(superkey)` | post-mount | Runs after OverlayFS is mounted |
+| `service(superkey)` | late_start service | Runs in non-blocking service mode |
+| `action()` | action | Runs when the user clicks the Action button in APatch Manager |
+
+The `superkey` parameter is `"kernelsu"` when running in KernelSU compatibility mode; otherwise it contains the APatch superkey value.
+
+### Built-in Global Functions {#lua-globals}
+
+The following global functions are injected into all Lua modules at runtime:
+
+| Function | Description |
+|---|---|
+| `info(msg)` | Log a message at INFO level |
+| `warn(msg)` | Log a message at WARN level |
+| `install_module(zip)` | Install a module from the given ZIP file path |
+| `setConfig(filename, content)` | Save text content to `/data/adb/config/<filename>` |
+| `getConfig(filename)` | Read text content from `/data/adb/config/<filename>`; returns empty string if the file does not exist |
+
+### Native Library Support {#lua-native}
+
+Native `.so` libraries placed in the module directory can be loaded via `require()`. The module directory is automatically prepended to Lua's `package.cpath`, so a library named `libmagic_mount.so` can be loaded as:
+
+```lua
+local lib = require("libmagic_mount")
+```
