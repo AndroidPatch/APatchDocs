@@ -15,3 +15,4 @@ The form below provide the currently available meta modules.
 |[magic mount](https://github.com/7a72/meta-magic_mount)|
 |[magic mount rs](https://github.com/Tools-cx-app/meta-magic_mount)|
 |[hybrid mount](https://github.com/YuzakiKokuban/meta-hybrid_mount)|
+|[MountAP](https://github.com/AYwlilwYA/MountAP)|
