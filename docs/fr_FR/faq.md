@@ -20,7 +20,7 @@ Alors que KernelSU requiert le code source du kernel de votre téléphone, qui n
 
 ## Quelle est la différence entre APatch, Magisk, et KernelSU ?
 
-APatch propose une option pour ne pas modifier SELinux. ça veut dire que le thread de l'application peut être rooté sans `libsu` et `IPC`.
+APatch propose une option pour ne pas modifier SELinux. Ça veut dire que le thread de l'application peut être rooté sans `libsu` et `IPC`.
 
 Fourni avec **KPModule**.
 
@@ -38,7 +38,7 @@ APatch dépend de KernelPatch, héritant de toutes ses fonctionnalités en plus 
 
 Vous pouvez seulement installer KernelPatch, mais ça ne vous permettera pas d'utiliser APM.
 
-[Learn more about KernelPatch](https://github.com/bmax121/KernelPatch).
+[En savoir plus sur KernelPatch](https://github.com/bmax121/KernelPatch).
 
 ## Qu'est-ce que SuperKey ?
 
@@ -48,13 +48,13 @@ invalide, le programme appelant ne sera pas affecté.
 
 ## Comment APatch gère-t-il SELinux ?
 
-KernelPatch ne modifie pas les contextes de SELinux mais les countournes par un crochet (hook). Cela vous permet de rooter une application directement, sans avoir besoin `libsu` pour démarrer un nouveau processus et exécuter `IPC`.
+KernelPatch ne modifie pas les contextes de SELinux mais les countourne par un crochet (hook). Cela vous permet de rooter une application directement, sans avoir besoin `libsu` pour démarrer un nouveau processus et exécuter `IPC`.
 
 Additionellement, APatch utilise directement `magiskpolicy` afin fournir du support supplémentaire pour SELinux. 
 
 ## La WebUI de KPM et APM
 
-Le code source d'APatch est directement tiré et modifié de KernelSU, APatch a introduit la WebUI dans [10568](https://github.com/bmax121/APatch/releases/tag/10568), après que KernelSU l'ai fait.
+Le code source d'APatch est directement modifié et tiré de KernelSU, APatch a introduit la WebUI dans [10568](https://github.com/bmax121/APatch/releases/tag/10568), après que KernelSU l'ai fait.
 
 L'implémentation de la WebUI d'APatch est strictement identique à celle de KernelSU, les applications conçues pour la WebUI de KernelSU devrait tourner sans problème avec APatch.
 
@@ -64,7 +64,7 @@ Si vous voulez concevoir une WebUI pour APM et KPM, référez vous à la [WebUI 
 
 Retirez les privilèges root du Shell dans la page Superutilisateur.
 
-## les modules installés disparaissent à partir de la version 10977 et au-delà
+## Les modules installés disparaissent à partir de la version 10977 et au-delà
 
 Special notes about CI build after version 10977.
 
@@ -72,23 +72,24 @@ Special notes about CI build after version 10977.
 Nous avons déjà pris en compte ce problème [Divers](update#miscellaneous).
 :::
 
-APatch a supprimé le support `module.img` à partir du commit [b843480](https://github.com/bmax121/APatch/commit/b843480c4f56b6190add41366e3eb7148ebc9b87). Par conséquent, tous les APModules installés dans les version précédentes **COMPLÈTEMENT PERDU** après avoir mis à jour vers la version `10977` ou ultérieur.
+APatch a supprimé le support de `module.img` à partir du commit [b843480](https://github.com/bmax121/APatch/commit/b843480c4f56b6190add41366e3eb7148ebc9b87). Par conséquent, tous les APModules installés dans les version précédentes seront **COMPLÈTEMENT PERDU** après avoir mis à jour vers la version `10977` ou ultérieure.
 
-Vous devrez installer les modules que vous avez précédement installés.
+Vous devrez réinstaller les modules que vous avez précédement installés.
 
-## App granted/lost root permission automatically when rebooting device
+## Une application a perdu ou gagné des droits root après le redémarrage de l'appareil
 
-This issue should already be resolved. However, if you're still experiencing the problem, try deleting the `/data/adb/ap/package_config` file to reset the root permissions. Then, grant root access again. This should fix the issue.
+Ce problème devrait être déjà résolu. Cependant, si vous rencontrez toujours des problèmes, essayez d'effacer le fichier `/data/adb/ap/package_config` pour réinitialiser les permissions root. Ensuite, accordez les droits root une nouvelle fois.
+Cela devrait régler le problème.
 
 ## Est-ce que je peux utiliser LSPosed ?
 
-LSPosed dépend de Riru ou de Zigisk pour s'exécuter. Cependant, APatch ne supporte pas Zygisk et Riru par défaut, vous ne pouvez donc pas utiliser LSPosed directement.
+LSPosed dépend de Riru ou de Zygisk pour s'exécuter. Cependant, APatch ne supporte pas Zygisk et Riru par défaut, vous ne pouvez donc pas utiliser LSPosed directement.
 
 Mais, APatch peut avoir un support pour Zygisk sans implémentation directe, par le biais des APMs.
 
 Voici 2 solutions pour faire tourner LSPosed sur APatch:
 
-1. Se référer [Zygisk support?](#zygisk-support) section pour ajouter Zygisk.
+1. Se référer à [Zygisk support?](#zygisk-support) pour ajouter Zygisk.
 2. Si vous avez seulement besoin de LSPosed sans les autres fonctionnalités de Zygisk, vous pouvez essayer [Zloader](https://github.com/Mufanc/z-loader) [for LSPosed](https://t.me/mufanc_chan/28).
 
 ::: Attention
