@@ -1,0 +1,93 @@
+diff --git a/docs/.vitepress/locales/fr_FR.ts b/docs/.vitepress/locales/fr_FR.ts
+index e0f1572..bf8ff79 100644
+--- a/docs/.vitepress/locales/fr_FR.ts
++++ b/docs/.vitepress/locales/fr_FR.ts
+@@ -2,7 +2,7 @@ import { createRequire } from 'module'
+ import { defineConfig } from 'vitepress'
+ 
+ export default defineConfig({
+-  lang: 'fr_FR',
++  lang: 'fr-FR',
+   description: 'Une solution de rooting basée sur le kernel pour les appareils Android.',
+ 
+   themeConfig: {
+@@ -11,7 +11,7 @@ export default defineConfig({
+     lastUpdatedText: "Actualisé le",
+ 
+     sidebar: {
+-      '/': sidebarGuide()
++      '/fr_FR/': sidebarGuide()
+     },
+ 
+     socialLinks: [
+@@ -22,7 +22,7 @@ export default defineConfig({
+ 
+ function nav() {
+   return [
+-    { text: 'Guide', link: '/what-is-apatch' },
++    { text: 'Guide', link: '/fr_FR/what-is-apatch' },
+   ]
+ }
+ 
+@@ -31,16 +31,16 @@ function sidebarGuide() {
+     {
+         text: 'Guide',
+         items: [
+-          { text: "Qu'est-ce qu'APatch ?", link: '/what-is-apatch' },
+-          { text: "Informations de sécurité", link: '/warn' },
+-          { text: 'Installation', link: '/install' },
+-          { text: 'Mise à jour', link: '/update' },
+-          { text: 'Réparations en cas de bootloop', link: '/rescue-bootloop' },
+-          { text: 'Guide de développement pour AndroidPatch Module', link: '/apm-guide' },
+-          { text: 'MetaModules', link: '/meta-module' },
+-          { text: "Guide d'utilisation de KernelPatch Module", link: '/kpm-usage-guide' },
+-          { text: 'Aide et support', link: '/support' },
+-          { text: 'FAQ', link: '/faq' },
++          { text: "Qu'est-ce qu'APatch ?", link: '/fr_FR/what-is-apatch' },
++          { text: "Informations de sécurité", link: '/fr_FR/warn' },
++          { text: 'Installation', link: '/fr_FR/install' },
++          { text: 'Mise à jour', link: '/fr_FR/update' },
++          { text: 'Réparations en cas de bootloop', link: '/fr_FR/rescue-bootloop' },
++          { text: 'Guide de développement pour AndroidPatch Module', link: '/fr_FR/apm-guide' },
++          { text: 'MetaModules', link: '/fr_FR/meta-module' },
++          { text: "Guide d'utilisation de KernelPatch Module", link: '/fr_FR/kpm-usage-guide' },
++          { text: 'Aide et support', link: '/fr_FR/support' },
++          { text: 'FAQ', link: '/fr_FR/faq' },
+         ]
+     }
+   ]
+diff --git a/docs/.vitepress/locales/index.ts b/docs/.vitepress/locales/index.ts
+index 0801814..8b26a4b 100644
+--- a/docs/.vitepress/locales/index.ts
++++ b/docs/.vitepress/locales/index.ts
+@@ -30,11 +30,11 @@ export default defineConfig({
+       themeConfig: zh_CN.themeConfig,
+       description: zh_CN.description,
+     },
+-   fr_FR: {
+-	label: "Français"
+-	lang: "fr_FR.lang"
+-	themeConfig: fr_FR.themeConfig,
+-	description: fr_FR.description,
+-   },
++    fr_FR: {
++      label: 'Français',
++      lang: fr_FR.lang,
++      themeConfig: fr_FR.themeConfig,
++      description: fr_FR.description,
++    },
+   },
+ })
+diff --git a/docs/fr_FR/index.md b/docs/fr_FR/index.md
+index 4b1a3bf..aa8afcd 100644
+--- a/docs/fr_FR/index.md
++++ b/docs/fr_FR/index.md
+@@ -12,7 +12,7 @@ hero:
+   actions:
+     - theme: brand
+       text: Commencer
+-      link: /what-is-apatch
++      link: /fr_FR/what-is-apatch
+     - theme: alt
+       text: Voir sur GitHub
+       link: https://github.com/bmax121/APatch

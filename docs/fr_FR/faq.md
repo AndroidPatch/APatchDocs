@@ -12,11 +12,11 @@ APatch est une solution de rooting semblable à Magisk et KernelSU, tout en comb
 
 ## Quelle est la différence entre Magisk et APatch ?
 
-Magisk modifie le système `d'initialisation` grâce à un patch au `ramdisk` de votre boot image. APatch va patcher directement le kernel.
+Magisk modifie le système `d'initialisation` grâce à un patch au `ramdisk` de votre boot image. APatch va patcher directement le noyau.
 
 ## Quelle est la différence entre KernelSU et APatch ?
 
-Alors que KernelSU requiert le code source du kernel de votre téléphone, qui n'est pas toujours fourni par votre fabricant, APatch a seulement besoin de votre `boot.img` d'origine.
+Alors que KernelSU requiert le code source du noyau de votre appareil, qui n'est pas toujours fourni par votre fabricant, APatch a seulement besoin de votre `boot.img` d'origine.
 
 ## Quelle est la différence entre APatch, Magisk, et KernelSU ?
 
@@ -30,13 +30,13 @@ KPM est un module qui s'exécute dans l'espace noyau, ce qui permet d'exécuter 
 
 De plus, le KPM est en capacité d'exécuter `inline-hook` et `syscall-table-hook` dans l'espace noyau.
 
-Pour plus d'informations, voir [how to write KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/zh-CN/module.md).
+Pour plus d'informations, voir [comment écrire un KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/zh-CN/module.md).
 
 ## Quelle est la relation entre KernelPatch et APatch ?
 
 APatch dépend de KernelPatch, héritant de toutes ses fonctionnalités en plus de les étendre.
 
-Vous pouvez seulement installer KernelPatch, mais ça ne vous permettera pas d'utiliser APM.
+Vous pouvez seulement installer KernelPatch, mais ça ne vous permettra pas d'utiliser APM.
 
 [En savoir plus sur KernelPatch](https://github.com/bmax121/KernelPatch).
 
@@ -48,17 +48,17 @@ invalide, le programme appelant ne sera pas affecté.
 
 ## Comment APatch gère-t-il SELinux ?
 
-KernelPatch ne modifie pas les contextes de SELinux mais les countourne par un crochet (hook). Cela vous permet de rooter une application directement, sans avoir besoin `libsu` pour démarrer un nouveau processus et exécuter `IPC`.
+KernelPatch ne modifie pas les contextes de SELinux mais les contourne par un crochet (hook). Cela vous permet de rooter une application directement, sans avoir besoin `libsu` pour démarrer un nouveau processus et exécuter `IPC`.
 
-Additionellement, APatch utilise directement `magiskpolicy` afin fournir du support supplémentaire pour SELinux. 
+Additionnellement, APatch utilise directement `magiskpolicy` afin de fournir du support supplémentaire pour SELinux. 
 
 ## La WebUI de KPM et APM
 
-Le code source d'APatch est directement modifié et tiré de KernelSU, APatch a introduit la WebUI dans [10568](https://github.com/bmax121/APatch/releases/tag/10568), après que KernelSU l'ai fait.
+Le code source d'APatch est directement tiré et modifié de KernelSU, APatch a introduit la WebUI dans [10568](https://github.com/bmax121/APatch/releases/tag/10568), après que KernelSU l'ai fait.
 
-L'implémentation de la WebUI d'APatch est strictement identique à celle de KernelSU, les applications conçues pour la WebUI de KernelSU devrait tourner sans problème avec APatch.
+L'implémentation de la WebUI d'APatch est strictement identique à celle de KernelSU, les applications conçues pour la WebUI de KernelSU devraient tourner sans problème avec APatch.
 
-Si vous voulez concevoir une WebUI pour APM et KPM, référez vous à la [WebUI Introduction](https://kernelsu.org/guide/module-webui.html) de KernelSU pour plus d'informations.
+Si vous voulez concevoir une WebUI pour un APM et/ou un KPM, référez vous à la [WebUI Introduction](https://kernelsu.org/guide/module-webui.html) de KernelSU pour plus d'informations.
 
 ## Je peux pas installer de modules (OS error 2/5/22)
 
@@ -66,15 +66,15 @@ Retirez les privilèges root du Shell dans la page Superutilisateur.
 
 ## Les modules installés disparaissent à partir de la version 10977 et au-delà
 
-Special notes about CI build after version 10977.
+Notes spéciales à propos du build CI après la version 10977.
 
 ::: Info
 Nous avons déjà pris en compte ce problème [Divers](update#miscellaneous).
 :::
 
-APatch a supprimé le support de `module.img` à partir du commit [b843480](https://github.com/bmax121/APatch/commit/b843480c4f56b6190add41366e3eb7148ebc9b87). Par conséquent, tous les APModules installés dans les version précédentes seront **COMPLÈTEMENT PERDU** après avoir mis à jour vers la version `10977` ou ultérieure.
+APatch a supprimé le support de `module.img` à partir du commit [b843480](https://github.com/bmax121/APatch/commit/b843480c4f56b6190add41366e3eb7148ebc9b87). Par conséquent, tous les APModules installés dans les versions précédentes seront **COMPLÈTEMENT PERDUS** après avoir mis à jour vers la version `10977` ou ultérieure.
 
-Vous devrez réinstaller les modules que vous avez précédement installés.
+Vous devrez réinstaller les modules que vous avez précédemment installé.
 
 ## Une application a perdu ou gagné des droits root après le redémarrage de l'appareil
 
@@ -116,11 +116,11 @@ Comme KernelSU, APatch n'a pas Zygisk d'inclus.
 
 Grâce aux efforts de la communauté, plusieurs APM ou modules Magisk sont compatibles avec APatch et vous permettront d'installer Zygisk. Vous trouverez ci-dessous quelques APM pour faire exécuter Zygisk :
 
-- [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext): Le premier à avoir supporté un environnement pour KernelSU, et supporte les fonctionnalités les plus compréhensives. Il sa'git d'une implémentation complète, avec des fonctionnalités supplémentaires,basées sur Zygisk ou extérieurs . La version `0.9.1.1` et toutes les versions précedentes sont libres, alors que les versions après celle-ci sont devenues propriétaires. Cette APM supporte initialement APatch `1.0.3`.
+- [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext): Le premier à avoir supporté un environnement pour KernelSU, et supporte les fonctionnalités les plus compréhensives. Il s'agit d'une implémentation complète, avec des fonctionnalités supplémentaires,basées sur Zygisk ou extérieurs . La version `0.9.1.1` et toutes les versions précedentes sont libres, alors que les versions après celle-ci sont devenues propriétaires. Cette APM supporte initialement APatch `1.0.3`.
 
 - [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod): Avant que ZygiskNext ne supporte APatch officiellement, cet APM comptait le faire. Depuis que ZygiskNext offre un support officiel, Zygisk_mod a été abandonné, mais il est toujours disponible.
 
-- [ReZygisk](https://github.com/PerformanC/ReZygisk): Une implémentation libre de Zygisk après que ZygiskNext soit devenu propriétaire. Étant toujours en dévéloppement précoce, cet APM ne supporte pas certaines fonctionnalités présentes dans ZygiskNext.
+- [ReZygisk](https://github.com/PerformanC/ReZygisk): Une implémentation libre de Zygisk après que ZygiskNext soit devenu propriétaire. Étant toujours en développement précoce, cet APM ne supporte pas certaines fonctionnalités présentes dans ZygiskNext.
 
 - [NeoZygisk](https://github.com/JingMatrix/NeoZygisk): Une autre implémentation libre de Zygisk après celle citée plus haut, qui vise seulement un environnement minimal en retirant le plus de parties possible. Le design de son API est directement inspirée par celle de Magisk, ce qui fait de cet implémentation, techniquement, une version plus proche du Zygisk original.
 

@@ -4,15 +4,15 @@ layout: home
 
 hero:
   name: "APatch"
-  text: "Nouvelle méthode de rooting pour le kernel"
-  tagline: Solution de rooting universelle pour les kernels 3.18 à 6.11
+  text: "Nouvelle méthode de rooting pour le noyau"
+  tagline: Solution de rooting universelle pour les noyaux 3.18 à 6.11
   image:
     src: /logo.png
     alt: APatch
   actions:
     - theme: brand
       text: Commencer
-      link: /what-is-apatch
+      link: /fr_FR/what-is-apatch
     - theme: alt
       text: Voir sur GitHub
       link: https://github.com/bmax121/APatch
@@ -21,10 +21,12 @@ hero:
       link: https://github.com/AndroidPatch/APatchDocs
 
 features:
+  - title: La traduction française n'est pas complétée !!
+    details: Pour le moment, seulement la page d'installation, la faq et celle-ci sont traduites. Si vous rencontrez des problèmes ou avez une suggestion, contactez moi avec irrationalfreak@protonmail.com
   - title: Basée sur le kernel
-    details: APatch s'exécute dans l'espace noyau et permet une meilleure dissimulation que les méthodes basée dans l'espace utilisateur.
+    details: APatch s'exécute dans l'espace noyau et permet une meilleure dissimulation que les méthodes basées dans l'espace utilisateur.
   - title: Contrôle d'accès des droits root
-    details: Seulement les applications autorisés ont la permission de voir ou d'utiliser su, toutes les autres applications ne seront pas affectées.
+    details: Seulement les applications autorisées ont la permission de voir ou d'utiliser su, toutes les autres applications ne seront pas affectées.
   - title: APModule
     details: Support pour modules similaire à Magisk.
   - title: KPModule

@@ -2,7 +2,7 @@ import { createRequire } from 'module'
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  lang: 'fr_FR',
+  lang: 'fr-FR',
   description: 'Une solution de rooting basée sur le kernel pour les appareils Android.',
 
   themeConfig: {
@@ -11,7 +11,7 @@ export default defineConfig({
     lastUpdatedText: "Actualisé le",
 
     sidebar: {
-      '/': sidebarGuide()
+      '/fr_FR/': sidebarGuide()
     },
 
     socialLinks: [
@@ -22,7 +22,7 @@ export default defineConfig({
 
 function nav() {
   return [
-    { text: 'Guide', link: '/what-is-apatch' },
+    { text: 'Guide', link: '/fr_FR/what-is-apatch' },
   ]
 }
 
@@ -31,16 +31,16 @@ function sidebarGuide() {
     {
         text: 'Guide',
         items: [
-          { text: "Qu'est-ce qu'APatch ?", link: '/what-is-apatch' },
-          { text: "Informations de sécurité", link: '/warn' },
-          { text: 'Installation', link: '/install' },
-          { text: 'Mise à jour', link: '/update' },
-          { text: 'Réparations en cas de bootloop', link: '/rescue-bootloop' },
-          { text: 'Guide de développement pour AndroidPatch Module', link: '/apm-guide' },
-          { text: 'MetaModules', link: '/meta-module' },
-          { text: "Guide d'utilisation de KernelPatch Module", link: '/kpm-usage-guide' },
-          { text: 'Aide et support', link: '/support' },
-          { text: 'FAQ', link: '/faq' },
+          { text: "Qu'est-ce qu'APatch ?", link: '/fr_FR/what-is-apatch' },
+          { text: "Informations de sécurité", link: '/fr_FR/warn' },
+          { text: 'Installation', link: '/fr_FR/install' },
+          { text: 'Mise à jour', link: '/fr_FR/update' },
+          { text: 'Réparations en cas de bootloop', link: '/fr_FR/rescue-bootloop' },
+          { text: 'Guide de développement pour AndroidPatch Module', link: '/fr_FR/apm-guide' },
+          { text: 'MetaModules', link: '/fr_FR/meta-module' },
+          { text: "Guide d'utilisation de KernelPatch Module", link: '/fr_FR/kpm-usage-guide' },
+          { text: 'Aide et support', link: '/fr_FR/support' },
+          { text: 'FAQ', link: '/fr_FR/faq' },
         ]
     }
   ]

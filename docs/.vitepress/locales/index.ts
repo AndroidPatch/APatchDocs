@@ -30,11 +30,11 @@ export default defineConfig({
       themeConfig: zh_CN.themeConfig,
       description: zh_CN.description,
     },
-   fr_FR: {
-	label: "Français"
-	lang: "fr_FR.lang"
-	themeConfig: fr_FR.themeConfig,
-	description: fr_FR.description,
-   },
+    fr_FR: {
+      label: 'Français',
+      lang: fr_FR.lang,
+      themeConfig: fr_FR.themeConfig,
+      description: fr_FR.description,
+    },
   },
 })

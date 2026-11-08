@@ -4,7 +4,7 @@
 
 ## Préparation
 
-1. Assurez-vous que le bootloader de votre appareil soit déverouillé avant de continuer.
+1. Assurez-vous que le bootloader de votre appareil soit déverrouillé avant de continuer.
 
 2. [PRÉREQUIS IMPORTANT] Vous pouvez exécuter la commande `zcat /proc/config.gz | grep CONFIG_KALLSYMS` dans votre terminal pour voir si votre noyau est compatible. Si vous utilisez ADB, entrez d'abord dans le terminal avec `adb shell`.
 
@@ -15,7 +15,7 @@
 5. Sauvegarder la `boot.img` que vous avez extraite sur un ordinateur, disque USB, ou sur un autre appareil. Si une erreur se produit, vous pourrez reflasher votre `boot.img` via fastboot pour réparer votre appareil.
 
 ::: Astuce
-1. Assurez-vous d'utiliser les dernières versions d'ADB et de fastboot et d'en savoir un peu sur ces outils. S'ils vous semblent nouveau, nous vous recommandons de faire quelques recherches pour en apprendre plus sur eux.
+1. Assurez-vous d'utiliser les dernières versions d'ADB et de fastboot et d'en savoir un peu sur ces outils. S'ils vous semblent nouveaux, nous vous recommandons de faire quelques recherches pour en apprendre plus sur eux.
 
 2. APatch patchera toujours la `boot.img` de n'importe quel appareil. N'essayez pas de patcher ou de flasher `init_boot` ou d'autres images de partitions. Le développeurs d'APatch ne seront pas responsables pour l'échec du patch ou du démarrage.
 
@@ -69,12 +69,12 @@ Il y a plusieurs moyens d'installer APatch.
 4. Créez une SuperKey et une SuperKey card. La SuperKey devrait mesurer entre **8 et 63 caractères et inclure des chiffres et des lettres, mais pas de caractères spéciaux**. Elle sera utilisée plus tard pour débloquer les privilèges root.
 
 ::: Attention
-Il est absolument interdit de créer des clés faibles comme `12345678`. Les dernières versions d'APatch [requieront l'utilisation de clés sécurisés](/warn).
+Il est absolument interdit de créer des clés faibles comme `12345678`. Les dernières versions d'APatch [requerront l'utilisation de clés sécurisés](/warn).
 :::
 
-5. Appuyez sur Start et attendez 1 minute. Après que le patch soit completé avec succès, le chemin de la `boot.img` patchée sera affiché. Par exemple: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
+5. Appuyez sur Start et attendez 1 minute. Après que le patch ait été complété avec succès, le chemin de la `boot.img` patchée sera affiché. Par exemple: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
 
-Enfin vous pouvez [flasher](#flash) comme bon vous semble.
+Enfin vous pouvez [flasher](#flash) comme besoin.
 
 ### Patch manuel
 
@@ -108,7 +108,7 @@ Alternativement, il est recommandé d'utiliser `WSL` avec `Linux` pour patcher :
 ./kptools-linux -p --image noyau-b --skey "YourKey" --kpimg kpimg-android --out noyau
 ```
 
-Si aucune erreur n'a été indiqué durant le patching, exécutez la commande suivante :
+Si aucune erreur n'a été signalée durant le patching, exécutez la commande suivante :
 
 ```cmd
 kptools.exe repack boot.img
@@ -159,35 +159,37 @@ Vous pouvez cliquer [ici](https://exame.apatch.top/) pour essayer.
 :::
 _Note du traducteur_
 Les commandes affichées ici ont été traduites, mais l'utilitaire d'aide du logiciel est en anglais !
+
+
 ```
 COMMAND:
   -h, --help                       Affiche ce message.
-  -v, --version                    Affiche le numéro de version. Print kpimg version if -k specified.
-  -p, --patch                      Patch or Update patch of noyau image(-i) with specified kpimg(-k) and superkey(-s).
-  -u, --unpatch                    Unpatch patched noyau image(-i).
-  -r, --reset-skey                 Reset superkey of patched image(-i).
-  -d, --dump                       Dump kallsyms infomations of noyau image(-i).
-  -f, --flag                       Dump ikconfig infomations of noyau image(-i).
-  -l, --list                       Print all patch informations of noyau image if (-i) specified.
-                                   Print extra item informations if (-M) specified.
-                                   Print KernelPatch image informations if (-k) specified.
-Unpack noyau: unpack <boot.img>
-Repack noyau: repack <boot.img>
+  -v, --version                    Affiche le numéro de version. Affiche la version de kpimg si -k est spécifié.
+  -p, --patch                      Patch ou Met à Jour l'image du noyau(-i) avec une kpimg (-k) et une SuperKey (-s) spécifiés.
+  -u, --unpatch                    Retire le patch de l'image du noyau patchée (-i).
+  -r, --reset-skey                 Réinitalise la superkey de l'image patchée (-i).
+  -d, --dump                       Affiche les informations kallsyms de l'image du noyau(-i).
+  -f, --flag                       Affiche les informations d'ikconfig de l'image du noyau'(-i).
+  -l, --list                       Affiche toutes les informations de patch de l'image du noyau si (-i) est spécifié.
+                                   Affiche des données supplémentaires sur les objets si (-M) est spécifié.
+                                   Affiche des informations sur l'image de KernelPatch si (-k) est spécifié.
+Dépaqueter le noyau: unpack <boot.img>
+Empaqueter le noyau: repack <boot.img>
 Options:
-  -i, --image PATH                 Kernel image path.
-  -k, --kpimg PATH                 KernelPatch image path.
-  -s, --skey KEY                   Set the superkey and save it directly in the boot.img.
-  -S, --root-skey KEY              Set the root-superkey that uses hash verification, and the superkey can be changed dynamically.
-  -o, --out PATH                   Patched image path.
-  -a  --addition KEY=VALUE         Add additional information.
-  -K, --kpatch PATH                Embed kpatch executable binary into patches.
-  -M, --embed-extra-path PATH      Embed new extra item.
-  -E, --embeded-extra-name NAME    Preserve and modifiy embedded extra item.
-  -T, --extra-type TYPE            Set type of previous extra item.
-  -N, --extra-name NAME            Set name of previous extra item.
-  -V, --extra-event EVENT          Set trigger event of previous extra item.
-  -A, --extra-args ARGS            Set arguments of previous extra item.
-  -D, --extra-detach               Detach previous extra item from patches.
+  -i, --image CHEMIN                 Chemin de l'image du noyau.
+  -k, --kpimg CHEMIN               Chemin de l'image de KernelPatch.
+  -s, --skey CLÉ                Spécifie la SuperKey et la sauvegarde directement dans la boot.img.
+  -S, --root-skey CLÉ              Spécifie la root-SuperKey qui utilise la vérification par hachage, la SuperKey peut-être changée dynamiquement.
+  -o, --out CHEMIN                   Chemin de l'image patchée.
+  -a  --addition CLÉ=VALEUR         Ajoute des informations supplémentaires.
+  -K, --kpatch CHEMIN                Intègre les exécutables binaires de kpatch dans les patchs.
+  -M, --embed-extra-path CHEMIN      Intègre un nouveau chemin  d'objet supplémentaire.
+  -E, --embeded-extra-name NOM    Préserve et modifie les objets supplémentaires.
+  -T, --extra-type TYPE            Spécifie le type des objets supplémentaires.
+  -N, --extra-name NOM            Spécifie le nom d'objets supplémentaires précédents.
+  -V, --extra-event ÉVÉNEMENT          Définit les événements déclencheurs des objets supplémentaires précédents.
+  -A, --extra-args ARGUMENTS            Définit les arguments des objets supplémentaires.
+  -D, --extra-detach               Détache des objets supplémentaires précédents des patchs.
 ```
 
 ## Flash
@@ -223,7 +225,7 @@ fastboot reboot
 
 ### Flasher directement
 
-La dernière version d'APatch Manager supporte directement le flashing sur des environnement de récupération tiers, comme TWRP.
+La dernière version du gestionnaire d'APatch supporte directement le flashing sur des environnement de récupération tiers, comme TWRP.
 
 ::: Attention
 Le flashing direct a été introduit dans la version `10888`, et les versions plus anciennes d'APatch **NE SUPPORTENT PAS** cette méthode.
@@ -272,7 +274,7 @@ APatch-10888-release-uninstall.zip
 
 Après l'avoir fait, vous pourrez flasher ce fichier `.zip` via la fonctionnalité de flash des environnements de récupération tiers. APatch sera automatiquement désinstallé, tout comme Magisk.
 ::: Astuce
-Tout comme la fonctionnalité Flash, la commande `adb sideload` fournie par l'environnement de récupération android est aussi supportée..
+Tout comme la fonctionnalité Flash, la commande `adb sideload` fournie par l'environnement de récupération Android est aussi supportée.
 :::
 
 ### Désinstallation manuelle
