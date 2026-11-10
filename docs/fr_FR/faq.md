@@ -5,7 +5,7 @@
 ## Qu'est-ce qu'APatch ? 
 
 ::: info
-[Ceci](/what-is-apatch) forme une introduction plus complète à APatch.
+[Ceci](/what-is-apatch) formera une introduction plus complète à APatch.
 :::
 
 APatch est une solution de rooting semblable à Magisk et KernelSU, tout en combinant le meilleur des 2 mondes. D'un côté, L'installation facile et pratique de Magisk par la `boot.img`, de l'autre les capacités de patch améliorées de KernelSU.
@@ -20,7 +20,7 @@ Alors que KernelSU requiert le code source du noyau de votre appareil, qui n'est
 
 ## Quelle est la différence entre APatch, Magisk, et KernelSU ?
 
-APatch propose une option pour ne pas modifier SELinux. Ça veut dire que le thread de l'application peut être rooté sans `libsu` et `IPC`.
+APatch propose une option pour ne pas modifier SELinux. Ça veut dire que le thread (fil) de l'application peut être rooté sans `libsu` et `IPC`.
 
 Fourni avec **KPModule**.
 
@@ -48,7 +48,7 @@ invalide, le programme appelant ne sera pas affecté.
 
 ## Comment APatch gère-t-il SELinux ?
 
-KernelPatch ne modifie pas les contextes de SELinux mais les contourne par un crochet (hook). Cela vous permet de rooter une application directement, sans avoir besoin `libsu` pour démarrer un nouveau processus et exécuter `IPC`.
+KernelPatch ne modifie pas les contextes de SELinux mais les contourne par un crochet (hook). Cela vous permet de rooter une application directement, sans avoir besoin de `libsu` pour démarrer un nouveau processus et exécuter `IPC`.
 
 Additionnellement, APatch utilise directement `magiskpolicy` afin de fournir du support supplémentaire pour SELinux. 
 
@@ -69,7 +69,7 @@ Retirez les privilèges root du Shell dans la page Superutilisateur.
 Notes spéciales à propos du build CI après la version 10977.
 
 ::: Info
-Nous avons déjà pris en compte ce problème [Divers](update#miscellaneous).
+Nous avons déjà pris en compte ce problème : [Divers](update#miscellaneous).
 :::
 
 APatch a supprimé le support de `module.img` à partir du commit [b843480](https://github.com/bmax121/APatch/commit/b843480c4f56b6190add41366e3eb7148ebc9b87). Par conséquent, tous les APModules installés dans les versions précédentes seront **COMPLÈTEMENT PERDUS** après avoir mis à jour vers la version `10977` ou ultérieure.
@@ -116,7 +116,7 @@ Comme KernelSU, APatch n'a pas Zygisk d'inclus.
 
 Grâce aux efforts de la communauté, plusieurs APM ou modules Magisk sont compatibles avec APatch et vous permettront d'installer Zygisk. Vous trouverez ci-dessous quelques APM pour faire exécuter Zygisk :
 
-- [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext): Le premier à avoir supporté un environnement pour KernelSU, et supporte les fonctionnalités les plus compréhensives. Il s'agit d'une implémentation complète, avec des fonctionnalités supplémentaires,basées sur Zygisk ou extérieurs . La version `0.9.1.1` et toutes les versions précedentes sont libres, alors que les versions après celle-ci sont devenues propriétaires. Cette APM supporte initialement APatch `1.0.3`.
+- [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext): Le premier à avoir supporté un environnement pour KernelSU, et supporte les fonctionnalités les plus compréhensives. Il s'agit d'une implémentation complète, avec des fonctionnalités supplémentaires, basées sur Zygisk ou extérieurs. La version `0.9.1.1` et toutes les versions précedentes sont libres, alors que les versions après celle-ci sont devenues propriétaires. Cet APM supporte initialement APatch `1.0.3`.
 
 - [Zygisk_mod](https://github.com/Admirepowered/Zygisk_mod): Avant que ZygiskNext ne supporte APatch officiellement, cet APM comptait le faire. Depuis que ZygiskNext offre un support officiel, Zygisk_mod a été abandonné, mais il est toujours disponible.
 
@@ -124,7 +124,7 @@ Grâce aux efforts de la communauté, plusieurs APM ou modules Magisk sont compa
 
 - [NeoZygisk](https://github.com/JingMatrix/NeoZygisk): Une autre implémentation libre de Zygisk après celle citée plus haut, qui vise seulement un environnement minimal en retirant le plus de parties possible. Le design de son API est directement inspirée par celle de Magisk, ce qui fait de cet implémentation, techniquement, une version plus proche du Zygisk original.
 
-Vous pouvez choisir une des implémentation ci-dessus ou utiliser la vôtre.
+Vous pouvez choisir une des implémentations ci-dessus ou utiliser la vôtre.
 
 ::: Attention
 Comme dit plus haut, APatch **N'A PAS** un support Zygisk par défaut, nous ne **POUVONS PAS** et ne **FERONS PAS** garantir la disponibilité,la fonctionnalité , la stabilité , ou tout autre élément relié à Zygisk. 

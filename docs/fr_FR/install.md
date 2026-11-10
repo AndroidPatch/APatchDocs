@@ -17,7 +17,7 @@
 ::: Astuce
 1. Assurez-vous d'utiliser les dernières versions d'ADB et de fastboot et d'en savoir un peu sur ces outils. S'ils vous semblent nouveaux, nous vous recommandons de faire quelques recherches pour en apprendre plus sur eux.
 
-2. APatch patchera toujours la `boot.img` de n'importe quel appareil. N'essayez pas de patcher ou de flasher `init_boot` ou d'autres images de partitions. Le développeurs d'APatch ne seront pas responsables pour l'échec du patch ou du démarrage.
+2. APatch patchera toujours la `boot.img` de n'importe quel appareil. N'essayez pas de patcher ou de flasher `init_boot` ou d'autres images de partitions. Les développeurs d'APatch ne seront pas responsables pour l'échec du patch ou du démarrage.
 
 3. Essayez d'éviter d'utiliser une `boot.img` déjà patchée par d'autres gestionnaires pour éviter toute situation incongrue.
 :::
@@ -69,7 +69,7 @@ Il y a plusieurs moyens d'installer APatch.
 4. Créez une SuperKey et une SuperKey card. La SuperKey devrait mesurer entre **8 et 63 caractères et inclure des chiffres et des lettres, mais pas de caractères spéciaux**. Elle sera utilisée plus tard pour débloquer les privilèges root.
 
 ::: Attention
-Il est absolument interdit de créer des clés faibles comme `12345678`. Les dernières versions d'APatch [requerront l'utilisation de clés sécurisés](/warn).
+Il est absolument interdit de créer des clés faibles comme `12345678`. Les dernières versions d'APatch [requerront l'utilisation de clés sécurisées](/warn).
 :::
 
 5. Appuyez sur Start et attendez 1 minute. Après que le patch ait été complété avec succès, le chemin de la `boot.img` patchée sera affiché. Par exemple: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
@@ -120,9 +120,9 @@ Pour empaqueter et générer l'image. La `new-boot.img` générée est l'image p
 
 #### Linux
 
-1. Download `kptools-linux` and `kpimg-android`.
+1. Téléchargez `kptools-linux` et `kpimg-android`.
 
-2. Execute this command:
+2. Exécutez cette commande:
 
 ```sh
 ./kptools-linux unpack boot.img
@@ -136,7 +136,7 @@ Lancez cette commande pour patcher :
 ./kptools-linux -p --image noyau-b --skey "YourKey" --kpimg kpimg-android --out noyau
 ```
 
-Si aucune erreur n'a été indiqué durant le patching, exécutez la commande suivante :
+Si aucune erreur n'a été signalée durant le patching, exécutez la commande suivante :
 
 ```sh
 ./kptools-linux repack boot.img
@@ -145,7 +145,7 @@ Si aucune erreur n'a été indiqué durant le patching, exécutez la commande su
 Pour empaqueter et générer l'image. La `new-boot.img` générée est l'image patchée.
 
 ::: Info
-Vous pouvez aussi essayer le [Patching en ligne](https://noyaupatch-on-web.pages.dev/).
+Vous pouvez aussi essayer le [Patching en ligne](https://kernelpatch-on-web.pages.dev/).
 :::
 
 ::: Astuce
@@ -167,9 +167,9 @@ COMMAND:
   -v, --version                    Affiche le numéro de version. Affiche la version de kpimg si -k est spécifié.
   -p, --patch                      Patch ou Met à Jour l'image du noyau(-i) avec une kpimg (-k) et une SuperKey (-s) spécifiés.
   -u, --unpatch                    Retire le patch de l'image du noyau patchée (-i).
-  -r, --reset-skey                 Réinitalise la superkey de l'image patchée (-i).
+  -r, --reset-skey                 Réinitialise la superkey de l'image patchée (-i).
   -d, --dump                       Affiche les informations kallsyms de l'image du noyau(-i).
-  -f, --flag                       Affiche les informations d'ikconfig de l'image du noyau'(-i).
+  -f, --flag                       Affiche les informations d'ikconfig de l'image du noyau(-i).
   -l, --list                       Affiche toutes les informations de patch de l'image du noyau si (-i) est spécifié.
                                    Affiche des données supplémentaires sur les objets si (-M) est spécifié.
                                    Affiche des informations sur l'image de KernelPatch si (-k) est spécifié.
@@ -183,7 +183,7 @@ Options:
   -o, --out CHEMIN                   Chemin de l'image patchée.
   -a  --addition CLÉ=VALEUR         Ajoute des informations supplémentaires.
   -K, --kpatch CHEMIN                Intègre les exécutables binaires de kpatch dans les patchs.
-  -M, --embed-extra-path CHEMIN      Intègre un nouveau chemin  d'objet supplémentaire.
+  -M, --embed-extra-path CHEMIN      Intègre un nouveau chemin d'objet supplémentaire.
   -E, --embeded-extra-name NOM    Préserve et modifie les objets supplémentaires.
   -T, --extra-type TYPE            Spécifie le type des objets supplémentaires.
   -N, --extra-name NOM            Spécifie le nom d'objets supplémentaires précédents.
@@ -225,13 +225,13 @@ fastboot reboot
 
 ### Flasher directement
 
-La dernière version du gestionnaire d'APatch supporte directement le flashing sur des environnement de récupération tiers, comme TWRP.
+La dernière version du gestionnaire d'APatch supporte directement le flashing sur des environnements de récupération tiers, comme TWRP.
 
 ::: Attention
-Le flashing direct a été introduit dans la version `10888`, et les versions plus anciennes d'APatch **NE SUPPORTENT PAS** cette méthode.
+Le flash direct a été introduit dans la version `10888`, et les versions plus anciennes d'APatch **NE SUPPORTERONT PAS** cette méthode.
 :::
 
-Changez l'extension du fichier d'APatch Manager d'`.apk` à `.zip`. Par exemple :
+Changez l'extension du fichier du gestionnaire APatch d'`.apk` à `.zip`. Par exemple :
 
 ```
 [username@localhost Demo] $ ls
@@ -250,7 +250,7 @@ Tout comme la fonctionnalité Flash, la commande `adb sideload` fournie par l'en
 
 ::: Attention
 Le flash direct **NE SUPPORTE PAS** la personnalisation de la SuperKey ! À la place, la SuperKey va être remplacée par une suite aléatoire de chiffres et de lettres.
-Si vous avez besoin de personnaliser la SuperKey, allez sur l'APatch Manager après le démarrage et repatcher pour changer la clé.
+Si vous avez besoin de personnaliser la SuperKey, allez sur le gestionnaire d'APatch après le démarrage et repatchez pour changer la clé.
 :::
 
 ## Désinstallation
@@ -258,7 +258,7 @@ Si vous avez besoin de personnaliser la SuperKey, allez sur l'APatch Manager apr
 ### Désinstallation automatique
 
 ::: Attention
-La désinstallation automatique a été introduite dans la version `10888`, et les versions plus anciennes d'APatch **NE SUPPORTENT PAS** cette méthode.
+La désinstallation automatique a été introduite dans la version `10888`, et les versions plus anciennes d'APatch **NE SUPPORTERONT PAS** cette méthode.
 :::
 
 Changez l'extension du fichier d'APatch Manager d'`.apk` à `.zip` et rajoutez au nom du fichier `uninstall`. Par exemple:
