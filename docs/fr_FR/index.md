@@ -19,10 +19,8 @@ hero:
     - theme: alt
       text: Contribuer à la documentation
       link: https://github.com/AndroidPatch/APatchDocs
-::: Attention
-  La traduction française n'est pas complétée !!
-  Pour le moment, seulement la page d'installation, la FAQ et celle-ci sont traduites. Si vous rencontrez des problèmes ou avez une suggestion, contactez moi sur [Github](https://github.com/AndroidPatch/APatchDocs/pull/410)
-:::
+
+features:
   - title: Basée sur le noyau
     details: APatch s'exécute dans l'espace noyau et permet une meilleure dissimulation que les méthodes basées dans l'espace utilisateur.
   - title: Contrôle d'accès des droits root
@@ -32,3 +30,8 @@ hero:
   - title: KPModule
     details: Un support pour modules qui vous permettra d'injecter du code dans le noyau (kernel) (Fournit les fonctions du noyau inline-hook et syscall-table-hook).
 ---
+
+::: Attention
+  La traduction française n'est pas complétée !!
+  Pour le moment, seulement la page d'installation, la FAQ et celle-ci sont traduites. Si vous rencontrez des problèmes ou avez une suggestion, contactez moi sur [Github](https://github.com/AndroidPatch/APatchDocs/pull/410)
+:::
