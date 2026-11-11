@@ -3,7 +3,7 @@ import en from './en'
 import ru from './ru'
 import pt_BR from './pt_BR'
 import zh_CN from './zh_CN'
-
+import fr_FR from './fr_FR'
 export default defineConfig({
   locales: {
     root: {
@@ -29,6 +29,12 @@ export default defineConfig({
       lang: zh_CN.lang,
       themeConfig: zh_CN.themeConfig,
       description: zh_CN.description,
+    },
+    fr_FR: {
+      label: 'Français',
+      lang: fr_FR.lang,
+      themeConfig: fr_FR.themeConfig,
+      description: fr_FR.description,
     },
   },
 })
