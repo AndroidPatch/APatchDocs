@@ -1,4 +1,4 @@
-# Qu'est ce qu'APatch ?
+# Qu'est-ce qu'APatch ?
 
 APatch est une solution de rooting basée sur le noyau pour les appareils Android qui fonctionne dans l'espace noyau et accordera les droits root aux applications s'exécutant dans l'espace utilisateur directement depuis l'espace noyau.
 
@@ -16,11 +16,11 @@ L'interface utilisateur d'APatch et le code source d'APModule ont été dérivé
 
 ## Comment utiliser APatch ?
 
-Veuillez vous référez à : [Installation](/install)
+Veuillez vous référez à : [Installation](/fr_FR/install)
 
 ## Comment patcher ?
 
-Veuillez vous référez à : [Patch](/install#how-to-patch)
+Veuillez vous référez à : [Patch](/fr_FR/install#how-to-patch)
 
 ## Licence
 ::: Note de traduction

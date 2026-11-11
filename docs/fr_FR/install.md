@@ -33,7 +33,7 @@ CONFIG_KALLSYMS_ALL=y
 ou:
 ```txt
 CONFIG_KALLSYMS=y
-CONFIG_KALLSYMS_ALL=n (Initial support)
+CONFIG_KALLSYMS_ALL=n (Support initial)
 ```
 ou:
 ```txt
@@ -64,7 +64,7 @@ Il y a plusieurs moyens d'installer APatch.
 
 2. Appuyez sur le bouton ![Patch Button](/PButton.png) dans le coin supérieur droit, et appuyez sur `Select a boot image to patch`.
 
-3. Séléctionnez votre `boot.img`.
+3. Sélectionnez votre `boot.img`.
 
 4. Créez une SuperKey et une SuperKey card. La SuperKey devrait mesurer entre **8 et 63 caractères et inclure des chiffres et des lettres, mais pas de caractères spéciaux**. Elle sera utilisée plus tard pour débloquer les privilèges root.
 
@@ -157,39 +157,35 @@ Vous pouvez écrire le paramètre `--help` ,ce qui fait `kptools --help`, pour o
 ::: Info
 Vous pouvez cliquer [ici](https://exame.apatch.top/) pour essayer.
 :::
-_Note du traducteur_
-Les commandes affichées ici ont été traduites, mais l'utilitaire d'aide du logiciel est en anglais !
-
-
 ```
 COMMAND:
-  -h, --help                       Affiche ce message.
-  -v, --version                    Affiche le numéro de version. Affiche la version de kpimg si -k est spécifié.
-  -p, --patch                      Patch ou Met à Jour l'image du noyau(-i) avec une kpimg (-k) et une SuperKey (-s) spécifiés.
-  -u, --unpatch                    Retire le patch de l'image du noyau patchée (-i).
-  -r, --reset-skey                 Réinitialise la superkey de l'image patchée (-i).
-  -d, --dump                       Affiche les informations kallsyms de l'image du noyau(-i).
-  -f, --flag                       Affiche les informations d'ikconfig de l'image du noyau(-i).
-  -l, --list                       Affiche toutes les informations de patch de l'image du noyau si (-i) est spécifié.
-                                   Affiche des données supplémentaires sur les objets si (-M) est spécifié.
-                                   Affiche des informations sur l'image de KernelPatch si (-k) est spécifié.
-Dépaqueter le noyau: unpack <boot.img>
-Empaqueter le noyau: repack <boot.img>
+  -h, --help                       Print this message.
+  -v, --version                    Print version number. Print kpimg version if -k specified.
+  -p, --patch                      Patch or Update patch of kernel image(-i) with specified kpimg(-k) and superkey(-s).
+  -u, --unpatch                    Unpatch patched kernel image(-i).
+  -r, --reset-skey                 Reset superkey of patched image(-i).
+  -d, --dump                       Dump kallsyms infomations of kernel image(-i).
+  -f, --flag                       Dump ikconfig infomations of kernel image(-i).
+  -l, --list                       Print all patch informations of kernel image if (-i) specified.
+                                   Print extra item informations if (-M) specified.
+                                   Print KernelPatch image informations if (-k) specified.
+Unpack kernel: unpack <boot.img>
+Repack kernel: repack <boot.img>
 Options:
-  -i, --image CHEMIN                 Chemin de l'image du noyau.
-  -k, --kpimg CHEMIN               Chemin de l'image de KernelPatch.
-  -s, --skey CLÉ                Spécifie la SuperKey et la sauvegarde directement dans la boot.img.
-  -S, --root-skey CLÉ              Spécifie la root-SuperKey qui utilise la vérification par hachage, la SuperKey peut-être changée dynamiquement.
-  -o, --out CHEMIN                   Chemin de l'image patchée.
-  -a  --addition CLÉ=VALEUR         Ajoute des informations supplémentaires.
-  -K, --kpatch CHEMIN                Intègre les exécutables binaires de kpatch dans les patchs.
-  -M, --embed-extra-path CHEMIN      Intègre un nouveau chemin d'objet supplémentaire.
-  -E, --embeded-extra-name NOM    Préserve et modifie les objets supplémentaires.
-  -T, --extra-type TYPE            Spécifie le type des objets supplémentaires.
-  -N, --extra-name NOM            Spécifie le nom d'objets supplémentaires précédents.
-  -V, --extra-event ÉVÉNEMENT          Définit les événements déclencheurs des objets supplémentaires précédents.
-  -A, --extra-args ARGUMENTS            Définit les arguments des objets supplémentaires.
-  -D, --extra-detach               Détache des objets supplémentaires précédents des patchs.
+  -i, --image PATH                 Kernel image path.
+  -k, --kpimg PATH                 KernelPatch image path.
+  -s, --skey KEY                   Set the superkey and save it directly in the boot.img.
+  -S, --root-skey KEY              Set the root-superkey that uses hash verification, and the superkey can be changed dynamically.
+  -o, --out PATH                   Patched image path.
+  -a  --addition KEY=VALUE         Add additional information.
+  -K, --kpatch PATH                Embed kpatch executable binary into patches.
+  -M, --embed-extra-path PATH      Embed new extra item.
+  -E, --embeded-extra-name NAME    Preserve and modifiy embedded extra item.
+  -T, --extra-type TYPE            Set type of previous extra item.
+  -N, --extra-name NAME            Set name of previous extra item.
+  -V, --extra-event EVENT          Set trigger event of previous extra item.
+  -A, --extra-args ARGS            Set arguments of previous extra item.
+  -D, --extra-detach               Detach previous extra item from patches.
 ```
 
 ## Flash
@@ -201,7 +197,7 @@ Les commandes de fastboot sont pratiques, stables, et faciles à réparer en cas
 
 :::
 
-Connectez votre appareil avec `ADB` and exécutez la commande suivante pour entrer dans le mode fastboot :
+Connectez votre appareil avec `ADB` et exécutez la commande suivante pour entrer dans le mode fastboot :
 
 ```sh
 adb reboot bootloader

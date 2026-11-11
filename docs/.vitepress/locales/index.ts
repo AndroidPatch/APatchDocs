@@ -3,7 +3,7 @@ import en from './en'
 import ru from './ru'
 import pt_BR from './pt_BR'
 import zh_CN from './zh_CN'
-import fr_FR from "./fr_FR"
+import fr_FR from './fr_FR'
 export default defineConfig({
   locales: {
     root: {
