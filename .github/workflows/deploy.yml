@@ -1,4 +1,4 @@
-# Sample workflow for building and deploying a VitePress site to GitHub Pages
+[![Build Manager](https://github.com/bmax121/APatch/actions/workflows/build.yml/badge.svg)](https://github.com/bmax121/APatch/actions/workflows/build.yml)# Sample workflow for building and deploying a VitePress site to GitHub Pages
 #
 name: Deploy VitePress site to Pages
 
