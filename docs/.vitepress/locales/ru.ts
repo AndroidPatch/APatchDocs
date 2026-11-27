@@ -21,7 +21,7 @@ export default defineConfig({
 })
 
 function nav() {
-	return [{ text: 'Руководство', link: '/what-is-apatch' }]
+	return [{ text: 'Руководство', link: '/ru/what-is-apatch' }]
 }
 
 function sidebarGuide() {

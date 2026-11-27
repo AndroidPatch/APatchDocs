@@ -73,7 +73,7 @@ Il y a plusieurs moyens d'installer APatch.
 :::
 
 ::: warning Attention
-Il est absolument interdit de créer des clés faibles comme `12345678`. Les versions utilisant SuperKey [requièrent l'utilisation de clés sécurisées](/warn).
+Il est absolument interdit de créer des clés faibles comme `12345678`. Les versions utilisant SuperKey [requièrent l'utilisation de clés sécurisées](/fr_FR/warn).
 :::
 
 5. Appuyez sur Start et attendez 1 minute. Après que le patch ait été complété avec succès, le chemin de la `boot.img` patchée sera affiché. Par exemple: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
@@ -158,9 +158,6 @@ Vous pouvez écrire le paramètre `--help` ,ce qui fait `kptools --help`, pour o
 
 ### Commandes et commentaires de KP:
 
-::: info Info
-Vous pouvez cliquer [ici](https://exame.apatch.top/) pour essayer.
-:::
 ```
 COMMAND:
   -h, --help                       Print this message.

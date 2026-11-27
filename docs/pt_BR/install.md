@@ -158,10 +158,6 @@ Você pode digitar o parâmetro `--help`, ou seja, `kptools --help`, para obter 
 
 # Comandos e comentários do KP
 
-::: info INFORMAÇÕES
-Você pode clicar [aqui](https://exame.apatch.top/) para experimentar.
-:::
-
 ```
 COMANDOS:
   -h, --help                       Imprimir esta mensagem.

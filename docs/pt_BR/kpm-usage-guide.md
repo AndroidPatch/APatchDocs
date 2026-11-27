@@ -26,7 +26,7 @@ A incorporação de KPMs pode ser feita tanto na primeira aplicação do patch n
 
 #### Incorporar KPMs no primeiro patch {#embed-kpms-at-first-patching}
 
-1. Faça o [Patch](/pt_BR/install#patch) de seu `boot.img` seguindo o guia [Patch automático](/pt_BR/install#automatically-patching). Após concluir a etapa 4, **NÃO** prossiga para a próxima etapa imediatamente.
+1. Faça o [Patch](/pt_BR/install#how-to-patch) de seu `boot.img` seguindo o guia [Patch automático](/pt_BR/install#automatically-patching). Após concluir a etapa 4, **NÃO** prossiga para a próxima etapa imediatamente.
 
 2. Clique no botão "Incorporar KPM" e selecione o KPM que deseja incorporar (Os arquivos KPM possuem o sufixo `.kpm`).
 

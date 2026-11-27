@@ -7,7 +7,6 @@ import { defineAsyncComponent } from 'vue'
 export default defineConfig({
     title: 'APatch Docs',
     locales: locales.locales,
-    ignoreDeadLinks: true,
     lastUpdated: true,
     sitemap: {
         hostname: 'https://apatch.dev'

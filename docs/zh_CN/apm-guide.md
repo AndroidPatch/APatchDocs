@@ -19,7 +19,7 @@ APatch 的模块运作机制与 Magisk 几乎是一样的，如果你熟悉 Magi
 
 <!-- ## 模块界面
 
-APatch 的模块支持显示界面并与用户交互，请参阅 [WebUI 文档](module-webui.md)。 -->
+APatch 的模块支持显示界面并与用户交互，请参阅 [WebUI 文档](https://kernelsu.org/zh_CN/guide/module-webui.html)。 -->
 
 ::: warning 升级须知
 从新版本开始，APatch 不再强制使用 SuperKey 认证，改为验证**管理器签名**。
@@ -116,7 +116,7 @@ APatch 模块就是一个放置在 `/data/adb/modules` 内且满足如下结构�
 ::: tip 与 Magisk 的差异
 APatch 没有内置的针对 Zygisk 的支持，因此模块中没有 Zygisk 相关的内容。
 
-但你可以参照 [Zygisk 支持？](zh_CN/faq#zygisk-support) 中列出的方式来支持 Zygisk 模块，此时 Zygisk 模块的内容与 Magisk 所支持的 Zygisk 是完全相同的。
+但你可以参照 [Zygisk 支持？](/zh_CN/faq#zygisk-support) 中列出的方式来支持 Zygisk 模块，此时 Zygisk 模块的内容与 Magisk 所支持的 Zygisk 是完全相同的。
 :::
 
 ### module.prop

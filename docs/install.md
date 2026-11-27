@@ -158,10 +158,6 @@ You can type the `--help` parameter, that is, `kptools --help`, to get all avail
 
 ### KP commands and comments:
 
-::: info
-You can click [here](https://exame.apatch.top/) to try it out.
-:::
-
 ```
 COMMAND:
   -h, --help                       Print this message.

@@ -4,7 +4,7 @@ updates:
     target-branch: main
     directory: /
     schedule:
-      interval: daily
+      interval: weekly
     groups:
       action-dependencies:
         patterns:
@@ -14,7 +14,7 @@ updates:
     target-branch: main
     directory: /
     schedule:
-      interval: daily
+      interval: weekly
     allow:
       - dependency-type: "all"
     groups:

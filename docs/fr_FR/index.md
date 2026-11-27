@@ -33,5 +33,5 @@ features:
 
 ::: warning Attention
 La traduction française est encore en cours !
-Pour le moment, seules cette page d'accueil, la présentation, le guide d'installation et la FAQ sont traduits. Si vous rencontrez des problèmes ou avez une suggestion, n'hésitez pas à ouvrir une issue ou une pull request sur [GitHub](https://github.com/AndroidPatch/APatchDocs).
+Pour le moment, seules cette page d'accueil, la présentation, l'alerte de sécurité, le guide d'installation et la FAQ sont traduits. Si vous rencontrez des problèmes ou avez une suggestion, n'hésitez pas à ouvrir une issue ou une pull request sur [GitHub](https://github.com/AndroidPatch/APatchDocs).
 :::

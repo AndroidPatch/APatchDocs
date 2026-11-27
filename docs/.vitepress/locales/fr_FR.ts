@@ -31,6 +31,7 @@ function sidebarGuide() {
         text: 'Guide',
         items: [
           { text: "Qu'est-ce qu'APatch ?", link: '/fr_FR/what-is-apatch' },
+          { text: 'Alerte de sécurité', link: '/fr_FR/warn' },
           { text: 'Installation', link: '/fr_FR/install' },
           { text: 'FAQ', link: '/fr_FR/faq' },
         ]

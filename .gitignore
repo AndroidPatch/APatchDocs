@@ -1,3 +1,4 @@
 node_modules
-/.vitepress
-!/.vitepress/config.mjs
+docs/.vitepress/dist
+docs/.vitepress/cache
+*.timestamp-*.mjs

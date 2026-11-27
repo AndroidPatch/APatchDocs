@@ -28,7 +28,7 @@ KPM 的嵌入可以在首次使用 APatch 管理器修补 `boot.img` 时或者�
 
 #### 首次修补时嵌入 {#embed-kpms-at-first-patching}
 
-1. 按照[安装指南](/zh_CN/install)中的[自动修补](/zh_CN/install.md#自动修补)流程进行修补，在进行第 4 步之后不要立即执行下一步操作。
+1. 按照[安装指南](/zh_CN/install)中的[自动修补](/zh_CN/install#自动修补)流程进行修补，在进行第 4 步之后不要立即执行下一步操作。
 
 2. 点击“嵌入模块”按钮，之后选择你要嵌入的 KPM 文件 (后缀名为 `.kpm`)。
 

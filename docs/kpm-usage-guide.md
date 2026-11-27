@@ -26,7 +26,7 @@ The Embed of KPMs can be done both at first patching `boot.img` and after instal
 
 #### Embed KPMs at first patching {#embed-kpms-at-first-patching}
 
-1. [Patch](/install#patch) your `boot.img` by following the [Automatically patching](/install#automatically-patching) guide. After completing step 4, **DO NOT** proceed to the next step immediately.
+1. [Patch](/install#how-to-patch) your `boot.img` by following the [Automatically patching](/install#automatically-patching) guide. After completing step 4, **DO NOT** proceed to the next step immediately.
 
 2. Click the "Embed KPM" button and select the KPM you want to embed (KPM files have the `.kpm` suffix).
 

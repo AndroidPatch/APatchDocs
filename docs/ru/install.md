@@ -132,10 +132,6 @@ kptools.exe repack boot.img
 
 ### Команды KernelPatch (KP) и комментарии:
 
-::: info
-Вы можете нажать [сюда](https://exame.apatch.top/), чтобы попробовать.
-:::
-
 ```
 Команды:
   -h, --help                       Вывести это сообщение
