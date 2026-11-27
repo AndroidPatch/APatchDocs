@@ -62,7 +62,7 @@ If you want to design WebUI for APM or KPM, refer to the [WebUI introduction](ht
 
 Remove the root privilege from the "Shell" app in Superuser page.
 
-## The installed modules disappear after updating to version 10997 of APatch and in subsequent versions
+## The installed modules disappear after updating to version 10977 of APatch and in subsequent versions
 
 Special notes about CI build after version 10977.
 

@@ -1,4 +1,3 @@
-import { createRequire } from 'module'
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
@@ -37,6 +36,7 @@ function sidebarGuide() {
           { text: 'Atualizar', link: '/pt_BR/update' },
           { text: 'Resgate do bootloop', link: '/pt_BR/rescue-bootloop' },
           { text: 'Guia de desenvolvimento de módulos AndroidPatch', link: '/pt_BR/apm-guide' },
+          { text: 'Metamódulos', link: '/pt_BR/meta-module' },
           { text: 'Guia de uso de módulos KernelPatch', link: '/pt_BR/kpm-usage-guide' },
           { text: 'Ajuda e suporte', link: '/pt_BR/support' },
           { text: 'Perguntas frequentes', link: '/pt_BR/faq' },

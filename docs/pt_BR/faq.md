@@ -62,7 +62,7 @@ Se você deseja usar o WebUI para o APMódulo ou KPMódulo, consulte a [introdu�
 
 Revogue o privilégio root do app "Shell" na página SuperUsuário.
 
-## Os módulos instalados desaparecem após a atualização para a versão 10997 do APatch e em versões posteriores
+## Os módulos instalados desaparecem após a atualização para a versão 10977 do APatch e em versões posteriores
 
 Notas especiais sobre CI build após a versão 10977.
 

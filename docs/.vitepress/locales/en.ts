@@ -1,4 +1,3 @@
-import { createRequire } from 'module'
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({

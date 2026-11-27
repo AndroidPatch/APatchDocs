@@ -65,7 +65,7 @@ APatch 的 WebUI 实现方法和要求和 KernelSU 的实现方法和要求完�
 
 在 root 授权页面取消 shell 的 root 权限。
 
-## 安装的模块在升级到 10997 及以后版本的 APatch 后消失？
+## 安装的模块在升级到 10977 及以后版本的 APatch 后消失？
 
 对 CI build 10977 及以后版本的特别说明
 

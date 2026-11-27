@@ -5,7 +5,7 @@
 
 本仓库是 [APatch](https://github.com/bmax121/APatch) 的文档库，网页版本请参阅[此处](https://apatch.dev)。
 
-目前本仓库的文档有[简体中文](/docs/zh_CN)、[英语](/docs/)、[葡萄牙语（巴西）](/docs/pt_BR)、[俄语](/docs/ru)等语言的版本，欢迎翻译并贡献本仓库文档的其他语言版本。我们需要你的帮助。
+目前本仓库的文档有[简体中文](/docs/zh_CN)、[英语](/docs/)、[葡萄牙语（巴西）](/docs/pt_BR)、[俄语](/docs/ru)、[法语](/docs/fr_FR)等语言的版本，欢迎翻译并贡献本仓库文档的其他语言版本。我们需要你的帮助。
 
 **请注意:** 当前，只有简体中文与英语的文档维护较为及时。对于一些数据与使用教程，请先参考这两个版本的内容。
 
@@ -13,7 +13,7 @@
 
 This repository is for [APatch Documentation](https://apatch.dev), which is created for [APatch Project](https://github.com/bmax121/APatch).
 
-**Currently there are only [zh_CN](/docs/zh_CN), [EN](/docs/), [pt_BR](/docs/pt_BR), [RU](/docs/ru) documents, and you are welcome to contribute versions in other languages. We need you.**
+**Currently there are [zh_CN](/docs/zh_CN), [EN](/docs/), [pt_BR](/docs/pt_BR), [RU](/docs/ru), and [fr_FR](/docs/fr_FR) documents, and you are welcome to contribute versions in other languages. We need you.**
 
 **Please note:** Only the Simplified Chinese and English documentation are currently maintained in a timely manner. For certain data and usage tutorials, please refer to these two versions first.
 
@@ -28,6 +28,8 @@ Brazilian Portuguese / Português (Brasil): [@igormiguell](https://github.com/ig
 English: [@RinLin-NYA](https://github.com/RinLin-NYA), [@igormiguell](https://github.com/igormiguell), [@xteamlyer](https://github.com/xteamlyer)
 
 Russian / Русский: [@xteamlyer](https://github.com/xteamlyer)
+
+French / Français: [@Oxyde38](https://github.com/Oxyde38)
 
 ## 特别感谢 / Special thanks
 
