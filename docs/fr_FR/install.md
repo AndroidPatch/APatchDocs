@@ -14,7 +14,7 @@
 
 5. Sauvegarder la `boot.img` que vous avez extraite sur un ordinateur, disque USB, ou sur un autre appareil. Si une erreur se produit, vous pourrez reflasher votre `boot.img` via fastboot pour réparer votre appareil.
 
-::: Astuce
+::: tip Astuce
 1. Assurez-vous d'utiliser les dernières versions d'ADB et de fastboot et d'en savoir un peu sur ces outils. S'ils vous semblent nouveaux, nous vous recommandons de faire quelques recherches pour en apprendre plus sur eux.
 
 2. APatch patchera toujours la `boot.img` de n'importe quel appareil. N'essayez pas de patcher ou de flasher `init_boot` ou d'autres images de partitions. Les développeurs d'APatch ne seront pas responsables pour l'échec du patch ou du démarrage.
@@ -40,17 +40,17 @@ ou:
 CONFIG_KALLSYMS=y
 ```
 
-::: Astuce
+::: tip Astuce
 Vous pouvez lancer la commande `zcat /proc/config.gz | grep -w CONFIG_KALLSYMS` dans le terminal pour vous assurer que le noyau supporte le patch (droits root requis).
 :::
 
-::: Attention
+::: warning Attention
 **Supporte seulement l'architecture ARM64**
 
 **Supporte uniquement les noyaux d'Android 3.18 à 6.12.**
 :::
 
-::: NOTE SUR LA COMPATIBILITÉ DU NOYAU 6.6
+::: danger NOTE SUR LA COMPATIBILITÉ DU NOYAU 6.6
 Le noyau 6.6 a été seulement testé sur des appareils OnePlus et Xiaomi. Pour des appareils d'autres marques, veuillez vous référez aux conditions d'usage.
 :::
 
@@ -66,10 +66,14 @@ Il y a plusieurs moyens d'installer APatch.
 
 3. Sélectionnez votre `boot.img`.
 
-4. Créez une SuperKey et une SuperKey card. La SuperKey devrait mesurer entre **8 et 63 caractères et inclure des chiffres et des lettres, mais pas de caractères spéciaux**. Elle sera utilisée plus tard pour débloquer les privilèges root.
+4. Créez une SuperKey dans la carte « SuperKey ». La SuperKey doit mesurer entre **8 et 63 caractères et inclure des chiffres et des lettres, mais pas de caractères spéciaux**. Elle sera utilisée plus tard pour débloquer les privilèges root.
 
-::: Attention
-Il est absolument interdit de créer des clés faibles comme `12345678`. Les dernières versions d'APatch [requerront l'utilisation de clés sécurisées](/warn).
+::: info Note sur les nouvelles versions
+À partir des nouvelles versions, APatch n'impose plus l'authentification par SuperKey dans le gestionnaire et vérifie à la place la **signature du gestionnaire**. Si votre version demande toujours une SuperKey, définissez une clé forte ; si vous mettez à jour depuis une version utilisant SuperKey, suivez les consignes de mise à jour afin d'éviter un bootloop ou une perte de l'accès root.
+:::
+
+::: warning Attention
+Il est absolument interdit de créer des clés faibles comme `12345678`. Les versions utilisant SuperKey [requièrent l'utilisation de clés sécurisées](/warn).
 :::
 
 5. Appuyez sur Start et attendez 1 minute. Après que le patch ait été complété avec succès, le chemin de la `boot.img` patchée sera affiché. Par exemple: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.
@@ -92,20 +96,20 @@ Vous pouvez aller sur le projet de [KernelPatch](https://github.com/bmax121/Kern
 kptools.exe unpack boot.img
 ```
 
-Pour dépaqueter la `boot.img` et obtenir le fichier du noyau. Renommez ce noyau **noyau-b**. (noyau-b peut être n'importe quel noyau tiers, mais ceux-ci sont fournis sans aucune garantie et ne seront pas supportés).
+Pour dépaqueter la `boot.img` et obtenir le fichier `kernel`. Renommez ce fichier `kernel` en **kernel-b** (`kernel-b` peut être n'importe quel noyau tiers, mais ceux-ci sont fournis sans aucune garantie et ne seront pas supportés).
 
 Les utilisateurs de Windows peuvent patcher avec `CMD` ou `PowerShell`.
 
 Lancez cette commande pour patcher :
 
 ```cmd
-kptools.exe -p --image noyau-b --skey "YourKey" --kpimg kpimg-android --out noyau
+kptools.exe -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
 Alternativement, il est recommandé d'utiliser `WSL` avec `Linux` pour patcher :
 
 ```cmd
-./kptools-linux -p --image noyau-b --skey "YourKey" --kpimg kpimg-android --out noyau
+./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
 Si aucune erreur n'a été signalée durant le patching, exécutez la commande suivante :
@@ -128,12 +132,12 @@ Pour empaqueter et générer l'image. La `new-boot.img` générée est l'image p
 ./kptools-linux unpack boot.img
 ```
 
-Pour dépaqueter la `boot.img` et obtenir le fichier du noyau. Renommez ce noyau **noyau-b**. (noyau-b peut être n'importe quel noyau tiers, mais ceux-ci sont fournis sans aucune garantie et ne seront pas supportés).
+Pour dépaqueter la `boot.img` et obtenir le fichier `kernel`. Renommez ce fichier `kernel` en **kernel-b** (`kernel-b` peut être n'importe quel noyau tiers, mais ceux-ci sont fournis sans aucune garantie et ne seront pas supportés).
 
 Lancez cette commande pour patcher :
 
 ```sh
-./kptools-linux -p --image noyau-b --skey "YourKey" --kpimg kpimg-android --out noyau
+./kptools-linux -p --image kernel-b --skey "YourKey" --kpimg kpimg-android --out kernel
 ```
 
 Si aucune erreur n'a été signalée durant le patching, exécutez la commande suivante :
@@ -144,17 +148,17 @@ Si aucune erreur n'a été signalée durant le patching, exécutez la commande s
 
 Pour empaqueter et générer l'image. La `new-boot.img` générée est l'image patchée.
 
-::: Info
+::: info Info
 Vous pouvez aussi essayer le [Patching en ligne](https://kernelpatch-on-web.pages.dev/).
 :::
 
-::: Astuce
+::: tip Astuce
 Vous pouvez écrire le paramètre `--help` ,ce qui fait `kptools --help`, pour obtenir tous les paramètres disponibles.
 :::
 
 ### Commandes et commentaires de KP:
 
-::: Info
+::: info Info
 Vous pouvez cliquer [ici](https://exame.apatch.top/) pour essayer.
 :::
 ```
@@ -192,9 +196,8 @@ Options:
 
 ### En utilisant Fastboot
 
-::: Info
+::: info Info
 Les commandes de fastboot sont pratiques, stables, et faciles à réparer en cas d'erreur. Nous recommandons fortement d'utiliser cette méthode pour le flash.
-
 :::
 
 Connectez votre appareil avec `ADB` et exécutez la commande suivante pour entrer dans le mode fastboot :
@@ -209,7 +212,7 @@ Quand vous entrez dans le mode fastboot, lancez cette commande :
 fastboot flash boot boot.img
 ```
 
-::: Astuce
+::: tip Astuce
 Si votre appareil supporte `fastboot boot`, vous pouvez utiliser la commande `fastboot boot boot.img` pour démarrer le système avant de flasher l'image. Si des problèmes inattendus se produisent, redémarrez simplement votre appareil, et il devrait démarrer correctement.
 :::
 
@@ -223,7 +226,7 @@ fastboot reboot
 
 La dernière version du gestionnaire d'APatch supporte directement le flashing sur des environnements de récupération tiers, comme TWRP.
 
-::: Attention
+::: warning Attention
 Le flash direct a été introduit dans la version `10888`, et les versions plus anciennes d'APatch **NE SUPPORTERONT PAS** cette méthode.
 :::
 
@@ -240,11 +243,11 @@ APatch-10888-release.zip
 
 Après l'avoir fait, vous pourrez flasher ce fichier `.zip` via la fonctionnalité de flash des environnements de récupération tiers. APatch sera automatiquement installé, tout comme Magisk.
 
-::: Astuce
+::: tip Astuce
 Tout comme la fonctionnalité Flash, la commande `adb sideload` fournie par l'environnement de récupération android est aussi supportée.
 :::
 
-::: Attention
+::: warning Attention
 Le flash direct **NE SUPPORTE PAS** la personnalisation de la SuperKey ! À la place, la SuperKey va être remplacée par une suite aléatoire de chiffres et de lettres.
 Si vous avez besoin de personnaliser la SuperKey, allez sur le gestionnaire d'APatch après le démarrage et repatchez pour changer la clé.
 :::
@@ -253,7 +256,7 @@ Si vous avez besoin de personnaliser la SuperKey, allez sur le gestionnaire d'AP
 
 ### Désinstallation automatique
 
-::: Attention
+::: warning Attention
 La désinstallation automatique a été introduite dans la version `10888`, et les versions plus anciennes d'APatch **NE SUPPORTERONT PAS** cette méthode.
 :::
 
@@ -269,7 +272,8 @@ APatch-10888-release-uninstall.zip
 ```
 
 Après l'avoir fait, vous pourrez flasher ce fichier `.zip` via la fonctionnalité de flash des environnements de récupération tiers. APatch sera automatiquement désinstallé, tout comme Magisk.
-::: Astuce
+
+::: tip Astuce
 Tout comme la fonctionnalité Flash, la commande `adb sideload` fournie par l'environnement de récupération Android est aussi supportée.
 :::
 
@@ -281,6 +285,6 @@ Flashez votre `boot.img` d'origine dans le mode `bootloader`.
 fastboot flash boot PATH/TO/boot.img
 ```
 
-::: Attention
+::: warning Attention
 **N'UTILISEZ PAS** `init_boot`!
 :::

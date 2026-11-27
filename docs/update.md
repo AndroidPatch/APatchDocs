@@ -2,6 +2,12 @@
 
 [[toc]]
 
+::: warning UPGRADE NOTICE (SUPERKEY TO MANAGER SIGNATURE)
+Starting from newer versions, APatch no longer enforces SuperKey authentication and instead verifies the **manager signature**.
+
+If you are upgrading from a SuperKey-based version to a signature-verified version, you **must** first upgrade via the [transitional build](https://github.com/bmax121/APatch/actions/runs/24625900590) (requires signing in to GitHub; if the CI artifact has expired, check [APatch Releases](https://github.com/bmax121/APatch/releases) for transition instructions) before upgrading to the latest version, or re-flash using a freshly patched stock `boot.img`. Skipping this step may result in a bootloop or loss of root access.
+:::
+
 ## Normal APatch update
 
 ::: info

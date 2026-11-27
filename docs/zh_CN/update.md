@@ -2,6 +2,12 @@
 
 [[toc]]
 
+::: warning 升级须知（SuperKey 迁移至管理器签名验证）
+从新版本开始，APatch 不再强制使用 SuperKey 认证，改为验证**管理器签名**。
+
+如果你是从 SuperKey 版本升级到签名验证版本，**必须**先通过[此过渡构建版本](https://github.com/bmax121/APatch/actions/runs/24625900590)（需登录 GitHub 下载；若 Actions 构建产物已过期，请前往 [APatch Releases](https://github.com/bmax121/APatch/releases) 查看最新过渡说明）进行过渡后再升级到最新版本，或者使用原厂 `boot.img` 重新修补刷入。跳过此步骤可能导致卡开机或丢失 root 权限。
+:::
+
 ## 普通升级 APatch
 
 ::: info

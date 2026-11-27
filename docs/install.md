@@ -68,8 +68,12 @@ There are several ways to patch APatch.
 
 4. Set a SuperKey at "SuperKey" card. The SuperKey should be **8-63 characters long and include numbers and letters, but no special characters**. It will be used later to unlock root privileges.
 
+::: info NOTE ON NEWER VERSIONS
+Starting from newer versions, APatch verifies the **manager signature** instead of enforcing SuperKey authentication in the manager. If your version of APatch Manager still prompts for a SuperKey, set a strong key; if you are upgrading from a SuperKey-based version, be sure to read the [Update guide](/update) first.
+:::
+
 ::: warning
-It's strictly prohibited to set weak keys like `12345678`. The latest versions of APatch [require the use of strong keys](/warn).
+It's strictly prohibited to set weak keys like `12345678`. SuperKey-based versions of APatch [require the use of strong keys](/warn).
 :::
 
 5. Click on "Start" and wait for a minute. After the patch is successful, the patched `boot.img` path will be displayed. For example: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.

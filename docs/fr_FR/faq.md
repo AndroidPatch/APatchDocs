@@ -68,7 +68,7 @@ Retirez les privilèges root du Shell dans la page Superutilisateur.
 
 Notes spéciales à propos du build CI après la version 10977.
 
-::: Info
+::: info Info
 Nous avons déjà pris en compte ce problème.
 :::
 
@@ -92,11 +92,11 @@ Voici 2 solutions pour faire tourner LSPosed sur APatch:
 1. Se référer à [Zygisk support?](#zygisk-support) pour ajouter Zygisk.
 2. Si vous avez seulement besoin de LSPosed sans les autres fonctionnalités de Zygisk, vous pouvez essayer [Zloader](https://github.com/Mufanc/z-loader) [for LSPosed](https://t.me/mufanc_chan/28).
 
-::: Attention
+::: warning Attention
 Zloader **N'EST PAS** compatible avec une autre implémentation Zygisk, et vous ne pourrez pas utiliser des modules qui en dépendent non plus. Veuillez désactiver Zygisk et autres modules associés avant d'installer Zloader.
 :::
 
-::: Danger
+::: danger Danger
 Zloader n'a **PAS** de commits ou de versions supplémentaires après la version `0.1.3`.
 
 Nous ne vous recommandons plus d'utiliser cette méthode. Utilisez Zygisk à la place.
@@ -106,7 +106,7 @@ Nous ne vous recommandons plus d'utiliser cette méthode. Utilisez Zygisk à la 
 
 Nous ne pouvons pas supporter Shamiko car il est propriétaire.
 
-::: Danger
+::: danger Danger
 **Tout problème causé par Shamiko ne sera pas traité par les développeurs d'APatch. Son utilisation est sous votre responsabilité.**
 :::
 
@@ -126,7 +126,7 @@ Grâce aux efforts de la communauté, plusieurs APM ou modules Magisk sont compa
 
 Vous pouvez choisir une des implémentations ci-dessus ou utiliser la vôtre.
 
-::: Attention
+::: warning Attention
 Comme dit plus haut, APatch **N'A PAS** un support Zygisk par défaut, nous ne **POUVONS PAS** et ne **FERONS PAS** garantir la disponibilité,la fonctionnalité , la stabilité , ou tout autre élément relié à Zygisk. 
 
 Si vous rencontrez des problèmes avec une implémentation de Zygisk, **NE NOUS REMONTEZ PAS**  votre bug directement, dites-le aux développeurs de votre implémentation d'abord.

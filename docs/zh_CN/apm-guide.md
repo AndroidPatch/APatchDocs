@@ -24,7 +24,7 @@ APatch 的模块支持显示界面并与用户交互，请参阅 [WebUI 文档](
 ::: warning 升级须知
 从新版本开始，APatch 不再强制使用 SuperKey 认证，改为验证**管理器签名**。
 
-如果你是从 SuperKey 版本升级，必须先升级到[此过渡版本](https://github.com/bmax121/APatch/actions/runs/24625900590)，再升级到最新版本。跳过此步骤可能导致卡开机或丢失 root 权限。
+如果你是从 SuperKey 版本升级，必须先升级到[此过渡版本](https://github.com/bmax121/APatch/actions/runs/24625900590)（需登录 GitHub 下载；若产物已过期请参阅 [APatch Releases](https://github.com/bmax121/APatch/releases) 与[升级指南](/zh_CN/update)），再升级到最新版本。跳过此步骤可能导致卡开机或丢失 root 权限。
 :::
 
 [[toc]]

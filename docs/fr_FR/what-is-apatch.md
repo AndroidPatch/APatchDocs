@@ -23,8 +23,8 @@ Veuillez vous référez à : [Installation](/fr_FR/install)
 Veuillez vous référez à : [Patch](/fr_FR/install#how-to-patch)
 
 ## Licence
-::: Note de traduction
-__La licence ci-dessous n'a pas été traduite afin de conserver sa valeur juridique, vous pouvez voir une traduction non officielle [ici](https://www.fsffrance.org/gpl/gpl-fr.fr.html)__ 
+::: info Note de traduction
+__La licence ci-dessous n'a pas été traduite afin de conserver sa valeur juridique, vous pouvez voir une traduction non officielle [ici](https://www.fsffrance.org/gpl/gpl-fr.fr.html)__
 :::
 ```
 Copyright (C) 2023 - Present bmax121 and APatch Developers

@@ -2,6 +2,12 @@
 
 [[toc]]
 
+::: warning AVISO DE ATUALIZAÇÃO (SUPERKEY PARA ASSINATURA DO GERENCIADOR)
+A partir das versões mais recentes, o APatch não exige mais a autenticação por SuperKey e passa a verificar a **assinatura do gerenciador**.
+
+Se você estiver atualizando de uma versão baseada em SuperKey para uma versão com verificação de assinatura, **deve** primeiro atualizar usando a [build de transição](https://github.com/bmax121/APatch/actions/runs/24625900590) (requer login no GitHub; caso o artefato do CI tenha expirado, verifique os [lançamentos do APatch](https://github.com/bmax121/APatch/releases)) antes de atualizar para a versão mais recente, ou refazer o patch e flash com o `boot.img` stock. Pular esta etapa pode resultar em bootloop ou perda de acesso root.
+:::
+
 ## Atualização normal do APatch
 
 ::: info INFORMAÇÕES

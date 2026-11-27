@@ -64,8 +64,12 @@ APatch 有多种修补方法。
 
 4. 在“超级密钥”卡片中设置一个密码，之后 APatch 管理器会将其作为超级密钥以解锁 root。
 
-:::warning 
-禁止设置 `12345678` 等弱密码，新版 APatch 管理器 已强制使用强密码  [原因](/zh_CN/warn)。
+::: info 关于新版本的说明
+从新版本开始，APatch 不再强制使用 SuperKey 认证，改为验证**管理器签名**。如果你使用的管理器版本仍提示设置超级密钥，请设置强密码；如果你是从 SuperKey 旧版本升级，请务必先阅读[升级指南](/zh_CN/update)。
+:::
+
+::: warning
+禁止设置 `12345678` 等弱密码，使用超级密钥的 APatch 版本强制要求强密码（参见[重要提醒](/zh_CN/warn)）。
 :::
 
 5. 点击“开始修补”并等待修补完成。修补成功后会显示修补后的 img 镜像 路径。例如: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`

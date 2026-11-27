@@ -31,7 +31,7 @@ features:
     details: Un support pour modules qui vous permettra d'injecter du code dans le noyau (kernel) (Fournit les fonctions du noyau inline-hook et syscall-table-hook).
 ---
 
-::: Attention
-  La traduction française n'est pas complétée !!
-  Pour le moment, seulement la page d'installation, la FAQ et celle-ci sont traduites. Si vous rencontrez des problèmes ou avez une suggestion, contactez moi sur [Github](https://github.com/AndroidPatch/APatchDocs/pull/410)
+::: warning Attention
+La traduction française est encore en cours !
+Pour le moment, seules cette page d'accueil, la présentation, le guide d'installation et la FAQ sont traduits. Si vous rencontrez des problèmes ou avez une suggestion, n'hésitez pas à ouvrir une issue ou une pull request sur [GitHub](https://github.com/AndroidPatch/APatchDocs).
 :::

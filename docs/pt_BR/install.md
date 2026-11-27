@@ -68,8 +68,12 @@ Existem várias maneiras de corrigir o APatch.
 
 4. Defina uma SuperKey no cartão "SuperKey". A SuperKey deve ter de **8 a 63 caracteres e incluir números e letras, mas sem caracteres especiais**. Ela será usada posteriormente para desbloquear privilégios root.
 
+::: info NOTA SOBRE VERSÕES MAIS RECENTES
+A partir das versões mais recentes, o APatch verifica a **assinatura do gerenciador** em vez de exigir autenticação por SuperKey no gerenciador. Se a sua versão ainda solicitar uma SuperKey, defina uma chave forte; se estiver atualizando a partir de uma versão baseada em SuperKey, consulte primeiro o [guia de atualização](/pt_BR/update).
+:::
+
 ::: warning AVISO
-É estritamente proibido definir chaves fracas como `12345678`. As versões mais recentes do APatch [obriga o uso de chaves fortes](/pt_BR/warn).
+É estritamente proibido definir chaves fracas como `12345678`. As versões do APatch baseadas em SuperKey [obrigam o uso de chaves fortes](/pt_BR/warn).
 :::
 
 5. Clique em "Iniciar" e aguarde um momento. Depois que o patch for bem-sucedido, o caminho do `boot.img` corrigido será exibido. Por exemplo: `/storage/emulated/0/Download/apatch_version_version_randomletter.img`.

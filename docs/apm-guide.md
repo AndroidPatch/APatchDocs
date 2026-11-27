@@ -20,7 +20,7 @@ The mechanism of APatch modules operation is almost the same as Magisk. If you a
 ::: warning UPGRADE NOTICE
 Starting from the new version, APatch no longer enforces SuperKey authentication. Instead, it verifies the **manager signature**.
 
-If you are upgrading from a SuperKey-based version, you **must** first upgrade to [this transitional build](https://github.com/bmax121/APatch/actions/runs/24625900590) before upgrading to the latest version. Skipping this step may result in a bootloop or loss of root access.
+If you are upgrading from a SuperKey-based version, you **must** first upgrade to [this transitional build](https://github.com/bmax121/APatch/actions/runs/24625900590) (requires GitHub sign-in; if expired, see [APatch Releases](https://github.com/bmax121/APatch/releases) and the [Update guide](/update)) before upgrading to the latest version. Skipping this step may result in a bootloop or loss of root access.
 :::
 
 [[toc]]
